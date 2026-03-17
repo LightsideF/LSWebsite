@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightside Financial | Personal &amp; Business Debt Advice</title>
+<meta name="description" content="FCA-authorised debt advice for individuals, businesses and directors. Lightside Financial helps you find the right path through debt — clearly, calmly, and on your side.">
+<meta property="og:title" content="Lightside Financial | Personal &amp; Business Debt Advice">
+<meta property="og:description" content="FCA-authorised debt advice for individuals, businesses and directors. Calm, clear, expert guidance — no jargon, no judgement.">
+<meta property="og:url" content="https://lightsidefinancial.com/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://lightsidefinancial.com/">
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHB4VJ09BT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZHB4VJ09BT');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["FinancialService", "LocalBusiness"],
+  "name": "Lightside Financial",
+  "alternateName": "Lightside",
+  "url": "https://lightsidefinancial.com",
+  "telephone": "01275859143",
+  "email": "resolve@lightsidefinancial.com",
+  "description": "FCA-authorised debt advice for individuals, businesses and directors.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bourton Barns, Ebdon Lane, Wick St Lawrence",
+    "addressLocality": "Weston-super-Mare",
+    "postalCode": "BS22 7YA",
+    "addressCountry": "GB"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "FCA Reference Number",
+    "value": "676943"
+  },
+  "areaServed": "GB",
+  "serviceType": ["Personal Debt Advice", "Business Debt Advice", "IVA", "Bankruptcy Advice", "Director Advice"]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; }
+
+:root {
+  --site-teal:     #2a8b8b;
+  --site-teal-dk:  #1f6a6a;
+  --site-navy:     #1e3a5f;
+  --site-navy-lt:  #254878;
+  --site-accent:   #e8a020;
+  --site-white:    #ffffff;
+  --site-offwhite: #f7f8f9;
+  --site-light:    #eef2f5;
+  --site-border:   #d8dfe6;
+  --site-text:     #333333;
+  --site-muted:    #6b7a8d;
+  --util-bg:       #162d4a;
+  --max-w:         1100px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--site-text);
+  background: var(--site-white);
+  font-size: 16px;
+  line-height: 1.75;
+}
+a { color: var(--site-teal); text-decoration: none; }
+a:hover { color: var(--site-teal-dk); text-decoration: underline; }
+
+/* ── COOKIE CONSENT BANNER ── */
+#cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--site-navy);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+  padding: 18px 24px;
+  z-index: 9999;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+#cookie-banner p { font-size: 0.88rem; color: rgba(255,255,255,0.88); line-height: 1.6; max-width: 780px; flex: 1; }
+#cookie-banner p a { color: var(--site-accent); text-decoration: underline; }
+.cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-accept {
+  background: var(--site-teal); color: #fff; border: none;
+  padding: 10px 22px; border-radius: 4px; font-weight: 700;
+  font-size: 0.88rem; cursor: pointer; min-height: 44px;
+}
+.cookie-decline {
+  background: transparent; color: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 18px; border-radius: 4px;
+  font-size: 0.88rem; cursor: pointer; min-height: 44px;
+}
+@media (max-width: 600px) {
+  #cookie-banner { flex-direction: column; }
+  .cookie-btns { width: 100%; flex-direction: column; }
+  .cookie-accept, .cookie-decline { width: 100%; text-align: center; }
+}
+
+/* ── UTILITY BAR ── */
+.util-bar { background: var(--util-bg); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 7px 0; }
+.util-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; display: flex; justify-content: flex-end; gap: 28px; align-items: center; }
+.util-bar a { font-size: 0.85rem; color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 6px; }
+.util-bar a:hover { color: var(--site-accent); text-decoration: none; }
+.util-bar a.util-testimonials { color: var(--site-accent); font-weight: 700; }
+.util-bar a.util-testimonials:hover { color: #f0b535; }
+
+/* ── HEADER ── */
+.site-header { background: var(--site-white); border-bottom: 3px solid var(--site-teal); position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 90px; }
+.site-logo { display: flex; align-items: center; }
+.site-logo img { height: 60px; width: auto; }
+.logo-fallback { font-family: 'Merriweather', serif; font-size: 1.15rem; font-weight: 700; color: var(--site-navy); line-height: 1.2; }
+.logo-fallback span { display: block; font-size: 0.72rem; font-weight: 300; color: var(--site-teal); letter-spacing: 0.08em; text-transform: uppercase; }
+.site-nav ul { list-style: none; display: flex; align-items: center; gap: 2px; }
+.site-nav ul li a { display: block; padding: 10px 13px; font-size: 0.875rem; font-weight: 700; color: var(--site-navy); border-radius: 3px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+.site-nav ul li a:hover, .site-nav ul li a.active { background: var(--site-light); color: var(--site-teal); text-decoration: none; }
+.nav-contact-btn { background: var(--site-teal) !important; color: var(--site-white) !important; border-radius: 4px !important; padding: 9px 18px !important; margin-left: 8px; }
+.nav-contact-btn:hover { background: var(--site-teal-dk) !important; }
+
+/* Hamburger */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--site-navy); margin: 5px 0; transition: all 0.2s; }
+@media (max-width: 780px) {
+  .nav-toggle { display: block; }
+  .site-nav { display: none; position: absolute; top: 90px; left: 0; right: 0; background: var(--site-white); border-top: 1px solid var(--site-border); box-shadow: 0 8px 20px rgba(0,0,0,0.1); z-index: 100; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; padding: 12px 0; gap: 0; }
+  .site-nav ul li a { padding: 13px 24px; border-radius: 0; }
+  .nav-contact-btn { margin: 8px 16px 12px !important; border-radius: 4px !important; text-align: center; }
+}
+
+/* ── HERO ── */
+.hero { background: var(--site-navy); padding: 72px 24px 80px; position: relative; overflow: hidden; }
+.hero::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 55%; height: 100%;
+  background: linear-gradient(135deg, transparent 30%, rgba(42,139,139,0.08) 100%);
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.hero-text { position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--site-teal); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+.hero-eyebrow::after { content: ''; display: block; width: 32px; height: 2px; background: var(--site-teal); }
+.hero h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; font-weight: 700; color: var(--site-white); line-height: 1.22; margin-bottom: 22px; }
+.hero h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,0.8); }
+.hero-lead { font-size: 1.05rem; color: rgba(255,255,255,0.78); font-weight: 300; line-height: 1.8; margin-bottom: 36px; max-width: 540px; }
+.hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-hero-primary { background: var(--site-teal); color: var(--site-white); padding: 15px 32px; border-radius: 4px; font-weight: 700; font-size: 1rem; white-space: nowrap; transition: background 0.18s; }
+.btn-hero-primary:hover { background: var(--site-teal-dk); color: var(--site-white); text-decoration: none; }
+.btn-hero-secondary { border: 2px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.85); padding: 13px 28px; border-radius: 4px; font-weight: 700; font-size: 1rem; white-space: nowrap; transition: all 0.18s; }
+.btn-hero-secondary:hover { border-color: var(--site-accent); color: var(--site-accent); text-decoration: none; }
+.hero-trust { margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 24px; flex-wrap: wrap; }
+.hero-trust-item { font-size: 0.82rem; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 8px; }
+.hero-trust-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--site-accent); color: var(--site-navy); font-size: 0.65rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* Hero right panel */
+.hero-panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 36px 32px; position: relative; z-index: 1; }
+.hero-panel-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--site-teal); margin-bottom: 18px; }
+.hero-panel-quote { font-family: 'Merriweather', serif; font-style: italic; font-size: 0.97rem; font-weight: 300; color: rgba(255,255,255,0.88); line-height: 1.85; margin-bottom: 20px; }
+.hero-panel-attr { font-size: 0.82rem; color: var(--site-accent); font-weight: 700; }
+.hero-panel-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 24px 0; }
+.hero-panel-stat { display: flex; gap: 28px; }
+.stat-item { text-align: center; }
+.stat-number { font-family: 'Merriweather', serif; font-size: 1.6rem; font-weight: 700; color: var(--site-white); line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); line-height: 1.3; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero { padding: 48px 24px 56px; }
+  .hero h1 { font-size: 2rem; }
+  .hero-panel { padding: 28px 24px; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 36px 16px 44px; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero-lead { font-size: 0.95rem; }
+  .hero-cta-row { flex-direction: column; }
+  .btn-hero-primary, .btn-hero-secondary { width: 100%; text-align: center; padding: 15px 20px; min-height: 48px; }
+  .hero-panel-stat { justify-content: space-around; }
+}
+
+/* ── PATHWAYS ── */
+.pathways { background: var(--site-offwhite); padding: 72px 24px; border-bottom: 1px solid var(--site-border); }
+.pathways-inner { max-width: var(--max-w); margin: 0 auto; }
+.section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--site-teal); margin-bottom: 8px; }
+.section-h2 { font-family: 'Merriweather', serif; font-size: 1.6rem; font-weight: 700; color: var(--site-navy); margin-bottom: 10px; line-height: 1.3; }
+.section-sub { font-size: 1rem; color: var(--site-muted); margin-bottom: 40px; max-width: 620px; line-height: 1.75; }
+.pathways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pathway-card {
+  background: var(--site-white);
+  border: 1px solid var(--site-border);
+  border-top: 4px solid var(--site-teal);
+  border-radius: 4px;
+  padding: 32px 28px 28px;
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: fadeUp 0.5s ease both;
+}
+.pathway-card:nth-child(1) { animation-delay: 0.05s; }
+.pathway-card:nth-child(2) { animation-delay: 0.12s; }
+.pathway-card:nth-child(3) { animation-delay: 0.19s; }
+.pathway-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.10); transform: translateY(-3px); text-decoration: none; }
+.pathway-icon { width: 44px; height: 44px; color: var(--site-teal); margin-bottom: 18px; }
+.pathway-card h3 { font-family: 'Merriweather', serif; font-size: 1.1rem; font-weight: 700; color: var(--site-navy); margin-bottom: 12px; line-height: 1.35; }
+.pathway-card p { font-size: 0.9rem; color: var(--site-muted); line-height: 1.7; flex: 1; margin-bottom: 22px; }
+.pathway-link { font-size: 0.88rem; font-weight: 700; color: var(--site-teal); display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+.pathway-card:hover .pathway-link { gap: 10px; }
+.pathway-link::after { content: '→'; }
+@media (max-width: 780px) {
+  .pathways-grid { grid-template-columns: 1fr; gap: 14px; }
+  .pathway-card { padding: 24px 20px; }
+}
+
+/* ── HOW WE HELP ── */
+.how-help { background: var(--site-white); padding: 72px 24px; }
+.how-help-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.how-help-text {}
+.how-help-text .section-h2 { margin-bottom: 20px; }
+.how-help-body { font-size: 0.97rem; color: var(--site-text); line-height: 1.8; margin-bottom: 16px; }
+.how-help-body:last-of-type { margin-bottom: 28px; }
+.differentiators { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+.diff-item { display: flex; gap: 14px; align-items: flex-start; }
+.diff-circle { width: 28px; height: 28px; border-radius: 50%; background: var(--site-navy); color: var(--site-white); font-size: 0.72rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.diff-text strong { display: block; font-size: 0.92rem; color: var(--site-navy); margin-bottom: 2px; }
+.diff-text span { font-size: 0.85rem; color: var(--site-muted); line-height: 1.5; }
+
+/* Steps panel */
+.steps-panel { background: var(--site-navy); border-radius: 8px; padding: 36px 32px; }
+.steps-panel-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--site-teal); margin-bottom: 20px; }
+.steps-list { display: flex; flex-direction: column; gap: 0; }
+.step-row { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.step-row:last-child { border-bottom: none; padding-bottom: 0; }
+.step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--site-teal); color: var(--site-white); font-family: 'Merriweather', serif; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.step-content h4 { font-size: 0.92rem; font-weight: 700; color: var(--site-white); margin-bottom: 4px; }
+.step-content p { font-size: 0.84rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .how-help-inner { grid-template-columns: 1fr; gap: 40px; }
+  .how-help { padding: 52px 24px; }
+}
+@media (max-width: 480px) {
+  .how-help { padding: 40px 16px; }
+  .steps-panel { padding: 24px 20px; }
+}
+
+/* ── TESTIMONIAL BAND ── */
+.testimonial-band { background: var(--site-navy); padding: 64px 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+.testimonial-band-inner { max-width: var(--max-w); margin: 0 auto; }
+.testimonial-band .section-label { color: var(--site-teal); margin-bottom: 36px; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.t-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-left: 4px solid var(--site-accent); border-radius: 0 6px 6px 0; padding: 28px 28px 24px; }
+.t-card blockquote { font-family: 'Merriweather', serif; font-style: italic; font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.88); line-height: 1.85; margin-bottom: 14px; }
+.t-attr { font-size: 0.82rem; font-weight: 700; color: var(--site-accent); }
+@media (max-width: 700px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-band { padding: 44px 16px; }
+}
+
+/* ── ASSURANCES ── */
+.assurances { background: var(--site-offwhite); padding: 56px 24px; border-bottom: 1px solid var(--site-border); }
+.assurances-inner { max-width: var(--max-w); margin: 0 auto; }
+.assurances-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--site-border); border: 1px solid var(--site-border); border-radius: 6px; overflow: hidden; margin-top: 36px; }
+.assurance-cell { background: var(--site-white); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; }
+.assurance-cell .a-check { width: 32px; height: 32px; border-radius: 50%; background: var(--site-navy); color: var(--site-white); font-size: 0.8rem; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+.assurance-cell strong { font-size: 0.92rem; color: var(--site-navy); font-weight: 700; line-height: 1.3; }
+.assurance-cell p { font-size: 0.84rem; color: var(--site-muted); line-height: 1.55; }
+@media (max-width: 780px) {
+  .assurances-grid { grid-template-columns: repeat(2, 1fr); }
+  .assurances { padding: 44px 16px; }
+}
+@media (max-width: 480px) {
+  .assurances-grid { grid-template-columns: 1fr; }
+}
+
+/* ── BOTTOM CTA ── */
+.bottom-cta-section { background: var(--site-white); padding: 72px 24px; }
+.bottom-cta-section-inner { max-width: var(--max-w); margin: 0 auto; }
+.bottom-cta-box {
+  background: var(--site-navy);
+  border-radius: 8px;
+  padding: 52px 56px;
+  display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap;
+}
+.cta-box-text h2 { font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: 700; color: var(--site-white); margin-bottom: 10px; line-height: 1.3; }
+.cta-box-text p { font-size: 0.97rem; color: rgba(255,255,255,0.72); max-width: 480px; line-height: 1.7; }
+.cta-box-btns { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; flex-shrink: 0; }
+.btn-primary { background: var(--site-teal); color: var(--site-white); padding: 14px 30px; border-radius: 4px; font-weight: 700; font-size: 0.95rem; white-space: nowrap; transition: background 0.18s; }
+.btn-primary:hover { background: var(--site-teal-dk); color: var(--site-white); text-decoration: none; }
+.btn-ghost { border: 2px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.85); padding: 12px 26px; border-radius: 4px; font-weight: 700; font-size: 0.95rem; white-space: nowrap; transition: all 0.18s; }
+.btn-ghost:hover { border-color: var(--site-accent); color: var(--site-accent); text-decoration: none; }
+@media (max-width: 780px) {
+  .bottom-cta-box { padding: 36px 28px; flex-direction: column; }
+  .cta-box-btns { width: 100%; flex-direction: column; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; min-height: 48px; padding: 14px 20px; }
+  .bottom-cta-section { padding: 44px 16px; }
+}
+
+/* ── FOOTER ── */
+.site-footer { background: var(--site-navy); color: rgba(255,255,255,0.7); padding: 56px 24px 24px; }
+.footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 60px; margin-bottom: 36px; }
+.footer-logo-text { font-family: 'Merriweather', serif; font-size: 1.15rem; font-weight: 700; color: var(--site-white); margin-bottom: 3px; }
+.footer-logo-sub { font-size: 0.72rem; color: var(--site-teal); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+.footer-brand-desc { font-size: 0.87rem; color: var(--site-white); line-height: 1.7; max-width: 420px; margin-bottom: 14px; }
+.footer-trading { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-top: 14px; }
+.footer-fca {
+  font-size: 0.82rem; color: rgba(255,255,255,0.7);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding: 12px 0; margin-top: 16px;
+}
+.footer-contact h4 { font-size: 0.82rem; font-weight: 700; color: var(--site-white); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-contact p { font-size: 0.88rem; margin-bottom: 8px; line-height: 1.5; }
+.footer-contact a { color: rgba(255,255,255,0.72); }
+.footer-contact a:hover { color: var(--site-accent); text-decoration: none; }
+.footer-address { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-top: 16px; }
+
+/* MoneyHelper */
+.footer-moneyhelper {
+  max-width: var(--max-w); margin: 0 auto 20px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.6;
+}
+.footer-moneyhelper a { color: rgba(255,255,255,0.72); text-decoration: underline; }
+.footer-moneyhelper a:hover { color: var(--site-accent); }
+
+.footer-bottom { max-width: var(--max-w); margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
+.footer-bottom a { color: rgba(255,255,255,0.5); margin: 0 4px; }
+.footer-bottom a:hover { color: var(--site-accent); text-decoration: none; }
+
+@media (max-width: 700px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .site-footer { padding: 40px 16px 20px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-banner">
+  <p>We use cookies to understand how visitors use our site and to improve your experience. We do not sell your data. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="setCookie('accepted')">Accept cookies</button>
+    <button class="cookie-decline" onclick="setCookie('essential')">Essential only</button>
+  </div>
+</div>
+<script>
+(function(){
+  var c = localStorage.getItem('ls_cookie_consent');
+  if(c) document.getElementById('cookie-banner').style.display = 'none';
+})();
+function setCookie(val){
+  localStorage.setItem('ls_cookie_consent', val);
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+</script>
+
+<!-- UTILITY BAR -->
+<div class="util-bar">
+  <div class="util-inner">
+    <a href="tel:01275859143">01275 859143</a>
+    <a href="/cdn-cgi/l/email-protection#cebcabbda1a2b8ab8ea2a7a9a6babda7aaaba8a7a0afa0ada7afa2e0ada1a3">✉ <span class="__cf_email__" data-cfemail="16647365797a6073567a7f717e62657f7273707f787778757f777a3875797b">[email&#160;protected]</span></a>
+    <a href="testimonials.html" class="util-testimonials">Client Testimonials</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <img
+        src="lightsideLogo_withStrap_300dpi.png"
+        alt="Lightside Financial Pain Relief"
+        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'">
+      <div id="logo-fallback" class="logo-fallback" style="display:none">
+        Lightside
+        <span>Financial Pain Relief</span>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Open navigation" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/personal-debt" class="active">Personal Debt</a></li>
+        <li><a href="/business-directors">Business &amp; Directors</a></li>
+        <li><a href="our-network.html">Our Network</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" class="nav-contact-btn">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">FCA Authorised &amp; Regulated</div>
+      <h1>Financial difficulty is<br><em>hard enough already.</em><br>We make the path clear.</h1>
+      <p class="hero-lead">Debt is rarely just a financial problem — it affects your sleep, your relationships, and your sense of who you are. We take the time to understand your full situation, then work with you to find the right path forward.</p>
+      <div class="hero-cta-row">
+        <a href="tel:01275859143" class="btn-hero-primary">Call 01275 859143</a>
+        <a href="contact.html" class="btn-hero-secondary">Send a message</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><div class="hero-trust-dot">✓</div>Completely confidential</div>
+        <div class="hero-trust-item"><div class="hero-trust-dot">✓</div>No charge for initial conversation</div>
+        <div class="hero-trust-item"><div class="hero-trust-dot">✓</div>We work for you, not your creditors</div>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hero-panel-label">What our clients say</div>
+      <blockquote class="hero-panel-quote">
+        "At a very difficult and dark time, Lightside literally saved my life. From the first meeting, a huge weight was lifted from my shoulders — not just the day-to-day nightmare of dealing with lenders alone, but the guilt and shame of being in debt at all."
+      </blockquote>
+      <div class="hero-panel-attr">Ms. J — referred by her solicitor during divorce proceedings</div>
+      <hr class="hero-panel-divider">
+      <div class="hero-panel-stat">
+        <div class="stat-item">
+          <div class="stat-number">FCA</div>
+          <div class="stat-label">Authorised &amp;<br>Regulated</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">No. 1</div>
+          <div class="stat-label">Priority is<br>always you</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Initial<br>conversation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAYS -->
+<section class="pathways">
+  <div class="pathways-inner">
+    <div class="section-label">Where would you like to start?</div>
+    <h2 class="section-h2">Who are you coming to us as?</h2>
+    <p class="section-sub">Debt looks different depending on your situation. Choose the path that best describes yours and we'll explain your options clearly, in plain English.</p>
+
+    <div class="pathways-grid">
+
+      <a class="pathway-card" href="/personal-debt">
+        <svg class="pathway-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+        <h3>I have personal debt</h3>
+        <p>Credit cards, loans, HMRC arrears, or you're worried about your home. You're not sure what your options are, or you need the creditor pressure to stop while you think clearly.</p>
+        <span class="pathway-link">Personal debt solutions</span>
+      </a>
+
+      <a class="pathway-card" href="/business-directors">
+        <svg class="pathway-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+          <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+        </svg>
+        <h3>I'm a business owner or director</h3>
+        <p>A personal guarantee has been called in, HMRC is chasing the business, or you're concerned about your personal liability. You need to understand what happens to you — not just the company.</p>
+        <span class="pathway-link">Business &amp; director advice</span>
+      </a>
+
+      <a class="pathway-card" href="our-network.html">
+        <svg class="pathway-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/>
+          <line x1="12" y1="8" x2="5.5" y2="16.5"/><line x1="12" y1="8" x2="18.5" y2="16.5"/>
+        </svg>
+        <h3>I refer clients who need debt advice</h3>
+        <p>Solicitors, accountants, IFAs, and mortgage advisers. If you work with clients who need regulated debt advice, we make the referral easy and keep you informed at every stage.</p>
+        <span class="pathway-link">Referral partner information</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE HELP -->
+<section class="how-help">
+  <div class="how-help-inner">
+    <div class="how-help-text">
+      <div class="section-label">Why Lightside</div>
+      <h2 class="section-h2">We meet the person before we address the problem</h2>
+      <p class="how-help-body">Most people come to us not quite knowing where to start. They know the situation is serious, but they don't know what the options are, what the consequences might be, or who they can trust to tell them the truth.</p>
+      <p class="how-help-body">We are FCA-authorised debt advisers. We are not a debt management company chasing a monthly fee, and we are not a firm that pushes one solution regardless of the situation. We look at everything — income, outgoings, every creditor, every asset — and we give you an honest assessment of every option available to you.</p>
+      <div class="differentiators">
+        <div class="diff-item">
+          <div class="diff-circle">✓</div>
+          <div class="diff-text">
+            <strong>We work for you, not your creditors</strong>
+            <span>Every recommendation we make is in your interest — not the creditors', not a referral partner's.</span>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-circle">✓</div>
+          <div class="diff-text">
+            <strong>We handle all creditor contact directly</strong>
+            <span>Once you instruct us, the calls and letters stop coming to you. We deal with them.</span>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-circle">✓</div>
+          <div class="diff-text">
+            <strong>Plain English, every step of the way</strong>
+            <span>No jargon, no pressure, no judgement. You understand exactly where you stand at every stage.</span>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-circle">✓</div>
+          <div class="diff-text">
+            <strong>Covers individuals, businesses, and directors</strong>
+            <span>Debt rarely sits neatly in one box. We handle the full picture — personal and business dimensions together.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps-panel">
+      <div class="steps-panel-label">What happens when you contact us</div>
+      <div class="steps-list">
+        <div class="step-row">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>A confidential conversation</h4>
+            <p>We listen. No judgement, no pressure. You tell us what's happening and we ask what we need to understand the full picture.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>We review everything</h4>
+            <p>Income, outgoings, all creditors, assets. We look at your situation as a whole — not just the debt figure.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>We explain your options</h4>
+            <p>Clearly, in plain English. Every option available to you, with our honest view on which is most likely to produce the best outcome.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>We handle it</h4>
+            <p>Once you instruct us, we deal with your creditors directly. You no longer have to deal with them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonial-band">
+  <div class="testimonial-band-inner">
+    <div class="section-label">In their own words</div>
+    <div class="testimonials-grid">
+      <div class="t-card">
+        <blockquote>"I was amazed to learn that Lightside could manage all negotiations on my behalf. This freed up so much space in my life — not just the time on the phone, but all the time spent worrying."</blockquote>
+        <div class="t-attr">Ms. J — Client, referred by her solicitor during divorce proceedings</div>
+      </div>
+      <div class="t-card">
+        <blockquote>"From the very first conversation, Lightside treated us with dignity and respect. They explained every option clearly and gave us the confidence to make the right decision for our family."</blockquote>
+        <div class="t-attr">Mr. &amp; Mrs. B — Clients, IVA resolved</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSURANCES -->
+<section class="assurances">
+  <div class="assurances-inner">
+    <div class="section-label">Our commitment to you</div>
+    <h2 class="section-h2">What you can always expect from Lightside</h2>
+    <div class="assurances-grid">
+      <div class="assurance-cell">
+        <div class="a-check">✓</div>
+        <strong>FCA Authorised &amp; Regulated</strong>
+        <p>You are dealing with a regulated firm at all times. FCA No. 676943.</p>
+      </div>
+      <div class="assurance-cell">
+        <div class="a-check">✓</div>
+        <strong>Completely confidential</strong>
+        <p>Everything you tell us stays between us — always.</p>
+      </div>
+      <div class="assurance-cell">
+        <div class="a-check">✓</div>
+        <strong>No obligation</strong>
+        <p>Talk to us before you decide anything. The initial conversation is free.</p>
+      </div>
+      <div class="assurance-cell">
+        <div class="a-check">✓</div>
+        <strong>Honest, independent advice</strong>
+        <p>We recommend what is right for your situation — not what is easiest to sell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta-section">
+  <div class="bottom-cta-section-inner">
+    <div class="bottom-cta-box">
+      <div class="cta-box-text">
+        <h2>Not sure where to start?</h2>
+        <p>Call us or send a message — we'll help you work out where you stand and what your options are, at no charge and with no obligation to proceed.</p>
+      </div>
+      <div class="cta-box-btns">
+        <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+        <a href="contact.html" class="btn-ghost">Send a message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-text">Lightside Financial</div>
+      <div class="footer-logo-sub">Financial Pain Relief</div>
+      <p class="footer-brand-desc">Expert debt advice for individuals, businesses and directors.</p>
+      <p class="footer-trading">Lightside and Lightside Financial are trading styles of Lightside (BPSC) Ltd.</p>
+      <div class="footer-fca">FCA Authorised &amp; Regulated. FCA No. 676943</div>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact us</h4>
+      <p><a href="tel:01275859143">01275 859143</a></p>
+      <p><a href="/cdn-cgi/l/email-protection#483a2d3b27243e2d0824212f203c3b212c2d2e212629262b212924662b2725"><span class="__cf_email__" data-cfemail="4a382f3925263c2f0a26232d223e39232e2f2c23242b2429232b2664292527">[email&#160;protected]</span></a></p>
+      <p class="footer-address">
+        Lightside, Bourton Barns,<br>
+        Ebdon Lane, Wick St Lawrence,<br>
+        Weston-super-Mare, BS22 7YA
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-moneyhelper">
+    If you are struggling with debt, free and impartial help is available from <a href="https://www.moneyhelper.org.uk" target="_blank" rel="noopener">MoneyHelper</a>, the government-backed money guidance service.
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Lightside (BPSC) Ltd. All rights reserved. &nbsp;|&nbsp;
+      <a href="privacy-policy.html">Privacy 
