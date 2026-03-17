@@ -248,6 +248,16 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
 .cf-submit{width:100%;min-height:48px;text-align:center;}
 .btn-form-cancel{text-align:center;padding:8px 0;}
 }
+/* =========================================================
+   READ MORE / READ LESS — reusable collapsible text pattern
+   Used in: Situation, Solution, and any long-text section.
+   ========================================================= */
+.read-more-btn{display:inline-flex;align-items:center;gap:6px;margin-top:14px;margin-bottom:2px;background:none;border:none;padding:0;font-family:'Lato',sans-serif;font-size:0.9rem;font-weight:700;color:var(--site-teal);cursor:pointer;line-height:1.5;}
+.read-more-btn:hover{color:var(--site-teal-dk);text-decoration:underline;}
+.read-more-btn .read-more-icon{font-size:0.75rem;line-height:1;transition:transform 0.22s;display:inline-block;}
+.read-more-btn[aria-expanded="true"] .read-more-icon{transform:rotate(180deg);}
+.read-more-content[hidden]{display:none!important;}
+.read-more-content>*:first-child{margin-top:18px;}
 </style>
 </head>
 <body>
@@ -316,10 +326,20 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
     <div class="section-label">The Situation</div>
     <h2>The petition that arrived when everything should have been settled</h2>
     <div class="situation-body">
+
+      <!-- 1. INTRO — always visible -->
       <p class="situation-opener">I had never been in any kind of financial trouble in my life. I paid my taxes, paid off my home, and handed the business to my son when I retired. I thought that chapter was closed.</p>
-      <p>I had run the restaurant as a sole trader for more than twenty years. When I retired, my son took over the running of it. There was no formal transfer — it was a family handover, and it seemed straightforward enough at the time. He managed everything. I moved on.</p>
-      <p>What neither of us had anticipated was an HMRC tax investigation. Inspectors examined the trading records and found irregularities that led to a substantial demand — almost £300,000. Because the business had never been formally transferred out of my name, I was still the registered sole trader. The demand came to me. I was a pensioner. I had no way to pay it.</p>
-      <p>My accountant and the tax investigation specialist had been working to challenge and reduce the debt. They did succeed in reducing the amount owed, but it was still more than I could pay. HMRC petitioned for my bankruptcy. I had no other debts. I had paid off my mortgage. I had done everything right. And yet here I was, facing insolvency proceedings for debts I had never incurred — on a business I had already walked away from.</p>
+
+      <!-- 2. TOGGLE BUTTON -->
+      <button type="button" class="read-more-btn" aria-expanded="false" aria-controls="situation-more" data-read-more-btn>Read more <span class="read-more-icon" aria-hidden="true">&#9660;</span></button>
+
+      <!-- 3. COLLAPSIBLE WRAPPER -->
+      <div class="read-more-content" id="situation-more" hidden data-read-more-content>
+        <p>I had run the restaurant as a sole trader for more than twenty years. When I retired, my son took over the running of it. There was no formal transfer — it was a family handover, and it seemed straightforward enough at the time. He managed everything. I moved on.</p>
+        <p>What neither of us had anticipated was an HMRC tax investigation. Inspectors examined the trading records and found irregularities that led to a substantial demand — almost £300,000. Because the business had never been formally transferred out of my name, I was still the registered sole trader. The demand came to me. I was a pensioner. I had no way to pay it.</p>
+        <p>My accountant and the tax investigation specialist had been working to challenge and reduce the debt. They did succeed in reducing the amount owed, but it was still more than I could pay. HMRC petitioned for my bankruptcy. I had no other debts. I had paid off my mortgage. I had done everything right. And yet here I was, facing insolvency proceedings for debts I had never incurred — on a business I had already walked away from.</p>
+      </div>
+
     </div>
   </section>
 
@@ -382,9 +402,19 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
     <div class="section-label">What We Did and Why It Worked</div>
     <h2>The work behind the outcome</h2>
     <div class="solution-body">
+
+      <!-- 1. INTRO — always visible -->
       <p>When we were brought in, the bankruptcy process had already begun. Our task was not to stop it, but to guide Mr. A through it in a way that protected what mattered most: his home and his peace of mind.</p>
-      <p>We began by counselling Mr. A and his family — his daughter and his grandson — on what a Trustee in Bankruptcy is empowered to do, and what the limits of that power are. A Trustee has an interest in the bankrupt's assets, including property, but that interest must be realised through a defined process — and that process creates a negotiating space. The Trustee's objective is to maximise recoveries for creditors; ours was to settle the interest in the property for the lowest figure the Trustee would accept.</p>
-      <p>After careful analysis of the property's equity, the Trustee's likely recovery position, and what the family could realistically assemble, we opened negotiations with a carefully positioned offer of £100,000. The Trustee's solicitors rejected our initial position and held firm, but we were tenacious. After almost twelve months, they accepted our figure. The Trustee relinquished their interest in the property for £94,000 — below our opening offer. Mr. A's home was secured. He had come to us feeling hopeless. He left with his home intact and a closed chapter behind him.</p>
+
+      <!-- 2. TOGGLE BUTTON -->
+      <button type="button" class="read-more-btn" aria-expanded="false" aria-controls="solution-more" data-read-more-btn>Read more <span class="read-more-icon" aria-hidden="true">&#9660;</span></button>
+
+      <!-- 3. COLLAPSIBLE WRAPPER -->
+      <div class="read-more-content" id="solution-more" hidden data-read-more-content>
+        <p>We began by counselling Mr. A and his family — his daughter and his grandson — on what a Trustee in Bankruptcy is empowered to do, and what the limits of that power are. A Trustee has an interest in the bankrupt's assets, including property, but that interest must be realised through a defined process — and that process creates a negotiating space. The Trustee's objective is to maximise recoveries for creditors; ours was to settle the interest in the property for the lowest figure the Trustee would accept.</p>
+        <p>After careful analysis of the property's equity, the Trustee's likely recovery position, and what the family could realistically assemble, we opened negotiations with a carefully positioned offer of £100,000. The Trustee's solicitors rejected our initial position and held firm, but we were tenacious. After almost twelve months, they accepted our figure. The Trustee relinquished their interest in the property for £94,000 — below our opening offer. Mr. A's home was secured. He had come to us feeling hopeless. He left with his home intact and a closed chapter behind him.</p>
+      </div>
+
     </div>
   </section>
 
@@ -586,6 +616,32 @@ function initForm(toggleId,wrapperId,formId,errorId,successId){
 initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
 initForm('footer-form-toggle','footer-contact-form','footer-form','footer-error','footer-success');
 initForm('util-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+/* ─────────────────────────────────────────────────────────────────────────
+   READ MORE / READ LESS
+   Wires all instances of the collapsible text component automatically.
+   No function call needed per instance — just add the HTML pattern.
+
+   Each button must have:   data-read-more-btn  +  aria-controls="[wrapper-id]"
+   Each wrapper must have:  data-read-more-content  +  id="[wrapper-id]"  +  hidden
+   ───────────────────────────────────────────────────────────────────────── */
+document.querySelectorAll('[data-read-more-btn]').forEach(function(btn){
+  var contentId=btn.getAttribute('aria-controls');
+  var content=document.getElementById(contentId);
+  if(!content)return;
+  btn.addEventListener('click',function(){
+    var isOpen=btn.getAttribute('aria-expanded')==='true';
+    if(isOpen){
+      content.hidden=true;
+      btn.setAttribute('aria-expanded','false');
+      /* Update label text; leave the icon <span> intact */
+      btn.firstChild.nodeValue='Read more ';
+    }else{
+      content.hidden=false;
+      btn.setAttribute('aria-expanded','true');
+      btn.firstChild.nodeValue='Read less ';
+    }
+  });
+});
 (function(){
   var hamburger=document.getElementById('hamburger');
   var nav=document.getElementById('site-nav');
