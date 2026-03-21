@@ -136,12 +136,39 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
 /* ── Forms — slide-down pattern (Web3Forms) ── */
-
+.slide-form-wrap{overflow:hidden;margin-top:16px;animation:slideDown 0.3s ease-out;}
+.slide-form-wrap[hidden]{display:none!important;}
+.slide-form-wrap--light{padding:28px 0 8px;}
+@keyframes slideDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+.contact-form{display:flex;flex-direction:column;gap:16px;}
+.cf-row{display:grid;gap:16px;}.cf-row--2{grid-template-columns:1fr 1fr;}
+.cf-field{display:flex;flex-direction:column;gap:6px;}.cf-field label{font-size:0.85rem;font-weight:700;color:#2a2a2a;}
+.cf-required{color:var(--site-accent);}
+.cf-optional{font-weight:400;font-size:0.80rem;opacity:0.7;}
+.contact-form input[type="text"],.contact-form input[type="email"],.contact-form input[type="tel"],.contact-form textarea{width:100%;padding:10px 14px;border-radius:4px;font-size:0.92rem;font-family:'Lato',sans-serif;line-height:1.5;transition:border-color 0.18s;box-sizing:border-box;border:1.5px solid #d0d7e2;background:#fff;color:#2a2a2a;}
+.contact-form textarea{resize:vertical;min-height:110px;}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--site-teal);box-shadow:0 0 0 3px rgba(42,139,139,0.15);}
+.cf-privacy{font-size:0.80rem;line-height:1.6;color:rgba(0,0,0,0.45);}
+.cf-privacy a{color:inherit;text-decoration:underline;}.cf-privacy a:hover{color:var(--site-teal);}
+.cf-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.cf-submit{cursor:pointer;border:none;background:var(--site-teal);color:white;padding:10px 24px;border-radius:4px;font-weight:600;font-family:'Lato',sans-serif;}
+.cf-submit:hover{background:var(--site-teal-dk);}
+.cf-submit[disabled]{opacity:0.6;cursor:not-allowed;}
+.btn-form-cancel{background:none;border:none;cursor:pointer;font-size:0.88rem;font-family:'Lato',sans-serif;font-weight:700;text-decoration:underline;color:rgba(0,0,0,0.45);padding:0;}
+.btn-form-cancel:hover{color:var(--site-navy);}
 .cf-error{margin-top:4px;}.cf-error p{font-size:0.88rem;line-height:1.6;color:#c0392b;background:#fdf0ee;border:1px solid #f5c6c0;border-radius:4px;padding:12px 16px;}
 .cf-error a{color:#c0392b;font-weight:700;}
 .cf-success{padding:20px 0 8px;}
 .cf-success-msg{font-size:0.95rem;line-height:1.7;color:#1a6b3c;background:#eaf6f0;border:1px solid #b2dfc8;border-radius:4px;padding:16px 20px;display:block;}
 .cf-success-msg a{color:#1a6b3c;font-weight:700;}
+.cta-buttons{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:flex-start;}
+.cta-buttons a,.cta-buttons button{padding:12px 24px;border:none;border-radius:4px;cursor:pointer;font-size:0.95rem;font-weight:600;text-decoration:none;font-family:'Lato',sans-serif;}
+.slide-form-wrap--dark{padding:32px 0 0;}
+.contact-form--dark input[type="text"],.contact-form--dark input[type="email"],.contact-form--dark input[type="tel"],.contact-form--dark textarea{border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);color:#fff;}
+.contact-form--dark input::placeholder,.contact-form--dark textarea::placeholder{color:rgba(255,255,255,0.35);}
+.contact-form--dark .cf-privacy{color:rgba(255,255,255,0.45);}
+.contact-form--dark .btn-form-cancel{color:rgba(255,255,255,0.45);}.contact-form--dark .btn-form-cancel:hover{color:rgba(255,255,255,0.9);}
+
 /* ── Buttons ── */
 .btn-primary{background:var(--site-teal);color:white;padding:13px 26px;border-radius:4px;font-weight:700;font-size:0.92rem;white-space:nowrap;transition:background 0.18s;text-decoration:none;display:inline-block;border:none;cursor:pointer;font-family:'Lato',sans-serif;min-height:44px;}
 .btn-primary:hover{background:var(--site-teal-dk);color:white;text-decoration:none;}
@@ -199,6 +226,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-secondary{background:transparent;color:var(--site-teal);border:1px solid var(--site-border);padding:12px 24px;border-radius:4px;font-weight:600;font-size:0.92rem;white-space:nowrap;transition:background 0.18s;text-decoration:none;display:inline-block;cursor:pointer;font-family:'Lato',sans-serif;min-height:44px;}
 .btn-secondary:hover{background:var(--site-light);}
 
+/* ── Inline CTA ── */
+.inline-cta{border-top:3px solid var(--site-teal);border-bottom:3px solid var(--site-teal);padding:32px 24px;max-width:var(--max-w);margin:0 auto;display:flex;gap:24px;justify-content:space-between;align-items:flex-start;}
+.inline-cta-text{flex:1;}.inline-cta-text h3{font-family:'Merriweather',serif;font-size:1.15rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.35;}
+.inline-cta-text p{font-size:1rem;line-height:1.6;}
+.cta-buttons{display:flex;gap:12px;flex-shrink:0;}
+.cta-buttons a,.cta-buttons button{padding:12px 24px;border:none;border-radius:4px;cursor:pointer;font-size:0.95rem;font-weight:600;text-decoration:none;}
+
 /* ── Responsive ── */
 @media(max-width:680px){
   .footer-inner{grid-template-columns:1fr;}
@@ -208,6 +242,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .site-nav.open ul{flex-direction:column;gap:0;}
   .site-nav.open ul li a{padding:12px 24px;}
   .policy-hero h1{font-size:1.55rem;}
+  .inline-cta{flex-direction:column;}
+  .cta-buttons{flex-direction:column;width:100%;}
 }
 @media(max-width:480px){
   .policy-hero{padding:36px 16px 36px;}
@@ -343,75 +379,45 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <p>Our website uses cookies to help us understand how visitors use our site and to improve your experience. This includes the use of Google Analytics (GA4), which provides anonymised information about how users interact with our website.</p>
     <p>When you visit our site, you will be given the option to accept or manage cookies. You can also control cookies through your browser settings.</p>
     <p>We are committed to ensuring you understand how your information is used and to supporting you in a clear, fair and transparent way.</p>
-
-    <!-- Inline contact form -->
-    <div class="inline-contact">
-      <p class="inline-contact-label">Get in touch</p>
-      <h2>Have a question? We&rsquo;re here to help.</h2>
-      <p>No charge for the initial conversation. Completely confidential.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;">
-        <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-        <button type="button" class="btn-secondary" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form">Send a message</button>
-      </div>
-      <div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
-        <form class="contact-form" id="inline-form" novalidate>
-          <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-          <input type="hidden" name="subject" value="Website enquiry — Privacy Policy">
-          <input type="hidden" name="from_name" value="Lightside Website">
-          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="cf-row cf-row--2">
-            <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
-            <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
-          </div>
-          <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
-          <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation — as much or as little as you like."></textarea></div>
-          <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
-          <div class="cf-actions">
-            <button type="submit" class="cf-submit">Send message</button>
-            <button type="button" class="btn-form-cancel">Cancel</button>
-          </div>
-          <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-        </form>
-        <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-      </div>
-    </div>
-
   </div>
 
 </main>
 
-<div class="footer-cta-wrap">
-  <div class="footer-cta">
-    <p class="footer-cta-label">Start the conversation</p>
-    <h3>Ready to talk it through?</h3>
-    <p>No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
-    <div class="cta-buttons">
-      <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-      <button type="button" class="btn-secondary" id="footer-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">Send a message</button>
-    </div>
-    <div class="slide-form-wrap slide-form-wrap--dark" id="footer-contact-form" hidden>
-      <form class="contact-form contact-form--dark" id="footer-form" novalidate>
-        <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-        <input type="hidden" name="subject" value="Website enquiry — Privacy Policy">
-        <input type="hidden" name="from_name" value="Lightside Website">
-        <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="cf-row cf-row--2">
-          <div class="cf-field"><label for="footer-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="footer-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
-          <div class="cf-field"><label for="footer-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="footer-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
-        </div>
-        <div class="cf-field"><label for="footer-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="footer-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
-        <div class="cf-field"><label for="footer-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="footer-message" name="message" required rows="4" placeholder="Tell us a little about your situation — as much or as little as you like."></textarea></div>
-        <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
-        <div class="cf-actions">
-          <button type="submit" class="cf-submit">Send message</button>
-          <button type="button" class="btn-form-cancel" id="footer-form-cancel">Cancel</button>
-        </div>
-        <div class="cf-error" id="footer-error" hidden><p>We weren&rsquo;t able to send your message — sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-      </form>
-      <div class="cf-success" id="footer-success" hidden><p class="cf-success-msg">&#10003; Message sent — thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-    </div>
+<div class="inline-cta">
+  <div class="inline-cta-text">
+    <h3>Have a question? We&rsquo;re here to help.</h3>
+    <p>No charge for the initial conversation. Completely confidential.</p>
+  </div>
+  <div class="cta-buttons">
+    <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+    <button type="button" class="btn-secondary btn-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" id="inline-form-toggle">Send a message</button>
   </div>
 </div>
+<div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+    <form class="contact-form" id="inline-form" novalidate>
+      <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+      <input type="hidden" name="subject" value="Website enquiry &mdash; Privacy Policy">
+      <input type="hidden" name="from_name" value="Lightside Website">
+      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="cf-row cf-row--2">
+        <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+        <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+      </div>
+      <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+      <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation &mdash; as much or as little as you like."></textarea></div>
+      <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+      <div class="cf-actions">
+        <button type="submit" class="cf-submit">Send message</button>
+        <button type="button" class="btn-form-cancel">Cancel</button>
+      </div>
+      <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+    </form>
+    <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+  </div>
+</div>
+
+
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      FOOTER — fixed, do not modify
@@ -441,55 +447,55 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 </footer>
 
 <script>
-/* ── Cookie banner ── */
-(function(){
-  var banner=document.getElementById('cookie-banner');
-  function hideBanner(){if(banner)banner.style.display='none';}
-  var acc=document.getElementById('cookie-accept');
-  var dec=document.getElementById('cookie-decline');
-  if(acc){acc.addEventListener('click',function(){localStorage.setItem('ls_cookie_consent','1');hideBanner();});}
-  if(dec){dec.addEventListener('click',function(){localStorage.setItem('ls_cookie_consent','0');hideBanner();});}
-})();
-
 /* ── Hamburger ── */
 (function(){
   var hamburger=document.getElementById('hamburger');
   var nav=document.getElementById('site-nav');
-  if(!hamburger||!nav)return;
-  hamburger.addEventListener('click',function(){
-    var open=nav.classList.toggle('open');
-    hamburger.classList.toggle('open',open);
-    hamburger.setAttribute('aria-expanded',open?'true':'false');
-  });
-  document.addEventListener('click',function(e){
-    if(!hamburger.contains(e.target)&&!nav.contains(e.target)){
-      nav.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded','false');
-    }
-  });
+  if(hamburger&&nav){
+    hamburger.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      hamburger.classList.toggle('open',open);
+      hamburger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(e){
+      if(!hamburger.contains(e.target)&&!nav.contains(e.target)){
+        nav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
 })();
 
-/* ── Inline form (toggle + submit) ── */
-(function(){
-  var toggle=document.getElementById('inline-form-toggle');
-  var wrapper=document.getElementById('inline-contact-form');
-  var form=document.getElementById('inline-form');
-  var errorEl=document.getElementById('inline-error');
-  var successEl=document.getElementById('inline-success');
+/* ── Cookie consent ── */
+document.getElementById('cookie-accept').addEventListener('click',function(){
+  document.getElementById('cookie-banner').style.display='none';
+  localStorage.setItem('ls_cookie_consent','accepted');
+});
+document.getElementById('cookie-decline').addEventListener('click',function(){
+  document.getElementById('cookie-banner').style.display='none';
+  localStorage.setItem('ls_cookie_consent','essential');
+});
+
+/* ── initForm — Web3Forms slide-down pattern ── */
+function initForm(toggleId,wrapperId,formId,errorId,successId){
+  var toggle=document.getElementById(toggleId);
+  var wrapper=document.getElementById(wrapperId);
+  var form=document.getElementById(formId);
+  var errorEl=document.getElementById(errorId);
+  var successEl=document.getElementById(successId);
   if(!toggle||!wrapper||!form)return;
   toggle.addEventListener('click',function(){
-    var isHidden=wrapper.hidden;
-    wrapper.hidden=!isHidden;
-    toggle.setAttribute('aria-expanded',isHidden?'true':'false');
-    toggle.textContent=isHidden?'Cancel':'Send a message';
-    if(isHidden){
-      setTimeout(function(){
-        var headerH=document.querySelector('.site-header');
-        var offset=headerH?headerH.offsetHeight+8:98;
-        var top=wrapper.getBoundingClientRect().top+window.pageYOffset-offset;
-        window.scrollTo({top:top,behavior:'smooth'});
-      },80);
+    var isOpen=!wrapper.hidden;
+    if(isOpen){
+      wrapper.hidden=true;
+      toggle.setAttribute('aria-expanded','false');
+      toggle.textContent='Send a message';
+    }else{
+      wrapper.hidden=false;
+      toggle.setAttribute('aria-expanded','true');
+      toggle.textContent='Close form';
+      setTimeout(function(){wrapper.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
     }
   });
   var cancelBtn=form.querySelector('.btn-form-cancel');
@@ -525,82 +531,19 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         if(errorEl)errorEl.hidden=false;
       });
   });
-})();
+}
 
-/* ── Footer form (toggle + submit) ── */
+initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+
+/* ── Util bar "Send a message" — opens inline form and scrolls to it ── */
 (function(){
-  var toggle=document.getElementById('footer-form-toggle');
-  var wrapper=document.getElementById('footer-contact-form');
-  var form=document.getElementById('footer-form');
-  var errorEl=document.getElementById('footer-error');
-  var successEl=document.getElementById('footer-success');
-  var cancelBtn=document.getElementById('footer-form-cancel');
-  if(!toggle||!wrapper)return;
-  toggle.addEventListener('click',function(){
-    var isHidden=wrapper.hidden;
-    wrapper.hidden=!isHidden;
-    toggle.setAttribute('aria-expanded',isHidden?'true':'false');
-    toggle.textContent=isHidden?'Cancel':'Send a message';
-    if(isHidden){
-      setTimeout(function(){
-        var headerH=document.querySelector('.site-header');
-        var offset=headerH?headerH.offsetHeight+8:98;
-        var top=wrapper.getBoundingClientRect().top+window.pageYOffset-offset;
-        window.scrollTo({top:top,behavior:'smooth'});
-      },80);
-    }
-  });
-  if(cancelBtn){
-    cancelBtn.addEventListener('click',function(){
-      wrapper.hidden=true;
-      toggle.setAttribute('aria-expanded','false');
-      toggle.textContent='Send a message';
-      if(form)form.reset();
-      if(errorEl)errorEl.hidden=true;
-    });
-  }
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      if(errorEl)errorEl.hidden=true;
-      var valid=true;
-      form.querySelectorAll('[required]').forEach(function(f){if(!f.value.trim()){valid=false;f.focus();}});
-      if(!valid)return;
-      var submitBtn=form.querySelector('.cf-submit');
-      var orig=submitBtn.textContent;
-      submitBtn.disabled=true;
-      submitBtn.textContent='Sending…';
-      fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)})
-        .then(function(r){return r.json();})
-        .then(function(j){
-          if(j.success){form.hidden=true;if(successEl)successEl.hidden=false;}
-          else{throw new Error(j.message||'failed');}
-        })
-        .catch(function(err){
-          console.error('Form error:',err);
-          submitBtn.disabled=false;
-          submitBtn.textContent=orig;
-          if(errorEl)errorEl.hidden=false;
-        });
-    });
-  }
-  /* Util bar "Send a message" */
   var utilBtn=document.getElementById('util-form-toggle');
-  if(utilBtn){
-    utilBtn.addEventListener('click',function(){
-      if(wrapper.hidden){toggle.click();}
-      else{
-        setTimeout(function(){
-          var headerH=document.querySelector('.site-header');
-          var offset=headerH?headerH.offsetHeight+8:98;
-          var top=wrapper.getBoundingClientRect().top+window.pageYOffset-offset;
-          window.scrollTo({top:top,behavior:'smooth'});
-        },80);
-      }
-    });
-  }
-})();
-</script>
-
-</body>
-</html>
+  var inlineToggle=document.getElementById('inline-form-toggle');
+  if(!utilBtn||!inlineToggle)return;
+  utilBtn.addEventListener('click',function(){
+    var wrapper=document.getElementById('inline-contact-form');
+    if(wrapper&&wrapper.hidden){inlineToggle.click();}
+    setTimeout(function(){
+      var target=document.getElementById('inline-contact-form');
+      if(target){
+        var headerH=document.querySelec

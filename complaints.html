@@ -185,6 +185,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-secondary{background:transparent;color:var(--site-teal);border:1px solid var(--site-border);padding:12px 24px;border-radius:4px;font-weight:600;font-size:0.92rem;white-space:nowrap;transition:background 0.18s;text-decoration:none;display:inline-block;cursor:pointer;font-family:'Lato',sans-serif;min-height:44px;}
 .btn-secondary:hover{background:var(--site-light);}
 
+/* ── Inline CTA ── */
+.inline-cta{border-top:3px solid var(--site-teal);border-bottom:3px solid var(--site-teal);padding:32px 24px;max-width:var(--max-w);margin:0 auto;display:flex;gap:24px;justify-content:space-between;align-items:flex-start;}
+.inline-cta-text{flex:1;}.inline-cta-text h3{font-family:'Merriweather',serif;font-size:1.15rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.35;}
+.inline-cta-text p{font-size:1rem;line-height:1.6;}
+.cta-buttons{display:flex;gap:12px;flex-shrink:0;}
+.cta-buttons a,.cta-buttons button{padding:12px 24px;border:none;border-radius:4px;cursor:pointer;font-size:0.95rem;font-weight:600;text-decoration:none;}
+
 /* ── Responsive ── */
 @media(max-width:680px){
   .footer-inner{grid-template-columns:1fr;}
@@ -194,6 +201,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .site-nav.open ul{flex-direction:column;gap:0;}
   .site-nav.open ul li a{padding:12px 24px;}
   .policy-hero h1{font-size:1.55rem;}
+  .inline-cta{flex-direction:column;}
+  .cta-buttons{flex-direction:column;width:100%;}
 }
 @media(max-width:480px){
   .policy-hero{padding:36px 16px 36px;}
@@ -292,72 +301,43 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <p>We are committed to resolving complaints fairly, consistently and in a way that ensures a positive outcome wherever possible.</p>
     </div>
 
-    <!-- Inline contact form -->
-    <div class="inline-contact">
-      <p class="inline-contact-label">Get in touch</p>
-      <h2>Have a question? We&rsquo;re here to help.</h2>
-      <p>No charge for the initial conversation. Completely confidential.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;">
-        <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-        <button type="button" class="btn-secondary" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form">Send a message</button>
-      </div>
-      <div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
-        <form class="contact-form" id="inline-form" novalidate>
-          <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-          <input type="hidden" name="subject" value="Website enquiry — Complaints">
-          <input type="hidden" name="from_name" value="Lightside Website">
-          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="cf-row cf-row--2">
-            <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
-            <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
-          </div>
-          <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
-          <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation — as much or as little as you like."></textarea></div>
-          <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
-          <div class="cf-actions">
-            <button type="submit" class="cf-submit">Send message</button>
-            <button type="button" class="btn-form-cancel">Cancel</button>
-          </div>
-          <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-        </form>
-        <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-      </div>
-    </div>
-
   </div>
 
 </main>
 
-<!-- INLINE CONTACT FORM -->
-<section class="inline-form-section" aria-labelledby="inline-form-heading">
-  <div class="inline-form-inner">
-    <h2 id="inline-form-heading">Get in touch</h2>
-    <p>No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
-    <div class="cta-buttons" style="margin-bottom:20px;">
-      <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-    </div>
-    <div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form">
-      <form class="contact-form" id="inline-form" novalidate>
-        <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-        <input type="hidden" name="subject" value="Website enquiry — Complaints page">
-        <input type="hidden" name="from_name" value="Lightside Website">
-        <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="cf-row cf-row--2">
-          <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
-          <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
-        </div>
-        <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
-        <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation — as much or as little as you like."></textarea></div>
-        <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
-        <div class="cf-actions">
-          <button type="submit" class="cf-submit">Send message</button>
-        </div>
-        <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-      </form>
-      <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-    </div>
+<div class="inline-cta">
+  <div class="inline-cta-text">
+    <h3>Have a question? We&rsquo;re here to help.</h3>
+    <p>No charge for the initial conversation. Completely confidential.</p>
   </div>
-</section>
+  <div class="cta-buttons">
+    <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+    <button type="button" class="btn-secondary btn-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" id="inline-form-toggle">Send a message</button>
+  </div>
+</div>
+<div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+    <form class="contact-form" id="inline-form" novalidate>
+      <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+      <input type="hidden" name="subject" value="Website enquiry — Complaints">
+      <input type="hidden" name="from_name" value="Lightside Website">
+      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="cf-row cf-row--2">
+        <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+        <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+      </div>
+      <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+      <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation — as much or as little as you like."></textarea></div>
+      <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+      <div class="cf-actions">
+        <button type="submit" class="cf-submit">Send message</button>
+        <button type="button" class="btn-form-cancel">Cancel</button>
+      </div>
+      <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+    </form>
+    <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      FOOTER — fixed, do not modify
@@ -486,15 +466,4 @@ initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error'
     setTimeout(function(){
       var target=document.getElementById('inline-contact-form');
       if(target){
-        var headerH=document.querySelector('.site-header');
-        var offset=headerH?headerH.offsetHeight+8:98;
-        var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
-        window.scrollTo({top:top,behavior:'smooth'});
-      }
-    },80);
-  });
-})();
-</script>
-
-</body>
-</html>
+        var headerH=document.querySele
