@@ -413,6 +413,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .trust-bar-inner{flex-direction:column;align-items:flex-start;gap:10px;}
   .trust-divider{display:none;}
   .inline-cta{flex-direction:column;gap:20px;}
+  .inline-cta>div{width:100%;}
+  .inline-cta .cta-buttons{justify-content:center;}
+  .inline-cta .btn-primary,.inline-cta .btn-secondary{text-align:center;}
   .adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:16px;}
   .adviser-banner-btn{width:100%;text-align:center;}
   .footer-inner{grid-template-columns:1fr;}
@@ -441,11 +444,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .btn-primary,.btn-secondary{width:100%;text-align:center;}
   .rg-grid{grid-template-columns:1fr;}
 }
-@media(max-width:680px){
-  .inline-cta .cta-buttons{align-items:center;justify-content:center;}
-  .inline-cta .cta-buttons .btn-primary,
-  .inline-cta .cta-buttons .btn-secondary{text-align:center;}
-}
+
 </style>
 </head>
 <body>
@@ -707,7 +706,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="section-label">The difference we make</div>
       <h2 class="section-h2" id="outcomes-heading">Here is what often becomes possible</h2>
       <button type="button" class="outcomes-toggle-btn" id="outcomes-toggle" aria-expanded="false" aria-controls="outcomes-collapsible">
-        Show what we can achieve <span class="otb-icon" aria-hidden="true">+</span>
+        <span class="otb-label">Show what we can achieve</span><span class="otb-icon" aria-hidden="true">+</span>
       </button>
       <div class="outcomes-collapsible" id="outcomes-collapsible" role="region">
         <ul class="outcomes-list">
@@ -1171,22 +1170,19 @@ if(!localStorage.getItem('ls_cookie_consent')){document.getElementById('cookie-b
 (function(){
   var btn=document.getElementById('outcomes-toggle');
   var panel=document.getElementById('outcomes-collapsible');
+  var label=btn?btn.querySelector('.otb-label'):null;
   if(!btn||!panel)return;
   btn.addEventListener('click',function(){
-    /* Only act if the button is actually visible (mobile) */
     if(getComputedStyle(btn).display==='none')return;
     var open=panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded',open);
-    btn.innerHTML=open
-      ?'Hide <span class="otb-icon" aria-hidden="true">+</span>'
-      :'Show what we can achieve <span class="otb-icon" aria-hidden="true">+</span>';
+    btn.setAttribute('aria-expanded',String(open));
+    if(label)label.textContent=open?'Hide':'Show what we can achieve';
   });
-  /* Reset to closed state when resizing back above mobile breakpoint */
   window.addEventListener('resize',function(){
     if(window.innerWidth>680){
       panel.classList.remove('open');
       btn.setAttribute('aria-expanded','false');
-      btn.innerHTML='Show what we can achieve <span class="otb-icon" aria-hidden="true">+</span>';
+      if(label)label.textContent='Show what we can achieve';
     }
   });
 })();
