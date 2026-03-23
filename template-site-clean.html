@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy &amp; Cookies Policy | Lightside Financial</title>
-<meta name="description" content="How Lightside Financial collects, uses and protects your personal information. Read our Privacy and Cookies Policy.">
+<title><!-- PAGE TITLE --> | Lightside Financial</title>
+<meta name="description" content="<!-- META DESCRIPTION -->">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.lightsidefinancial.com/privacy-policy.html">
+<link rel="canonical" href="https://www.lightsidefinancial.com/<!-- PAGE-SLUG -->.html">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Privacy &amp; Cookies Policy | Lightside Financial">
-<meta property="og:description" content="How Lightside Financial collects, uses and protects your personal information. Read our Privacy and Cookies Policy.">
-<meta property="og:url" content="https://www.lightsidefinancial.com/privacy-policy.html">
+<meta property="og:title" content="<!-- PAGE TITLE --> | Lightside Financial">
+<meta property="og:description" content="<!-- META DESCRIPTION -->">
+<meta property="og:url" content="https://www.lightsidefinancial.com/<!-- PAGE-SLUG -->.html">
 <meta property="og:site_name" content="Lightside Financial">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privacy &amp; Cookies Policy | Lightside Financial">
-<meta name="twitter:description" content="How Lightside Financial collects, uses and protects your personal information. Read our Privacy and Cookies Policy.">
+<meta name="twitter:title" content="<!-- PAGE TITLE --> | Lightside Financial">
+<meta name="twitter:description" content="<!-- META DESCRIPTION -->">
 <meta name="twitter:site" content="@LightsideFinancial">
 
 <!-- Google Analytics GA4 -->
@@ -33,9 +33,10 @@
 {"@context":"https://schema.org","@type":"Organization","@id":"https://www.lightsidefinancial.com/#organization","name":"Lightside Financial","alternateName":"Lightside (BSPC) Ltd","description":"FCA-authorised debt advice firm providing expert guidance on personal debt, creditor arrangements, negotiated settlements, bankruptcy and insolvency for individuals and businesses across the UK.","url":"https://www.lightsidefinancial.com","email":"resolve@lightsidefinancial.com","address":{"@type":"PostalAddress","streetAddress":"Bourton Barns, Ebdon Lane, Wick St Lawrence","addressLocality":"Weston-super-Mare","postalCode":"BS22 7YA","addressCountry":"GB"},"areaServed":"GB","regulatoryDetails":{"@type":"GovernmentPermit","name":"FCA Authorisation","issuedBy":"Financial Conduct Authority","permitId":"676943"}}
 </script>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.lightsidefinancial.com/privacy-policy.html","url":"https://www.lightsidefinancial.com/privacy-policy.html","name":"Privacy &amp; Cookies Policy | Lightside Financial","description":"How Lightside Financial collects, uses and protects your personal information.","isPartOf":{"@id":"https://www.lightsidefinancial.com/#organization"}}
-</script>
+<!-- JSON-LD: PAGE-SPECIFIC SCHEMA — insert here                             -->
+<!-- Options: BreadcrumbList, WebPage, FAQPage, HowTo, Article, Service      -->
+<!-- See Site Anatomy v1.00 Section 5 for schema specifications               -->
+<!-- Remove this comment block once schema is in place                        -->
 
 <!-- Cookie banner: hide immediately on page load if consent already stored  -->
 <script>(function(){var c=localStorage.getItem('ls_cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}})()</script>
@@ -108,6 +109,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
+/* ── Trust bar ── */
+.trust-bar{background:var(--site-navy);border-top:1px solid rgba(255,255,255,0.1);padding:14px 24px;}
+.trust-bar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+.trust-item{display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.75);}
+.trust-circle{width:24px;height:24px;border-radius:50%;background:var(--site-accent);color:white;font-size:0.72rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.trust-divider{width:1px;height:20px;background:rgba(255,255,255,0.2);}
+
 /* ── Section utilities ── */
 .section-label{font-size:0.72rem;color:var(--site-teal);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
 .section-h2{font-family:'Merriweather',serif;font-size:1.5rem;font-weight:700;color:var(--site-navy);margin-bottom:8px;line-height:1.3;}
@@ -120,6 +128,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-primary:hover{background:var(--site-teal-dk);color:white;text-decoration:none;}
 .btn-secondary{background:transparent;color:var(--site-teal);border:1px solid var(--site-border);padding:12px 24px;border-radius:4px;font-weight:600;font-size:0.92rem;white-space:nowrap;transition:background 0.18s;text-decoration:none;display:inline-block;cursor:pointer;font-family:'Lato',sans-serif;min-height:44px;}
 .btn-secondary:hover{background:var(--site-light);}
+/* Dark background override — add to page CSS when .btn-secondary sits on navy: */
+/* .footer-cta .btn-secondary{color:white;border-color:rgba(255,255,255,0.5);background:transparent;} */
 
 /* ── Forms — slide-down pattern (Web3Forms) ── */
 .slide-form-wrap{overflow:hidden;margin-top:16px;animation:slideDown 0.3s ease-out;}
@@ -159,6 +169,29 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .contact-form--dark .cf-success-msg{background:rgba(26,107,60,0.2);border-color:rgba(26,107,60,0.4);color:#7ddba8;}
 .contact-form--dark .cf-success-msg a{color:#7ddba8;}
 
+/* ── FAQ section ── */
+.faq-section{max-width:var(--max-w);margin:0 auto;padding:52px 24px 56px;}
+.faq-section h2{font-family:'Merriweather',serif;font-size:1.35rem;font-weight:700;color:var(--site-navy);margin-bottom:28px;line-height:1.3;}
+.faq-list{border:1px solid var(--site-border);border-radius:6px;overflow:hidden;}
+.faq-item{border-bottom:1px solid var(--site-border);}.faq-item:last-child{border-bottom:none;}
+.faq-question{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;text-align:left;font-family:'Lato',sans-serif;font-size:0.98rem;font-weight:700;color:var(--site-navy);line-height:1.45;transition:background 0.15s;min-height:44px;}
+.faq-question:hover{background:var(--site-offwhite);}
+.faq-question[aria-expanded="true"]{background:var(--site-offwhite);color:var(--site-teal);}
+.faq-icon{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:var(--site-light);color:var(--site-teal);font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background 0.15s,transform 0.25s;}
+.faq-question[aria-expanded="true"] .faq-icon{background:var(--site-teal);color:white;transform:rotate(45deg);}
+.faq-answer{display:none;padding:0 24px 20px;}.faq-answer.open{display:block;}
+.faq-answer p{font-size:0.95rem;color:var(--site-text);line-height:1.75;margin-bottom:10px;}.faq-answer p:last-child{margin-bottom:0;}
+
+/* ── Footer CTA ── */
+.footer-cta-wrap{background:var(--site-navy);margin-top:56px;}
+.footer-cta{max-width:var(--max-w);margin:0 auto;padding:48px 40px;text-align:center;}
+.footer-cta-label{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--site-teal);margin-bottom:10px;}
+.footer-cta h3{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:700;color:white;margin-bottom:16px;line-height:1.35;}
+.footer-cta > p{font-size:1.05rem;color:rgba(255,255,255,0.88);margin-bottom:20px;line-height:1.65;}
+.footer-cta .cta-buttons{justify-content:center;margin-bottom:4px;}
+.footer-cta .btn-secondary{color:white;border-color:rgba(255,255,255,0.5);background:transparent;}
+.footer-cta .btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:white;}
+
 /* ── Footer ── */
 .site-footer{background:var(--site-navy);padding:48px 24px 24px;}
 .footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:32px;}
@@ -182,45 +215,21 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
 /* ══════════════════════════════════════════════════════════════════════
-   PAGE-SPECIFIC CSS
+   PAGE-SPECIFIC CSS — insert styles for this page type below this line.
+   Do not modify any rules above — they are shared across all pages.
    ══════════════════════════════════════════════════════════════════════ */
 
-/* ── Policy page styles ── */
-.policy-hero{background:var(--site-navy);padding:52px 24px 48px;}
-.policy-hero-inner{max-width:760px;margin:0 auto;}
-.policy-hero-label{font-size:0.72rem;color:var(--site-teal);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;}
-.policy-hero h1{font-family:'Merriweather',serif;font-size:2rem;font-weight:700;color:white;line-height:1.25;margin-bottom:16px;}
-.policy-hero-version{font-size:0.82rem;color:rgba(255,255,255,0.45);}
-
-.policy-body{max-width:760px;margin:0 auto;padding:48px 24px 64px;}
-.policy-body h2{font-family:'Merriweather',serif;font-size:1.15rem;font-weight:700;color:var(--site-navy);margin:36px 0 12px;line-height:1.35;}
-.policy-body h2:first-child{margin-top:0;}
-.policy-body p{font-size:0.97rem;color:var(--site-text);line-height:1.8;margin-bottom:14px;}
-.policy-body p:last-child{margin-bottom:0;}
-.policy-body ul{margin:0 0 14px 20px;padding:0;}
-.policy-body ul li{font-size:0.97rem;color:var(--site-text);line-height:1.8;margin-bottom:6px;}
-.policy-contact-box{background:var(--site-offwhite);border:1px solid var(--site-border);border-radius:6px;padding:24px 28px;margin-top:36px;}
-.policy-contact-box p{margin-bottom:6px;font-size:0.95rem;}
-.policy-contact-box p:last-child{margin-bottom:0;}
-
-/* ── Inline CTA ── */
-.inline-cta{border-top:3px solid var(--site-teal);border-bottom:3px solid var(--site-teal);padding:32px 24px;max-width:var(--max-w);margin:0 auto;display:flex;gap:24px;justify-content:space-between;align-items:flex-start;}
-.inline-cta-text{flex:1;}
-.inline-cta-text h3{font-family:'Merriweather',serif;font-size:1.15rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.35;}
-.inline-cta-text p{font-size:1rem;line-height:1.6;}
-.inline-cta .cta-buttons{flex-shrink:0;}
 
 /* ── Responsive ── */
 @media(max-width:680px){
+  .trust-bar-inner{flex-direction:column;align-items:flex-start;gap:10px;}
+  .trust-divider{display:none;}
   .footer-inner{grid-template-columns:1fr;}
   .site-nav{display:none;}
   .hamburger{display:flex;}
   .site-nav.open{display:block;position:absolute;top:90px;left:0;right:0;background:white;border-bottom:2px solid var(--site-teal);padding:12px 0;box-shadow:0 4px 12px rgba(0,0,0,0.12);z-index:300;}
   .site-nav.open ul{flex-direction:column;gap:0;}
   .site-nav.open ul li a{padding:12px 24px;}
-  .policy-hero h1{font-size:1.55rem;}
-  .inline-cta{flex-direction:column;}
-  .cta-buttons{flex-direction:column;width:100%;}
 }
 @media(max-width:600px){
   .cf-row--2{grid-template-columns:1fr;}
@@ -229,8 +238,11 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .btn-form-cancel{text-align:center;padding:8px 0;}
 }
 @media(max-width:480px){
-  .policy-hero{padding:36px 16px 36px;}
-  .policy-body{padding:36px 16px 52px;}
+  .page-body{padding:28px 16px 0;}
+  .footer-cta{padding:22px 16px;}
+  .faq-section{padding:36px 16px 44px;}
+  .faq-question{padding:14px 14px;font-size:0.92rem;}
+  .faq-answer{padding:0 14px 16px;}
 }
 </style>
 </head>
@@ -253,13 +265,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 <div class="util-bar">
   <div class="util-inner">
     <a href="tel:01275859143">01275 859143</a>
-    <button type="button" class="util-contact-btn" id="util-form-toggle" aria-expanded="false" aria-controls="inline-contact-form">✉︎ Send a message</button>
+    <button type="button" class="util-contact-btn" id="util-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">✉︎ Send a message</button>
     <a href="testimonials.html" class="util-testimonials">Testimonials</a>
   </div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     HEADER & NAV
+     HEADER & NAV — add class="active" to the nav item for this page section
      ═══════════════════════════════════════════════════════════════════════ -->
 <header class="site-header">
   <div class="header-inner">
@@ -283,132 +295,133 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </header>
 
-<!-- Trust bar omitted — policy/utility page -->
-
 <!-- ═══════════════════════════════════════════════════════════════════════
-     PAGE BODY
+     TRUST BAR — fixed, do not modify.
+     Remove this block for policy/utility pages where it is not appropriate.
      ═══════════════════════════════════════════════════════════════════════ -->
-<main id="main-content" aria-label="Privacy and Cookies Policy">
-
-  <div class="policy-hero">
-    <div class="policy-hero-inner">
-      <p class="policy-hero-label">Legal &amp; Compliance</p>
-      <h1>Privacy &amp; Cookies Policy</h1>
-    </div>
-  </div>
-
-  <div class="policy-body">
-
-    <p>Lightside (BSPC) Ltd, trading as Lightside and Lightside Financial, is committed to protecting your personal information and treating it with care, respect and transparency. We understand that sharing your information is an important decision, and we will always use it responsibly to support you.</p>
-
-    <h2>Who we are</h2>
-    <div class="policy-contact-box">
-      <p><strong>Lightside (BSPC) Ltd</strong></p>
-      <p>Bourton Barns, Ebdon Lane, Wick Saint Lawrence, Weston Super Mare BS22 7YA</p>
-      <p>Company No. 5817877</p>
-      <p>Authorised and regulated by the Financial Conduct Authority (FCA No. 676943)</p>
-      <p>Email: <a href="/cdn-cgi/l/email-protection#156770667a79637055797c727d61667c7170737c7b747b767c74793b767a78"><span class="__cf_email__" data-cfemail="e29087918d8e9487a28e8b858a96918b8687848b8c838c818b838ecc818d8f">[email&#160;protected]</span></a></p>
-    </div>
-
-    <h2>The information we collect</h2>
-    <p>We may collect and use personal information including:</p>
-    <ul>
-      <li>Name, address and date of birth</li>
-      <li>Contact details such as phone number and email address</li>
-      <li>Financial information including income, expenditure, debts and creditors</li>
-      <li>Employment details</li>
-      <li>Information about your personal circumstances, including where you may need additional support</li>
-    </ul>
-    <p>We only collect the information we need to understand your situation and provide appropriate advice.</p>
-
-    <h2>How we use your information</h2>
-    <p>We use your information to:</p>
-    <ul>
-      <li>Provide debt advice and support tailored to your circumstances</li>
-      <li>Communicate with your creditors and their agents on your behalf</li>
-      <li>Meet our legal and regulatory obligations</li>
-      <li>Improve our services and the support we provide</li>
-    </ul>
-    <p>We do not send marketing emails or text messages.</p>
-
-    <h2>Our lawful basis for using your information</h2>
-    <p>We process your personal information where it is necessary to:</p>
-    <ul>
-      <li>Perform our contract with you and provide our services</li>
-      <li>Comply with our legal and regulatory obligations</li>
-      <li>Pursue our legitimate interests in delivering effective support, provided this does not override your rights</li>
-    </ul>
-
-    <h2>Who we share your information with</h2>
-    <p>We may share your information with creditors and their agents where necessary to provide our services. We will only share what is required and will always aim to do so securely and responsibly.</p>
-
-    <h2>How long we keep your information</h2>
-    <p>We retain your personal information for up to 6 years after your relationship with us ends. This is to meet legal, regulatory and complaint handling requirements.</p>
-
-    <h2>Keeping your information safe</h2>
-    <p>We take appropriate technical and organisational measures to protect your personal information. While no system can be completely secure, we are committed to safeguarding your data and handling it responsibly.</p>
-
-    <h2>Your rights</h2>
-    <p>You have rights in relation to your personal data, including:</p>
-    <ul>
-      <li>The right to access the information we hold about you</li>
-      <li>The right to request correction of inaccurate information</li>
-      <li>The right to request deletion of your data in certain circumstances</li>
-      <li>The right to restrict or object to how we use your data</li>
-      <li>The right to complain to the Information Commissioner's Office (ICO)</li>
-    </ul>
-    <p>If you would like to exercise any of these rights, please contact us using the details above.</p>
-
-    <h2>If you are not satisfied</h2>
-    <p>If you have concerns about how we use your data, please contact us and we will do our best to resolve the issue. You also have the right to lodge a complaint with the Information Commissioner's Office at <a href="https://www.ico.org.uk" target="_blank" rel="noopener noreferrer">www.ico.org.uk</a>.</p>
-
-    <h2>Cookies</h2>
-    <p>Our website uses cookies to help us understand how visitors use our site and to improve your experience. This includes the use of Google Analytics (GA4), which provides anonymised information about how users interact with our website.</p>
-    <p>When you visit our site, you will be given the option to accept or manage cookies. You can also control cookies through your browser settings.</p>
-    <p>We are committed to ensuring you understand how your information is used and to supporting you in a clear, fair and transparent way.</p>
-
-  </div>
-
-</main>
-
-<!-- ═══════════════════════════════════════════════════════════════════════
-     INLINE CTA + FORM
-     ═══════════════════════════════════════════════════════════════════════ -->
-<div class="inline-cta">
-  <div class="inline-cta-text">
-    <h3>Have a question? We&rsquo;re here to help.</h3>
-    <p>No charge for the initial conversation. Completely confidential.</p>
-  </div>
-  <div class="cta-buttons">
-    <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-    <button type="button" class="btn-secondary btn-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" id="inline-form-toggle">Send a message</button>
-  </div>
-</div>
-<div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
-  <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
-    <form class="contact-form" id="inline-form" novalidate>
-      <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-      <input type="hidden" name="subject" value="Website enquiry &mdash; Privacy Policy">
-      <input type="hidden" name="from_name" value="Lightside Website">
-      <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-      <div class="cf-row cf-row--2">
-        <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
-        <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
-      </div>
-      <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
-      <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation &mdash; as much or as little as you like."></textarea></div>
-      <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
-      <div class="cf-actions">
-        <button type="submit" class="cf-submit">Send message</button>
-        <button type="button" class="btn-form-cancel">Cancel</button>
-      </div>
-      <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-    </form>
-    <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+<div class="trust-bar" aria-label="Trust indicators">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-circle" aria-hidden="true">&#10003;</span>Completely Confidential</div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item"><span class="trust-circle" aria-hidden="true">&#10003;</span>No charge for initial conversation</div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item"><span class="trust-circle" aria-hidden="true">&#10003;</span>FCA Authorised &amp; Regulated</div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item"><span class="trust-circle" aria-hidden="true">&#10003;</span>We work for you, not your creditors</div>
   </div>
 </div>
 
-<!-- Footer CTA omitted — policy/utility page -->
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PAGE BODY — replace this comment block with page-specific content.
+
+     Recommended structure:
+
+       <main id="main-content" aria-label="[Page description]">
+
+         <section class="page-hero" aria-labelledby="page-h1">
+           [Hero content]
+         </section>
+
+         <div class="page-body">
+           [Main content sections]
+         </div>
+
+       </main>
+
+     INLINE CTA FORM (optional):
+     If this page needs an inline contact form, use these IDs:
+       id="inline-contact-form"  on the slide-form-wrap div
+       id="inline-form"          on the <form> element
+       id="inline-error"         on the cf-error div
+       id="inline-success"       on the cf-success div
+     Then update the util bar JS block at the bottom to wire to the inline
+     form instead of the footer form (see comment in JS block).
+     By default the util bar "Send a message" opens the footer form.
+
+     TRUST BAR:
+     Remove the div.trust-bar block above for policy/utility pages
+     (Privacy Policy, TCF Policy, Complaints) where it is not appropriate.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FOOTER CTA — populate FOOTER CTA HEADING and CHANNEL NAME placeholders.
+     Remove this entire section for policy/utility pages.
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="footer-cta-wrap">
+  <div class="footer-cta">
+    <p class="footer-cta-label">Start the conversation</p>
+    <h3><!-- FOOTER CTA HEADING --></h3>
+    <p>No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
+    <div class="cta-buttons">
+      <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+      <button type="button" class="btn-secondary btn-form-toggle" id="footer-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">Send a message</button>
+    </div>
+    <div class="slide-form-wrap slide-form-wrap--dark" id="footer-contact-form" hidden>
+      <form class="contact-form contact-form--dark" id="footer-form" novalidate>
+        <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+        <input type="hidden" name="subject" value="Website enquiry — <!-- CHANNEL NAME -->">
+        <input type="hidden" name="from_name" value="Lightside Website">
+        <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="cf-row cf-row--2">
+          <div class="cf-field"><label for="footer-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="footer-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+          <div class="cf-field"><label for="footer-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="footer-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+        </div>
+        <div class="cf-field"><label for="footer-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="footer-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+        <div class="cf-field"><label for="footer-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="footer-message" name="message" required rows="4" placeholder="Tell us a little about your situation — as much or as little as you like."></textarea></div>
+        <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+        <div class="cf-actions">
+          <button type="submit" class="cf-submit">Send message</button>
+          <button type="button" class="btn-form-cancel">Cancel</button>
+        </div>
+        <div class="cf-error" id="footer-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+      </form>
+      <div class="cf-success" id="footer-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FAQ SECTION — remove entirely if this page has no FAQs.
+     If FAQs are present, add FAQPage JSON-LD schema in <head>.
+     Minimum 3 items. Add further .faq-item blocks as needed.
+     ═══════════════════════════════════════════════════════════════════════ -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">Questions people often ask</h2>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq1">
+        <!-- FAQ QUESTION 1 -->
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq1" role="region">
+        <p><!-- FAQ ANSWER 1 --></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2">
+        <!-- FAQ QUESTION 2 -->
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq2" role="region">
+        <p><!-- FAQ ANSWER 2 --></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq3">
+        <!-- FAQ QUESTION 3 -->
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq3" role="region">
+        <p><!-- FAQ ANSWER 3 --></p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      FOOTER — fixed, do not modify
@@ -438,8 +451,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      JAVASCRIPT — shared interactions, fixed, do not modify.
+     Page-specific JS goes in a separate <script> block after this one.
      ═══════════════════════════════════════════════════════════════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ── Hamburger ── */
 (function(){
   var hamburger=document.getElementById('hamburger');
@@ -470,7 +484,9 @@ document.getElementById('cookie-decline').addEventListener('click',function(){
   localStorage.setItem('ls_cookie_consent','essential');
 });
 
-/* ── initForm — Web3Forms slide-down pattern ── */
+/* ── initForm — Web3Forms slide-down pattern ──
+   Usage: initForm('toggle-id','wrapper-id','form-id','error-id','success-id')
+   Wire one call per form present on this page.                              */
 function initForm(toggleId,wrapperId,formId,errorId,successId){
   var toggle=document.getElementById(toggleId);
   var wrapper=document.getElementById(wrapperId);
@@ -526,18 +542,50 @@ function initForm(toggleId,wrapperId,formId,errorId,successId){
   });
 }
 
-/* Wire inline form */
-initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+/* Wire footer form — always present */
+initForm('footer-form-toggle','footer-contact-form','footer-form','footer-error','footer-success');
 
-/* ── Util bar "Send a message" — opens inline form and scrolls to it ── */
+/* ── Util bar “Send a message” ── opens footer form and scrolls to it ──
+   On pages that add an inline form, replace footerToggle/footer-contact-form
+   references below with inlineToggle/inline-contact-form, and add:
+   initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success'); */
 (function(){
   var utilBtn=document.getElementById('util-form-toggle');
-  var inlineToggle=document.getElementById('inline-form-toggle');
-  if(!utilBtn||!inlineToggle)return;
+  var footerToggle=document.getElementById('footer-form-toggle');
+  if(!utilBtn||!footerToggle)return;
   utilBtn.addEventListener('click',function(){
-    var wrapper=document.getElementById('inline-contact-form');
-    if(wrapper&&wrapper.hidden){inlineToggle.click();}
+    var wrapper=document.getElementById('footer-contact-form');
+    if(wrapper&&wrapper.hidden){footerToggle.click();}
     setTimeout(function(){
-      var target=document.getElementById('inline-contact-form');
+      var target=document.getElementById('footer-contact-form');
       if(target){
-        var headerH=document.querySelec
+        var headerH=document.querySelector('.site-header');
+        var offset=headerH?headerH.offsetHeight+8:98;
+        var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+        window.scrollTo({top:top,behavior:'smooth'});
+      }
+    },80);
+  });
+})();
+
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var answer=document.getElementById(btn.getAttribute('aria-controls'));
+    var isOpen=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-question').forEach(function(b){b.setAttribute('aria-expanded','false');});
+    document.querySelectorAll('.faq-answer').forEach(function(a){a.classList.remove('open');});
+    if(!isOpen){
+      btn.setAttribute('aria-expanded','true');
+      if(answer)answer.classList.add('open');
+    }
+  });
+});
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PAGE-SPECIFIC JAVASCRIPT — insert below if needed
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+</body>
+</html>

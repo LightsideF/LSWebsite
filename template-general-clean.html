@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Lightside Financial | Who We Are</title>
-<meta name="description" content="Every client works directly with an adviser — someone who knows their situation, understands the options, and sees the case through from the first conversation to the final resolution.">
+<title><!-- PAGE TITLE --> | Lightside Financial</title>
+<meta name="description" content="<!-- META DESCRIPTION -->">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.lightsidefinancial.com/about.html">
+<link rel="canonical" href="https://www.lightsidefinancial.com/<!-- PAGE-SLUG -->.html">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="About Lightside Financial | Who We Are">
-<meta property="og:description" content="Every client works directly with an adviser — someone who knows their situation, understands the options, and sees the case through from the first conversation to the final resolution.">
-<meta property="og:url" content="https://www.lightsidefinancial.com/about.html">
+<meta property="og:title" content="<!-- PAGE TITLE --> | Lightside Financial">
+<meta property="og:description" content="<!-- META DESCRIPTION -->">
+<meta property="og:url" content="https://www.lightsidefinancial.com/<!-- PAGE-SLUG -->.html">
 <meta property="og:site_name" content="Lightside Financial">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Lightside Financial | Who We Are">
-<meta name="twitter:description" content="Every client works directly with an adviser — someone who knows their situation, understands the options, and sees the case through from the first conversation to the final resolution.">
+<meta name="twitter:title" content="<!-- PAGE TITLE --> | Lightside Financial">
+<meta name="twitter:description" content="<!-- META DESCRIPTION -->">
 
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHB4VJ09BT"></script>
@@ -33,13 +33,49 @@
 </script>
 
 <!-- JSON-LD: BreadcrumbList -->
+<!-- NOTE: Adjust depth to match page position. Most general pages sit at L1 (Home › Page). -->
+<!-- Remove position 3 entirely if this is a top-level page. -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.lightsidefinancial.com/index.html"},{"@type":"ListItem","position":2,"name":"About Lightside Financial","item":"https://www.lightsidefinancial.com/about.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.lightsidefinancial.com/index.html"},{"@type":"ListItem","position":2,"name":"<!-- PAGE TITLE -->","item":"https://www.lightsidefinancial.com/<!-- PAGE-SLUG -->.html"}]}
 </script>
 
 <!-- JSON-LD: WebPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.lightsidefinancial.com/about.html","name":"About Lightside Financial | Who We Are","description":"Every client works directly with an adviser — someone who knows their situation, understands the options, and sees the case through from the first conversation to the final resolution.","speakable":{"@type":"SpeakableSpecification","cssSelector":["#page-h1",".hero-lead",".page-intro"]}}
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.lightsidefinancial.com/<!-- PAGE-SLUG -->.html","name":"<!-- PAGE TITLE --> | Lightside Financial","description":"<!-- META DESCRIPTION -->","speakable":{"@type":"SpeakableSpecification","cssSelector":["#page-h1",".hero-lead",".page-intro"]}}
+</script>
+
+<!-- JSON-LD: FAQPage — remove entirely if page has no FAQ section -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "<!-- FAQ QUESTION 1 -->",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<!-- FAQ ANSWER 1 -->"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "<!-- FAQ QUESTION 2 -->",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<!-- FAQ ANSWER 2 -->"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "<!-- FAQ QUESTION 3 -->",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<!-- FAQ ANSWER 3 -->"
+      }
+    }
+  ]
+}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,16 +177,41 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .page-intro p:last-child{margin-bottom:0;}
 .page-intro .opener{font-family:'Merriweather',serif;font-size:1.05rem;font-weight:300;font-style:italic;color:var(--site-navy);line-height:1.85;}
 
-/* ── Content block ── */
+/* ── Content block — general prose or custom section ── */
+/* Use freely inside <main> for any page-specific sections. */
 .content-block{margin-bottom:44px;}
 .content-block p{font-size:1rem;line-height:1.8;color:var(--site-text);margin-bottom:18px;}
 .content-block p:last-child{margin-bottom:0;}
 
-/* ── Highlight box ── */
+/* ── Highlight box (optional — e.g. a key stat, pull quote, or callout) ── */
 .highlight-box{background:var(--site-offwhite);border:1px solid var(--site-border);border-left:4px solid var(--site-teal);border-radius:0 6px 6px 0;padding:28px 32px;margin:32px 0 44px;}
 .highlight-box h3{font-family:'Merriweather',serif;font-size:1.05rem;font-weight:700;color:var(--site-navy);margin-bottom:12px;}
 .highlight-box p{font-size:0.95rem;color:var(--site-text);line-height:1.75;margin-bottom:10px;}
 .highlight-box p:last-child{margin-bottom:0;}
+
+/* ── Testimonial ── */
+.testimonial-section{background:var(--site-offwhite);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);padding:48px 24px;}
+.testimonial-inner{max-width:var(--max-w);margin:0 auto;}
+.testimonial-block{border-left:6px solid var(--site-teal);border-radius:0 6px 6px 0;padding:32px 40px;position:relative;}
+.testimonial-block::before{content:'\201C';position:absolute;top:8px;left:18px;font-family:'Merriweather',serif;font-size:5rem;color:rgba(42,139,139,0.12);line-height:1;pointer-events:none;}
+.testimonial-block blockquote{font-family:'Merriweather',serif;font-size:1.02rem;font-style:italic;font-weight:300;color:var(--site-navy);line-height:1.8;margin-bottom:16px;position:relative;}
+.testimonial-attr{font-size:0.85rem;font-weight:700;color:var(--site-teal);}
+
+/* ── FAQ ── */
+.faq-section{max-width:var(--max-w);margin:0 auto;padding:52px 24px 56px;}
+.faq-section h2{font-family:'Merriweather',serif;font-size:1.35rem;font-weight:700;color:var(--site-navy);margin-bottom:28px;line-height:1.3;}
+.faq-list{border:1px solid var(--site-border);border-radius:6px;overflow:hidden;}
+.faq-item{border-bottom:1px solid var(--site-border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-question{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;text-align:left;font-family:'Lato',sans-serif;font-size:0.98rem;font-weight:700;color:var(--site-navy);line-height:1.45;transition:background 0.15s;min-height:44px;}
+.faq-question:hover{background:var(--site-offwhite);}
+.faq-question[aria-expanded="true"]{background:var(--site-offwhite);color:var(--site-teal);}
+.faq-icon{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:var(--site-light);color:var(--site-teal);font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background 0.15s,transform 0.25s;}
+.faq-question[aria-expanded="true"] .faq-icon{background:var(--site-teal);color:white;transform:rotate(45deg);}
+.faq-answer{display:none;padding:0 24px 20px;}
+.faq-answer.open{display:block;}
+.faq-answer p{font-size:0.95rem;color:var(--site-text);line-height:1.75;margin-bottom:10px;}
+.faq-answer p:last-child{margin-bottom:0;}
 
 /* ── Footer CTA ── */
 .footer-cta-wrap{background:var(--site-navy);}
@@ -171,21 +232,28 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .cf-row--2{grid-template-columns:1fr 1fr;}
 .cf-field{display:flex;flex-direction:column;gap:6px;}
 .cf-field label{font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.85);}
+.slide-form-wrap--light .cf-field label{color:var(--site-navy);}
 .cf-field input,.cf-field textarea{padding:10px 14px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;background:rgba(255,255,255,0.1);color:white;font-family:'Lato',sans-serif;font-size:0.95rem;width:100%;}
+.slide-form-wrap--light .cf-field input,.slide-form-wrap--light .cf-field textarea{background:white;border:1px solid var(--site-border);color:var(--site-text);}
 .cf-field input::placeholder,.cf-field textarea::placeholder{color:rgba(255,255,255,0.35);}
+.slide-form-wrap--light .cf-field input::placeholder,.slide-form-wrap--light .cf-field textarea::placeholder{color:var(--site-muted);}
 .cf-field textarea{resize:vertical;min-height:100px;}
 .cf-required{color:var(--site-accent);}
 .cf-optional{font-size:0.8rem;font-weight:400;color:rgba(255,255,255,0.5);}
+.slide-form-wrap--light .cf-optional{color:var(--site-muted);}
 .cf-privacy{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;}
+.slide-form-wrap--light .cf-privacy{color:var(--site-muted);}
 .cf-privacy a{color:var(--site-accent);}
 .cf-actions{display:flex;gap:12px;align-items:center;}
 .cf-submit{background:var(--site-accent);color:var(--site-navy);font-weight:700;font-size:0.92rem;padding:11px 24px;border-radius:4px;border:none;cursor:pointer;font-family:inherit;min-height:44px;}
 .cf-submit:hover{background:#d4911c;}
 .btn-form-cancel{background:none;border:none;font-size:0.85rem;color:rgba(255,255,255,0.55);cursor:pointer;font-family:inherit;padding:4px 8px;}
+.slide-form-wrap--light .btn-form-cancel{color:var(--site-muted);}
 .cf-error{margin-top:8px;}
 .cf-error p{font-size:0.88rem;color:#f87171;line-height:1.5;}
 .cf-success{padding:16px;background:rgba(42,139,139,0.15);border-radius:4px;border:1px solid rgba(42,139,139,0.3);}
 .cf-success-msg{font-size:0.92rem;color:white;line-height:1.6;}
+.slide-form-wrap--light .cf-success-msg{color:var(--site-navy);}
 
 /* ── Footer ── */
 .site-footer{background:var(--site-navy);padding:48px 24px 24px;}
@@ -209,74 +277,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .footer-bottom a{color:rgba(255,255,255,0.45);margin-right:14px;}
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
-/* ── Page-specific: Values panel ── */
-.values-panel{background:var(--site-navy);border-radius:6px;padding:32px;margin-bottom:44px;}
-.values-panel h3{font-family:'Merriweather',serif;font-size:1.05rem;color:var(--site-white);margin-bottom:20px;}
-.value-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px;}
-.value-item:last-child{margin-bottom:0;}
-.value-dot{width:8px;height:8px;border-radius:50%;background:var(--site-accent);flex-shrink:0;margin-top:8px;}
-.value-item p{font-size:0.9rem;color:rgba(255,255,255,0.82);line-height:1.65;}
-.value-item strong{display:block;color:var(--site-white);margin-bottom:2px;font-size:0.92rem;}
-
-/* ── Page-specific: FCA strip ── */
-.fca-strip{background:var(--site-light);border:1px solid var(--site-border);border-left:5px solid var(--site-teal);border-radius:0 6px 6px 0;padding:22px 28px;margin-bottom:64px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.fca-badge{width:48px;height:48px;border-radius:50%;background:var(--site-teal);color:var(--site-white);font-size:0.65rem;font-weight:900;display:flex;align-items:center;justify-content:center;text-align:center;letter-spacing:0.02em;flex-shrink:0;line-height:1.2;}
-.fca-text p{font-size:0.9rem;color:var(--site-text);line-height:1.65;}
-.fca-text strong{color:var(--site-navy);}
-
-/* ── Page-specific: Section divider ── */
-.section-divider{display:flex;align-items:center;gap:16px;margin:0 0 52px;}
-.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--site-border);}
-.section-divider span{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--site-muted);white-space:nowrap;}
-
-/* ── Page-specific: Team panels ── */
-.team-panel{display:grid;grid-template-columns:260px 1fr;gap:0;border:1px solid var(--site-border);border-radius:6px;overflow:hidden;margin-bottom:36px;}
-.team-photo-col{background:var(--site-light);display:flex;flex-direction:column;align-items:stretch;}
-.team-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;}
-.team-photo-placeholder{width:100%;aspect-ratio:3/4;background:var(--site-light);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--site-muted);}
-.team-photo-placeholder svg{width:48px;height:48px;opacity:0.35;}
-.team-photo-placeholder span{font-size:0.78rem;color:var(--site-muted);font-style:italic;}
-.team-name-block{background:var(--site-navy);padding:18px 20px;}
-.team-name-block h3{font-family:'Merriweather',serif;font-size:1.05rem;font-weight:700;color:var(--site-white);margin-bottom:4px;line-height:1.3;}
-.team-name-block .role{font-size:0.78rem;color:var(--site-accent);font-weight:700;line-height:1.4;}
-.team-bio-col{padding:32px 36px;border-left:1px solid var(--site-border);}
-.team-bio-col p{font-size:0.93rem;color:var(--site-text);line-height:1.85;margin-bottom:14px;}
-.team-bio-col p:last-child{margin-bottom:0;}
-
-/* ── Page-specific: Bio pull quote ── */
-.bio-pull-quote{border-left:4px solid var(--site-accent);padding:14px 20px;margin:20px 0;background:var(--site-offwhite);border-radius:0 4px 4px 0;}
-.bio-pull-quote p{font-family:'Merriweather',serif;font-size:0.9rem;font-style:italic;font-weight:300;color:var(--site-navy);line-height:1.75;margin-bottom:0!important;}
-.bio-pull-quote .pull-label{font-family:'Lato',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--site-muted);margin-bottom:8px!important;font-style:normal;}
-
-/* ── Page-specific: Bio client quote ── */
-.bio-client-quote{border-top:1px solid var(--site-border);margin-top:20px;padding-top:20px;}
-.bio-client-quote blockquote{font-size:0.88rem;font-style:italic;color:var(--site-muted);line-height:1.75;margin-bottom:8px;}
-.bio-client-quote cite{font-size:0.8rem;font-weight:700;color:var(--site-teal);font-style:normal;}
-
-/* ── Page-specific: Testimonials link strip ── */
-.testimonials-link-strip{background:var(--site-offwhite);border:1px solid var(--site-border);border-left:5px solid var(--site-accent);border-radius:0 6px 6px 0;padding:24px 28px;margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-.testimonials-link-strip p{font-size:0.95rem;color:var(--site-text);line-height:1.65;}
-.testimonials-link-strip strong{color:var(--site-navy);}
-.btn-outline{border:2px solid var(--site-navy);color:var(--site-navy);padding:10px 24px;border-radius:4px;font-weight:700;font-size:0.88rem;white-space:nowrap;flex-shrink:0;display:inline-block;}
-.btn-outline:hover{background:var(--site-navy);color:var(--site-white);text-decoration:none;}
-
-/* ── Page-specific: Assurance panel ── */
-.assurance-panel{background:var(--site-navy);border-radius:6px;padding:36px 40px;margin:52px 0;display:flex;align-items:flex-start;gap:24px;}
-.assurance-icon{width:48px;height:48px;border-radius:50%;background:var(--site-accent);color:var(--site-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;font-weight:900;}
-.assurance-panel h3{font-family:'Merriweather',serif;font-size:1.15rem;color:var(--site-white);margin-bottom:10px;line-height:1.3;}
-.assurance-panel p{font-size:0.93rem;color:rgba(255,255,255,0.8);line-height:1.75;margin-bottom:10px;}
-.assurance-panel p:last-child{margin-bottom:0;}
-
 /* ── Responsive ── */
 @media(max-width:900px){
   .footer-inner{grid-template-columns:1fr;}
-}
-@media(max-width:820px){
-  .team-panel{grid-template-columns:1fr;}
-  .team-photo-col{flex-direction:row;flex-wrap:wrap;}
-  .team-photo,.team-photo-placeholder{aspect-ratio:4/3;}
-  .team-bio-col{border-left:none;border-top:1px solid var(--site-border);padding:24px;}
-  .assurance-panel{flex-direction:column;}
 }
 @media(max-width:760px){
   .cf-row--2{grid-template-columns:1fr;}
@@ -328,7 +331,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <li><a href="/personal">Personal Debt</a></li>
         <li><a href="/business">Business &amp; Directors</a></li>
         <li><a href="/our-network">Our Network</a></li>
-        <li><a href="/about" class="active">About</a></li>
+        <!-- Set class="active" on the link matching this page -->
+        <li><a href="/about">About</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="/contact" class="nav-cta">Contact Us</a></li>
       </ul>
@@ -339,17 +343,23 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </header>
 
+<!-- ═══════════════════════════════════
+     HERO
+     ═══════════════════════════════════ -->
 <section class="page-hero" aria-labelledby="page-h1">
   <div class="hero-inner">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a> &rsaquo;
-      <span>About Lightside</span>
+      <!-- Add intermediate crumb here if page sits below an L1 hub: -->
+      <!-- <a href="<!-- PARENT PAGE -->.html"><!-- PARENT LABEL --></a> &rsaquo; -->
+      <span><!-- PAGE TITLE --></span>
     </nav>
-    <h1 id="page-h1">About Lightside</h1>
-    <p class="hero-lead">Every client works directly with an adviser — someone who knows their situation, understands the options, and sees the case through from the first conversation to the final resolution.</p>
+    <h1 id="page-h1"><!-- H1 HEADING --></h1>
+    <p class="hero-lead"><!-- HERO LEAD --></p>
   </div>
 </section>
 
+<!-- Trust bar — keep on all pages. Remove only for purely admin/policy pages. -->
 <div class="trust-bar" aria-label="Trust indicators">
   <div class="trust-bar-inner">
     <div class="trust-item"><span class="trust-circle" aria-hidden="true">&#10003;</span>Completely Confidential</div>
@@ -362,224 +372,74 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </div>
 
+<!-- ═══════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════ -->
 <main id="main-content">
 
   <div class="page-body">
 
-    <!-- Firm story intro -->
+    <!-- Page intro -->
     <div class="page-intro">
-      <div class="section-label">Who we are</div>
-      <h2 class="section-h2">A different kind of debt advice firm</h2>
-      <p>Lightside is considered a specialist in its field — regularly referred clients by solicitors, accountants, and mortgage advisers who trust us to handle their clients' matters with discretion, expertise, and a genuine commitment to the right outcome.</p>
-      <p>We will consider all available options and give honest, professional advice on what is realistically achievable — for individuals and businesses alike. Our aim is always to put a client in a position where they can make a genuinely informed choice about the right path forward, without pressure and without jargon.</p>
-
-      <div class="testimonials-link-strip">
-        <p><strong>Read what our clients say.</strong> Financial difficulty is one of the most private experiences a person can go through — which is why you won't find us on Trustpilot. The testimonials on our site have been shared privately, over many years, by clients who wanted to express their gratitude.</p>
-        <a href="/about/testimonials" class="btn-outline">Read testimonials</a>
-      </div>
+      <div class="section-label"><!-- SECTION LABEL --></div>
+      <h2 class="section-h2"><!-- INTRO H2 --></h2>
+      <p class="opener"><!-- OPENER PARAGRAPH —  Merriweather italic, sets tone --></p>
+      <p><!-- BODY PARAGRAPH 1 --></p>
+      <p><!-- BODY PARAGRAPH 2 — remove if not needed --></p>
     </div>
 
-    <!-- Values panel -->
-    <div class="values-panel">
-      <h3>What we believe</h3>
-      <div class="value-item">
-        <div class="value-dot"></div>
-        <p><strong>Debt is rarely the whole story</strong>The financial situation is usually the visible part of something more complex. We take the time to understand the full picture before we recommend anything.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-dot"></div>
-        <p><strong>We think about where you want to end up</strong>The initial conversation is not just about your current situation — it takes into account your future aspirations too. The right solution is one that works for the life you want to rebuild, not just the crisis in front of you.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-dot"></div>
-        <p><strong>Honest advice, not comfortable advice</strong>We will tell you what we think is the right course of action — including when that answer is not the one you were hoping for.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-dot"></div>
-        <p><strong>Early advice opens more doors</strong>The sooner we can look at a situation, the more options are available. We encourage people to contact us before they feel they have run out of them.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-dot"></div>
-        <p><strong>You deal with us — we deal with your creditors</strong>Once you instruct us, you can stop answering calls and letters. We handle all creditor contact directly.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-dot"></div>
-        <p><strong>Plans adapt when circumstances change</strong>Life doesn't stand still. If your situation changes and the agreed approach is no longer the most appropriate, we will revisit your options and make sure the course of action continues to fit your needs.</p>
-      </div>
+    <!-- ─────────────────────────────────────────
+         OPTIONAL: Highlight / callout box
+         Use for a key stat, important note, or
+         a pull-quote style block. Remove if not needed.
+         ───────────────────────────────────────── -->
+    <div class="highlight-box">
+      <h3><!-- HIGHLIGHT HEADING --></h3>
+      <p><!-- HIGHLIGHT BODY --></p>
     </div>
 
-    <!-- FCA strip -->
-    <div class="fca-strip">
-      <div class="fca-badge">FCA<br>Auth.</div>
-      <div class="fca-text">
-        <p><strong>Authorised and Regulated by the Financial Conduct Authority.</strong> Lightside Financial is a trading name of Lightside (BSPC) Ltd, registered in England and Wales (Company No. 5817877). FCA Reference No. 676943. Registered office: Bourton Barns, Ebdon Lane, Wick St Lawrence, Weston-super-Mare, BS22 7YA.</p>
-      </div>
-    </div>
-
-    <!-- Team section -->
-    <div class="section-divider"><span>The team</span></div>
-    <div class="section-label">The people you will work with</div>
-    <h2 class="section-h2" id="team">Meet the advisers</h2>
-    <p class="section-sub">Every client at Lightside works directly with one of the four advisers below. When you get in touch, we will make sure you are speaking with the right person for your situation — and if your case is better suited to a colleague, we will tell you and make the introduction ourselves.</p>
-
-    <!-- John Beynon -->
-    <div class="team-panel" id="john-beynon">
-      <div class="team-photo-col">
-        <div class="team-photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
-          <span>Photo to follow</span>
-        </div>
-        <div class="team-name-block">
-          <h3>John Beynon</h3>
-          <div class="role">Director &amp; Money and Debt Adviser</div>
-        </div>
-      </div>
-      <div class="team-bio-col">
-        <p>John's career before Lightside covered marketing at IBM, moving into motor finance with First National — six years understanding how consumer lending works from the lender's side — and then into customer-facing commercial lending at Lloyds Bank.</p>
-        <p>That breadth matters. John has sat in the rooms where lending decisions are made, understands the commercial logic that drives how creditors behave, and knows from experience what they will and won't accept. When he negotiates on behalf of a client, he is not guessing at how the other side thinks.</p>
-        <p>What has remained constant across all of it is the direct relationship with the people he works with. John is at his best face-to-face with a client — getting to the heart of a complicated situation quickly, and setting out a plan that is both realistic and clearly understood.</p>
-
-        <div class="bio-pull-quote">
-          <p class="pull-label">In John's words</p>
-          <p>"When business owners take advice early, they have so many more options available to them, and far fewer sleepless nights. It is so important to talk to someone who gets you and will give you the best advice for you."</p>
-        </div>
-
-        <p>John's particular depth is in business debt: assessing viability, negotiating time-to-pay arrangements, and making sure directors understand what insolvency law requires of them before they make decisions they cannot undo.</p>
-        <p>Outside work, John and his partner run the Black Horse, a village pub — which tells you something about his character. Patience, genuine interest in people, and the ability to stay calm when things get complicated are useful qualities in both roles.</p>
-
-        <div class="bio-client-quote">
-          <blockquote>"Thank you John, you have been a star putting up with me throughout this dark period. I feel as though the world is going to be a good place now. You're a true gent."</blockquote>
-          <cite>Mr P, Bristol</cite>
-        </div>
-      </div>
-    </div>
-
-    <!-- Priti Shah -->
-    <div class="team-panel" id="priti-shah">
-      <div class="team-photo-col">
-        <img class="team-photo" src="priti-shah.jpg" alt="Priti Shah — Regional Director, Lightside Financial"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-        <div class="team-photo-placeholder" style="display:none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
-          <span>Photo to follow</span>
-        </div>
-        <div class="team-name-block">
-          <h3>Priti Shah</h3>
-          <div class="role">Regional Director, London &amp; Home Counties<br>Money and Debt Adviser</div>
-        </div>
-      </div>
-      <div class="team-bio-col">
-        <p>Priti began her career in investment banking, providing debt financing of £5million–£25million to businesses based on cash flow rather than assets as security. She was good at it — but the work felt abstract. The deals were large, the outcomes distant.</p>
-        <p>She left the corporate world to do something different: work directly with individuals and families facing financial difficulty, at the point where the stakes are most personal. That was over twenty years ago.</p>
-        <p>Her investment banking background gave her something that proves useful every day: fluency with business cash flows, balance sheets, and profit and loss — and an ease with large financial numbers that means she is rarely fazed by the scale of what a client is facing. But it is twenty years of working directly with creditors, lenders, and trustees that has given her the deeper knowledge of how they think, what they will accept, and where the real room for negotiation lies.</p>
-
-        <div class="bio-pull-quote">
-          <p class="pull-label">In Priti's words</p>
-          <p>"Get it wrong and the home is at risk — relationships, kids, the lot. Get it right and there is often a real sense of a fresh start. That's what makes this work matter."</p>
-        </div>
-
-        <p>Priti's specialism is the space where business and personal finances collide. When a business is struggling, the consequences rarely stop at the company's door — directors face personal liability, joint debts surface, and the family home can come into the picture. Priti takes a holistic view from the outset: building a strategy that addresses the business situation and the personal financial fallout together, rather than treating them as separate problems to be solved in sequence.</p>
-        <p>She has appeared on Sky TV and BBC Radio, and has produced a series of online guides helping people understand their options when facing financial difficulty.</p>
-        <p>Away from work, Priti is a keen scuba diver. She describes the underwater world as quiet, peaceful, and intensely colourful — though you always have to stay alert. Her most memorable dives have been in the Andaman &amp; Nicobar Islands.</p>
-
-        <div class="bio-client-quote">
-          <blockquote>"Priti has a knack of simplifying the most complex. I truly admire her dedication to her clients — I have felt completely supported by her over the past few years."</blockquote>
-          <cite>Emily, London</cite>
-        </div>
-      </div>
-    </div>
-
-    <!-- Khurm Arshad -->
-    <div class="team-panel" id="khurm-arshad">
-      <div class="team-photo-col">
-        <div class="team-photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
-          <span>Photo to follow</span>
-        </div>
-        <div class="team-name-block">
-          <h3>Khurm Arshad</h3>
-          <div class="role">Regional Director, Bristol &amp; South West<br>Money and Debt Adviser</div>
-        </div>
-      </div>
-      <div class="team-bio-col">
-        <p>Before joining Lightside, Khurm ran the family construction and property business — overseeing projects of up to twenty flats — before retraining as a mortgage adviser. He was mid-way through that training when Lightside made an approach. He has been here for over fifteen years since.</p>
-        <p>There is a particular kind of case that tends to find its way to Khurm: situations where alternative lenders are involved, where a business liquidation has triggered personal guarantees, or where creditors' solicitors are communicating aggressively. He handles these with a cool, settled confidence — focused on finding a solution rather than winning an argument.</p>
-
-        <div class="bio-pull-quote">
-          <p class="pull-label">In Khurm's words</p>
-          <p>"I had been negotiating a settlement for a client who appeared to own a property in Mayfair. After numerous rounds of negotiation, a settlement was reached. Our client was really pleased — not just with the outcome, but with the strategic thinking throughout. What was unusual was the comment from the opposing solicitor: he said he was pleased to have dealt with someone so professional and solution-oriented. He has since referred work to Lightside."</p>
-        </div>
-
-        <p>That last detail is not one Khurm tends to mention himself. It is worth noting.</p>
-        <p>Outside work, Khurm's focus is his family. Current projects at home include building an outdoor wildlife-friendly pool for cold water dips — following the completion of a commercial kitchen for his wife's business, The Bentley Road Baker.</p>
-
-        <div class="bio-client-quote">
-          <blockquote>"Thank you for all your help with this complicated situation, and for taking the chance on it when solicitors weren't interested. Our lives already feel different — it feels like we can breathe and live again, and our home is safe once more."</blockquote>
-          <cite>Mr &amp; Mrs J, Somerset</cite>
-        </div>
-      </div>
-    </div>
-
-    <!-- Barry Mitchell -->
-    <div class="team-panel" id="barry-mitchell">
-      <div class="team-photo-col">
-        <div class="team-photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
-          <span>Photo to follow</span>
-        </div>
-        <div class="team-name-block">
-          <h3>Barry Mitchell</h3>
-          <div class="role">Senior Consultant, London &amp; Home Counties<br>Money and Debt Adviser</div>
-        </div>
-      </div>
-      <div class="team-bio-col">
-        <p>In 2008, Barry made a deliberate decision: having spent fifteen years running a successful construction business and then becoming the UK's most successful mortgage adviser in 2003/4, he concluded that helping people take on debt they wanted was less useful than helping people get out of debt they didn't. He has been doing the latter ever since.</p>
-        <p>Barry has built a particular expertise in personal bankruptcy — specifically in cases where clients feared losing their home, and didn't. In one case, a client not only kept their home but their Porsche. In another, a client was discharged nine months early, with two properties that appeared to be in his name both successfully exempt from the bankruptcy estate.</p>
-        <p>He has also developed a significant specialism in landlord debt, where a property portfolio has become a cash drain rather than an asset worth holding. The work involves identifying which properties are worth keeping, managing the exit from those that are not, and handling any mortgage shortfalls that result. Barry has dealt with a number of cases involving property held overseas, where the complexity — and the anxiety — is considerably greater.</p>
-
-        <div class="bio-pull-quote">
-          <p class="pull-label">Barry's rules</p>
-          <p>"My first rule in life is to avoid a fight. My second rule is: if I'm going to fight, I'm going to fight to win. I've taught this in my Karate Dojo for years, and it sends a clear message."</p>
-        </div>
-
-        <p>Barry holds a black belt in karate, ran his own dojo, and has judged competitions in the UK and internationally. The discipline and strategic patience that is involved will be familiar to anyone who has worked with him on a difficult case.</p>
-
-        <div class="bio-client-quote">
-          <blockquote>"Barry has the ability to explain complicated matters in easy-to-understand language, and always answered every question, every call, every enquiry within a day — never making me feel I was a nuisance. He is amazingly patient."</blockquote>
-          <cite>SD, Uxbridge</cite>
-        </div>
-      </div>
-    </div>
-
-    <!-- Direct relationship assurance -->
-    <div class="assurance-panel">
-      <div class="assurance-icon" aria-hidden="true">&#8594;</div>
-      <div>
-        <h3>You will always speak to the right person</h3>
-        <p>When you contact Lightside, we will make sure you are working with the adviser best suited to your situation. If your case is better matched to a colleague, we will tell you — and make the introduction ourselves. There is no handoff. Every client works directly with their adviser throughout.</p>
-        <p>Not sure who to ask for? Just call or send a message. We will take it from there.</p>
-      </div>
-    </div>
+    <!-- ─────────────────────────────────────────
+         OPTIONAL: Additional content block
+         Repeat as needed for page-specific sections
+         (e.g. team bios, testimonial cards, process steps).
+         Build custom markup here — all site tokens available.
+         ───────────────────────────────────────── -->
+    <section class="content-block" aria-labelledby="content-block-heading">
+      <div class="section-label"><!-- SECTION LABEL --></div>
+      <h2 class="section-h2" id="content-block-heading"><!-- SECTION H2 --></h2>
+      <p class="section-sub"><!-- SECTION SUBHEADING — optional, remove if not needed --></p>
+      <!-- Page-specific content goes here -->
+    </section>
 
   </div><!-- /page-body -->
+
+
+  <!-- ─────────────────────────────────────────
+       OPTIONAL: Testimonial pull-quote
+       Remove entirely if not needed on this page.
+       ───────────────────────────────────────── -->
+  <section class="testimonial-section" aria-label="Client testimonial">
+    <div class="testimonial-inner">
+      <div class="testimonial-block">
+        <blockquote>
+          <!-- TESTIMONIAL QUOTE -->
+        </blockquote>
+        <div class="testimonial-attr"><!-- TESTIMONIAL ATTRIBUTION —  e.g. "Ms T, Bristol — IVA resolved 2024" --></div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 
-<!-- Footer CTA -->
+<!-- ═══════════════════════════════════
+     FOOTER CTA
+     ═══════════════════════════════════ -->
 <div class="footer-cta-wrap">
   <div class="footer-cta">
     <p class="footer-cta-label">Start the conversation</p>
-    <h3>Ready to talk to us?</h3>
-    <p>Call us or send a message — we'll help you work out where you stand and what your options are, at no charge and with no obligation to proceed.</p>
+    <h3><!-- FOOTER CTA HEADING --></h3>
+    <p>No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
     <div class="cta-buttons">
       <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
       <button type="button" class="btn-secondary" id="footer-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">Send a message</button>
@@ -587,7 +447,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="slide-form-wrap slide-form-wrap--dark" id="footer-contact-form" hidden>
       <form class="contact-form" id="footer-form" novalidate>
         <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-        <input type="hidden" name="subject" value="Website enquiry — About Us">
+        <input type="hidden" name="subject" value="Website enquiry — <!-- PAGE TITLE -->">
         <input type="hidden" name="from_name" value="Lightside Website">
         <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="cf-row cf-row--2">
@@ -607,6 +467,48 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     </div>
   </div>
 </div>
+
+
+<!-- ─────────────────────────────────────────
+     OPTIONAL: FAQ accordion
+     Remove section AND its FAQPage JSON-LD if not used.
+     ───────────────────────────────────────── -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">Questions people often ask</h2>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq1">
+        <!-- FAQ QUESTION 1 -->
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq1" role="region">
+        <p><!-- FAQ ANSWER 1 --></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2">
+        <!-- FAQ QUESTION 2 -->
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq2" role="region">
+        <p><!-- FAQ ANSWER 2 --></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq3">
+        <!-- FAQ QUESTION 3 -->
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq3" role="region">
+        <p><!-- FAQ ANSWER 3 --></p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 <footer class="site-footer" aria-label="Site footer">
@@ -746,7 +648,71 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     });
   }
 })();
+
+/* ── FAQ accordion ── */
+document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var answer=document.getElementById(btn.getAttribute('aria-controls'));
+    var isOpen=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-question').forEach(function(b){b.setAttribute('aria-expanded','false');});
+    document.querySelectorAll('.faq-answer').forEach(function(a){a.classList.remove('open');});
+    if(!isOpen){
+      btn.setAttribute('aria-expanded','true');
+      if(answer)answer.classList.add('open');
+    }
+  });
+});
 </script>
+
+<!--
+  TEMPLATE NOTES
+  ==============
+
+  FILE: template-general-clean.html
+  USE FOR: About Us, Testimonials, Contact, Policy pages, Resources, and any
+           page that does not require the L2 channel architecture (journey
+           infographic, recognition block, cases grid, adviser panel).
+
+  PLACEHOLDERS TO FILL
+  ─────────────────────
+  In <head>:
+    PAGE TITLE           Page title, e.g. "About Lightside Financial"
+    META DESCRIPTION     150-160 char summary for search results
+    PAGE-SLUG            Filename without extension, e.g. "about"
+    FAQ QUESTION/ANSWER  Fill or remove FAQPage JSON-LD block
+
+  In <body>:
+    H1 HEADING                    Main heading - matches or closely mirrors PAGE TITLE
+    HERO LEAD                     1-2 sentence lead beneath the H1
+    SECTION LABEL                 Small teal uppercase label, e.g. "Who we are"
+    INTRO H2                      Section heading beneath section label
+    OPENER PARAGRAPH              Merriweather italic tone-setter
+    BODY PARAGRAPH n              Prose content - add or remove <p> tags as needed
+    HIGHLIGHT HEADING/BODY        Optional callout box - remove if not needed
+    SECTION H2                    Heading for custom content block
+    TESTIMONIAL QUOTE/ATTRIBUTION Remove section if unused
+    FOOTER CTA HEADING            e.g. "Ready to talk it through?"
+    FAQ QUESTION/ANSWER n         FAQ items - remove section if unused
+
+  OPTIONAL SECTIONS (safe to delete entirely)
+    .highlight-box        Callout / key stat block
+    .content-block        Custom mid-page section - duplicate as needed
+    .testimonial-section  Pull-quote testimonial
+    .faq-section          FAQ accordion - also remove FAQPage JSON-LD
+
+  ACTIVE NAV ITEM
+  Add class="active" to the <a> matching this page in .site-nav ul.
+
+  TRUST BAR
+  Keep on all public-facing pages. Remove only for policy/admin pages.
+
+  GA4
+  ID G-ZHB4VJ09BT is hardcoded. Do not replace with a placeholder.
+
+  FORM SUBJECT LINE
+  Update the hidden "subject" input in the footer form to match the page,
+  e.g. "Website enquiry - About Us".
+-->
 
 </body>
 </html>
