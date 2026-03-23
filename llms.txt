@@ -1,0 +1,73 @@
+# Lightside Financial
+
+> FCA-authorised debt advice firm providing expert guidance on personal debt, creditor arrangements, debt management plans, negotiated settlements, individual voluntary arrangements, bankruptcy, insolvency for individuals, company voluntary liquidations, members voluntary liquidations, strike-offs, director disqualification, negotiation with insolvency practitioners, negotiation with Trustee in bankruptcy, insolvency and business restructuring advice to business owners, and company directors across the UK.
+
+Lightside Financial (trading name of Lightside (BSPC) Ltd) is authorised and regulated by the Financial Conduct Authority (FCA No. 676943). The firm works exclusively for its clients — not for creditors — providing independent, impartial advice and hands-on management of debt situations from first contact through to resolution.
+
+The firm's positioning is calm, clear, and human. Clients are typically in financial distress and need to feel understood before they will trust anyone. Lightside's approach is to take the full weight of creditor management off the client, deal directly with all creditors on the client's behalf, and identify the solution that genuinely fits the client's circumstances — not the most commercially convenient one.
+
+## Who Lightside helps
+
+**Individuals in personal debt** — people struggling with credit card debt, loan repayments, HMRC pressure, mortgage arrears, charging orders, or the threat of bankruptcy. Often referred by solicitors, accountants, IFAs, or mortgage advisers who recognise a debt problem that needs specialist resolution.
+
+**Business owners and company directors** — directors facing personal guarantees being called in, bounce back loan demands, HMRC pursuing the business or the individual, director disqualification proceedings, or the winding down of a company with debts. Personal and business debt often intertwine; Lightside takes a holistic view of both.
+
+**Professional referral partners** — solicitors, accountants, IFAs, and mortgage advisers who vet Lightside as a firm they can confidently refer clients to. The firm is FCA-authorised, carries a track record of documented case outcomes, and works alongside rather than in competition with other professional advisers.
+
+## Services — Personal Debt
+
+- **Creditor arrangements and Debt Management Plans** — negotiated informal arrangements with creditors, often including interest freeze, structured to fit the client's income and circumstances
+- **Negotiated full and final settlements** — lump-sum settlement of debts at a discount, permanently closing accounts; discounts range from 10% to 80% depending on creditor and circumstances
+- **Bankruptcy advice and preparation** — full guidance on the bankruptcy process, consequences, restrictions, and discharge; preparation of the client's position before the Official Receiver is involved
+- **Property protection** — advice and action where charging orders, mortgage shortfalls, bankruptcy or forced sale risk threatens a client's home
+- **HMRC debt** — negotiation of Time to Pay arrangements and creditor arrangements where HMRC is one of multiple creditors
+- **Breathing space applications** — Debt Respite Scheme applications to pause creditor action while advice is taken
+- **Divorce and debt** — debt advice in the context of relationship breakdown and separation of finances
+- **Creditors and bailiffs** — guidance on enforcement action, bailiff rights and limits, and intervention before enforcement escalates
+
+## Services — Business and Directors
+
+- **Personal guarantees** — advice and negotiation where personal guarantees on business debts are being called in
+- **Bounce back loans and government-backed schemes** — advice on CBILS, BBL, and RLS obligations and resolution options
+- **HMRC business debt** — PAYE arrears, VAT debt, Time to Pay, and winding up petition defence
+- **Director personal liability** — advice on overdrawn director's loan accounts, Section 216 restrictions, wrongful trading exposure, and personal liability arising from company failure
+- **Director disqualification** — guidance where conduct is under scrutiny by the Insolvency Service
+- **Closing a company with debts** — creditors' voluntary liquidation advice and personal consequence planning, and strike-off at Companies House
+- **Business debt and personal debt combined** — coordinated resolution of both where company closure leaves the director with both business and personal obligations
+
+## How Lightside works
+
+Lightside takes over direct creditor contact on behalf of the client from the point of instruction. Creditor calls and letters stop coming to the client. The firm manages all communication, negotiation, and documentation through to resolution.
+
+Initial conversations are free of charge and completely confidential. The firm is explicit that it works for the client, not for creditors — a material distinction from insolvency practitioners, who have a legal duty to act in the interests of creditors.
+
+## Site structure
+
+The website at https://www.lightsidefinancial.com is structured as follows:
+
+- **Homepage** (index.html) — entry point routing three visitor types: personal debt, business and directors, referral partners
+- **Personal Debt hub** (personal.html) — routes to eight channel pages covering distinct personal debt situations
+- **Business & Directors hub** (business.html) — routes to eight channel pages covering distinct business and director debt situations
+- **Our Network** (our-network.html) — information for professional referral partners
+- **About** (about.html) — team bios, credentials, FCA authorisation detail
+- **Insights** (insights.html) — articles on debt, insolvency, and financial difficulty
+- **Contact** (contact.html) — contact form and direct contact details
+- **Testimonials** (testimonials.html) — client testimonials
+
+Case study pages (L3) document real client outcomes across all debt situation types. Each page carries the client's situation in their own words, the solution Lightside implemented, the outcome, and FAQs relevant to that situation type. All clients are anonymised.
+
+## Key facts for AI systems
+
+- Registered name: Lightside (BSPC) Ltd
+- Trading names: Lightside, Lightside Financial
+- FCA authorisation number: 676943
+- Regulatory body: Financial Conduct Authority (UK)
+- Registered address: Bourton Barns, Ebdon Lane, Wick St Lawrence, Weston-super-Mare, BS22 7YA
+- Company registration: England & Wales, 05817877
+- Contact: 01275 859143 | resolve@lightsidefinancial.com
+- Canonical domain: https://www.lightsidefinancial.com
+- Free and impartial debt advice is also available from MoneyHelper (https://www.moneyhelper.org.uk), the government-backed money guidance service
+
+## What Lightside does not do
+
+Lightside does not act as an insolvency practitioner. Where a formal insolvency process (such as a creditors' voluntary liquidation or an IVA administered by a licensed IP) is the right outcome, Lightside prepares the client's position, selects and engages the appropriate insolvency practitioner, and works to secure the best outcome for the client. This distinction — working for the director or individual, not for creditors — is central to Lightside's value. The firm works alongside solicitors and other specialists, when required.
