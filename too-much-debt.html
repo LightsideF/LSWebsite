@@ -476,7 +476,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <li><a href="business.html">Business &amp; Directors</a></li>
         <li><a href="our-network.html">Our Network</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="insights.html">Insights</a></li>
+        <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
       </ul>
     </nav>
@@ -1175,18 +1175,24 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   });
 });
 
-/* ── Adviser pill scroll ── */
+/* ── Adviser pill — scroll to banner and open panel ── */
 (function(){
   var pill=document.getElementById('adviser-pill-btn');
   if(!pill)return;
   pill.addEventListener('click',function(e){
     e.preventDefault();
-    var target=document.getElementById('adviser-anchor');
-    if(!target)return;
-    var headerH=document.querySelector('.site-header');
-    var offset=headerH?headerH.offsetHeight+8:98;
-    var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
-    window.scrollTo({top:top,behavior:'smooth'});
+    var toggleBtn=document.getElementById('adviser-toggle-btn');
+    var panel=document.getElementById('adviser-panel');
+    if(panel&&!panel.classList.contains('open')&&toggleBtn){
+      toggleBtn.click();
+    } else {
+      var target=document.getElementById('adviser-anchor');
+      if(!target)return;
+      var headerH=document.querySelector('.site-header');
+      var offset=headerH?headerH.offsetHeight+8:98;
+      var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+      window.scrollTo({top:top,behavior:'smooth'});
+    }
   });
 })();
 
