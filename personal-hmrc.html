@@ -1173,11 +1173,9 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   });
 });
 
-/* ── Adviser pill ── */
+/* ── Adviser pills (hero + warning box) — both open the PA panel directly ── */
 (function(){
-  var pill=document.getElementById('adviser-pill-btn');
-  if(!pill)return;
-  pill.addEventListener('click',function(e){
+  function openAdviserPanel(e){
     e.preventDefault();
     var toggleBtn=document.getElementById('adviser-toggle-btn');
     var panel=document.getElementById('adviser-panel');
@@ -1191,7 +1189,11 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
       var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
       window.scrollTo({top:top,behavior:'smooth'});
     }
-  });
+  }
+  var pill=document.getElementById('adviser-pill-btn');
+  if(pill)pill.addEventListener('click',openAdviserPanel);
+  var pillWarning=document.getElementById('adviser-pill-warning');
+  if(pillWarning)pillWarning.addEventListener('click',openAdviserPanel);
 })();
 
 /* ── Adviser panel toggle ── */
