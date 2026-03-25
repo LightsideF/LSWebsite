@@ -133,6 +133,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 /* ── Adviser pill ── */
 .adviser-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.35);color:white;font-size:0.82rem;font-weight:700;padding:7px 16px;border-radius:20px;cursor:pointer;font-family:'Lato',sans-serif;transition:background 0.18s;margin-top:20px;text-decoration:none;}
 .adviser-pill:hover{background:rgba(255,255,255,0.2);color:white;text-decoration:none;}
+.adviser-pill--light{background:var(--site-light);border:1px solid var(--site-border);color:var(--site-navy);margin-top:16px;}
+.adviser-pill--light svg{fill:var(--site-navy);}
+.adviser-pill--light:hover{background:var(--site-border);color:var(--site-navy);text-decoration:none;}
 
 /* ── Trust bar ── */
 .trust-bar{background:var(--site-navy);border-top:1px solid rgba(255,255,255,0.1);padding:14px 24px;}
@@ -194,10 +197,11 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .case-read-link{display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;font-weight:700;color:var(--site-teal);text-decoration:none;min-height:44px;}
 .case-read-link:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
-/* ── Inline CTA ── */
-.inline-cta{border-top:3px solid var(--site-teal);border-bottom:3px solid var(--site-teal);padding:36px 0;display:flex;gap:28px;justify-content:space-between;align-items:flex-start;margin-bottom:0;}
+/* ── CTA band ── */
+.inline-cta-band{border-top:3px solid var(--site-teal);border-bottom:3px solid var(--site-teal);padding:36px 24px;}
+.inline-cta-band-inner{max-width:var(--max-w);margin:0 auto;display:flex;gap:28px;justify-content:space-between;align-items:flex-start;}
 .inline-cta-text h3{font-family:'Merriweather',serif;font-size:1.2rem;font-weight:700;color:var(--site-navy);margin-bottom:10px;line-height:1.35;}
-.inline-cta-text p{font-size:0.97rem;color:var(--site-muted);max-width:480px;line-height:1.65;}
+.inline-cta-text p{font-size:0.97rem;color:var(--site-muted);max-width:560px;line-height:1.65;}
 .inline-cta-btns{flex-shrink:0;}
 .cta-buttons{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;}
 .btn-primary{background:var(--site-teal);color:white;padding:13px 26px;border-radius:4px;font-weight:700;font-size:0.92rem;white-space:nowrap;transition:background 0.18s;text-decoration:none;display:inline-block;border:none;cursor:pointer;font-family:'Lato',sans-serif;min-height:44px;line-height:1.4;}
@@ -239,20 +243,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .cf-success-msg{font-size:0.92rem;color:white;line-height:1.6;}
 .slide-form-wrap--light .cf-success-msg{color:var(--site-navy);}
 
-/* ── How it works ── */
-.how-section{background:var(--site-white);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);padding:52px 24px;}
-.how-inner{max-width:var(--max-w);margin:0 auto;}
-.how-section .section-label{color:var(--site-teal);}
-.how-section .section-h2{color:var(--site-navy);margin-bottom:8px;}
-.how-section .section-sub{color:var(--site-muted);margin-bottom:0;}
-.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,58,95,0.15);border:1px solid rgba(30,58,95,0.15);border-radius:6px;overflow:hidden;margin-top:32px;}
-.step{background:var(--site-navy);padding:28px 20px;text-align:center;}
-.step-num{width:42px;height:42px;border-radius:50%;background:var(--site-accent);color:var(--site-navy);font-size:1.1rem;font-weight:700;font-family:'Merriweather',serif;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
-.step h4{font-size:0.92rem;font-weight:700;color:white;margin-bottom:8px;line-height:1.3;}
-.step p{font-size:0.84rem;color:rgba(255,255,255,0.7);line-height:1.6;}
-
 /* ── Adviser banner + panel ── */
-.adviser-banner{background:var(--site-teal);padding:0 24px;margin-top:64px;}
+.adviser-banner{background:var(--site-teal);padding:0 24px;}
 .adviser-banner-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 0;flex-wrap:wrap;}
 .adviser-banner-left{display:flex;align-items:center;gap:20px;}
 .adviser-banner-icon{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -286,15 +278,23 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-outline-white:hover{background:rgba(255,255,255,0.1);}
 .referred-strip{margin-top:0;}
 .referred-strip h4{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--site-muted);margin-bottom:12px;}
-.referred-cases{display:flex;flex-direction:column;gap:8px;}
-.referred-case{display:flex;align-items:center;gap:14px;background:white;border:1px solid var(--site-border);border-radius:6px;padding:14px 16px;text-decoration:none;transition:box-shadow 0.18s,transform 0.15s;}
-.referred-case:hover{box-shadow:0 4px 14px rgba(30,58,95,0.1);transform:translateY(-1px);text-decoration:none;}
-.ref-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-navy);color:white;padding:3px 8px;border-radius:3px;flex-shrink:0;}
-.ref-tag.accent{background:var(--site-accent);color:var(--site-navy);}
-.referred-case-text{flex:1;}
-.referred-case-text strong{display:block;font-size:0.87rem;font-weight:700;color:var(--site-navy);line-height:1.35;margin-bottom:2px;}
-.referred-case-text span{font-size:0.82rem;color:var(--site-muted);line-height:1.5;}
-.referred-case-arrow{font-size:1rem;color:var(--site-teal);flex-shrink:0;}
+.referred-cases{display:flex;flex-direction:column;gap:12px;}
+.ref-case-card{background:var(--site-navy);border-radius:6px;overflow:hidden;text-decoration:none;display:block;transition:box-shadow 0.2s,transform 0.18s;}
+.ref-case-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.28);transform:translateY(-2px);text-decoration:none;}
+.ref-case-header{padding:16px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.ref-case-meta{flex:1;}
+.ref-case-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:4px;}
+.ref-case-title{font-family:'Merriweather',serif;font-size:0.9rem;font-weight:700;color:white;line-height:1.35;margin-bottom:3px;}
+.ref-case-detail{font-size:0.78rem;color:rgba(255,255,255,0.55);line-height:1.4;}
+.ref-case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.35);border-radius:4px;padding:7px 12px;text-align:center;flex-shrink:0;}
+.ref-case-stamp .stamp-num{display:block;font-family:'Merriweather',serif;font-size:1rem;font-weight:700;color:var(--site-accent);line-height:1.1;margin-bottom:2px;}
+.ref-case-stamp .stamp-label{font-size:0.62rem;color:rgba(255,255,255,0.6);line-height:1.3;display:block;}
+.ref-case-footer{padding:10px 20px;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;}
+.ref-case-ref-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;}
+.ref-case-arrow{font-size:0.88rem;color:var(--site-accent);}
+.ref-case-annulled{position:relative;}
+.ref-case-ribbon-wrap{position:absolute;top:0;left:0;width:90px;height:90px;overflow:hidden;border-radius:6px 0 0 0;pointer-events:none;}
+.ref-case-ribbon{position:absolute;top:20px;left:-26px;width:110px;background:var(--site-accent);color:var(--site-navy);font-size:0.52rem;font-weight:900;letter-spacing:0.04em;text-transform:uppercase;text-align:center;padding:4px 0;line-height:1.3;transform:rotate(-45deg);transform-origin:center center;}
 .adviser-assurance{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;}
 .adv-assurance-item{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--site-border);border-radius:6px;padding:16px;}
 .adv-check{width:28px;height:28px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.8rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
@@ -355,7 +355,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .outcomes-grid{grid-template-columns:repeat(2,1fr);}
   .adviser-panel-grid{grid-template-columns:1fr;}
   .adviser-assurance{grid-template-columns:1fr;}
-  .steps-row{grid-template-columns:repeat(2,1fr);}
   .footer-inner{grid-template-columns:1fr;}
 }
 @media(max-width:760px){
@@ -383,15 +382,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .case-card-body-inner{padding:20px 20px 18px;}
   .case-card-footer{padding:14px 20px;}
   .cases-inner{padding:0 16px;}
-  /* Inline CTA */
-  .inline-cta{flex-direction:column;gap:20px;}
+  /* CTA band */
+  .inline-cta-band-inner{flex-direction:column;gap:20px;}
   .inline-cta-btns{width:100%;}
-  .inline-cta .cta-buttons{justify-content:center;}
+  .inline-cta-band .cta-buttons{justify-content:center;}
   /* Adviser */
   .adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:16px;}
   .adviser-banner-btn{width:100%;text-align:center;}
-  /* Steps */
-  .steps-row{grid-template-columns:1fr;}
   /* Footer */
   .footer-bottom{flex-direction:column;gap:6px;}
 }
@@ -489,41 +486,10 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <h3>HMRC operates differently from banks and commercial creditors</h3>
         <p>Banks will negotiate because settlement is often in their commercial interest. HMRC&rsquo;s own guidance is clear: <strong>they are not a bank.</strong> Time-to-pay arrangements are available, but they are typically structured to clear the full debt within a defined period of time &mdash; and if those terms cannot be met, HMRC will pursue enforcement.</p>
         <p>We work regularly alongside accountants, solicitors, and tax investigation specialists on HMRC cases &mdash; bringing the debt resolution piece to the table when their client&rsquo;s position requires it.</p>
-      </div>
-    </div>
-
-    <!-- Inline CTA -->
-    <div class="inline-cta">
-      <div class="inline-cta-text">
-        <h3>Not sure where you stand with HMRC?</h3>
-        <p>No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
-      </div>
-      <div class="inline-cta-btns">
-        <div class="cta-buttons">
-          <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-          <button type="button" class="btn-secondary" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" style="background:transparent;">Send a message</button>
-        </div>
-        <div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
-          <form class="contact-form" id="inline-form" novalidate>
-            <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-            <input type="hidden" name="subject" value="Website enquiry — HMRC Debt">
-            <input type="hidden" name="from_name" value="Lightside Website">
-            <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-            <div class="cf-row cf-row--2">
-              <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
-              <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
-            </div>
-            <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
-            <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation &mdash; as much or as little as you like."></textarea></div>
-            <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
-            <div class="cf-actions">
-              <button type="submit" class="cf-submit">Send message</button>
-              <button type="button" class="btn-form-cancel" id="inline-form-cancel">Cancel</button>
-            </div>
-            <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-          </form>
-          <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
-        </div>
+        <a href="#adviser-anchor" class="adviser-pill adviser-pill--light" id="adviser-pill-warning">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.35C18 2.99 16.01 1 13.65 1c-1.3 0-2.48.56-3.33 1.44L9 4 7.68 2.44C6.83 1.56 5.65 1 4.35 1 1.99 1 0 2.99 0 5.35c0 .47.08.91.18 1.35H0v14h24V6h-4zm-7-3c.74 0 1.35.61 1.35 1.35S13.74 5.7 13 5.7H11l2-2.7z"/></svg>
+          For professional advisers
+        </a>
       </div>
     </div>
 
@@ -553,32 +519,38 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </section>
 
-<!-- How it works -->
-<div class="how-section">
-  <div class="how-inner">
-    <div class="section-label">How we work</div>
-    <h2 class="section-h2">From your first call to a resolved position</h2>
-    <p class="section-sub">You do not need to have all the answers first. Four steps &mdash; you only need to take the first one.</p>
-    <div class="steps-row">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>You make contact</h4>
-        <p>The hardest step &mdash; and the only one you need to take on your own. Everything after this, we handle together.</p>
+<!-- CTA band -->
+<div class="inline-cta-band">
+  <div class="inline-cta-band-inner">
+    <div class="inline-cta-text">
+      <h3>Not sure where you stand with HMRC?</h3>
+      <p>The hardest step is the only one you need to take on your own. No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
+    </div>
+    <div class="inline-cta-btns">
+      <div class="cta-buttons">
+        <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+        <button type="button" class="btn-secondary" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" style="background:transparent;">Send a message</button>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>We map the picture</h4>
-        <p>We review the full position &mdash; income, assets, all creditors, the HMRC liability &mdash; and explain every realistic option clearly.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>You choose</h4>
-        <p>The right path is yours to choose. We give you the information to make a genuinely informed decision &mdash; without pressure and without jargon.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h4>We handle it</h4>
-        <p>Once you instruct us, we deal with HMRC directly. The letters and calls stop coming to you.</p>
+      <div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
+        <form class="contact-form" id="inline-form" novalidate>
+          <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+          <input type="hidden" name="subject" value="Website enquiry — HMRC Debt">
+          <input type="hidden" name="from_name" value="Lightside Website">
+          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="cf-row cf-row--2">
+            <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+            <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+          </div>
+          <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+          <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation &mdash; as much or as little as you like."></textarea></div>
+          <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+          <div class="cf-actions">
+            <button type="submit" class="cf-submit">Send message</button>
+            <button type="button" class="btn-form-cancel" id="inline-form-cancel">Cancel</button>
+          </div>
+          <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+        </form>
+        <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
       </div>
     </div>
   </div>
@@ -696,6 +668,43 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 </section>
 
 <!-- Adviser banner -->
+<div class="inline-cta-band">
+  <div class="inline-cta-band-inner">
+    <div class="inline-cta-text">
+      <h3>Not sure where you stand with HMRC?</h3>
+      <p>The hardest step is the only one you need to take on your own. No charge for the initial conversation. No obligation to proceed. Completely confidential.</p>
+    </div>
+    <div class="inline-cta-btns">
+      <div class="cta-buttons">
+        <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+        <button type="button" class="btn-secondary" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" style="background:transparent;">Send a message</button>
+      </div>
+      <div class="slide-form-wrap slide-form-wrap--light" id="inline-contact-form" hidden>
+        <form class="contact-form" id="inline-form" novalidate>
+          <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+          <input type="hidden" name="subject" value="Website enquiry — HMRC Debt">
+          <input type="hidden" name="from_name" value="Lightside Website">
+          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="cf-row cf-row--2">
+            <div class="cf-field"><label for="inline-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="inline-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+            <div class="cf-field"><label for="inline-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="inline-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+          </div>
+          <div class="cf-field"><label for="inline-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="inline-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+          <div class="cf-field"><label for="inline-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="inline-message" name="message" required rows="4" placeholder="Tell us a little about your situation &mdash; as much or as little as you like."></textarea></div>
+          <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+          <div class="cf-actions">
+            <button type="submit" class="cf-submit">Send message</button>
+            <button type="button" class="btn-form-cancel" id="inline-form-cancel">Cancel</button>
+          </div>
+          <div class="cf-error" id="inline-error" hidden><p>We weren&rsquo;t able to send your message &mdash; please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+        </form>
+        <div class="cf-success" id="inline-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Adviser banner -->
 <div class="adviser-banner" id="adviser-anchor">
   <div class="adviser-banner-inner">
     <div class="adviser-banner-left">
@@ -807,40 +816,79 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           <h4>Cases referred by professionals</h4>
           <div class="referred-cases">
 
-            <a href="mr-a-bankruptcy.html" class="referred-case">
-              <span class="ref-tag accent">Accountant</span>
-              <div class="referred-case-text">
-                <strong>Mr. A &mdash; &pound;300,000 HMRC debt, family home at risk</strong>
-                <span>Referred by the client&rsquo;s accountant. Bankruptcy navigated; family home fully protected.</span>
+            <a href="mr-a-bankruptcy.html" class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">Personal &mdash; HMRC</div>
+                  <div class="ref-case-title">Retired Sole Trader Faced &pound;300,000 HMRC Debt &mdash; Home Saved</div>
+                  <div class="ref-case-detail">Mr. A &mdash; Retired restaurateur, Richmond &mdash; family home equity c. &pound;600,000 at risk</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="stamp-num">&pound;94k</span>
+                  <span class="stamp-label">trustee&rsquo;s interest<br>settled for</span>
+                </div>
               </div>
-              <span class="referred-case-arrow" aria-hidden="true">&#8594;</span>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">Accountant</span>
+                <span class="ref-case-arrow">&#8594;</span>
+              </div>
             </a>
 
-            <a href="500coh-hmrc.html" class="referred-case">
-              <span class="ref-tag accent">Accountant</span>
-              <div class="referred-case-text">
-                <strong>Mr. CR &mdash; &pound;44,000 HMRC debt, two BTL properties at risk</strong>
-                <span>Referred after accountant compiled the historic returns. Properties excluded from estate; discharged in three months.</span>
+            <a href="500coh-hmrc.html" class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">Personal &mdash; HMRC</div>
+                  <div class="ref-case-title">Tax Return Filed, Debt Unaffordable &mdash; but BTL Properties Saved</div>
+                  <div class="ref-case-detail">Mr. CR &mdash; Private chauffeur, Watford &mdash; &pound;44,000 HMRC debt, two properties excluded from estate</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="stamp-num">3&nbsp;months</span>
+                  <span class="stamp-label">to bankruptcy<br>discharge</span>
+                </div>
               </div>
-              <span class="referred-case-arrow" aria-hidden="true">&#8594;</span>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">Accountant</span>
+                <span class="ref-case-arrow">&#8594;</span>
+              </div>
             </a>
 
-            <a href="200bts-hmrc.html" class="referred-case">
-              <span class="ref-tag accent">Accountant</span>
-              <div class="referred-case-text">
-                <strong>Mr. B &mdash; self-employed, unaffordable tax liability</strong>
-                <span>Referred by his accountant after TTP terms could not be met. Bankruptcy secured a fresh start while protecting his employment.</span>
+            <a href="200gk-personal-liability.html" class="ref-case-card ref-case-annulled">
+              <div class="ref-case-ribbon-wrap" aria-hidden="true">
+                <div class="ref-case-ribbon">Bankruptcy<br>Annulled</div>
               </div>
-              <span class="referred-case-arrow" aria-hidden="true">&#8594;</span>
+              <div class="ref-case-header" style="padding-left:60px;">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">Personal &mdash; HMRC &amp; Bankruptcy</div>
+                  <div class="ref-case-title">The Bankruptcy Order That Should Never Have Been Made</div>
+                  <div class="ref-case-detail">Mr. G &mdash; FCA-registered sole trader &mdash; HMRC demand resisted from &pound;194,000 to &pound;60,000</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="stamp-num">&pound;60k</span>
+                  <span class="stamp-label">paid vs HMRC&rsquo;s<br>&pound;194k demand</span>
+                </div>
+              </div>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">Accountant</span>
+                <span class="ref-case-arrow">&#8594;</span>
+              </div>
             </a>
 
-            <a href="mr-and-mrs-tac-property-at-risk.html" class="referred-case">
-              <span class="ref-tag accent">Accountant</span>
-              <div class="referred-case-text">
-                <strong>Mr. &amp; Mrs. TA &mdash; HMRC trust claim alongside charging orders</strong>
-                <span>Referred during a complex property matter. HMRC claim against a family trust resolved alongside seven mortgage shortfalls.</span>
+            <a href="200bts-hmrc.html" class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">Personal &mdash; HMRC</div>
+                  <div class="ref-case-title">The Tax Bill Was Real &mdash; but Future Debt Was Written Off</div>
+                  <div class="ref-case-detail">Mr. B &mdash; Self-employed tree surgeon &mdash; TTP terms unaffordable, employment protected throughout</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="stamp-num">100%</span>
+                  <span class="stamp-label">of debts<br>written off</span>
+                </div>
               </div>
-              <span class="referred-case-arrow" aria-hidden="true">&#8594;</span>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">Accountant</span>
+                <span class="ref-case-arrow">&#8594;</span>
+              </div>
             </a>
 
           </div>
