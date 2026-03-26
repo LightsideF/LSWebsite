@@ -150,9 +150,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.46s cubic-bezier(.4,0,.2,1);}
 .flip-tile.flipped .flip-inner{transform:rotateY(180deg);}
 .flip-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;padding:18px 16px;display:flex;flex-direction:column;justify-content:space-between;}
-.flip-front{background:#fffbf0;border:2px solid var(--site-navy);text-align:center;align-items:center;}
+.flip-front{background:var(--site-offwhite);border:2px solid var(--site-navy);text-align:center;align-items:center;justify-content:center;}
 .flip-back{background:var(--site-navy);border:2px solid var(--site-accent);transform:rotateY(180deg);}
-.flip-num{font-size:28px;font-weight:700;line-height:1;font-family:'Merriweather',serif;color:rgba(30,58,95,0.15);}
+.flip-num{display:none;}
 .flip-claim{font-size:0.82rem;font-weight:700;line-height:1.4;font-family:'Merriweather',serif;color:var(--site-navy);}
 .flip-hint{font-size:0.68rem;color:rgba(30,58,95,0.4);}
 .flip-back-label{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(232,160,32,0.85);text-align:center;margin-bottom:4px;}
@@ -599,7 +599,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="flip-tile" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Tile 1: Creditors can secure debt on your home. Most don't. Click to read more.">
         <div class="flip-inner">
           <div class="flip-face flip-front">
-            <div class="flip-num" aria-hidden="true">01</div>
             <div class="flip-claim">Creditors can secure debt on your home. Most don&rsquo;t.</div>
             <div class="flip-hint">Tap to understand why &#8599;</div>
           </div>
@@ -615,7 +614,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="flip-tile" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Tile 2: Agreeing a charge on your home can actually protect you from bankruptcy. Click to read more.">
         <div class="flip-inner">
           <div class="flip-face flip-front">
-            <div class="flip-num" aria-hidden="true">02</div>
             <div class="flip-claim">Agreeing a charge on your home can actually protect you from bankruptcy.</div>
             <div class="flip-hint">Tap to understand why &#8599;</div>
           </div>
@@ -631,7 +629,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="flip-tile" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Tile 3: Bankruptcy — you could keep your home or BTL. Click to read more.">
         <div class="flip-inner">
           <div class="flip-face flip-front">
-            <div class="flip-num" aria-hidden="true">03</div>
             <div class="flip-claim">Bankruptcy &mdash; you could keep your home or BTL.</div>
             <div class="flip-hint">Tap to understand why &#8599;</div>
           </div>
@@ -647,7 +644,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="flip-tile" onclick="this.classList.toggle('flipped')" role="button" tabindex="0" aria-label="Tile 4: Mortgage Debt. Click to read more.">
         <div class="flip-inner">
           <div class="flip-face flip-front">
-            <div class="flip-num" aria-hidden="true">04</div>
             <div class="flip-claim">Mortgage Debt</div>
             <div class="flip-hint">Tap to understand why &#8599;</div>
           </div>
