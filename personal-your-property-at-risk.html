@@ -121,7 +121,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
 /* Adviser photo — mobile bubble */
 .hero-mobile-adviser{display:none;align-items:center;gap:12px;margin-bottom:18px;}
-.hero-mobile-circle{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(255,255,255,0.2);flex-shrink:0;}
+.hero-mobile-circle{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(255,255,255,0.2);flex-shrink:0;}
 .hero-mobile-bubble{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:0 10px 10px 10px;padding:8px 14px;font-size:0.8rem;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5;font-family:'Merriweather',serif;position:relative;}
 .hero-mobile-bubble::before{content:'';position:absolute;left:-8px;top:8px;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:8px solid rgba(255,255,255,0.1);}
 
@@ -657,7 +657,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       </div>
 
     </div>
-    <p class="flip-note">Click each card to read the full picture</p>
+    <p class="flip-note">Tap each to find out more &mdash; and speak to us for the full picture.</p>
   </div>
 
   <!-- Creditor spectrum -->
@@ -1629,4 +1629,12 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
     btn.classList.toggle('open',open);
     btn.setAttribute('aria-expanded',String(open));
     btn.textContent=open?'Hide referral information':'Show referral information';
-    if(open){setTimeou
+        if(open){setTimeout(function(){panel.scrollIntoView({behavior:'smooth',block:'start'});},60);}
+    else{if(anchor)anchor.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+  if(window.location.search.indexOf('view=adviser')!==-1){btn.click();}
+})();
+</script>
+
+</body>
+</html>
