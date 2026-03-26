@@ -453,6 +453,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .page-hero h1{font-size:1.75rem;}
   .hero-lead{font-size:1rem;}
   .flip-grid{grid-template-columns:1fr 1fr;}
+  .flip-tile{height:auto;min-height:80px;}
   .cases-grid{grid-template-columns:1fr;}
   .steps-row{grid-template-columns:1fr;}
   .adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:16px;}
@@ -480,10 +481,18 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 @media(max-width:480px){
   .page-body{padding:32px 16px 0;}
   .flip-grid{grid-template-columns:1fr 1fr;gap:10px;}
-  .flip-back-text{display:none;}
-  .flip-back-text-mobile{display:block;}
   .flip-back-label{font-size:0.68rem;}
   .flip-reset{font-size:0.65rem;}
+  /* Mobile: expand pattern — no 3D flip */
+  .flip-tile{height:auto;min-height:80px;perspective:none;}
+  .flip-tile .flip-inner{transform:none!important;transition:none;transform-style:flat;}
+  .flip-face{position:relative;backface-visibility:visible;transform:none!important;}
+  .flip-front{border-radius:10px;}
+  .flip-back{transform:none;border-radius:0 0 10px 10px;display:none;padding-top:14px;}
+  .flip-tile.flipped .flip-front{border-radius:10px 10px 0 0;}
+  .flip-tile.flipped .flip-back{display:flex;}
+  .flip-tile .flip-inner{display:flex;flex-direction:column;height:auto;}
+  .flip-front{min-height:80px;}
   .spectrum-cols{grid-template-columns:1fr;}
   .faq-section{padding:36px 16px 44px;}
   .faq-question{padding:14px;font-size:0.92rem;}
@@ -1346,7 +1355,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="footer-contact">
       <h4>Contact us</h4>
       <p><a href="tel:01275859143">01275 859143</a></p>
-      <p><a href="mailto:resolve@lightsidefinancial.com">resolve@lightsidefinancial.com</a></p>
+      <p><a href="/cdn-cgi/l/email-protection#3f4d5a4c5053495a7f535658574b4c565b5a5956515e515c565e53115c5052"><span class="__cf_email__" data-cfemail="66140315090a1003260a0f010e12150f0203000f080708050f070a4805090b">[email&#160;protected]</span></a></p>
       <p class="footer-reg">Bourton Barns, Ebdon Lane,<br>Wick St Lawrence,<br>Weston-super-Mare, BS22 7YA</p>
     </div>
   </div>
@@ -1365,7 +1374,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── Cookie banner ── */
 (function(){
   var banner=document.getElementById('cookie-banner');
@@ -1583,12 +1592,4 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
     btn.classList.toggle('open',open);
     btn.setAttribute('aria-expanded',String(open));
     btn.textContent=open?'Hide referral information':'Show referral information';
-    if(open){setTimeout(function(){panel.scrollIntoView({behavior:'smooth',block:'start'});},60);}
-    else{if(anchor)anchor.scrollIntoView({behavior:'smooth',block:'start'});}
-  });
-  if(window.location.search.indexOf('view=adviser')!==-1){btn.click();}
-})();
-</script>
-
-</body>
-</html>
+    if(open){setTimeou
