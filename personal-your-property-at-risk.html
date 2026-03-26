@@ -453,6 +453,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .page-hero h1{font-size:1.75rem;}
   .hero-lead{font-size:1rem;}
   .flip-grid{grid-template-columns:1fr 1fr;}
+  .flip-tile{height:auto;min-height:80px;}
   .cases-grid{grid-template-columns:1fr;}
   .steps-row{grid-template-columns:1fr;}
   .adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:16px;}
@@ -482,38 +483,16 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .flip-grid{grid-template-columns:1fr 1fr;gap:10px;}
   .flip-back-label{font-size:0.68rem;}
   .flip-reset{font-size:0.65rem;}
-  /* Mobile: flip plays, back face expands to readable height */
-  .flip-tile{height:auto;}
-  .flip-inner{
-    position:relative;
-    width:100%;
-    height:auto;
-    transform-style:preserve-3d;
-    transition:transform 0.46s cubic-bezier(.4,0,.2,1);
-  }
-  .flip-tile.flipped .flip-inner{transform:rotateY(180deg);}
-  .flip-face{
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-  }
-  .flip-front{
-    position:relative;
-    min-height:110px;
-    border-radius:10px;
-  }
-  .flip-back{
-    position:absolute;
-    top:0;left:0;right:0;
-    height:auto;
-    max-height:0;
-    overflow:hidden;
-    transition:max-height 0.4s ease 0.42s;
-    transform:rotateY(180deg);
-    border-radius:10px;
-  }
-  .flip-tile.flipped .flip-back{
-    max-height:500px;
-  }
+  /* Mobile: expand pattern — no 3D flip */
+  .flip-tile{height:auto;min-height:80px;perspective:none;}
+  .flip-tile .flip-inner{transform:none!important;transition:none;transform-style:flat;}
+  .flip-face{position:relative;backface-visibility:visible;transform:none!important;}
+  .flip-front{border-radius:10px;}
+  .flip-back{transform:none;border-radius:0 0 10px 10px;display:none;padding-top:14px;}
+  .flip-tile.flipped .flip-front{border-radius:10px 10px 0 0;}
+  .flip-tile.flipped .flip-back{display:flex;}
+  .flip-tile .flip-inner{display:flex;flex-direction:column;height:auto;}
+  .flip-front{min-height:80px;}
   .spectrum-cols{grid-template-columns:1fr;}
   .faq-section{padding:36px 16px 44px;}
   .faq-question{padding:14px;font-size:0.92rem;}
