@@ -453,7 +453,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .page-hero h1{font-size:1.75rem;}
   .hero-lead{font-size:1rem;}
   .flip-grid{grid-template-columns:1fr 1fr;}
-  .flip-tile{height:auto;min-height:80px;}
   .cases-grid{grid-template-columns:1fr;}
   .steps-row{grid-template-columns:1fr;}
   .adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:16px;}
@@ -483,16 +482,16 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .flip-grid{grid-template-columns:1fr 1fr;gap:10px;}
   .flip-back-label{font-size:0.68rem;}
   .flip-reset{font-size:0.65rem;}
-  /* Mobile: expand pattern — no 3D flip */
-  .flip-tile{height:auto;min-height:80px;perspective:none;}
-  .flip-tile .flip-inner{transform:none!important;transition:none;transform-style:flat;}
-  .flip-face{position:relative;backface-visibility:visible;transform:none!important;}
-  .flip-front{border-radius:10px;}
-  .flip-back{transform:none;border-radius:0 0 10px 10px;display:none;padding-top:14px;}
+  /* Mobile: face-up accordion — no flip */
+  .flip-tile{height:130px;perspective:none;overflow:hidden;transition:height 0.35s ease;}
+  .flip-tile.flipped{height:auto;}
+  .flip-inner{position:relative;width:100%;height:auto;transform:none!important;transition:none;transform-style:flat;display:flex;flex-direction:column;}
+  .flip-face{position:relative;backface-visibility:visible;transform:none!important;border-radius:10px;}
+  .flip-front{flex-shrink:0;height:130px;border-radius:10px;}
   .flip-tile.flipped .flip-front{border-radius:10px 10px 0 0;}
-  .flip-tile.flipped .flip-back{display:flex;}
-  .flip-tile .flip-inner{display:flex;flex-direction:column;height:auto;}
-  .flip-front{min-height:80px;}
+  .flip-back{transform:none;border-radius:0 0 10px 10px;padding-top:14px;display:flex;border-top:1px solid rgba(255,255,255,0.15);}
+  .flip-hint{display:none;}
+  .flip-tile.flipped .flip-hint-open{display:none;}
   .spectrum-cols{grid-template-columns:1fr;}
   .faq-section{padding:36px 16px 44px;}
   .faq-question{padding:14px;font-size:0.92rem;}
@@ -608,7 +607,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="flip-back-label">The probability question</div>
             <div class="flip-back-text">A charging order is a legal right &mdash; but not standard. Credit cards, loans, overdrafts want payment, not property.</div>
             <div class="flip-back-text-mobile">A charging order is a legal right &mdash; but not standard. Credit cards, loans, overdrafts want payment, not property.</div>
-            <button class="flip-reset" onclick="event.stopPropagation();this.closest('.flip-tile').classList.remove('flipped')" aria-label="Flip back">&#8617; back</button>
+            <button class="flip-reset" onclick="event.stopPropagation();var t=this.closest('.flip-tile');if(window.innerWidth<=480){t.style.transition='height 0.35s ease';t.style.height='130px';t.classList.remove('flipped');t.addEventListener('transitionend',function c(){t.style.height='';t.style.transition='';t.removeEventListener('transitionend',c);});}else{t.classList.remove('flipped');}" aria-label="Flip back">&#8617; back</button>
           </div>
         </div>
       </div>
@@ -624,7 +623,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="flip-back-label">The counter-intuitive truth</div>
             <div class="flip-back-text">Once a creditor secures their debt on your property, they cannot also petition for your bankruptcy. Agreeing a voluntary charge removes a big risk. A charging order does not give rights to force a sale.</div>
             <div class="flip-back-text-mobile">Once a creditor secures their debt on your property &mdash; bankruptcy risk removed.</div>
-            <button class="flip-reset" onclick="event.stopPropagation();this.closest('.flip-tile').classList.remove('flipped')" aria-label="Flip back">&#8617; back</button>
+            <button class="flip-reset" onclick="event.stopPropagation();var t=this.closest('.flip-tile');if(window.innerWidth<=480){t.style.transition='height 0.35s ease';t.style.height='130px';t.classList.remove('flipped');t.addEventListener('transitionend',function c(){t.style.height='';t.style.transition='';t.removeEventListener('transitionend',c);});}else{t.classList.remove('flipped');}" aria-label="Flip back">&#8617; back</button>
           </div>
         </div>
       </div>
@@ -640,7 +639,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="flip-back-label">Bankruptcy &ne; losing your home</div>
             <div class="flip-back-text">The Trustee&rsquo;s interest depends on equity, ownership, and negotiation. We have saved homes where the Trustee opened at 100% of the equity &mdash; and settled for a fraction of that.</div>
             <div class="flip-back-text-mobile">The Trustee&rsquo;s interest depends on equity and negotiation. We have saved homes where they opened at 100%.</div>
-            <button class="flip-reset" onclick="event.stopPropagation();this.closest('.flip-tile').classList.remove('flipped')" aria-label="Flip back">&#8617; back</button>
+            <button class="flip-reset" onclick="event.stopPropagation();var t=this.closest('.flip-tile');if(window.innerWidth<=480){t.style.transition='height 0.35s ease';t.style.height='130px';t.classList.remove('flipped');t.addEventListener('transitionend',function c(){t.style.height='';t.style.transition='';t.removeEventListener('transitionend',c);});}else{t.classList.remove('flipped');}" aria-label="Flip back">&#8617; back</button>
           </div>
         </div>
       </div>
@@ -656,7 +655,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="flip-back-label">Eviction not inevitable</div>
             <div class="flip-back-text">Repossession can be staved off. Mortgage shortfalls rarely result in bankruptcy &mdash; most lenders accept a repayment plan. We know which lenders push harder and how to respond.</div>
             <div class="flip-back-text-mobile">Repossession can be avoided.<hr style="border:none;border-top:1px solid rgba(255,255,255,0.25);margin:6px 0;">Shortfall debt is usually resolved by repayment plan.</div>
-            <button class="flip-reset" onclick="event.stopPropagation();this.closest('.flip-tile').classList.remove('flipped')" aria-label="Flip back">&#8617; back</button>
+            <button class="flip-reset" onclick="event.stopPropagation();var t=this.closest('.flip-tile');if(window.innerWidth<=480){t.style.transition='height 0.35s ease';t.style.height='130px';t.classList.remove('flipped');t.addEventListener('transitionend',function c(){t.style.height='';t.style.transition='';t.removeEventListener('transitionend',c);});}else{t.classList.remove('flipped');}" aria-label="Flip back">&#8617; back</button>
           </div>
         </div>
       </div>
@@ -1405,12 +1404,54 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   });
 })();
 
-/* ── Flip tiles — keyboard support ── */
+/* ── Flip tiles — keyboard + mobile accordion ── */
 document.querySelectorAll('.flip-tile').forEach(function(tile){
+  // Keyboard support
   tile.addEventListener('keydown',function(e){
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();tile.classList.toggle('flipped');}
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();handleTileToggle(tile);}
   });
+  // Click — override onclick with JS-controlled toggle for mobile
+  tile.onclick=function(e){handleTileToggle(tile);};
 });
+
+function handleTileToggle(tile){
+  var isMobile=window.innerWidth<=480;
+  if(isMobile){
+    var isOpen=tile.classList.contains('flipped');
+    if(isOpen){
+      // Collapse: animate from current height back to 130px
+      tile.style.height=tile.scrollHeight+'px';
+      // Force reflow
+      tile.offsetHeight;
+      tile.style.transition='height 0.35s ease';
+      tile.style.height='130px';
+      tile.classList.remove('flipped');
+      tile.addEventListener('transitionend',function clear(){
+        tile.style.height='';
+        tile.style.transition='';
+        tile.removeEventListener('transitionend',clear);
+      });
+    } else {
+      // Expand: measure full height then animate to it
+      tile.classList.add('flipped');
+      var back=tile.querySelector('.flip-back');
+      var fullH=130+(back?back.scrollHeight+1:120);
+      tile.style.height='130px';
+      tile.style.transition='height 0.35s ease';
+      // Force reflow
+      tile.offsetHeight;
+      tile.style.height=fullH+'px';
+      tile.addEventListener('transitionend',function clear(){
+        tile.style.height='auto';
+        tile.style.transition='';
+        tile.removeEventListener('transitionend',clear);
+      });
+    }
+  } else {
+    // Desktop: normal class toggle (CSS 3D flip handles it)
+    tile.classList.toggle('flipped');
+  }
+}
 
 /* ── Outcomes toggle (mobile only) ── */
 (function(){
