@@ -277,7 +277,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <p>You can contact us in whichever way is most convenient for you:</p>
     <div class="contact-methods">
       <p><strong>Phone:</strong> <a href="tel:01275859143">01275 859143</a></p>
-      <p><strong>Email:</strong> <a href="mailto:resolve@lightsidefinancial.com">resolve@lightsidefinancial.com</a></p>
       <p><strong>Post:</strong> Bourton Barns, Ebdon Lane, Wick Saint Lawrence, Weston Super Mare, BS22 7YA</p>
     </div>
     <p>A complaint is any expression of dissatisfaction, whether made verbally or in writing.</p>
@@ -387,14 +386,18 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 })();
 
 /* ── Cookie consent ── */
-document.getElementById('cookie-accept').addEventListener('click',function(){
-  document.getElementById('cookie-banner').style.display='none';
-  localStorage.setItem('ls_cookie_consent','accepted');
-});
-document.getElementById('cookie-decline').addEventListener('click',function(){
-  document.getElementById('cookie-banner').style.display='none';
-  localStorage.setItem('ls_cookie_consent','essential');
-});
+(function(){
+  var banner=document.getElementById('cookie-banner');
+  if(!banner)return;
+  document.getElementById('cookie-accept').addEventListener('click',function(){
+    banner.style.display='none';
+    localStorage.setItem('ls_cookie_consent','accepted');
+  });
+  document.getElementById('cookie-decline').addEventListener('click',function(){
+    banner.style.display='none';
+    localStorage.setItem('ls_cookie_consent','essential');
+  });
+})();
 
 /* ── initForm — Web3Forms slide-down pattern ── */
 function initForm(toggleId,wrapperId,formId,errorId,successId){
@@ -445,4 +448,14 @@ function initForm(toggleId,wrapperId,formId,errorId,successId){
       })
       .catch(function(err){
         console.error('Form error:',err);
-        sub
+        submitBtn.disabled=false;
+        submitBtn.textContent=orig;
+        if(errorEl)errorEl.hidden=false;
+      });
+  });
+}
+initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+initForm('util-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+</script>
+</body>
+</html>

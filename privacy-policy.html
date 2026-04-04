@@ -307,7 +307,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <p>Bourton Barns, Ebdon Lane, Wick Saint Lawrence, Weston Super Mare BS22 7YA</p>
       <p>Company No. 5817877</p>
       <p>Authorised and regulated by the Financial Conduct Authority (FCA No. 676943)</p>
-      <p>Email: <a href="mailto:resolve@lightsidefinancial.com">resolve@lightsidefinancial.com</a></p>
     </div>
 
     <h2>The information we collect</h2>
@@ -461,14 +460,18 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 })();
 
 /* ── Cookie consent ── */
-document.getElementById('cookie-accept').addEventListener('click',function(){
-  document.getElementById('cookie-banner').style.display='none';
-  localStorage.setItem('ls_cookie_consent','accepted');
-});
-document.getElementById('cookie-decline').addEventListener('click',function(){
-  document.getElementById('cookie-banner').style.display='none';
-  localStorage.setItem('ls_cookie_consent','essential');
-});
+(function(){
+  var banner=document.getElementById('cookie-banner');
+  if(!banner)return;
+  document.getElementById('cookie-accept').addEventListener('click',function(){
+    banner.style.display='none';
+    localStorage.setItem('ls_cookie_consent','accepted');
+  });
+  document.getElementById('cookie-decline').addEventListener('click',function(){
+    banner.style.display='none';
+    localStorage.setItem('ls_cookie_consent','essential');
+  });
+})();
 
 /* ── initForm — Web3Forms slide-down pattern ── */
 function initForm(toggleId,wrapperId,formId,errorId,successId){
@@ -525,8 +528,8 @@ function initForm(toggleId,wrapperId,formId,errorId,successId){
       });
   });
 }
-
-/* Wire inline form */
 initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
-
-/* ── Util bar "Send a message" — opens 
+initForm('util-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+</script>
+</body>
+</html>

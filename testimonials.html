@@ -6,6 +6,9 @@
 <title>Client Testimonials | Lightside Financial</title>
 <meta name="description" content="Read what clients say about Lightside Financial — real feedback from people we've helped resolve personal and business debt across the UK.">
 <meta name="robots" content="index, follow">
+
+<!-- Cookie banner: hide immediately on page load if consent already stored -->
+<script>(function(){var c=localStorage.getItem('ls_cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://www.lightsidefinancial.com/testimonials.html">
@@ -310,9 +313,31 @@ a:hover { color: var(--site-link-hov); text-decoration: underline; }
   .testimonial-featured { padding: 28px 24px; }
   .bottom-cta { flex-direction: column; }
 }
+
+/* ── Cookie banner ── */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--site-navy);padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.25);display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+#cookie-banner p{font-size:0.9rem;line-height:1.6;margin:0;color:rgba(255,255,255,0.85);flex:1 1 300px;}
+#cookie-banner a{color:var(--site-accent);}
+.cookie-btns{display:flex;gap:12px;flex-shrink:0;}
+.cookie-btns button{padding:10px 22px;border:none;border-radius:4px;cursor:pointer;font-size:0.85rem;min-height:44px;}
+.cookie-accept{background:var(--site-teal);color:white;}
+.cookie-accept:hover{background:var(--site-teal-dk);}
+.cookie-decline{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.3);}
+.cookie-decline:hover{color:rgba(255,255,255,0.85);}
 </style>
 </head>
 <body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     COOKIE BANNER — fixed, do not modify
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div id="cookie-banner" role="region" aria-label="Cookie consent">
+  <p>We use cookies to understand how visitors use our site and to improve your experience. We do not sell your data. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookie-accept">Accept cookies</button>
+    <button class="cookie-decline" id="cookie-decline">Essential only</button>
+  </div>
+</div>
 
 <!-- UTILITY BAR -->
 <div class="util-bar">
@@ -597,5 +622,41 @@ In the mosaic of life.</pre>
   </div>
 </footer>
 
+
+<script>
+/* ── Cookie consent ── */
+(function(){
+  var banner=document.getElementById('cookie-banner');
+  if(!banner)return;
+  document.getElementById('cookie-accept').addEventListener('click',function(){
+    banner.style.display='none';
+    localStorage.setItem('ls_cookie_consent','accepted');
+  });
+  document.getElementById('cookie-decline').addEventListener('click',function(){
+    banner.style.display='none';
+    localStorage.setItem('ls_cookie_consent','essential');
+  });
+})();
+
+/* ── Hamburger ── */
+(function(){
+  var hamburger=document.getElementById('hamburger');
+  var nav=document.getElementById('site-nav');
+  if(hamburger&&nav){
+    hamburger.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      hamburger.classList.toggle('open',open);
+      hamburger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(e){
+      if(!hamburger.contains(e.target)&&!nav.contains(e.target)){
+        nav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
