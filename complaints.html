@@ -185,6 +185,16 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-secondary{background:transparent;color:var(--site-teal);border:1px solid var(--site-border);padding:12px 24px;border-radius:4px;font-weight:600;font-size:0.92rem;white-space:nowrap;transition:background 0.18s;text-decoration:none;display:inline-block;cursor:pointer;font-family:'Lato',sans-serif;min-height:44px;}
 .btn-secondary:hover{background:var(--site-light);}
 
+/* ── Complaints email form ── */
+.email-us-toggle{background:none;border:none;padding:0;font-family:'Lato',sans-serif;font-size:inherit;font-weight:700;color:var(--site-teal);cursor:pointer;text-decoration:underline;}
+.email-us-toggle:hover{color:var(--site-teal-dk);}
+.complaints-form-wrap{margin-top:16px;padding:20px 0 4px;border-top:1px solid var(--site-border);}
+.complaints-form-wrap[hidden]{display:none!important;}
+.cf-save-copy{cursor:pointer;border:1px solid var(--site-border);background:var(--site-offwhite);color:var(--site-navy);padding:10px 20px;border-radius:4px;font-weight:600;font-family:'Lato',sans-serif;font-size:0.88rem;}
+.cf-save-copy:hover{background:var(--site-light);border-color:var(--site-teal);}
+.cf-save-hint{font-size:0.82rem;color:#1a6b3c;margin-top:2px;}
+.cf-save-nudge{font-size:0.88rem;color:var(--site-text);margin-top:12px;}.cf-save-nudge .cf-save-copy{font-size:0.88rem;}
+
 /* ── Inline CTA ── */
 .inline-cta{border-top:3px solid var(--site-teal);border-bottom:3px solid var(--site-teal);padding:32px 24px;max-width:var(--max-w);margin:0 auto;display:flex;gap:24px;justify-content:space-between;align-items:flex-start;}
 .inline-cta-text{flex:1;}.inline-cta-text h3{font-family:'Merriweather',serif;font-size:1.15rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.35;}
@@ -276,6 +286,32 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <h2>Tell us what&rsquo;s happened</h2>
     <p>You can contact us in whichever way is most convenient for you:</p>
     <div class="contact-methods">
+      <p><strong>Email:</strong> <button type="button" class="email-us-toggle" id="complaints-form-toggle" aria-expanded="false" aria-controls="complaints-contact-form">Email us</button></p>
+      <div class="slide-form-wrap complaints-form-wrap" id="complaints-contact-form" hidden>
+        <form class="contact-form" id="complaints-form" novalidate>
+          <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+          <input type="hidden" name="subject" value="Complaint — Lightside Financial">
+          <input type="hidden" name="from_name" value="Lightside Website">
+          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="cf-row cf-row--2">
+            <div class="cf-field"><label for="c-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="c-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+            <div class="cf-field"><label for="c-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="c-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+          </div>
+          <div class="cf-field"><label for="c-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+          <div class="cf-field"><label for="c-message">Your complaint <span class="cf-required" aria-hidden="true">*</span></label><textarea id="c-message" name="message" required rows="5" placeholder="Please describe what has happened and how it has affected you."></textarea></div>
+          <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+          <div class="cf-actions">
+            <button type="submit" class="cf-submit">Send complaint</button>
+            <button type="button" class="cf-save-copy" id="complaints-save-copy">Save a copy</button>
+            <button type="button" class="btn-form-cancel" data-cancel-for="complaints-contact-form" data-toggle-id="complaints-form-toggle">Cancel</button>
+          </div>
+          <div class="cf-save-hint" id="complaints-save-hint" hidden>Your message has been saved as a text file.</div>
+          <div class="cf-error" id="complaints-error" hidden><p>We weren&rsquo;t able to send your message &mdash; sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+        </form>
+        <div class="cf-success" id="complaints-success" hidden>
+          <p class="cf-save-nudge">Would you like to keep a record? <button type="button" class="cf-save-copy" id="complaints-save-copy-post">Save a copy</button></p>
+        </div>
+      </div>
       <p><strong>Phone:</strong> <a href="tel:01275859143">01275 859143</a></p>
       <p><strong>Post:</strong> Bourton Barns, Ebdon Lane, Wick Saint Lawrence, Weston Super Mare, BS22 7YA</p>
     </div>
@@ -456,6 +492,106 @@ function initForm(toggleId,wrapperId,formId,errorId,successId){
 }
 initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
 initForm('util-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
+
+/* ── Complaints inline email form ── */
+(function(){
+  var toggle=document.getElementById('complaints-form-toggle');
+  var wrapper=document.getElementById('complaints-contact-form');
+  var form=document.getElementById('complaints-form');
+  var errorEl=document.getElementById('complaints-error');
+  var successEl=document.getElementById('complaints-success');
+  var saveBtn=document.getElementById('complaints-save-copy');
+  var saveHint=document.getElementById('complaints-save-hint');
+  if(!toggle||!wrapper||!form)return;
+
+  toggle.addEventListener('click',function(){
+    var isOpen=!wrapper.hidden;
+    if(isOpen){
+      wrapper.hidden=true;
+      toggle.setAttribute('aria-expanded','false');
+      toggle.textContent='Email us';
+    }else{
+      wrapper.hidden=false;
+      toggle.setAttribute('aria-expanded','true');
+      toggle.textContent='Close form';
+      setTimeout(function(){wrapper.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
+    }
+  });
+
+  form.querySelector('.btn-form-cancel').addEventListener('click',function(){
+    wrapper.hidden=true;
+    toggle.setAttribute('aria-expanded','false');
+    toggle.textContent='Email us';
+    form.reset();
+    if(errorEl)errorEl.hidden=true;
+    if(saveHint)saveHint.hidden=true;
+  });
+
+  function doSave(){
+    var name=document.getElementById('c-name').value.trim()||'(not provided)';
+    var email=document.getElementById('c-email').value.trim()||'(not provided)';
+    var phone=document.getElementById('c-phone').value.trim()||'(not provided)';
+    var message=document.getElementById('c-message').value.trim()||'(no message entered)';
+    var now=new Date();
+    var dateStr=now.toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
+    var timeStr=now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+    var content=[
+      'COMPLAINT TO LIGHTSIDE FINANCIAL',
+      '=================================',
+      '',
+      'Date:    '+dateStr+' at '+timeStr,
+      'Name:    '+name,
+      'Email:   '+email,
+      'Phone:   '+phone,
+      '',
+      'Message',
+      '-------',
+      message,
+      '',
+      '=================================',
+      'Sent to: resolve@lightsidefinancial.com',
+      'Lightside (BSPC) Ltd | FCA No. 676943',
+    ].join('\n');
+    var blob=new Blob([content],{type:'text/plain;charset=utf-8'});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');
+    a.href=url;
+    a.download='lightside-complaint-'+now.toISOString().slice(0,10)+'.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    if(saveHint)saveHint.hidden=false;
+  }
+  saveBtn.addEventListener('click',doSave);
+
+  // Post-send save button (in success state)
+  document.getElementById('complaints-save-copy-post').addEventListener('click',doSave);
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(errorEl)errorEl.hidden=true;
+    var valid=true;
+    form.querySelectorAll('[required]').forEach(function(f){if(!f.value.trim()){valid=false;f.focus();}});
+    if(!valid)return;
+    var submitBtn=form.querySelector('.cf-submit');
+    var orig=submitBtn.textContent;
+    submitBtn.disabled=true;
+    submitBtn.textContent='Sending…';
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){form.hidden=true;if(successEl)successEl.hidden=false;}
+        else{throw new Error(j.message||'failed');}
+      })
+      .catch(function(err){
+        console.error('Complaints form error:',err);
+        submitBtn.disabled=false;
+        submitBtn.textContent=orig;
+        if(errorEl)errorEl.hidden=false;
+      });
+  });
+})();
 </script>
 </body>
 </html>
