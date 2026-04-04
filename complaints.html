@@ -445,13 +445,4 @@ function initForm(toggleId,wrapperId,formId,errorId,successId){
       })
       .catch(function(err){
         console.error('Form error:',err);
-        submitBtn.disabled=false;
-        submitBtn.textContent=orig;
-        if(errorEl)errorEl.hidden=false;
-      });
-  });
-}
-
-initForm('inline-form-toggle','inline-contact-form','inline-form','inline-error','inline-success');
-
-/* ── Util bar "Send a message" — opens
+        sub
