@@ -157,11 +157,14 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 /* ── Creditor-threat cards (Section 6) ── */
 .threat-section{padding-bottom:52px;}
 .threat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;}
-.threat-card{background:var(--site-offwhite);border:1px solid var(--site-border);border-top:3px solid var(--site-teal);border-radius:6px;padding:22px 20px;}
-.threat-card-heading{font-family:'Merriweather',serif;font-size:0.97rem;font-weight:700;color:var(--site-navy);margin-bottom:10px;line-height:1.35;}
-.threat-card-body{font-size:0.9rem;color:var(--site-muted);line-height:1.7;}
-.threat-card-body a{color:var(--site-teal);font-weight:700;}
-.threat-card-body a:hover{color:var(--site-teal-dk);}
+.threat-card{border-top:3px solid var(--site-accent);border-radius:6px;padding:22px 20px;}
+.threat-card-1{background:#2a8b8b;}
+.threat-card-2{background:#1e5f75;}
+.threat-card-3{background:#1e3a5f;}
+.threat-card-heading{font-family:'Merriweather',serif;font-size:0.97rem;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.threat-card-body{font-size:0.9rem;color:rgba(255,255,255,0.85);line-height:1.7;}
+.threat-card-body a{color:var(--site-accent);font-weight:700;}
+.threat-card-body a:hover{color:#f0b840;text-decoration:underline;}
 .threat-section-sub{font-size:1rem;color:var(--site-muted);line-height:1.7;margin-top:6px;margin-bottom:0;max-width:680px;}
 
 /* ── Inline CTA ── */
@@ -597,8 +600,8 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
           </div>
           <div class="flip-face flip-back">
             <div class="flip-back-label">What it means</div>
-            <div class="flip-back-text">If your total unsecured debt is &pound;50,000 or less &mdash; and you meet the other DRO criteria &mdash; a Debt Relief Order may be more appropriate than bankruptcy. If your debt exceeds &pound;50,000, or you don&rsquo;t meet the DRO criteria, bankruptcy can be considered. We will explain all your options clearly.</div>
-            <div class="flip-back-text-mobile">Under &pound;50k? A DRO may apply. Over &pound;50k? Bankruptcy is likely right. We&rsquo;ll tell you clearly.</div>
+            <div class="flip-back-text">Whether you use bankruptcy or a Debt Relief Order to write off unsecured debt depends on the level of debt &mdash; more than or less than &pound;50,000 &mdash; and other criteria. We explore all the options.</div>
+            <div class="flip-back-text-mobile">Bankruptcy or DRO depends on whether your debt is above or below &pound;50,000 and other criteria. We explore all options.</div>
             <button class="flip-reset" onclick="event.stopPropagation();var t=this.closest('.flip-tile');if(window.innerWidth<=480){t.style.transition='height 0.35s ease';t.style.height='130px';t.classList.remove('flipped');t.addEventListener('transitionend',function c(){t.style.height='';t.style.transition='';t.removeEventListener('transitionend',c);});}else{t.classList.remove('flipped');}" aria-label="Flip back">&#8617; back</button>
           </div>
         </div>
@@ -631,22 +634,21 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 
   <!-- A creditor is trying to make you bankrupt -->
   <div class="threat-section">
-    <div class="section-label">When you are threatened with bankruptcy you don&rsquo;t want</div>
-    <h2 class="section-h2">You may have more options than you think.</h2>
-    <p class="threat-section-sub">A creditor petitioning for your bankruptcy does not mean bankruptcy is inevitable &mdash; or that the terms are out of your hands.</p>
+    <h2 class="section-h2">When you are threatened with bankruptcy you don&rsquo;t want</h2>
+    <p class="threat-section-sub">You may have more options than you think. A creditor petitioning for your bankruptcy does not mean bankruptcy is inevitable &mdash; or that the terms are out of your hands.</p>
     <div class="threat-grid">
 
-      <div class="threat-card">
+      <div class="threat-card threat-card-1">
         <div class="threat-card-heading">Buy time to consider your options</div>
         <div class="threat-card-body">The Debt Respite Scheme (Breathing Space) pauses creditor enforcement for 60 days. That pause stops the clock on a bankruptcy petition. You cannot request Breathing Space directly but we can.</div>
       </div>
 
-      <div class="threat-card">
+      <div class="threat-card threat-card-2">
         <div class="threat-card-heading">Show the creditor they&rsquo;d be worse off</div>
         <div class="threat-card-body">An Estimated Outcome Statement demonstrates what a creditor would realistically recover in bankruptcy. In many cases an EOS can support a negotiated settlement or an IVA proposal can be considered.</div>
       </div>
 
-      <div class="threat-card">
+      <div class="threat-card threat-card-3">
         <div class="threat-card-heading">Reverse an order that should never have been made</div>
         <div class="threat-card-body">If a bankruptcy order has already been made it can be challenged and annulled. This is not a theoretical option: Mr. G&rsquo;s order was annulled on the grounds it should never have been made, preserving his FCA registration and his ability to trade as a regulated professional. <a href="mr-g-personal-liability.html">Read Mr. G&rsquo;s case &rarr;</a></div>
       </div>
