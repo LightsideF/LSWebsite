@@ -265,23 +265,31 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .adv-assurance-text strong{display:block;font-size:0.88rem;color:white;margin-bottom:2px;}
 .adv-assurance-text span{font-size:0.8rem;color:rgba(255,255,255,0.58);line-height:1.4;}
 
-/* ── Referred cases strip ── */
-.referred-strip{margin-top:24px;}
-.referred-strip h4{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--site-muted);margin-bottom:12px;}
-.referred-cases{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.ref-case-card{background:var(--site-navy);border-radius:6px;overflow:hidden;text-decoration:none;display:block;transition:box-shadow 0.2s,transform 0.18s;}
-.ref-case-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.28);transform:translateY(-2px);text-decoration:none;}
-.ref-case-header{padding:14px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
-.ref-case-meta{flex:1;}
-.ref-case-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-accent);margin-bottom:4px;}
-.ref-case-title{font-family:'Merriweather',serif;font-size:0.88rem;font-weight:700;color:white;line-height:1.35;margin-bottom:3px;}
-.ref-case-detail{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.4;}
-.ref-case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.35);border-radius:4px;padding:6px 10px;text-align:center;flex-shrink:0;}
-.ref-stamp-num{display:block;font-family:'Merriweather',serif;font-size:0.92rem;font-weight:700;color:var(--site-accent);line-height:1.1;margin-bottom:2px;}
-.ref-stamp-lbl{font-size:0.62rem;color:rgba(255,255,255,0.6);line-height:1.3;display:block;}
-.ref-case-footer{padding:8px 18px;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;}
-.ref-case-ref-tag{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;}
-.ref-case-arrow{font-size:0.88rem;color:var(--site-accent);}
+/* ── Case cards (adviser panel) ── */
+.case-card{background:var(--site-white);border:0.5px solid var(--site-border);border-radius:8px;overflow:hidden;}
+.case-card-hdr{background:var(--site-navy);padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.case-card-meta{flex:1;}
+.case-card-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-accent);margin-bottom:5px;}
+.case-card-title{font-family:'Merriweather',serif;font-size:0.95rem;font-weight:700;color:white;line-height:1.35;margin-bottom:4px;}
+.case-card-ref{font-size:0.72rem;color:rgba(255,255,255,0.45);}
+.case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.28);border-radius:4px;padding:8px 10px;text-align:center;flex-shrink:0;min-width:68px;}
+.case-stamp-val{display:block;font-size:0.85rem;font-weight:700;color:var(--site-accent);font-family:'Merriweather',serif;line-height:1.2;margin-bottom:2px;}
+.case-stamp-lbl{font-size:0.67rem;color:rgba(255,255,255,0.5);display:block;line-height:1.3;}
+.case-body{overflow:hidden;max-height:0;transition:max-height 0.38s ease;}
+.case-body.open{max-height:800px;}
+.case-body-inner{padding:18px 20px 14px;border-top:0.5px solid var(--site-border);}
+.case-section-lbl{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
+.case-sit{background:var(--site-offwhite);border-left:3px solid var(--site-teal);border-radius:0 4px 4px 0;padding:14px 16px;margin-bottom:14px;}
+.case-sit p{font-family:'Merriweather',serif;font-size:0.88rem;font-style:italic;color:var(--site-text);line-height:1.8;}
+.case-sol p{font-size:0.9rem;color:var(--site-muted);line-height:1.7;margin-bottom:8px;}
+.case-sol p:last-child{margin-bottom:0;}
+.case-footer{padding:10px 20px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid var(--site-border);}
+.case-toggle-btn{font-size:0.85rem;font-weight:700;color:var(--site-teal);background:none;border:none;cursor:pointer;padding:0;font-family:inherit;min-height:44px;display:inline-flex;align-items:center;gap:6px;}
+.case-read-link{font-size:0.85rem;font-weight:700;color:var(--site-teal);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;}
+.case-read-link:hover{color:var(--site-teal-dk);text-decoration:underline;}
+.case-referrer-tag{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;}
+.toggle-chevron{font-size:0.72rem;display:inline-block;transition:transform 0.25s;}
+.case-toggle-btn[aria-expanded="true"] .toggle-chevron{transform:rotate(180deg);}
 
 /* ── Footer CTA ── */
 .footer-cta-wrap{background:var(--site-navy);margin-top:56px;}
@@ -325,7 +333,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .channels-grid{grid-template-columns:repeat(2,1fr);}
   .steps-row{grid-template-columns:1fr 1fr;}
   .adviser-panel-grid{grid-template-columns:1fr;}
-  .referred-cases{grid-template-columns:1fr;}
   .adviser-assurance{grid-template-columns:1fr;}
 }
 @media(max-width:640px){
@@ -730,134 +737,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           </div>
         </div>
 
-        <!-- Real cases strip -->
-        <div class="referred-strip" style="margin-top:40px;">
-          <div class="section-label" style="margin-bottom:6px;">Real cases. Real outcomes.</div>
-          <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.3;">Where we have helped directors and business owners find a way forward.</h3>
-          <div class="referred-cases">
-
-            <!-- 1: Mr & Mrs B -->
-            <a href="mr-and-mrs-b-personal-guarantees.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Business &mdash; Personal Guarantees</div>
-                  <div class="ref-case-title">We Owed &pound;335,000. Our Home Was Worth &pound;1.4 Million. We Still Kept It.</div>
-                  <div class="ref-case-detail">Mr. &amp; Mrs. B &mdash; construction business failed, full and final IVA</div>
-                </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Home<br>kept</span>
-                  <span class="ref-stamp-lbl">BKTCY avoided</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Insolvency Practitioner</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
-
-            <!-- 2: Ms PA -->
-            <a href="ms-pa-business-personal-guarantees.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Business &mdash; Personal Guarantees</div>
-                  <div class="ref-case-title">Two Personally Guaranteed Debts Settled &mdash; Avoiding Bankruptcy and Saving Thousands</div>
-                  <div class="ref-case-detail">Ms. PA &mdash; two creditors, bankruptcy avoided, &pound;40,000+ liquidation costs saved</div>
-                </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">BKTCY<br>avoided</span>
-                  <span class="ref-stamp-lbl">both debts settled</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
-
-            <!-- 3: Mr A -->
-            <a href="mr-a-personal-liability.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Business &mdash; Personal Liability</div>
-                  <div class="ref-case-title">Retired Sole Trader Faced &pound;300,000 HMRC Debt &mdash; Home Saved</div>
-                  <div class="ref-case-detail">Mr. A &mdash; Trustee&rsquo;s claim 100% &rarr; 16%, settled at &pound;94k</div>
-                </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">&pound;94k</span>
-                  <span class="ref-stamp-lbl">home secured</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
-
-            <!-- 4: Mr G -->
-            <a href="mr-g-personal-liability.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Business &mdash; Personal Liability</div>
-                  <div class="ref-case-title">Bankruptcy Annulled on the Grounds It Should Never Have Been Made</div>
-                  <div class="ref-case-detail">Mr. G &mdash; FCA authorisation preserved, HMRC demand resisted</div>
-                </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Annulled</span>
-                  <span class="ref-stamp-lbl">FCA status kept</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
-
-            <!-- 5: Mr & Mrs C -->
-            <a href="mr-and-mrs-c-personal-too-much-debt.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Business &mdash; Personal Guarantees</div>
-                  <div class="ref-case-title">Personal Guarantee Called In &mdash; Debt Growing, Home &amp; Family Impacted</div>
-                  <div class="ref-case-detail">Mr. &amp; Mrs. C &mdash; &pound;50,000+ coordinated, home protected</div>
-                </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Home<br>kept</span>
-                  <span class="ref-stamp-lbl">BKTCY halted</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Insolvency Practitioner</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
-
-            <!-- 6: Mrs SS -->
-            <a href="mrs-ss-property-at-risk.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Business &mdash; Closing a Business</div>
-                  <div class="ref-case-title">Forced to Close Her Business by a Litigious Landlord &mdash; Bankruptcy Actually Protected Her Home</div>
-                  <div class="ref-case-detail">Mrs. SS &mdash; home protected, all debts written off at discharge</div>
-                </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Home<br>kept</span>
-                  <span class="ref-stamp-lbl">debts written off</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
-
-          </div><!-- /.referred-cases -->
-        </div><!-- /.referred-strip -->
-
-      </div><!-- /left column -->
-
-      <!-- Right: referral CTA -->
-      <div>
-        <div class="referral-cta-box">
+        <!-- Referral CTA box -->
+        <div class="referral-cta-box" style="margin-top:32px;">
           <div class="section-label">Make a referral enquiry</div>
           <h3>Talk to us about your client</h3>
           <p>Initial referral discussions are completely confidential. You do not need your client&rsquo;s permission to make a speculative enquiry &mdash; anonymised details are fine at this stage.</p>
@@ -887,6 +768,184 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="cf-success" id="ref-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. All referral enquiries are treated in complete confidence. We&rsquo;ll be in touch shortly.</p></div>
           </div>
         </div>
+
+      </div><!-- /left column -->
+
+      <!-- Right: cases -->
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">Real cases. Real outcomes.</div>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.3;">Where we have helped directors and business owners find a way forward.</h3>
+        <div class="referred-cases">
+
+          <!-- 1: Mr & Mrs B -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Business &mdash; Personal Guarantees</div>
+                <div class="case-card-title">We Owed &pound;335,000. Our Home Was Worth &pound;1.4 Million. We Still Kept It.</div>
+                <div class="case-card-ref">Mr. &amp; Mrs. B &mdash; construction business failed, full and final IVA</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Home<br>kept</span>
+                <span class="case-stamp-lbl">BKTCY avoided</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-bb">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;When the business failed, the personal guarantees crystallised overnight. We owed &pound;335,000. Our home was worth &pound;1.4 million. We were told we would lose everything.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>We structured a full and final IVA benchmarked against what creditors would recover in bankruptcy. The family home &mdash; despite its significant equity &mdash; was protected throughout. All &pound;335,000 of personal debt was resolved in a single lump sum payment. Bankruptcy avoided.</p></div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Insolvency Practitioner</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-bb" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-and-mrs-b-personal-guarantees.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 2: Ms PA -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Business &mdash; Personal Guarantees</div>
+                <div class="case-card-title">Two Personally Guaranteed Debts Settled &mdash; Avoiding Bankruptcy and Saving Thousands</div>
+                <div class="case-card-ref">Ms. PA &mdash; two creditors, bankruptcy avoided, &pound;40,000+ liquidation costs saved</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">BKTCY<br>avoided</span>
+                <span class="case-stamp-lbl">both debts settled</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-pa">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I had two personally guaranteed business debts, one creditor moving to commence bankruptcy proceedings, and conflicting advice that had nearly cost me everything.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>Both guaranteed debts were negotiated and settled &mdash; one via Breathing Space protection, one through a negotiated settlement. Formal liquidation was avoided, saving &pound;40,000+ in costs and director investigation. Ms. PA retained her home and her ability to trade.</p></div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Accountant</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-pa" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="ms-pa-business-personal-guarantees.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 3: Mr A -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Business &mdash; Personal Liability</div>
+                <div class="case-card-title">Retired Sole Trader Faced &pound;300,000 HMRC Debt &mdash; Home Saved</div>
+                <div class="case-card-ref">Mr. A &mdash; Trustee&rsquo;s claim 100% &rarr; 16%, settled at &pound;94k</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">&pound;94k</span>
+                <span class="case-stamp-lbl">home secured</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-mra">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I had done everything right. Paid off my mortgage. Handed the business to my son. And yet here I was, facing bankruptcy for debts I had never incurred.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>Nearly twelve months of sustained negotiation with the Trustee in Bankruptcy. The Trustee opened wanting 100% &mdash; threatening a forced sale of the family home. We argued the beneficial interest position comprehensively. They conceded to 16%. Settlement: &pound;94,000. The family home, with equity of c.&pound;600,000, was protected and not sold.</p></div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Accountant</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-mra" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-a-personal-liability.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 4: Mr G -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Business &mdash; Personal Liability</div>
+                <div class="case-card-title">Bankruptcy Annulled on the Grounds It Should Never Have Been Made</div>
+                <div class="case-card-ref">Mr. G &mdash; FCA authorisation preserved, HMRC demand resisted</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Annulled</span>
+                <span class="case-stamp-lbl">FCA status kept</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-mrg">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I was an FCA-registered sole trader caring for seriously ill family members when HMRC pursued a VAT debt. A bankruptcy order was made. My authorisation &mdash; and my livelihood &mdash; were at risk.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>The bankruptcy petition was adjourned at four days&rsquo; notice. We then applied to annul the order on the grounds it should never have been made. HMRC&rsquo;s revised demand of &pound;194,000 was resisted &mdash; the annulment was secured for &pound;60,000. FCA authorisation was preserved with no regulatory notification required.</p></div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Accountant</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-mrg" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-g-personal-liability.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 5: Mr & Mrs C -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Business &mdash; Personal Guarantees</div>
+                <div class="case-card-title">Personal Guarantee Called In &mdash; Debt Growing, Home &amp; Family Impacted</div>
+                <div class="case-card-ref">Mr. &amp; Mrs. C &mdash; &pound;50,000+ coordinated, home protected</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Home<br>kept</span>
+                <span class="case-stamp-lbl">BKTCY halted</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-ncm">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;The personal guarantee creditor came straight for us &mdash; aggressive, fast, threatening bankruptcy. Not the company. Us. Me and my co-director, personally.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>We identified that a voluntary charge could give the creditor the security to stand down from formal proceedings. A charge was agreed. The bankruptcy threat evaporated. Over &pound;50,000 of combined personal and business debt was brought into a single coordinated arrangement. The co-director&rsquo;s share was structured separately to reflect his different asset position.</p></div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Insolvency Practitioner</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ncm" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-and-mrs-c-personal-too-much-debt.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 6: Mrs SS -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Business &mdash; Closing a Business</div>
+                <div class="case-card-title">Forced to Close Her Business by a Litigious Landlord &mdash; Bankruptcy Actually Protected Her Home</div>
+                <div class="case-card-ref">Mrs. SS &mdash; home protected, all debts written off at discharge</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Home<br>kept</span>
+                <span class="case-stamp-lbl">debts written off</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-ss">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I was so scared at the thought of bankruptcy. The thought of losing my home was terrifying. I wasn&rsquo;t eating. I wasn&rsquo;t sleeping.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>A thorough equity analysis confirmed the home was never at risk &mdash; the ownership structure meant the Trustee had no viable claim. We managed all correspondence throughout. The Trustee attempted to claim the family Porsche; we challenged it successfully and the claim was dropped. Mrs. SS emerged from bankruptcy with her home, her business closed cleanly, and all personal debts written off at discharge.</p></div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Accountant</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ss" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mrs-ss-property-at-risk.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+        </div><!-- /.referred-cases -->
       </div><!-- /right column -->
 
     </div><!-- /.adviser-panel-grid -->
@@ -1105,7 +1164,19 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   });
 })();
 
-/* ── Adviser panel toggle ── */
+/* ── Case card toggles ── */
+document.querySelectorAll('[data-case-toggle]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var bodyId=btn.getAttribute('aria-controls');
+    var body=document.getElementById(bodyId);
+    var isOpen=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',isOpen?'false':'true');
+    if(body){body.classList.toggle('open',!isOpen);}
+    btn.querySelector('.toggle-chevron') && (btn.querySelector('.toggle-chevron').style.transform=isOpen?'':'rotate(180deg)');
+  });
+});
+
+
 (function(){
   var btn=document.getElementById('adviser-toggle-btn');
   var panel=document.getElementById('adviser-panel');
