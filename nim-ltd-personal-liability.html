@@ -84,6 +84,7 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
 .outcome-item{display:flex;align-items:flex-start;gap:10px;font-size:0.95rem;color:rgba(255,255,255,0.95);line-height:1.55;}
 .outcome-check{width:22px;height:22px;border-radius:50%;background:var(--site-accent);color:white;font-size:0.72rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
 .attribution{border-top:1px solid rgba(255,255,255,0.2);padding-top:24px;font-size:0.82rem;color:rgba(255,255,255,0.7);}
+.attribution-link{color:rgba(255,255,255,0.9);text-decoration:underline;text-underline-offset:2px;}.attribution-link:hover{color:white;text-decoration:none;}
 .outcome-reflection-gap{height:28px;}
 .client-reflection{background:var(--site-navy);color:white;padding:32px 40px;border-radius:6px;margin:28px 24px 0;max-width:calc(var(--max-w) - 48px);margin-left:auto;margin-right:auto;}
 .client-reflection .section-label{color:rgba(255,255,255,0.55);margin-bottom:14px;}
@@ -297,7 +298,7 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
     <div class="hero-text">
       <nav class="breadcrumb" aria-label="Breadcrumb">Home <span aria-hidden="true">&rsaquo;</span> Business &amp; Directors <span aria-hidden="true">&rsaquo;</span> Personal Liability <span aria-hidden="true">&rsaquo;</span> NIM Ltd</nav>
       <h1>The Liquidator Didn&#8217;t Mention the &#163;30,000 &#8212; We Did</h1>
-      <p class="hero-lead">Nimo was hours away from signing a liquidation engagement letter. The firm he was about to instruct hadn&#8217;t told him the appointment would trigger a personal demand for &#163;30,000. We identified the exposure, found a better route, and saved him over &#163;22,000.</p>
+      <p class="hero-lead">Nimo was hours away from signing a liquidation engagement letter. The firm he&#8217;d instructed hadn&#8217;t told him the appointment would trigger a personal demand for &#163;30,000. We identified the exposure, found a better route, and saved him over &#163;22,000.</p>
     </div>
     <img src="nim-ltd-personal-liability-hero.webp" alt="A couple standing apart while an adviser works at a desk in the background — representing the complexity of business and personal decisions made under personal and financial pressure" width="200" loading="eager" decoding="async" style="border-radius:4px;aspect-ratio:2/3;">
   </div>
@@ -349,7 +350,7 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
       <div class="outcome-item"><span class="outcome-check" aria-hidden="true">&#10003;</span><span>No investigation, no conduct report for either director</span></div>
       <div class="outcome-item"><span class="outcome-check" aria-hidden="true">&#10003;</span><span>Over &#163;22,000 saved compared with the liquidation route</span></div>
     </div>
-    <p class="attribution">Priti Shah &middot; Referred by a personal contact</p>
+    <p class="attribution">Adviser: <a href="about.html#priti-shah" class="attribution-link">Priti Shah</a> &middot; Referred by a personal contact</p>
   </section>
 
   <div class="outcome-reflection-gap"></div>
@@ -540,7 +541,7 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
       <h4>Get in touch</h4>
       <p>
         <a href="tel:01275859143">01275 859143</a><br>
-        <a href="/cdn-cgi/l/email-protection#47352234282b3122072b2e202f33342e2322212e292629242e262b6924282a"><span class="__cf_email__" data-cfemail="790b1c0a16150f1c3915101e110d0a101d1c1f101718171a101815571a1614">[email&#160;protected]</span></a><br><br>
+        <a href="mailto:resolve@lightsidefinancial.com">resolve@lightsidefinancial.com</a><br><br>
         Bourton Barns<br>
         Ebdon Lane, Wick St Lawrence<br>
         Weston-super-Mare<br>
@@ -562,33 +563,43 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function initForm(toggleId,formWrapId,formId,errorId,successId){
-  var toggleBtn=document.getElementById(toggleId);
-  var formWrap=document.getElementById(formWrapId);
-  if(!toggleBtn||!formWrap)return;
-  toggleBtn.addEventListener('click',function(){
-    var isOpen=!formWrap.hidden;
-    if(isOpen){
-      formWrap.hidden=true;
-      toggleBtn.setAttribute('aria-expanded','false');
-    }else{
-      formWrap.hidden=false;
-      toggleBtn.setAttribute('aria-expanded','true');
-      setTimeout(function(){formWrap.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
-    }
-  });
+<script>
+function initForm(toggleId,wrapperId,formId,errorId,successId){
+  var toggle=document.getElementById(toggleId);
+  var wrapper=document.getElementById(wrapperId);
   var form=document.getElementById(formId);
   var errorEl=document.getElementById(errorId);
   var successEl=document.getElementById(successId);
-  if(!form)return;
+  if(!toggle||!wrapper||!form)return;
+  toggle.addEventListener('click',function(){
+    var isOpen=!wrapper.hidden;
+    if(isOpen){
+      wrapper.hidden=true;
+      toggle.setAttribute('aria-expanded','false');
+      toggle.textContent=toggle.textContent.includes('Close')?'Send a message':'Send a message';
+    }else{
+      wrapper.hidden=false;
+      toggle.setAttribute('aria-expanded','true');
+      toggle.textContent='Close form';
+      setTimeout(function(){wrapper.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
+    }
+  });
+  var cancelBtn=form.querySelector('.btn-form-cancel');
+  if(cancelBtn){
+    cancelBtn.addEventListener('click',function(){
+      wrapper.hidden=true;
+      toggle.setAttribute('aria-expanded','false');
+      toggle.textContent='Send a message';
+      form.reset();
+      if(errorEl)errorEl.hidden=true;
+    });
+  }
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(errorEl)errorEl.hidden=true;
     var valid=true;
     form.querySelectorAll('[required]').forEach(function(f){
-      if(!f.value.trim()){valid=false;f.style.borderColor='#c0392b';}
-      else{f.style.borderColor='';}
+      if(!f.value.trim()){valid=false;f.focus();}
     });
     if(!valid)return;
     var submitBtn=form.querySelector('.cf-submit');
