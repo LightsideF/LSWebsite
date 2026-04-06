@@ -367,7 +367,7 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
     </div>
     <div class="cta-buttons">
       <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-      <button type="button" class="btn-secondary" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form" style="background:transparent;">Send a message</button>
+      <button type="button" class="btn-secondary btn-form-toggle" id="inline-form-toggle" aria-expanded="false" aria-controls="inline-contact-form">Send a message</button>
     </div>
   </div>
 
@@ -449,49 +449,33 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
 </section>
 
 <section class="faq-section" aria-label="Frequently asked questions">
-  <h2>Questions directors ask us about this situation</h2>
-  <div class="faq-list" role="list">
-
-    <div class="faq-item" role="listitem">
-      <button class="faq-question" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
-        Does a director have to repay an overdrawn loan account if the company goes into liquidation?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+  <div class="section-label">Questions about director liability and company closure</div>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq1">Does a director have to repay an overdrawn loan account if the company goes into liquidation?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" id="faq1" role="region">
         <p>Yes. An overdrawn director&#8217;s loan account is a debt owed by the director to the company. When a liquidator is appointed under the Insolvency Act 1986, they have a statutory duty to recover that balance from the director personally. This applies regardless of whether the director was aware the account was overdrawn, and regardless of their personal financial circumstances at the time.</p>
       </div>
     </div>
-
-    <div class="faq-item" role="listitem">
-      <button class="faq-question" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
-        Can a company be dissolved if a director has an overdrawn loan account?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2">Can a company be dissolved if a director has an overdrawn loan account?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" id="faq2" role="region">
         <p>In certain circumstances, yes. Voluntary strike-off under the Companies Act 2006 does not involve the appointment of an insolvency practitioner. Where no liquidator is appointed, no statutory power to investigate or recover the director&#8217;s loan account arises. Whether strike-off is available depends on the company&#8217;s individual position &#8212; it must have ceased trading, have no pending legal proceedings against it, and creditors must be given their legal option prior to filing. Each case must be assessed individually.</p>
       </div>
     </div>
-
-    <div class="faq-item" role="listitem">
-      <button class="faq-question" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
-        What is the difference between dissolving a company and liquidating it?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq3">What is the difference between dissolving a company and liquidating it?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" id="faq3" role="region">
         <p>Dissolution is a non-insolvency process. The company applies to be struck off the Companies Register, creditors are notified and given their legal option, and if no objections block the process, the company is removed from the register. There is no insolvency practitioner, no statutory investigation of director conduct, and no formal recovery of the director&#8217;s loan account. Liquidation is a formal insolvency process. A licensed insolvency practitioner is appointed with statutory powers to investigate the company&#8217;s affairs and pursue directors for repayment of overdrawn loan accounts, unlawful transactions, and other recoverable sums.</p>
       </div>
     </div>
-
-    <div class="faq-item" role="listitem">
-      <button class="faq-question" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
-        Why would an insolvency practitioner recommend liquidation over dissolution?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+    <div class="faq-item">
+      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq4">Why would an insolvency practitioner recommend liquidation over dissolution?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" id="faq4" role="region">
         <p>An insolvency practitioner earns their fee from a formal appointment &#8212; liquidation generates that appointment; dissolution does not. This does not mean liquidation is always the wrong route: there are circumstances where it is genuinely required. But it does mean that directors should take independent advice before accepting that liquidation is the only or best option. In cases where dissolution is available, it is almost always the less costly and less burdensome route for the director.</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -502,7 +486,7 @@ a{color:var(--site-teal);text-decoration:none;}a:hover{color:var(--site-teal-dk)
     <p>The initial conversation is free, completely confidential, and carries no obligation. We will tell you what your options are &#8212; including whether you need us at all.</p>
     <div class="cta-buttons">
       <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
-      <button type="button" class="btn-secondary" id="footer-form-toggle" aria-expanded="false" aria-controls="footer-contact-form" style="background:transparent;color:white;border-color:rgba(255,255,255,0.55);">Send a message</button>
+      <button type="button" class="btn-secondary btn-form-toggle" id="footer-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">Send a message</button>
     </div>
     <div class="slide-form-wrap slide-form-wrap--dark" id="footer-contact-form" hidden>
       <form class="contact-form contact-form--dark" id="footer-form" novalidate>
@@ -675,3 +659,11 @@ document.getElementById('cookie-accept').addEventListener('click',function(){
   localStorage.setItem('ls_cookie_consent','accepted');
 });
 document.getElementById('cookie-decline').addEventListener('click',function(){
+  document.getElementById('cookie-banner').style.display='none';
+  localStorage.setItem('ls_cookie_consent','essential');
+});
+if(!localStorage.getItem('ls_cookie_consent')){document.getElementById('cookie-banner').style.display='flex';}
+</script>
+
+</body>
+</html>
