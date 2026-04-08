@@ -1,0 +1,153 @@
+<!--
+================================================================================
+INFOGRAPHIC SNIPPET — infographic-200bosh-equity-comparison.html
+================================================================================
+Case:      Mr & Mrs B (200BOSH)
+Context:   IVA / 8p in £1 settlement
+Purpose:   Communicates the counter-intuitive pivot — a £1.4m home produces
+           negligible equity for unsecured creditors once the prior-ranking
+           secured claims (mortgage + a previously unregistered neighbour loan)
+           are properly accounted for. This is the mechanism that justifies a
+           full-and-final IVA over bankruptcy.
+Location:  Standalone HTML snippet file stored at the GitHub repo root.
+           Embedded into .case-body-inner between .case-sol and
+           .case-attribution when Mr & Mrs B appears as a related case on an
+           L2 page (read from Page Log Card Reference → Card Preview
+           Infographic field).
+Style:     Self-contained CSS scoped with eqcomp-* class prefix to avoid
+           collisions with the parent page's CSS.
+Created:   8 April 2026
+Revised:   8 April 2026 — middle box rewritten as descriptive (Mortgage +
+           Neighbours' secured loan) rather than numeric, after Priti
+           pointed out the £335k figure is personal debt, not the
+           secured claim against the property.
+================================================================================
+-->
+
+<div class="eqcomp-block" aria-label="Equity comparison for Mr and Mrs B's case">
+  <div class="eqcomp-label">What made this an IVA, not bankruptcy</div>
+  <div class="eqcomp-row">
+    <div class="eqcomp-box eqcomp-box-setup">
+      <div class="eqcomp-val">&pound;1.4m</div>
+      <div class="eqcomp-desc">Home value</div>
+    </div>
+    <div class="eqcomp-arrow">&minus;</div>
+    <div class="eqcomp-box eqcomp-box-setup eqcomp-box-mid">
+      <div class="eqcomp-val">Mortgage</div>
+      <div class="eqcomp-plus">+</div>
+      <div class="eqcomp-val">Neighbours&rsquo;<br>secured loan</div>
+    </div>
+    <div class="eqcomp-arrow">=</div>
+    <div class="eqcomp-box eqcomp-box-payoff">
+      <div class="eqcomp-val">&asymp;&pound;0</div>
+      <div class="eqcomp-desc">Available equity<br>for unsecured<br>creditors</div>
+    </div>
+  </div>
+  <div class="eqcomp-caption">A &pound;1.4m home looks like equity for creditors to pursue in bankruptcy. In Mr &amp; Mrs B&rsquo;s case it wasn&rsquo;t. Once the mortgage and a previously unregistered neighbour loan were properly accounted for as prior-ranking secured claims, the equity available to unsecured creditors was negligible &mdash; which made a lump-sum IVA, funded by those same neighbours, a better outcome for creditors than bankruptcy would have produced.</div>
+</div>
+
+<style>
+.eqcomp-block {
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+.eqcomp-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--site-teal);
+  margin-bottom: 10px;
+}
+.eqcomp-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1.15fr auto 1fr;
+  gap: 6px;
+  align-items: stretch;
+}
+.eqcomp-box {
+  border-radius: 6px;
+  padding: 12px 8px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.eqcomp-box-setup {
+  background: var(--site-offwhite);
+  border: 1px solid var(--site-border);
+}
+.eqcomp-box-payoff {
+  background: rgba(232, 160, 32, 0.10);
+  border: 1.5px solid rgba(232, 160, 32, 0.45);
+}
+.eqcomp-val {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--site-navy);
+  margin-bottom: 4px;
+}
+.eqcomp-box-payoff .eqcomp-val {
+  color: var(--site-accent);
+  font-size: 1.15rem;
+}
+.eqcomp-box-setup:not(.eqcomp-box-mid) .eqcomp-val {
+  font-size: 1.15rem;
+}
+.eqcomp-box-mid .eqcomp-val:last-child {
+  margin-bottom: 0;
+}
+.eqcomp-plus {
+  font-family: 'Merriweather', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--site-muted);
+  margin: 1px 0 3px;
+  line-height: 1;
+}
+.eqcomp-desc {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--site-muted);
+}
+.eqcomp-box-payoff .eqcomp-desc {
+  color: var(--site-text);
+  font-weight: 700;
+}
+.eqcomp-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--site-muted);
+  padding: 0 2px;
+}
+.eqcomp-caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--site-muted);
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--site-border);
+}
+
+/* Responsive: stack vertically on narrow containers */
+@media (max-width: 560px) {
+  .eqcomp-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .eqcomp-arrow {
+    padding: 2px 0;
+    font-size: 1.1rem;
+  }
+  .eqcomp-box {
+    padding: 10px 8px 8px;
+  }
+}
+</style>

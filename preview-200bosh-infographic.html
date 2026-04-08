@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Preview — Mr & Mrs B equity comparison infographic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --site-teal: #2a8b8b;
+  --site-teal-dk: #1f6e6e;
+  --site-navy: #1e3a5f;
+  --site-navy-lt: #254878;
+  --site-accent: #e8a020;
+  --site-white: #ffffff;
+  --site-offwhite: #f7f8f9;
+  --site-light: #eef2f5;
+  --site-border: #d8dfe6;
+  --site-text: #3a3a3a;
+  --site-muted: #6b7a8d;
+  --max-w: 1100px;
+}
+body {
+  margin: 0;
+  background: #e8ebef;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: var(--site-text);
+  padding: 40px 24px;
+}
+.preview-header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+.preview-header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+  color: var(--site-navy);
+  margin: 0 0 8px;
+}
+.preview-header p {
+  margin: 6px 0;
+  color: var(--site-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.preview-header strong {
+  color: var(--site-text);
+}
+.preview-wrap {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background: #f0f3f6;
+  border-radius: 10px;
+  border: 1px dashed #c0c8d0;
+}
+.preview-wrap-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--site-muted);
+  margin-bottom: 14px;
+}
+
+/* ── Case card CSS (simulating the host page environment) ── */
+.case-card {
+  background: var(--site-white);
+  border: 0.5px solid var(--site-border);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.case-card-hdr {
+  background: var(--site-navy);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.case-card-meta { flex: 1; }
+.case-card-eyebrow {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--site-accent);
+  margin-bottom: 5px;
+}
+.case-card-title {
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+.case-card-ref {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+.case-stamp {
+  background: rgba(232, 160, 32, 0.15);
+  border: 1px solid rgba(232, 160, 32, 0.28);
+  border-radius: 4px;
+  padding: 8px 10px;
+  text-align: center;
+  flex-shrink: 0;
+  min-width: 68px;
+}
+.case-stamp-val {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--site-accent);
+  font-family: 'Merriweather', serif;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+.case-stamp-lbl {
+  font-size: 0.67rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  line-height: 1.3;
+}
+.case-body-inner {
+  padding: 18px 20px 14px;
+  border-top: 0.5px solid var(--site-border);
+}
+.case-section-lbl {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--site-teal);
+  margin-bottom: 6px;
+}
+.case-sit {
+  background: var(--site-offwhite);
+  border-left: 3px solid var(--site-teal);
+  border-radius: 0 4px 4px 0;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+.case-sit p {
+  font-family: 'Merriweather', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--site-text);
+  line-height: 1.8;
+  margin: 0;
+}
+.case-sol {
+  margin-bottom: 8px;
+}
+.case-sol p {
+  font-size: 0.9rem;
+  color: var(--site-muted);
+  line-height: 1.7;
+  margin: 0 0 8px;
+}
+.case-attribution {
+  font-size: 0.78rem;
+  color: var(--site-muted);
+  font-style: italic;
+  border-top: 1px solid var(--site-border);
+  padding-top: 10px;
+  margin-top: 12px;
+}
+
+/* ── Equity comparison infographic (the file under review) ── */
+.eqcomp-block {
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+.eqcomp-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--site-teal);
+  margin-bottom: 10px;
+}
+.eqcomp-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1.15fr auto 1fr;
+  gap: 6px;
+  align-items: stretch;
+}
+.eqcomp-box {
+  border-radius: 6px;
+  padding: 12px 8px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.eqcomp-box-setup {
+  background: var(--site-offwhite);
+  border: 1px solid var(--site-border);
+}
+.eqcomp-box-payoff {
+  background: rgba(232, 160, 32, 0.10);
+  border: 1.5px solid rgba(232, 160, 32, 0.45);
+}
+.eqcomp-val {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--site-navy);
+  margin-bottom: 4px;
+}
+.eqcomp-box-payoff .eqcomp-val {
+  color: var(--site-accent);
+  font-size: 1.15rem;
+}
+.eqcomp-box-setup:not(.eqcomp-box-mid) .eqcomp-val {
+  font-size: 1.15rem;
+}
+.eqcomp-box-mid .eqcomp-val:last-child {
+  margin-bottom: 0;
+}
+.eqcomp-plus {
+  font-family: 'Merriweather', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--site-muted);
+  margin: 1px 0 3px;
+  line-height: 1;
+}
+.eqcomp-desc {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--site-muted);
+}
+.eqcomp-box-payoff .eqcomp-desc {
+  color: var(--site-text);
+  font-weight: 700;
+}
+.eqcomp-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--site-muted);
+  padding: 0 2px;
+}
+.eqcomp-caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--site-muted);
+  line-height: 1.6;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--site-border);
+}
+@media (max-width: 560px) {
+  .eqcomp-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .eqcomp-arrow {
+    padding: 2px 0;
+    font-size: 1.1rem;
+  }
+  .eqcomp-box {
+    padding: 10px 8px 8px;
+  }
+}
+
+/* Responsive preview wrapper */
+@media (max-width: 600px) {
+  .preview-wrap { padding: 12px; }
+  body { padding: 20px 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="preview-header">
+  <h1>Infographic preview — Mr &amp; Mrs B (200BOSH) equity comparison</h1>
+  <p>This is a <strong>standalone preview</strong> of how the infographic will render when embedded inside a <code>.case-body-inner</code> block on an L2 page. The preview shows a simulated <code>.case-card</code> in its expanded state, with the infographic appearing between the &ldquo;What We Did&rdquo; solution paragraph and the attribution line, exactly as it will on the live page.</p>
+  <p><strong>Filename when live:</strong> <code>infographic-200bosh-equity-comparison.html</code> (stored at GitHub repo root, referenced from Page Log Card Reference row 9 &rarr; Card Preview Infographic field)</p>
+  <p>Resize the browser window below 560px to see the mobile stacked layout.</p>
+</div>
+
+<div class="preview-wrap">
+  <div class="preview-wrap-label">Card as it will appear on business-personal-guarantees.html (main grid and adviser panel)</div>
+
+  <div class="case-card">
+    <div class="case-card-hdr">
+      <div class="case-card-meta">
+        <div class="case-card-eyebrow">B&amp;D &mdash; Personal Guarantees</div>
+        <div class="case-card-title">Home At Risk Because of Personal Guarantees</div>
+        <div class="case-card-ref">Mr. &amp; Mrs. B &mdash; IVA, home protected, debt free in ten months</div>
+      </div>
+      <div class="case-stamp">
+        <span class="case-stamp-val">8p/&pound;1</span>
+        <span class="case-stamp-lbl">Settled at</span>
+      </div>
+    </div>
+    <div class="case-body-inner">
+      <div class="case-section-lbl">The Situation</div>
+      <div class="case-sit">
+        <p>&ldquo;We had driven to London not knowing what to expect &mdash; braced for more bad news. My wife and I were in our fifties. The thought of losing our home and having to start again felt devastating.&rdquo;</p>
+      </div>
+      <div class="case-section-lbl">What We Did</div>
+      <div class="case-sol">
+        <p>We structured a full and final IVA. Although the property was valued at &pound;1.4 million, once a previously unregistered loan from neighbours was properly accounted for, the available equity was negligible. We prepared an asset and liability statement demonstrating that a one-off lump sum &mdash; funded by those same neighbours, who chose to provide additional funds &mdash; would produce a better return than bankruptcy, in which creditors would have received nothing. The settlement was approximately 8p in the pound. The IVA was accepted, the home was protected, and Mr &amp; Mrs B were debt free within ten months of their first meeting with us.</p>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════ -->
+      <!-- BEGIN embedded infographic snippet                           -->
+      <!-- ═══════════════════════════════════════════════════════════ -->
+      <div class="eqcomp-block" aria-label="Equity comparison for Mr and Mrs B's case">
+        <div class="eqcomp-label">What made this an IVA, not bankruptcy</div>
+        <div class="eqcomp-row">
+          <div class="eqcomp-box eqcomp-box-setup">
+            <div class="eqcomp-val">&pound;1.4m</div>
+            <div class="eqcomp-desc">Home value</div>
+          </div>
+          <div class="eqcomp-arrow">&minus;</div>
+          <div class="eqcomp-box eqcomp-box-setup eqcomp-box-mid">
+            <div class="eqcomp-val">Mortgage</div>
+            <div class="eqcomp-plus">+</div>
+            <div class="eqcomp-val">Neighbours&rsquo;<br>secured loan</div>
+          </div>
+          <div class="eqcomp-arrow">=</div>
+          <div class="eqcomp-box eqcomp-box-payoff">
+            <div class="eqcomp-val">&asymp;&pound;0</div>
+            <div class="eqcomp-desc">Available equity<br>for unsecured<br>creditors</div>
+          </div>
+        </div>
+        <div class="eqcomp-caption">A &pound;1.4m home looks like equity for creditors to pursue in bankruptcy. In Mr &amp; Mrs B&rsquo;s case it wasn&rsquo;t. Once the mortgage and a previously unregistered neighbour loan were properly accounted for as prior-ranking secured claims, the equity available to unsecured creditors was negligible &mdash; which made a lump-sum IVA, funded by those same neighbours, a better outcome for creditors than bankruptcy would have produced.</div>
+      </div>
+      <!-- ═══════════════════════════════════════════════════════════ -->
+      <!-- END embedded infographic snippet                             -->
+      <!-- ═══════════════════════════════════════════════════════════ -->
+
+      <div class="case-attribution">Adviser: Priti Shah. Referred by an insolvency practitioner.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="preview-header">
+  <p style="font-size:0.82rem;"><strong>Design notes:</strong></p>
+  <ul style="font-size:0.82rem; line-height:1.7; color:var(--site-muted); padding-left:20px;">
+    <li>Three boxes in a row, desktop layout, with minus / equals operators between them. The layout reads as an equation: &pound;1.4m &minus; (Mortgage + Neighbours&rsquo; secured loan) = &asymp;&pound;0.</li>
+    <li>The first and middle boxes (setup) are off-white with a thin grey border &mdash; neutral.</li>
+    <li>The middle box is <strong>descriptive rather than numeric</strong>. There&rsquo;s no specific pound figure for the mortgage or the neighbours&rsquo; loan in the source case, and inventing one would be wrong. Naming the two prior-ranking secured claims is the substantive content &mdash; a reader gets the full mechanism at a glance: &ldquo;the house is encumbered by the mortgage AND by a secured loan from the neighbours, so there&rsquo;s nothing left for unsecured creditors.&rdquo;</li>
+    <li>The plus sign in the middle box echoes the minus / equals operators between the boxes, reinforcing the equation framing and signalling that the middle box represents two combined things.</li>
+    <li>The third box (payoff) is gold-accented: pale gold background, thicker gold border, gold value colour. This ties visually to the case stamp in the header (also gold), creating a narrative loop &mdash; the stamp says &ldquo;8p/&pound;1 settled at&rdquo;, the infographic explains why that was possible.</li>
+    <li>Values use Merriweather serif bold &mdash; the numbers (&pound;1.4m, &asymp;&pound;0) at 1.15rem, the descriptive words in the middle box at 1.05rem so the lines fit comfortably without wrapping awkwardly.</li>
+    <li>Descriptors underneath use Lato at 0.68rem muted.</li>
+    <li>Caption below the row explains the mechanism in prose, bordered above with a dashed separator. Italic muted text, same style as the attribution line at the bottom. The caption was rewritten to match the corrected framing.</li>
+    <li>On mobile (&lt;560px) the three boxes stack vertically with operators rotated inline. Still legible, still tells the same story.</li>
+    <li>No coral anywhere &mdash; card internals stay channel-agnostic per v1.02 Section 3.13.</li>
+    <li><strong>Correction from first draft:</strong> the original middle box said &pound;335k labelled as &ldquo;Neighbour loan (properly accounted for)&rdquo;. That conflated two different numbers: &pound;335k is Mr &amp; Mrs B&rsquo;s total personal debt (the figure that went into the IVA), not the secured claim against the property. Subtracting unsecured personal debt from a property value isn&rsquo;t how equity works, so the equation was nonsense even though the prose insight was right. Rebuilt with the descriptive middle box per Priti&rsquo;s suggestion.</li>
+  </ul>
+</div>
+
+</body>
+</html>
