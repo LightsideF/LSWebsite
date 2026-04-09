@@ -289,7 +289,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .case-stamp-val{display:block;font-size:0.85rem;font-weight:700;color:var(--site-accent);font-family:'Merriweather',serif;line-height:1.2;margin-bottom:2px;}
 .case-stamp-lbl{font-size:0.67rem;color:rgba(255,255,255,0.5);display:block;line-height:1.3;}
 .case-body{overflow:hidden;max-height:0;transition:max-height 0.38s ease;}
-.case-body.open{max-height:800px;}
+.case-body.open{max-height:1200px;}
 .case-body-inner{padding:18px 20px 14px;border-top:0.5px solid var(--site-border);}
 .case-section-lbl{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
 .case-sit{background:var(--site-offwhite);border-left:3px solid var(--site-teal);border-radius:0 4px 4px 0;padding:14px 16px;margin-bottom:14px;}
@@ -371,20 +371,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-outline-white:hover{background:rgba(255,255,255,0.1);}
 .referred-strip{margin-top:24px;}
 .referred-strip h4{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--site-muted);margin-bottom:12px;}
-.referred-cases{display:flex;flex-direction:column;gap:10px;}
-.ref-case-card{background:var(--site-navy);border-radius:6px;overflow:hidden;text-decoration:none;display:block;transition:box-shadow 0.2s,transform 0.18s;}
-.ref-case-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.28);transform:translateY(-2px);text-decoration:none;}
-.ref-case-header{padding:14px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
-.ref-case-meta{flex:1;}
-.ref-case-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:4px;}
-.ref-case-title{font-family:'Merriweather',serif;font-size:0.88rem;font-weight:700;color:white;line-height:1.35;margin-bottom:3px;}
-.ref-case-detail{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.4;}
-.ref-case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.35);border-radius:4px;padding:6px 10px;text-align:center;flex-shrink:0;}
-.ref-stamp-num{display:block;font-family:'Merriweather',serif;font-size:0.92rem;font-weight:700;color:var(--site-accent);line-height:1.1;margin-bottom:2px;}
-.ref-stamp-lbl{font-size:0.62rem;color:rgba(255,255,255,0.6);line-height:1.3;display:block;}
-.ref-case-footer{padding:8px 18px;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;}
-.ref-case-ref-tag{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;}
-.ref-case-arrow{font-size:0.88rem;color:var(--site-accent);}
+.referred-cases{display:flex;flex-direction:column;gap:16px;}
 .adviser-assurance{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;}
 .adv-assurance-item{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--site-border);border-radius:6px;padding:16px;}
 .adv-check{width:28px;height:28px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.8rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
@@ -820,21 +807,22 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
+            <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
             <div class="case-card-title">Told Her Home Was at Risk &mdash; It Wasn&rsquo;t</div>
             <div class="case-card-ref">Ms. JJ &mdash; credit card debt, no charges on home</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">No<br>charge</span>
-            <span class="case-stamp-lbl">ever placed</span>
+            <span class="case-stamp-val">No charge</span>
+            <span class="case-stamp-lbl">Home safe</span>
           </div>
         </div>
         <div class="case-body" id="case-body-jj">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;The calls were relentless. I was told that credit cards could secure the debt on my home, and I was frightened I would have to sell. I couldn&rsquo;t sleep.&rdquo;</p></div>
+            <div class="case-sit"><p>&ldquo;The calls were relentless. I was told that credit card companies could secure the debt on my home, and I was frightened I would have to sell. I couldn&rsquo;t sleep.&rdquo;</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>We explained the commercial reality &mdash; retail creditors want payment, not property. We took over all creditor contact, negotiated a repayment arrangement with each lender, and the charging order threat dissolved. No court action. No charge. Ms. JJ got her life back.</p></div>
+            <div class="case-sol"><p>The threat Ms. JJ had been given &mdash; that credit card companies could force a charge on her home &mdash; was true but commercially unrealistic. We explained the reality of how credit card lenders actually behave, took over all creditor contact, and negotiated a managed repayment arrangement with each lender. No court action was taken. No charging order was ever placed. Ms. JJ&rsquo;s home was not at risk.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah. Referred by her divorce solicitor.</div>
           </div>
         </div>
         <div class="case-footer">
@@ -847,21 +835,22 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Personal Guarantees</div>
+            <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
             <div class="case-card-title">Voluntary Charge Offered &mdash; Bankruptcy Threat Withdrawn</div>
             <div class="case-card-ref">Mr. &amp; Mrs. C &mdash; PG called in, home and family protected</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">BKTCY<br>halted</span>
-            <span class="case-stamp-lbl">charge agreed</span>
+            <span class="case-stamp-val">BKTCY halted</span>
+            <span class="case-stamp-lbl">Charge agreed</span>
           </div>
         </div>
         <div class="case-body" id="case-body-ncm">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;The personal guarantee creditor came straight for us &mdash; aggressive, fast, threatening bankruptcy. Not the company. Us. Me and my co-director, personally.&rdquo;</p></div>
+            <div class="case-sit"><p>&ldquo;Bankruptcy. I couldn&rsquo;t stop turning that word over. We had a house. The children were settled in school. This wasn&rsquo;t just a money problem any more &mdash; it had become a threat to everything we had built.&rdquo;</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>We identified that a voluntary charge could give the creditor the security to stand down from formal proceedings. A charge was agreed. The bankruptcy threat evaporated. All personal debt &mdash; over &pound;50,000 &mdash; brought into a coordinated repayment plan. The co-director&rsquo;s share was structured separately to reflect his different asset position.</p></div>
+            <div class="case-sol"><p>A personal guarantee creditor was threatening bankruptcy proceedings against Mr. and Mrs. C personally, which threatened them with losing their home. We identified that a voluntary charge on the family home would give the creditor the security to stand down &mdash; protecting the home rather than losing it. The charge was agreed, the bankruptcy threat was removed, and business personal guarantees and credit card debts of over &pound;50,000 were brought into a single coordinated Creditor Arrangement. The co-director&rsquo;s share of the personal guarantee was structured separately to reflect his different asset position.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah. Referred by an insolvency practitioner.</div>
           </div>
         </div>
         <div class="case-footer">
@@ -874,13 +863,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
+            <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
             <div class="case-card-title">Bankruptcy Didn&rsquo;t Mean Losing the Home. It Never Did.</div>
             <div class="case-card-ref">Mrs. SS &mdash; equity analysis confirmed home was never at risk</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">Porsche<br>Kept</span>
-            <span class="case-stamp-lbl">Assets Saved</span>
+            <span class="case-stamp-val">Porsche kept</span>
+            <span class="case-stamp-lbl">Assets saved</span>
           </div>
         </div>
         <div class="case-body" id="case-body-ss">
@@ -888,7 +877,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="case-section-lbl">The Situation</div>
             <div class="case-sit"><p>&ldquo;I was so scared at the thought of bankruptcy. The thought of losing my home was terrifying. I wasn&rsquo;t eating. I wasn&rsquo;t sleeping.&rdquo;</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>A thorough equity analysis confirmed the home was never at risk &mdash; the ownership structure meant the Trustee had no viable claim. We managed all correspondence throughout. The Trustee attempted to claim the family Porsche; we challenged it successfully and the claim was dropped. Mrs. SS emerged from bankruptcy with her home, her marriage, and her life intact.</p></div>
+            <div class="case-sol"><p>Mrs. SS&rsquo;s home was never at risk &mdash; but she didn&rsquo;t know that. A thorough review of the equity ownership structure confirmed the Trustee in Bankruptcy had no viable claim on the property. We managed all correspondence throughout, so she never had to deal with the insolvency service or creditors directly. When the Trustee attempted to claim the family Porsche, we challenged it. The claim was dropped. Mrs. SS was discharged within 12 months with her home, her marriage, and her financial footing intact.</p></div>
+            <div class="case-attribution">Adviser: Barry Mitchell. Referred by Peter Green, Green &amp; Co Accountants.</div>
           </div>
         </div>
         <div class="case-footer">
@@ -901,13 +891,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; HMRC</div>
-            <div class="case-card-title">HMRC Petitioned a Pensioner for His Son&rsquo;s Debts &mdash; Home Saved</div>
+            <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+            <div class="case-card-title">HMRC Bankrupted a Pensioner for His Son&rsquo;s Debts &mdash; Home Saved</div>
             <div class="case-card-ref">Mr. A &mdash; Trustee&rsquo;s claim 100% &rarr; 16%, settled at &pound;94k</div>
           </div>
           <div class="case-stamp">
             <span class="case-stamp-val">&pound;94k</span>
-            <span class="case-stamp-lbl">below our<br>opening offer</span>
+            <span class="case-stamp-lbl">Agreed</span>
           </div>
         </div>
         <div class="case-body" id="case-body-miah">
@@ -916,7 +906,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="case-sit"><p>&ldquo;I had done everything right. Paid off my mortgage. Handed the business to my son. And yet here I was, facing bankruptcy for debts I had never incurred.&rdquo;</p></div>
             <div class="case-section-lbl">What We Did</div>
             <div class="case-sol">
-              <p>Nearly twelve months of sustained negotiation with the Trustee in Bankruptcy. The Trustee opened wanting full repayment &mdash; threatening a forced sale. We argued comprehensively. They conceded to 32%, still denying Mrs. A any share. We pressed further, arguing Mrs. A held 50% of the 32%. They capitulated: 16% &mdash; precisely the position Lightside had held from the outset. With beneficial interest settled, the Trustee sought &pound;107,000. Lightside&rsquo;s opening offer had been &pound;100,000. We still negotiated them lower. Settlement: &pound;94,000. Home secure.</p>
+              <p>Nearly twelve months of sustained negotiation with the Trustee in Bankruptcy. The Trustee opened claiming 100% of the family home &mdash; threatening a forced sale. We argued comprehensively that the family held a beneficial interest; the Trustee conceded that the bankrupt&rsquo;s interest was 32%. We disagreed. We pressed that Mrs. A had 50% of the 32% interest, despite the Trustee&rsquo;s lawyers claiming she didn&rsquo;t. They eventually relented. With the beneficial interest settled at 16%, the Trustee sought &pound;107,000. Lightside&rsquo;s opening offer had been &pound;100,000. We continued to negotiate them down. Settlement: &pound;94,000. Home secured.</p>
             </div>
             <div class="neg-timeline" aria-label="Negotiation timeline">
               <div class="neg-label">The negotiation &mdash; how it actually happened</div>
@@ -963,7 +953,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
                 </div>
               </div>
             </div>
-            <div class="case-attribution">Lightside working with <a href="https://www.nsaha.co.uk" target="_blank" rel="noopener noreferrer">N. Saha &amp; Co Ltd, Chartered Accountants</a> &middot; Tax Gains, Tax Investigations</div>
+            <div class="case-attribution">Adviser: Priti Shah. Lightside working with N. Saha &amp; Co Ltd, Chartered Accountants, and Tax Gains, Tax Investigations.</div>
           </div>
         </div>
         <div class="case-footer">
@@ -978,23 +968,20 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           <div class="case-card-meta">
             <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
             <div class="case-card-title">Two Charging Orders on the Family Home &mdash; and a Decision That Protected What Was Left</div>
-            <div class="case-card-ref">Mr. &amp; Mrs. TA &mdash; seven BTLs repossessed, shortfall debt resolved, family home protected</div>
+            <div class="case-card-ref">Mr. &amp; Mrs. TA &mdash; seven BTLs repossessed, family home protected</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">Value<br>Preserved</span>
-            <span class="case-stamp-lbl">No BKTCY</span>
+            <span class="case-stamp-val">No BKTCY</span>
+            <span class="case-stamp-lbl">home equity saved</span>
           </div>
         </div>
         <div class="case-body" id="case-body-tac">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;Some of the envelopes were in French. From solicitors, I assumed, though I didn&rsquo;t know which ones or what they were claiming. They&rsquo;d arrived alongside everything else, and I&rsquo;d left them in the pile with the rest.&rdquo;</p></div>
+            <div class="case-sit"><p>&ldquo;I had stopped answering the phone entirely. My wife was frightened, and I had nothing to offer her. I couldn&rsquo;t see how any single person or firm could deal with all of this at once.&rdquo;</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol">
-              <p>Seven buy-to-let properties had been repossessed &mdash; UK and overseas. Shortfall debts had followed. Two mortgage lenders had already obtained final charging orders on the family home. An HMRC claim had been raised against a family trust.</p>
-              <p>We mapped the complete picture: the overseas debts, the domestic shortfalls, the HMRC position, and the charging orders. We brought in Tax Gains to handle the HMRC trust claim &mdash; they reduced the liability to nil. The remaining unsecured debts were placed into a creditor arrangement. No bankruptcy petition was issued. The family home was protected.</p>
-            </div>
-            <div class="case-attribution">Advised by Priti Shah, Lightside &middot; working with Tax Gains, Tax Investigations</div>
+            <div class="case-sol"><p>Two final charging orders on the family home, seven repossessed buy-to-lets, an HMRC claim against a family trust, and overseas creditor correspondence arriving in French. We coordinated the whole picture. A controlled sale of the family home was advised &mdash; protecting the equity by distributing proceeds to the adult children per the existing trust terms before a forced sale could consume it. The HMRC trust claim was handled by specialist tax investigators and reduced to nil. The remaining unsecured debts, including mortgage shortfalls, were placed into a creditor arrangement. No bankruptcy petition was issued. No further enforcement action followed.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah. Referred by a friend of the family.</div>
           </div>
         </div>
         <div class="case-footer">
@@ -1118,95 +1105,168 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           <h4>Cases referred by professionals</h4>
           <div class="referred-cases">
 
-            <a href="ms-jj-too-much-debt.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Too Much Debt</div>
-                  <div class="ref-case-title">Told Her Home Was at Risk &mdash; It Wasn&rsquo;t</div>
-                  <div class="ref-case-detail">Ms. JJ &mdash; retail creditors, no charge ever placed</div>
+            <!-- Ref case 1: 200JJ Ms. JJ -->
+            <div class="case-card">
+              <div class="case-card-hdr">
+                <div class="case-card-meta">
+                  <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+                  <div class="case-card-title">Told Her Home Was at Risk &mdash; It Wasn&rsquo;t</div>
+                  <div class="case-card-ref">Ms. JJ &mdash; credit card debt, no charges on home</div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">No<br>charge</span>
-                  <span class="ref-stamp-lbl">ever placed</span>
+                <div class="case-stamp">
+                  <span class="case-stamp-val">No charge</span>
+                  <span class="case-stamp-lbl">Home safe</span>
                 </div>
               </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Solicitor</span>
-                <span class="ref-case-arrow">&#8594;</span>
+              <div class="case-body" id="case-body-ref-1">
+                <div class="case-body-inner">
+                  <div class="case-section-lbl">The Situation</div>
+                  <div class="case-sit"><p>&ldquo;The calls were relentless. I was told that credit card companies could secure the debt on my home, and I was frightened I would have to sell. I couldn&rsquo;t sleep.&rdquo;</p></div>
+                  <div class="case-section-lbl">What We Did</div>
+                  <div class="case-sol"><p>The threat Ms. JJ had been given &mdash; that credit card companies could force a charge on her home &mdash; was true but commercially unrealistic. We explained the reality of how credit card lenders actually behave, took over all creditor contact, and negotiated a managed repayment arrangement with each lender. No court action was taken. No charging order was ever placed. Ms. JJ&rsquo;s home was not at risk.</p></div>
+                  <div class="case-attribution">Adviser: Priti Shah. Referred by her divorce solicitor.</div>
+                </div>
               </div>
-            </a>
+              <div class="case-footer">
+                <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-1" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="ms-jj-too-much-debt.html" class="case-read-link">Full case &rarr;</a>
+              </div>
+            </div>
 
-            <a href="mr-and-mrs-c-personal-too-much-debt.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Personal Guarantees</div>
-                  <div class="ref-case-title">Voluntary Charge Offered &mdash; Bankruptcy Threat Withdrawn</div>
-                  <div class="ref-case-detail">Mr. &amp; Mrs. C &mdash; PG called in, home and family protected</div>
+            <!-- Ref case 2: 200NCM Mr. & Mrs. C -->
+            <div class="case-card">
+              <div class="case-card-hdr">
+                <div class="case-card-meta">
+                  <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+                  <div class="case-card-title">Voluntary Charge Offered &mdash; Bankruptcy Threat Withdrawn</div>
+                  <div class="case-card-ref">Mr. &amp; Mrs. C &mdash; PG called in, home and family protected</div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">BKTCY<br>halted</span>
-                  <span class="ref-stamp-lbl">charge agreed</span>
+                <div class="case-stamp">
+                  <span class="case-stamp-val">BKTCY halted</span>
+                  <span class="case-stamp-lbl">Charge agreed</span>
                 </div>
               </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Insolvency Practitioner</span>
-                <span class="ref-case-arrow">&#8594;</span>
+              <div class="case-body" id="case-body-ref-2">
+                <div class="case-body-inner">
+                  <div class="case-section-lbl">The Situation</div>
+                  <div class="case-sit"><p>&ldquo;Bankruptcy. I couldn&rsquo;t stop turning that word over. We had a house. The children were settled in school. This wasn&rsquo;t just a money problem any more &mdash; it had become a threat to everything we had built.&rdquo;</p></div>
+                  <div class="case-section-lbl">What We Did</div>
+                  <div class="case-sol"><p>A personal guarantee creditor was threatening bankruptcy proceedings against Mr. and Mrs. C personally, which threatened them with losing their home. We identified that a voluntary charge on the family home would give the creditor the security to stand down &mdash; protecting the home rather than losing it. The charge was agreed, the bankruptcy threat was removed, and business personal guarantees and credit card debts of over &pound;50,000 were brought into a single coordinated Creditor Arrangement. The co-director&rsquo;s share of the personal guarantee was structured separately to reflect his different asset position.</p></div>
+                  <div class="case-attribution">Adviser: Priti Shah. Referred by an insolvency practitioner.</div>
+                </div>
               </div>
-            </a>
+              <div class="case-footer">
+                <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-2" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="mr-and-mrs-c-personal-too-much-debt.html" class="case-read-link">Full case &rarr;</a>
+              </div>
+            </div>
 
-            <a href="mrs-ss-property-at-risk.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Bankruptcy</div>
-                  <div class="ref-case-title">Bankruptcy Didn&rsquo;t Mean Losing the Home. It Never Did.</div>
-                  <div class="ref-case-detail">Mrs. SS &mdash; equity analysis confirmed home was never at risk</div>
+            <!-- Ref case 3: 500SAN Mrs. SS -->
+            <div class="case-card">
+              <div class="case-card-hdr">
+                <div class="case-card-meta">
+                  <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+                  <div class="case-card-title">Bankruptcy Didn&rsquo;t Mean Losing the Home. It Never Did.</div>
+                  <div class="case-card-ref">Mrs. SS &mdash; equity analysis confirmed home was never at risk</div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Porsche<br>Kept</span>
-                  <span class="ref-stamp-lbl">Assets Saved</span>
+                <div class="case-stamp">
+                  <span class="case-stamp-val">Porsche kept</span>
+                  <span class="case-stamp-lbl">Assets saved</span>
                 </div>
               </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
+              <div class="case-body" id="case-body-ref-3">
+                <div class="case-body-inner">
+                  <div class="case-section-lbl">The Situation</div>
+                  <div class="case-sit"><p>&ldquo;I was so scared at the thought of bankruptcy. The thought of losing my home was terrifying. I wasn&rsquo;t eating. I wasn&rsquo;t sleeping.&rdquo;</p></div>
+                  <div class="case-section-lbl">What We Did</div>
+                  <div class="case-sol"><p>Mrs. SS&rsquo;s home was never at risk &mdash; but she didn&rsquo;t know that. A thorough review of the equity ownership structure confirmed the Trustee in Bankruptcy had no viable claim on the property. We managed all correspondence throughout, so she never had to deal with the insolvency service or creditors directly. When the Trustee attempted to claim the family Porsche, we challenged it. The claim was dropped. Mrs. SS was discharged within 12 months with her home, her marriage, and her financial footing intact.</p></div>
+                  <div class="case-attribution">Adviser: Barry Mitchell. Referred by Peter Green, Green &amp; Co Accountants.</div>
+                </div>
               </div>
-            </a>
+              <div class="case-footer">
+                <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-3" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="mrs-ss-property-at-risk.html" class="case-read-link">Full case &rarr;</a>
+              </div>
+            </div>
 
-            <a href="mr-a-bankruptcy.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; HMRC</div>
-                  <div class="ref-case-title">HMRC Petitioned a Pensioner for His Son&rsquo;s Debts &mdash; Home Saved</div>
-                  <div class="ref-case-detail">Mr. A &mdash; Trustee&rsquo;s claim 100% &rarr; 16%, settled at &pound;94k</div>
+            <!-- Ref case 4: 200MIAH Mr. A -->
+            <div class="case-card">
+              <div class="case-card-hdr">
+                <div class="case-card-meta">
+                  <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+                  <div class="case-card-title">HMRC Bankrupted a Pensioner for His Son&rsquo;s Debts &mdash; Home Saved</div>
+                  <div class="case-card-ref">Mr. A &mdash; Trustee&rsquo;s claim 100% &rarr; 16%, settled at &pound;94k</div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">&pound;94k</span>
-                  <span class="ref-stamp-lbl">below our<br>opening offer</span>
+                <div class="case-stamp">
+                  <span class="case-stamp-val">&pound;94k</span>
+                  <span class="case-stamp-lbl">Agreed</span>
                 </div>
               </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
+              <div class="case-body" id="case-body-ref-4">
+                <div class="case-body-inner">
+                  <div class="case-section-lbl">The Situation</div>
+                  <div class="case-sit"><p>&ldquo;I had done everything right. Paid off my mortgage. Handed the business to my son. And yet here I was, facing bankruptcy for debts I had never incurred.&rdquo;</p></div>
+                  <div class="case-section-lbl">What We Did</div>
+                  <div class="case-sol"><p>Nearly twelve months of sustained negotiation with the Trustee in Bankruptcy. The Trustee opened claiming 100% of the family home &mdash; threatening a forced sale. We argued comprehensively that the family held a beneficial interest; the Trustee conceded that the bankrupt&rsquo;s interest was 32%. We disagreed. We pressed that Mrs. A had 50% of the 32% interest, despite the Trustee&rsquo;s lawyers claiming she didn&rsquo;t. They eventually relented. With the beneficial interest settled at 16%, the Trustee sought &pound;107,000. Lightside&rsquo;s opening offer had been &pound;100,000. We continued to negotiate them down. Settlement: &pound;94,000. Home secured.</p></div>
+                  <style>
+.negtl-block{margin-top:16px;}
+.negtl-label{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:10px;}
+.negtl-row-1{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;align-items:end;margin-bottom:8px;}
+.negtl-row-2{display:grid;grid-template-columns:1fr auto 1fr;gap:4px;align-items:end;}
+.negtl-box{border-radius:6px;padding:7px 4px;text-align:center;}
+.negtl-box-t{background:#fff3f3;border:1px solid #f0b8b8;}
+.negtl-box-l{background:#f0f8f8;border:1px solid #b2d8d8;}
+.negtl-box-f{background:var(--site-navy);}
+.negtl-arrow{text-align:center;font-size:1rem;color:var(--site-muted);padding-top:18px;}
+.negtl-who{font-size:0.6rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:3px;}
+.negtl-who-t{color:#c0392b;}
+.negtl-who-l{color:#2a8b8b;}
+.negtl-who-f{color:rgba(255,255,255,0.5);}
+.negtl-val{font-size:0.92rem;font-weight:700;font-family:'Merriweather',serif;line-height:1;margin-bottom:2px;}
+.negtl-val-t{color:#a03030;}
+.negtl-val-l{color:#1e6e6e;}
+.negtl-val-f{color:var(--site-accent);}
+.negtl-desc{font-size:0.6rem;line-height:1.3;}
+.negtl-desc-t{color:#a03030;}
+.negtl-desc-l{color:#1e6e6e;}
+.negtl-desc-f{color:rgba(255,255,255,0.6);}
+</style><div class="negtl-block" aria-label="Negotiation timeline"><div class="negtl-label">The negotiation &mdash; how it actually happened</div><div class="negtl-row-1"><div><div class="negtl-who negtl-who-t">Trustee opens</div><div class="negtl-box negtl-box-t"><div class="negtl-val negtl-val-t">100%</div><div class="negtl-desc negtl-desc-t">&pound;650k or<br>full debt</div></div></div><div class="negtl-arrow">&rarr;</div><div><div class="negtl-who negtl-who-l">Lightside argues</div><div class="negtl-box negtl-box-l"><div class="negtl-val negtl-val-l">32%</div><div class="negtl-desc negtl-desc-l">family has<br>interest</div></div></div><div class="negtl-arrow">&rarr;</div><div><div class="negtl-who negtl-who-l">Lightside presses</div><div class="negtl-box negtl-box-l"><div class="negtl-val negtl-val-l">16%</div><div class="negtl-desc negtl-desc-l">Mrs A holds<br>50% of 32%</div></div></div></div><div class="negtl-row-2"><div><div class="negtl-who negtl-who-t">Trustee wants</div><div class="negtl-box negtl-box-t"><div class="negtl-val negtl-val-t">&pound;107k</div><div class="negtl-desc negtl-desc-t">16% of &pound;650k</div></div></div><div class="negtl-arrow">&rarr;</div><div><div class="negtl-who negtl-who-f">Settled</div><div class="negtl-box negtl-box-f"><div class="negtl-val negtl-val-f">&pound;94k</div><div class="negtl-desc negtl-desc-f">below opening<br>offer</div></div></div></div></div>
+                  <div class="case-attribution">Adviser: Priti Shah. Lightside working with N. Saha &amp; Co Ltd, Chartered Accountants, and Tax Gains, Tax Investigations.</div>
+                </div>
               </div>
-            </a>
+              <div class="case-footer">
+                <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-4" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="mr-a-bankruptcy.html" class="case-read-link">Full case &rarr;</a>
+              </div>
+            </div>
 
-            <a href="mr-and-mrs-tac-property-at-risk.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Your Property at Risk</div>
-                  <div class="ref-case-title">Two Charging Orders on the Family Home &mdash; and a Decision That Protected What Was Left</div>
-                  <div class="ref-case-detail">Mr. &amp; Mrs. TA &mdash; seven BTLs repossessed, family home protected</div>
+            <!-- Ref case 5: 200TAC Mr. & Mrs. TA -->
+            <div class="case-card">
+              <div class="case-card-hdr">
+                <div class="case-card-meta">
+                  <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+                  <div class="case-card-title">Two Charging Orders on the Family Home &mdash; and a Decision That Protected What Was Left</div>
+                  <div class="case-card-ref">Mr. &amp; Mrs. TA &mdash; seven BTLs repossessed, family home protected</div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Value<br>Preserved</span>
-                  <span class="ref-stamp-lbl">No BKTCY</span>
+                <div class="case-stamp">
+                  <span class="case-stamp-val">No BKTCY</span>
+                  <span class="case-stamp-lbl">home equity saved</span>
                 </div>
               </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Good Friend</span>
-                <span class="ref-case-arrow">&#8594;</span>
+              <div class="case-body" id="case-body-ref-5">
+                <div class="case-body-inner">
+                  <div class="case-section-lbl">The Situation</div>
+                  <div class="case-sit"><p>&ldquo;I had stopped answering the phone entirely. My wife was frightened, and I had nothing to offer her. I couldn&rsquo;t see how any single person or firm could deal with all of this at once.&rdquo;</p></div>
+                  <div class="case-section-lbl">What We Did</div>
+                  <div class="case-sol"><p>Two final charging orders on the family home, seven repossessed buy-to-lets, an HMRC claim against a family trust, and overseas creditor correspondence arriving in French. We coordinated the whole picture. A controlled sale of the family home was advised &mdash; protecting the equity by distributing proceeds to the adult children per the existing trust terms before a forced sale could consume it. The HMRC trust claim was handled by specialist tax investigators and reduced to nil. The remaining unsecured debts, including mortgage shortfalls, were placed into a creditor arrangement. No bankruptcy petition was issued. No further enforcement action followed.</p></div>
+                  <div class="case-attribution">Adviser: Priti Shah. Referred by a friend of the family.</div>
+                </div>
               </div>
-            </a>
+              <div class="case-footer">
+                <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-5" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="mr-and-mrs-tac-property-at-risk.html" class="case-read-link">Full case &rarr;</a>
+              </div>
+            </div>
 
           </div>
         </div>
