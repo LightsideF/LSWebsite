@@ -278,16 +278,13 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 .case-stamp-val{display:block;font-size:0.85rem;font-weight:700;color:var(--site-accent);font-family:'Merriweather',serif;line-height:1.2;margin-bottom:2px;}
 .case-stamp-lbl{font-size:0.67rem;color:rgba(255,255,255,0.5);display:block;line-height:1.3;}
 .case-body{overflow:hidden;max-height:0;transition:max-height 0.38s ease;}
-.case-body.open{max-height:800px;}
+.case-body.open{max-height:600px;}
 .case-body-inner{padding:18px 20px 14px;border-top:0.5px solid var(--site-border);}
 .case-section-lbl{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
 .case-sit{background:var(--site-offwhite);border-left:3px solid var(--site-teal);border-radius:0 4px 4px 0;padding:14px 16px;margin-bottom:14px;}
 .case-sit p{font-family:'Merriweather',serif;font-size:0.88rem;font-style:italic;color:var(--site-text);line-height:1.8;}
 .case-sol p{font-size:0.9rem;color:var(--site-muted);line-height:1.7;margin-bottom:8px;}
 .case-sol p:last-child{margin-bottom:0;}
-.case-attribution{font-size:0.78rem;color:var(--site-muted);font-style:italic;border-top:1px solid var(--site-border);padding-top:10px;margin-top:12px;}
-.case-attribution a{color:var(--site-teal);text-decoration:none;}
-.case-attribution a:hover{text-decoration:underline;}
 .case-outcomes-list{list-style:none;margin-top:12px;border-top:1px solid var(--site-border);padding-top:10px;display:flex;flex-direction:column;gap:5px;}
 .case-outcomes-list li{font-size:0.85rem;color:var(--site-muted);line-height:1.55;display:flex;gap:8px;align-items:flex-start;}
 .case-outcomes-list li::before{content:'✓';color:var(--site-teal);font-weight:700;flex-shrink:0;}
@@ -338,7 +335,34 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 .referred-strip{margin-top:24px;}
 .referred-strip h4{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--site-muted);margin-bottom:12px;}
 .referred-cases{display:flex;flex-direction:column;gap:10px;}
-
+.ref-case-card{background:var(--site-navy);border-radius:6px;overflow:hidden;transition:box-shadow 0.2s,transform 0.18s;}
+.ref-case-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.28);transform:translateY(-2px);}
+.ref-case-header{padding:14px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.ref-case-meta{flex:1;}
+.ref-case-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:4px;}
+.ref-case-title{font-family:'Merriweather',serif;font-size:0.88rem;font-weight:700;color:white;line-height:1.35;margin-bottom:3px;}
+.ref-case-detail{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.4;}
+.ref-case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.35);border-radius:4px;padding:6px 10px;text-align:center;flex-shrink:0;}
+.ref-stamp-num{display:block;font-family:'Merriweather',serif;font-size:0.92rem;font-weight:700;color:var(--site-accent);line-height:1.1;margin-bottom:2px;}
+.ref-stamp-lbl{font-size:0.62rem;color:rgba(255,255,255,0.6);line-height:1.3;display:block;}
+.ref-case-body{overflow:hidden;max-height:0;transition:max-height 0.38s ease;}
+.ref-case-body.open{max-height:800px;}
+.ref-case-body-inner{padding:16px 18px 14px;border-top:1px solid rgba(255,255,255,0.1);}
+.ref-case-section-lbl{font-size:0.62rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
+.ref-case-sit{background:rgba(255,255,255,0.06);border-left:3px solid var(--site-teal);border-radius:0 4px 4px 0;padding:12px 14px;margin-bottom:12px;}
+.ref-case-sit p{font-size:0.82rem;color:rgba(255,255,255,0.88);line-height:1.6;font-style:italic;}
+.ref-case-sol{margin-bottom:4px;}
+.ref-case-sol p{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.6;}
+.ref-case-footer{padding:10px 18px;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.ref-case-ref-tag{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;flex-shrink:0;}
+.ref-case-ref-tag--navy{background:var(--site-navy-lt);color:white;}
+.ref-case-ref-tag--slate{background:var(--site-muted);color:white;}
+.ref-case-toggle-btn{font-size:0.78rem;font-weight:700;color:var(--site-accent);background:none;border:none;cursor:pointer;padding:0;font-family:inherit;min-height:32px;display:inline-flex;align-items:center;gap:6px;}
+.ref-case-toggle-btn:hover{color:white;}
+.ref-case-toggle-chevron{display:inline-block;transition:transform 0.25s;font-size:0.62rem;}
+.ref-case-toggle-btn[aria-expanded="true"] .ref-case-toggle-chevron{transform:rotate(180deg);}
+.ref-case-read-link{font-size:0.78rem;font-weight:700;color:var(--site-accent);text-decoration:none;min-height:32px;display:inline-flex;align-items:center;gap:5px;}
+.ref-case-read-link:hover{color:white;text-decoration:underline;}
 .adviser-assurance{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;}
 .adv-assurance-item{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--site-border);border-radius:6px;padding:16px;}
 .adv-check{width:28px;height:28px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.8rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
@@ -1052,125 +1076,121 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
           </div>
         </div>
 
-                <div class="referred-strip">
+        <div class="referred-strip">
           <h4>Cases referred by professionals</h4>
           <div class="referred-cases">
 
-          <!-- Referred case 1 -->
-          <div class="case-card">
-            <div class="case-card-hdr">
-              <div class="case-card-meta">
-                <div class="case-card-eyebrow">[REF CASE 1 EYEBROW]</div>
-                <div class="case-card-title">[REF CASE 1 TITLE]</div>
-                <div class="case-card-ref">[REF CASE 1 DETAIL]</div>
+            <!-- Referred case 1 -->
+            <div class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">[REF CASE 1 EYEBROW]</div>
+                  <div class="ref-case-title">[REF CASE 1 TITLE]</div>
+                  <div class="ref-case-detail">[REF CASE 1 DETAIL]</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="ref-stamp-num">[STAMP VAL]</span>
+                  <span class="ref-stamp-lbl">[STAMP LABEL]</span>
+                </div>
               </div>
-              <div class="case-stamp">
-                <span class="case-stamp-val">[STAMP VAL]</span>
-                <span class="case-stamp-lbl">[STAMP LABEL]</span>
+              <div class="ref-case-body" id="ref-case-body-1">
+                <div class="ref-case-body-inner">
+                  <div class="ref-case-section-lbl">The Situation</div>
+                  <div class="ref-case-sit"><p>&ldquo;[REF CASE 1 SITUATION QUOTE]&rdquo;</p></div>
+                  <div class="ref-case-section-lbl">What We Did</div>
+                  <div class="ref-case-sol"><p>[REF CASE 1 SOLUTION TEXT]</p></div>
+                </div>
+              </div>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">[REFERRER TYPE]</span>
+                <button type="button" class="ref-case-toggle-btn" aria-expanded="false" aria-controls="ref-case-body-1" data-ref-case-toggle>Read more <span class="ref-case-toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="[REF-CASE-1-SLUG].html" class="ref-case-read-link">Full case &rarr;</a>
               </div>
             </div>
-            <div class="case-body" id="case-body-ref-1">
-              <div class="case-body-inner">
-                <div class="case-section-lbl">The Situation</div>
-                <div class="case-sit"><p>&ldquo;[REF CASE 1 SITUATION QUOTE]&rdquo;</p></div>
-                <div class="case-section-lbl">What We Did</div>
-                <div class="case-sol"><p>[REF CASE 1 WHAT WE DID]</p></div>
-                <!-- Optional infographic snippet inserted here if Card Preview Infographic field populated -->
-                <div class="case-attribution">[REF CASE 1 ATTRIBUTION]</div>
-              </div>
-            </div>
-            <div class="case-footer">
-              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-1" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-              <a href="[REF-CASE-1-SLUG].html" class="case-read-link">Full case &rarr;</a>
-            </div>
-          </div>
 
-          <!-- Referred case 2 -->
-          <div class="case-card">
-            <div class="case-card-hdr">
-              <div class="case-card-meta">
-                <div class="case-card-eyebrow">[REF CASE 2 EYEBROW]</div>
-                <div class="case-card-title">[REF CASE 2 TITLE]</div>
-                <div class="case-card-ref">[REF CASE 2 DETAIL]</div>
+            <!-- Referred case 2 -->
+            <div class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">[REF CASE 2 EYEBROW]</div>
+                  <div class="ref-case-title">[REF CASE 2 TITLE]</div>
+                  <div class="ref-case-detail">[REF CASE 2 DETAIL]</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="ref-stamp-num">[STAMP VAL]</span>
+                  <span class="ref-stamp-lbl">[STAMP LABEL]</span>
+                </div>
               </div>
-              <div class="case-stamp">
-                <span class="case-stamp-val">[STAMP VAL]</span>
-                <span class="case-stamp-lbl">[STAMP LABEL]</span>
+              <div class="ref-case-body" id="ref-case-body-2">
+                <div class="ref-case-body-inner">
+                  <div class="ref-case-section-lbl">The Situation</div>
+                  <div class="ref-case-sit"><p>&ldquo;[REF CASE 2 SITUATION QUOTE]&rdquo;</p></div>
+                  <div class="ref-case-section-lbl">What We Did</div>
+                  <div class="ref-case-sol"><p>[REF CASE 2 SOLUTION TEXT]</p></div>
+                </div>
+              </div>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">[REFERRER TYPE]</span>
+                <button type="button" class="ref-case-toggle-btn" aria-expanded="false" aria-controls="ref-case-body-2" data-ref-case-toggle>Read more <span class="ref-case-toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="[REF-CASE-2-SLUG].html" class="ref-case-read-link">Full case &rarr;</a>
               </div>
             </div>
-            <div class="case-body" id="case-body-ref-2">
-              <div class="case-body-inner">
-                <div class="case-section-lbl">The Situation</div>
-                <div class="case-sit"><p>&ldquo;[REF CASE 2 SITUATION QUOTE]&rdquo;</p></div>
-                <div class="case-section-lbl">What We Did</div>
-                <div class="case-sol"><p>[REF CASE 2 WHAT WE DID]</p></div>
-                <!-- Optional infographic snippet inserted here if Card Preview Infographic field populated -->
-                <div class="case-attribution">[REF CASE 2 ATTRIBUTION]</div>
-              </div>
-            </div>
-            <div class="case-footer">
-              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-2" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-              <a href="[REF-CASE-2-SLUG].html" class="case-read-link">Full case &rarr;</a>
-            </div>
-          </div>
 
-          <!-- Referred case 3 -->
-          <div class="case-card">
-            <div class="case-card-hdr">
-              <div class="case-card-meta">
-                <div class="case-card-eyebrow">[REF CASE 3 EYEBROW]</div>
-                <div class="case-card-title">[REF CASE 3 TITLE]</div>
-                <div class="case-card-ref">[REF CASE 3 DETAIL]</div>
+            <!-- Referred case 3 -->
+            <div class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">[REF CASE 3 EYEBROW]</div>
+                  <div class="ref-case-title">[REF CASE 3 TITLE]</div>
+                  <div class="ref-case-detail">[REF CASE 3 DETAIL]</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="ref-stamp-num">[STAMP VAL]</span>
+                  <span class="ref-stamp-lbl">[STAMP LABEL]</span>
+                </div>
               </div>
-              <div class="case-stamp">
-                <span class="case-stamp-val">[STAMP VAL]</span>
-                <span class="case-stamp-lbl">[STAMP LABEL]</span>
+              <div class="ref-case-body" id="ref-case-body-3">
+                <div class="ref-case-body-inner">
+                  <div class="ref-case-section-lbl">The Situation</div>
+                  <div class="ref-case-sit"><p>&ldquo;[REF CASE 3 SITUATION QUOTE]&rdquo;</p></div>
+                  <div class="ref-case-section-lbl">What We Did</div>
+                  <div class="ref-case-sol"><p>[REF CASE 3 SOLUTION TEXT]</p></div>
+                </div>
+              </div>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">[REFERRER TYPE]</span>
+                <button type="button" class="ref-case-toggle-btn" aria-expanded="false" aria-controls="ref-case-body-3" data-ref-case-toggle>Read more <span class="ref-case-toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="[REF-CASE-3-SLUG].html" class="ref-case-read-link">Full case &rarr;</a>
               </div>
             </div>
-            <div class="case-body" id="case-body-ref-3">
-              <div class="case-body-inner">
-                <div class="case-section-lbl">The Situation</div>
-                <div class="case-sit"><p>&ldquo;[REF CASE 3 SITUATION QUOTE]&rdquo;</p></div>
-                <div class="case-section-lbl">What We Did</div>
-                <div class="case-sol"><p>[REF CASE 3 WHAT WE DID]</p></div>
-                <!-- Optional infographic snippet inserted here if Card Preview Infographic field populated -->
-                <div class="case-attribution">[REF CASE 3 ATTRIBUTION]</div>
-              </div>
-            </div>
-            <div class="case-footer">
-              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-3" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-              <a href="[REF-CASE-3-SLUG].html" class="case-read-link">Full case &rarr;</a>
-            </div>
-          </div>
 
-          <!-- Referred case 4 -->
-          <div class="case-card">
-            <div class="case-card-hdr">
-              <div class="case-card-meta">
-                <div class="case-card-eyebrow">[REF CASE 4 EYEBROW]</div>
-                <div class="case-card-title">[REF CASE 4 TITLE]</div>
-                <div class="case-card-ref">[REF CASE 4 DETAIL]</div>
+            <!-- Referred case 4 -->
+            <div class="ref-case-card">
+              <div class="ref-case-header">
+                <div class="ref-case-meta">
+                  <div class="ref-case-eyebrow">[REF CASE 4 EYEBROW]</div>
+                  <div class="ref-case-title">[REF CASE 4 TITLE]</div>
+                  <div class="ref-case-detail">[REF CASE 4 DETAIL]</div>
+                </div>
+                <div class="ref-case-stamp">
+                  <span class="ref-stamp-num">[STAMP VAL]</span>
+                  <span class="ref-stamp-lbl">[STAMP LABEL]</span>
+                </div>
               </div>
-              <div class="case-stamp">
-                <span class="case-stamp-val">[STAMP VAL]</span>
-                <span class="case-stamp-lbl">[STAMP LABEL]</span>
+              <div class="ref-case-body" id="ref-case-body-4">
+                <div class="ref-case-body-inner">
+                  <div class="ref-case-section-lbl">The Situation</div>
+                  <div class="ref-case-sit"><p>&ldquo;[REF CASE 4 SITUATION QUOTE]&rdquo;</p></div>
+                  <div class="ref-case-section-lbl">What We Did</div>
+                  <div class="ref-case-sol"><p>[REF CASE 4 SOLUTION TEXT]</p></div>
+                </div>
+              </div>
+              <div class="ref-case-footer">
+                <span class="ref-case-ref-tag">[REFERRER TYPE]</span>
+                <button type="button" class="ref-case-toggle-btn" aria-expanded="false" aria-controls="ref-case-body-4" data-ref-case-toggle>Read more <span class="ref-case-toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                <a href="[REF-CASE-4-SLUG].html" class="ref-case-read-link">Full case &rarr;</a>
               </div>
             </div>
-            <div class="case-body" id="case-body-ref-4">
-              <div class="case-body-inner">
-                <div class="case-section-lbl">The Situation</div>
-                <div class="case-sit"><p>&ldquo;[REF CASE 4 SITUATION QUOTE]&rdquo;</p></div>
-                <div class="case-section-lbl">What We Did</div>
-                <div class="case-sol"><p>[REF CASE 4 WHAT WE DID]</p></div>
-                <!-- Optional infographic snippet inserted here if Card Preview Infographic field populated -->
-                <div class="case-attribution">[REF CASE 4 ATTRIBUTION]</div>
-              </div>
-            </div>
-            <div class="case-footer">
-              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-4" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-              <a href="[REF-CASE-4-SLUG].html" class="case-read-link">Full case &rarr;</a>
-            </div>
-          </div>
 
           </div>
         </div>
@@ -1521,6 +1541,18 @@ function handleTileToggle(tile){
     });
   }
 })();
+
+/* ── Referred case card expand/collapse (adviser panel) ── */
+document.querySelectorAll('[data-ref-case-toggle]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var panelId=btn.getAttribute('aria-controls');
+    var panel=document.getElementById(panelId);
+    var open=btn.getAttribute('aria-expanded')==='true';
+    if(panel)panel.classList.toggle('open',!open);
+    btn.setAttribute('aria-expanded',String(!open));
+    btn.firstChild.nodeValue=open?'Read more ':'Read less ';
+  });
+});
 
 /* ── Case card expand/collapse ── */
 document.querySelectorAll('[data-case-toggle]').forEach(function(btn){
