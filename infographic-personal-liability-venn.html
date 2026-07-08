@@ -1,0 +1,146 @@
+<!-- LIGHTSIDE FINANCIAL — PERSONAL LIABILITY VENN DIAGRAM INFOGRAPHIC -->
+<!-- Filename: infographic-personal-liability-venn.html -->
+<!-- Embed into personal-liability.html at build stage -->
+<!-- CSS prefix: plv- to avoid class collisions -->
+
+<style>
+*{box-sizing:border-box;}
+.plv-wrap{font-family:'Lato',sans-serif;padding:1rem 0;}
+.plv-inner{display:flex;gap:2rem;align-items:flex-start;}
+.plv-left{flex:0 0 auto;width:100%;max-width:480px;}
+.plv-right{flex:1 1 auto;min-width:220px;}
+.plv-panel{background:#f7f8f9;border-left:4px solid #c0392b;border-radius:0 6px 6px 0;padding:1rem 1.25rem;min-height:120px;}
+.plv-panel p{margin:0;font-size:14px;color:#3a3a3a;line-height:1.7;}
+.plv-lbl{font-size:11px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;}
+.plv-default{font-size:13px;color:#888;font-style:italic;margin:0;}
+.plv-pill{cursor:pointer;}
+.plv-pill rect{transition:opacity 0.15s;}
+.plv-pill:hover rect{opacity:0.82;}
+.plv-clink{cursor:pointer;}
+.plv-clink:hover text{opacity:0.65;}
+svg.plv-svg{width:100%;display:block;}
+@media(max-width:640px){
+  .plv-inner{flex-direction:column;}
+  .plv-left{max-width:100%;}
+  .plv-panel{margin-top:1rem;}
+}
+</style>
+
+<div class="plv-wrap">
+  <div class="plv-inner">
+    <div class="plv-left">
+      <svg class="plv-svg" viewBox="0 0 480 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Venn diagram showing where business liability crosses into personal liability, with sole trader sitting outside both circles">
+
+        <circle cx="148" cy="140" r="138" fill="#c0392b" fill-opacity="0.10" stroke="#c0392b" stroke-width="2"/>
+        <circle cx="332" cy="140" r="138" fill="#2a8b8b" fill-opacity="0.10" stroke="#2a8b8b" stroke-width="2"/>
+
+        <text x="66" y="30" font-family="'Lato',sans-serif" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">Business</text>
+        <text x="414" y="30" font-family="'Lato',sans-serif" font-size="14" font-weight="700" fill="#2a8b8b" text-anchor="middle">Personal</text>
+        <text x="66" y="46" font-family="'Lato',sans-serif" font-size="9" fill="#c0392b" fill-opacity="0.75" text-anchor="middle">written off on closure</text>
+        <text x="414" y="46" font-family="'Lato',sans-serif" font-size="9" fill="#2a8b8b" fill-opacity="0.75" text-anchor="middle">your personal debts</text>
+
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Bank — go to Closing a Company" onclick="plvGoLink('business-closing.html')">
+          <text x="66" y="78" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#a03020" text-anchor="middle">Bank</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="HMRC CT — go to Closing a Company" onclick="plvGoLink('business-closing.html')">
+          <text x="66" y="100" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#a03020" text-anchor="middle">HMRC CT</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="HMRC VAT — go to Closing a Company" onclick="plvGoLink('business-closing.html')">
+          <text x="66" y="122" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#a03020" text-anchor="middle">HMRC VAT</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Suppliers — go to Closing a Company" onclick="plvGoLink('business-closing.html')">
+          <text x="66" y="144" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#a03020" text-anchor="middle">Suppliers</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Utilities — go to Closing a Company" onclick="plvGoLink('business-closing.html')">
+          <text x="66" y="166" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#a03020" text-anchor="middle">Utilities</text>
+        </g>
+
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Mortgage — go to Too Much Debt" onclick="plvGoLink('too-much-debt.html')">
+          <text x="414" y="78" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#1f6e6e" text-anchor="middle">Mortgage</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Credit card — go to Too Much Debt" onclick="plvGoLink('too-much-debt.html')">
+          <text x="414" y="100" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#1f6e6e" text-anchor="middle">Credit card</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Overdraft — go to Too Much Debt" onclick="plvGoLink('too-much-debt.html')">
+          <text x="414" y="122" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#1f6e6e" text-anchor="middle">Overdraft</text>
+        </g>
+        <g class="plv-clink" tabindex="0" role="link" aria-label="Loans — go to Too Much Debt" onclick="plvGoLink('too-much-debt.html')">
+          <text x="414" y="144" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#1f6e6e" text-anchor="middle">Loans</text>
+        </g>
+
+        <g class="plv-pill" data-plvkey="dla" tabindex="0" role="button" aria-label="Loan to Dir (DLA) — click to find out more">
+          <rect x="162" y="56" width="156" height="26" rx="13" fill="#1e3a5f" stroke="#e8a020" stroke-width="1.5"/>
+          <text x="240" y="73" font-family="'Lato',sans-serif" font-size="11" font-weight="700" fill="#e8a020" text-anchor="middle">Loan to Dir (DLA)</text>
+        </g>
+        <g class="plv-pill" data-plvkey="exp" tabindex="0" role="button" aria-label="Expenses Recovery — click to find out more">
+          <rect x="152" y="89" width="176" height="26" rx="13" fill="#1e3a5f" stroke="#e8a020" stroke-width="1.5"/>
+          <text x="240" y="106" font-family="'Lato',sans-serif" font-size="11" font-weight="700" fill="#e8a020" text-anchor="middle">Expenses Recovery</text>
+        </g>
+        <g class="plv-pill" data-plvkey="pg" tabindex="0" role="button" aria-label="Personal Guarantee — click to find out more">
+          <rect x="148" y="122" width="184" height="26" rx="13" fill="#1e3a5f" stroke="#e8a020" stroke-width="1.5"/>
+          <text x="240" y="139" font-family="'Lato',sans-serif" font-size="11" font-weight="700" fill="#e8a020" text-anchor="middle">Personal Guarantee</text>
+        </g>
+        <g class="plv-pill" data-plvkey="ban" tabindex="0" role="button" aria-label="Director Ban — click to find out more">
+          <rect x="162" y="155" width="156" height="26" rx="13" fill="#1e3a5f" stroke="#e8a020" stroke-width="1.5"/>
+          <text x="240" y="172" font-family="'Lato',sans-serif" font-size="11" font-weight="700" fill="#e8a020" text-anchor="middle">Director Ban</text>
+        </g>
+        <g class="plv-pill" data-plvkey="fraud" tabindex="0" role="button" aria-label="Fraud — click to find out more">
+          <rect x="186" y="188" width="108" height="26" rx="13" fill="#1e3a5f" stroke="#e8a020" stroke-width="1.5"/>
+          <text x="240" y="205" font-family="'Lato',sans-serif" font-size="11" font-weight="700" fill="#e8a020" text-anchor="middle">Fraud</text>
+        </g>
+
+        <text x="240" y="254" font-family="'Lato',sans-serif" font-size="9" fill="#888" text-anchor="middle">Click any item to find out more</text>
+
+        <!-- vertical dashed lines dropping from above pill ends to sole trader pill -->
+        <line x1="172" y1="270" x2="172" y2="304" stroke="#c0392b" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+        <line x1="308" y1="270" x2="308" y2="304" stroke="#2a8b8b" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+
+        <g class="plv-pill" data-plvkey="sole" tabindex="0" role="button" aria-label="Sole Trader — click to find out more">
+          <rect x="158" y="304" width="164" height="28" rx="14" fill="#1e3a5f" stroke="#e8a020" stroke-width="1.5"/>
+          <text x="240" y="322" font-family="'Lato',sans-serif" font-size="12" font-weight="700" fill="#e8a020" text-anchor="middle">Sole Trader</text>
+          <text x="240" y="338" font-family="'Lato',sans-serif" font-size="9" fill="#888" text-anchor="middle">all business debts are personal</text>
+        </g>
+
+      </svg>
+    </div>
+
+    <div class="plv-right">
+      <div class="plv-panel" id="plv-panel">
+        <p class="plv-default" id="plv-default">Select an item to find out more.</p>
+        <div class="plv-lbl" id="plv-lbl" style="display:none"></div>
+        <p id="plv-txt" style="display:none;margin:0;font-size:14px;color:#3a3a3a;line-height:1.7;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var plvContent={
+    dla:{label:'Loan to Dir (DLA)',text:'When a director withdraws money from the company, the accountant records it as a loan — meaning it must be repaid. Many directors don\'t realise this. If a liquidator is appointed, recovering that balance is a statutory duty under the Insolvency Act 1986. It cannot be overlooked, regardless of whether the director was aware the account was overdrawn.'},
+    exp:{label:'Expenses Recovery',text:'A liquidator reviews company expenditure as part of their investigation. Expenses that cannot be shown to be wholly for business purposes may be treated as personal drawings — and the director can face a demand to repay those sums. The liquidator\'s opening figure is a starting position, not a final one. Early advice before a liquidator is appointed can make a material difference to the outcome.'},
+    pg:{label:'Personal Guarantee',text:'A <a href="business-personal-guarantees.html">personal guarantee</a> is a personal liability from the moment it is signed — not from the moment the business fails. The lender is not required to wait for the company to default before pursuing the guarantor. If you have signed one, the risk is already personal, regardless of how the business is performing.'},
+    ban:{label:'Director Ban',text:'A director disqualification is a personal consequence of business conduct. Under the Company Directors Disqualification Act 1986, the Insolvency Service can apply to court to ban a director from acting in that role for up to 15 years. The investigation process is formal and the consequences are serious — but the outcome is not predetermined. We help directors understand their position and navigate the process.'},
+    fraud:{label:'Fraud',text:'Where a director has obtained funds through misrepresentation — including Bounce Back Loans falsely claimed or misused — personal liability follows. The exposure can include repayment demands, civil recovery action, and in serious cases criminal proceedings. The position must be understood clearly and early.'},
+    sole:{label:'Sole Trader',text:'A sole trader has no legal separation between business and personal finances. Unlike a limited company, there is no closing route that writes off business debts. Every liability — HMRC, suppliers, creditors — is personal from the outset and remains personal. The mechanisms available are different from those open to a company director. See our <a href="personal.html">Personal Debt</a> and <a href="personal-hmrc.html">Personal HMRC</a> channels for the right starting point.'}
+  };
+  document.querySelectorAll('.plv-pill').forEach(function(el){
+    function activate(){
+      var key=el.getAttribute('data-plvkey');
+      document.getElementById('plv-default').style.display='none';
+      var lbl=document.getElementById('plv-lbl');
+      var txt=document.getElementById('plv-txt');
+      lbl.textContent=plvContent[key].label;
+      txt.innerHTML=plvContent[key].text;
+      lbl.style.display='block';
+      txt.style.display='block';
+    }
+    el.addEventListener('click',activate);
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+  });
+  document.querySelectorAll('.plv-clink').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var fn=el.getAttribute('onclick');if(fn)eval(fn);}});
+  });
+})();
+function plvGoLink(slug){window.location.href='/'+slug;}
+</script>
