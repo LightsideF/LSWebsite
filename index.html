@@ -237,21 +237,17 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 /* Award badge — overlaps the column boundary, desktop only */
 .hero-badge{
   position:absolute;
-  /* sits on the boundary between left and right columns.
-     Left col is 1fr, right col is 420px, gap is 48px.
-     Centre of gap = right edge of left col = calc(100% - 420px - 48px)
-     Badge is 120px rendered, so offset left by 60px to centre on the gap */
   top: 36px; /* aligned with top of H1 text, below eyebrow line */
-  right: calc(420px + 24px - 60px); /* centre on gap midpoint */
-  width: 120px;
-  height: 120px;
+  right: calc(420px + 48px - 20px); /* shifted left — sits over text column edge */
+  width: 160px;
+  height: 160px;
   z-index: 10;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.45));
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
   pointer-events: none;
 }
 .hero-badge img{
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   display: block;
 }
 @media(max-width:900px){.hero-badge{display:none;}}
@@ -939,6 +935,6 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
 });
 </script>
 
-<script src="award-banner.js"></script>
+
 </body>
 </html>
