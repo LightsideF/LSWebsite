@@ -343,6 +343,32 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .btn-primary,.btn-secondary{width:100%;text-align:center;}
   .ch-card-icon{width:96px;height:96px;}
 }
+.referred-cases{display:flex;flex-direction:column;gap:10px;}
+.case-card{background:var(--site-white);border:0.5px solid var(--site-border);border-radius:8px;overflow:hidden;}
+.case-card-hdr{background:var(--site-navy);padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.case-card-meta{flex:1;}
+.case-card-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-accent);margin-bottom:5px;}
+.case-card-title{font-family:'Merriweather',serif;font-size:0.95rem;font-weight:700;color:white;line-height:1.35;margin-bottom:4px;}
+.case-card-ref{font-size:0.72rem;color:rgba(255,255,255,0.45);}
+.case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.28);border-radius:4px;padding:8px 10px;text-align:center;flex-shrink:0;min-width:68px;}
+.case-stamp-val{display:block;font-size:0.85rem;font-weight:700;color:var(--site-accent);font-family:'Merriweather',serif;line-height:1.2;margin-bottom:2px;}
+.case-stamp-lbl{font-size:0.67rem;color:rgba(255,255,255,0.5);display:block;line-height:1.3;}
+.case-body{overflow:hidden;max-height:0;transition:max-height 0.38s ease;}
+.case-body.open{max-height:800px;}
+.case-body-inner{padding:18px 20px 14px;border-top:0.5px solid var(--site-border);}
+.case-section-lbl{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
+.case-sit{background:var(--site-offwhite);border-left:3px solid var(--site-teal);border-radius:0 4px 4px 0;padding:14px 16px;margin-bottom:14px;}
+.case-sit p{font-family:'Merriweather',serif;font-size:0.88rem;font-style:italic;color:var(--site-text);line-height:1.8;}
+.case-sol p{font-size:0.9rem;color:var(--site-muted);line-height:1.7;margin-bottom:8px;}
+.case-sol p:last-child{margin-bottom:0;}
+.case-attribution{font-size:0.72rem;color:var(--site-muted);margin-top:10px;border-top:1px solid var(--site-border);padding-top:10px;}
+.case-footer{padding:10px 20px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid var(--site-border);}
+.case-referrer-tag{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;}
+.case-toggle-btn{font-size:0.85rem;font-weight:700;color:var(--site-teal);background:none;border:none;cursor:pointer;padding:0;font-family:inherit;min-height:44px;display:inline-flex;align-items:center;gap:6px;}
+.case-read-link{font-size:0.85rem;font-weight:700;color:var(--site-teal);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;}
+.case-read-link:hover{color:var(--site-teal-dk);text-decoration:underline;}
+.case-toggle-btn[aria-expanded="true"] .toggle-chevron{transform:rotate(180deg);}
+.toggle-chevron{display:inline-block;transition:transform 0.25s;font-size:0.75rem;}
 </style>
 </head>
 <body>
@@ -698,7 +724,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   <div class="adviser-panel-inner">
     <div class="adviser-panel-grid">
 
-      <!-- Left: trigger signals -->
+      <!-- Left: trigger signals + referral CTA -->
       <div>
         <div class="section-label">When to refer</div>
         <h2 class="section-h2" id="adviser-heading">Recognise any of these in a client&rsquo;s situation?</h2>
@@ -724,11 +750,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="signal-text"><strong>A client who needs creditors handled for them</strong><span>Once we are instructed, all creditor contact is redirected to Lightside. Calls and letters stop coming to your client immediately.</span></div>
           </div>
         </div>
-      </div>
 
-      <!-- Right: referral CTA -->
-      <div>
-        <div class="referral-cta-box">
+        <!-- Referral CTA box -->
+        <div class="referral-cta-box" style="margin-top:32px;">
           <div class="section-label">Make a referral enquiry</div>
           <h3>Talk to us about your client</h3>
           <p>Initial referral discussions are completely confidential. You do not need your client&rsquo;s permission to make a speculative enquiry &mdash; anonymised details are fine at this stage.</p>
@@ -739,7 +763,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           <div class="slide-form-wrap slide-form-wrap--dark" id="ref-contact-form" hidden>
             <form class="contact-form contact-form--dark" id="ref-form" novalidate>
               <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-              <input type="hidden" name="subject" value="Professional referral enquiry — Personal Debt">
+              <input type="hidden" name="subject" value="Professional referral enquiry &mdash; Personal Debt">
               <input type="hidden" name="from_name" value="Lightside Website">
               <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
               <div class="cf-row cf-row--2">
@@ -758,11 +782,166 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <div class="cf-success" id="ref-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. All referral enquiries are treated in complete confidence. We&rsquo;ll be in touch shortly.</p></div>
           </div>
         </div>
-      </div>
+
+      </div><!-- /left column -->
+
+      <!-- Right: cases -->
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">Real cases. Real outcomes.</div>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;line-height:1.3;">Where we have helped individuals find a way forward.</h3>
+        <div class="referred-cases">
+
+          <!-- 200MIAH — Mr. A — Your Property at Risk -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Personal &mdash; Your Property at Risk</div>
+                <div class="case-card-title">HMRC Bankrupted a Pensioner for His Son&rsquo;s Debts &mdash; Home Saved</div>
+                <div class="case-card-ref">Mr. A &mdash; bankruptcy &amp; trustee negotiation</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">&pound;94k</span>
+                <span class="case-stamp-lbl">Agreed</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-miah">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I had done everything right. Paid off my mortgage. Handed the business to my son. And yet here I was, facing bankruptcy for debts I had never incurred.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>Nearly twelve months of sustained negotiation with the Trustee in Bankruptcy. The Trustee opened claiming 100% of the family home &mdash; threatening a forced sale. We argued comprehensively that the family held a beneficial interest; the Trustee conceded that the bankrupt&rsquo;s interest was 32%. We disagreed. We pressed that Mrs. A had 50% of the 32% interest, despite the Trustee&rsquo;s lawyers claiming she didn&rsquo;t. They eventually relented. With the beneficial interest settled at 16%, the Trustee sought &pound;107,000. Lightside&rsquo;s opening offer had been &pound;100,000. We continued to negotiate them down. Settlement: &pound;94,000. Home secured.</p></div>
+                <div class="case-attribution">Adviser: Priti Shah. Lightside working with N. Saha &amp; Co Ltd, Chartered Accountants, and Tax Gains, Tax Investigations.</div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Accountant</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-miah" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-a-bankruptcy.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 200GK — Mr. G — Bankruptcy -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
+                <div class="case-card-title">The Bankruptcy Order That Should Never Have Been Made</div>
+                <div class="case-card-ref">Mr. G &mdash; annulment &amp; HMRC challenge</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Bktcy<br>Annulled</span>
+                <span class="case-stamp-lbl">&pound;60k v &pound;194k</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-gk">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I knew exactly what a bankruptcy petition was. When I walked into that meeting on the Friday afternoon, I already understood what I was looking at. The hearing was four days away. HMRC were claiming &pound;60,000.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>Lightside secured an emergency adjournment of the bankruptcy petition hearing at four days&rsquo; notice and paid &pound;10,000 at court on the day. When the bankruptcy order was subsequently made &mdash; after Mr. G allowed the eight-week window to pass &mdash; Lightside took the case on in full and applied for annulment on the grounds the order should never have been made. That specific legal basis mattered: it would, if the application succeeded, remove the bankruptcy from all records entirely, preserving Mr. G&rsquo;s FCA authorisation. HMRC contested the application and raised their demand from the original &pound;60,000 to &pound;194,000. Lightside challenged the revised figure successfully: the annulment was granted on the basis of the original &pound;60,000 petition debt. The bankruptcy was annulled, the record was cleared, and his FCA registration was preserved.</p></div>
+                <div class="case-attribution">Adviser: Priti Shah. Referred by Andrew Rhodes, Partner, Sobell Rhodes LLP &mdash; www.sobellrhodes.co.uk via BNI.</div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">BNI</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-gk" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-g-personal-liability.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 500COH — Mr. CR — Bankruptcy -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
+                <div class="case-card-title">Tax Return Filed, Debt Unaffordable &mdash; but BTL Properties Saved</div>
+                <div class="case-card-ref">Mr. CR &mdash; bankruptcy &amp; beneficial ownership</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Property<br>Saved</span>
+                <span class="case-stamp-lbl">3 mths &mdash; Discharged</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-coh">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;I hadn&rsquo;t filed my tax returns for several years. When I finally did, the bill was around &pound;44,000 &mdash; and HMRC wanted &pound;5,000 a month to clear it. What made it far worse was that two properties appeared to be in my name. They weren&rsquo;t mine &mdash; they belonged to my teenage step-daughters.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>We established that both properties were beneficially owned by Mr. CR&rsquo;s step-daughters &mdash; not by Mr. CR &mdash; and built the evidence case: source of deposits, documented intention at the time of purchase, and the written trust arrangement in favour of the step-daughters. We presented that case to the bankruptcy trustee with sufficient clarity that the trustee accepted the position without dispute. Both properties were excluded from the bankruptcy estate entirely. Mr. CR was discharged from bankruptcy within three months &mdash; nine months ahead of the standard twelve-month term.</p></div>
+                <div class="case-attribution">Adviser: Barry Mitchell. Referred by Kam Sira, Accountant, TaxAssist &mdash; Watford.</div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Accountant</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-coh" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="mr-cr-hmrc.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 500SWT — George and Grace — Property at Risk -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Personal &mdash; Property at Risk</div>
+                <div class="case-card-title">Fifteen Properties Were Costing Them Everything &mdash; We Found a Way Out</div>
+                <div class="case-card-ref">George and Grace &mdash; BTL portfolio &amp; creditor arrangement</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">14 Props</span>
+                <span class="case-stamp-lbl">Home Saved</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-swt">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;We had fifteen properties. From the outside it looked like we had made it &mdash; people assumed we were thriving. The truth was the opposite. Almost every property was losing money, and every month we were finding &pound;15,000 just to stand still.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>Lightside devised and managed a strategy that disposed of fourteen loss-making properties through a coordinated managed repossession process, collecting rent until each lender took formal possession. Mortgage shortfalls and unsecured credit card debts were consolidated into a creditor arrangement with affordable repayments negotiated across approximately ten institutions. The couple&rsquo;s equity-positive property in Camden was retained, and their son&rsquo;s savings were protected through a CCJ and interim charging order secured ahead of other creditors. Their family home was preserved throughout.</p></div>
+                <div class="case-attribution">Adviser: Barry Mitchell &middot; Priti Shah. Referral: Trident Property Ltd.</div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Estate Agent</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-swt" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="gg-property-portfolio.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 200JJ — Ms. JJ — Too Much Debt -->
+          <div class="case-card">
+            <div class="case-card-hdr">
+              <div class="case-card-meta">
+                <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
+                <div class="case-card-title">Feeling Overwhelmed Dealing with the Debt &mdash; Lightside Helped to Find Space</div>
+                <div class="case-card-ref">Ms. JJ &mdash; creditor management &amp; peace of mind</div>
+              </div>
+              <div class="case-stamp">
+                <span class="case-stamp-val">Control</span>
+                <span class="case-stamp-lbl">Peace of Mind</span>
+              </div>
+            </div>
+            <div class="case-body" id="case-body-jj">
+              <div class="case-body-inner">
+                <div class="case-section-lbl">The Situation</div>
+                <div class="case-sit"><p>&ldquo;The calls were relentless. I couldn&rsquo;t sleep because of anxiety I felt in the pit of my stomach.&rdquo;</p></div>
+                <div class="case-section-lbl">What We Did</div>
+                <div class="case-sol"><p>Ms. JJ was anxious and worried about the advice she had already received. She had tried to engage with creditors but the letters and calls didn&rsquo;t stop. We advised, differentiating between the law and commercial reality. We took over dealing with her lenders; the calls stopped, the letters reduced. Ms. JJ knew we could be relied upon, and she got back her peace of mind.</p></div>
+                <div class="case-attribution">Adviser: Priti Shah. Referred by her divorce solicitor.</div>
+              </div>
+            </div>
+            <div class="case-footer">
+              <span class="case-referrer-tag">Solicitor</span>
+              <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-jj" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+              <a href="ms-jj-too-much-debt.html" class="case-read-link">Full case &rarr;</a>
+            </div>
+          </div>
+
+        </div><!-- /.referred-cases -->
+      </div><!-- /right column -->
 
     </div><!-- /.adviser-panel-grid -->
 
-    <!-- Adviser assurances -->
+        <!-- Adviser assurances -->
     <div class="adviser-assurance" role="list" aria-label="Referral assurances">
       <div class="adv-assurance-item" role="listitem"><div class="adv-check" aria-hidden="true">&#10003;</div><div class="adv-assurance-text"><strong>FCA Authorised &amp; Regulated</strong><span>Firm Reference 676943 &mdash; your client is advised by a regulated firm throughout</span></div></div>
       <div class="adv-assurance-item" role="listitem"><div class="adv-check" aria-hidden="true">&#10003;</div><div class="adv-assurance-text"><strong>Your client relationship is protected</strong><span>We work alongside you, not instead of you &mdash; your client relationship remains intact</span></div></div>
@@ -991,6 +1170,18 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   });
   if(window.location.search.indexOf('view=adviser')!==-1){btn.click();}
 })();
+
+/* ── Case card expand/collapse ── */
+document.querySelectorAll('[data-case-toggle]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var panelId=btn.getAttribute('aria-controls');
+    var panel=document.getElementById(panelId);
+    var open=btn.getAttribute('aria-expanded')==='true';
+    if(panel)panel.classList.toggle('open',!open);
+    btn.setAttribute('aria-expanded',String(!open));
+    btn.firstChild.nodeValue=open?'Read more ':'Read less ';
+  });
+});
 </script>
 
 <script src="award-banner.js"></script>

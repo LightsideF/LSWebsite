@@ -112,8 +112,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* ── Hero ── */
-.page-hero{background:var(--site-navy);padding:36px 24px 40px;}
-.hero-inner{max-width:var(--max-w);margin:0 auto;}
+.page-hero{background:var(--site-navy);padding:36px 24px 40px;display:flex;align-items:center;justify-content:space-between;}
+.hero-inner{max-width:var(--max-w);margin:0 auto;flex:1;min-width:0;}
 .breadcrumb{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:16px;}
 .breadcrumb a{color:rgba(255,255,255,0.7);}
 .breadcrumb a:hover{color:var(--site-accent);text-decoration:none;}
@@ -271,6 +271,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .insights-item{padding:26px 0;}
   .insights-item-title{font-size:1rem;}
 }
+
+.hero-award-img{display:block;height:auto;max-height:180px;width:auto;max-width:280px;object-fit:contain;flex-shrink:0;margin-left:40px;}
+@media(max-width:768px){.hero-award-img{display:none;}}
 </style>
 </head>
 <body>
@@ -327,6 +330,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <h1 id="page-h1">Insights</h1>
     <p class="hero-lead">Practical articles on debt options, legal mechanisms, and what your choices really mean — written by our advisers for people who need straight answers, not jargon.</p>
   </div>
+  <img src="nav-hero.webp" alt="Best Personal &amp; Business Solutions Firm 2026, England &amp; Wales — UK Enterprise Awards" class="hero-award-img" width="794" height="250">
 </section>
 
 <!-- Trust bar — keep on all pages. Remove only for purely admin/policy pages. -->
