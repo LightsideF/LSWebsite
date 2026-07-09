@@ -307,6 +307,14 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .adviser-cta a:hover{background:var(--site-light);text-decoration:none;}
 
 /* ── Responsive ── */
+
+/* ── Hero icon (desktop only) ── */
+.hero-icon{display:none;}
+@media(min-width:761px){
+  .hero-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;}
+  .hero-text{flex:1;min-width:0;max-width:680px;}
+  .hero-icon{display:block;flex-shrink:0;width:160px;height:160px;}
+}
 @media(max-width:960px){
   .outcomes-inner{grid-template-columns:1fr;gap:32px;}
   .adviser-inner{flex-direction:column;gap:24px;}
@@ -417,7 +425,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 <!-- ═══════ HERO ═══════ -->
 <main id="main-content">
   <section class="page-hero" aria-labelledby="page-h1">
-    <div class="hero-inner">
+  <div class="hero-inner">
+    <div class="hero-text">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a> <span aria-hidden="true">&rsaquo;</span>
         <a href="personal.html">Personal Debt</a> <span aria-hidden="true">&rsaquo;</span>
@@ -425,8 +434,22 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       </nav>
       <h1 id="page-h1">When debt is the problem &mdash; and nothing seems to fit a neat category</h1>
       <p class="hero-lead">Debt causes pain whether it comes labelled or not. If you are carrying a burden that is affecting your sleep, your relationships, or your ability to think straight &mdash; and you are not sure which box it falls into &mdash; start here.</p>
+        </div><!-- /.hero-text -->
+    <div class="hero-icon" aria-hidden="true">
+      <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160" aria-hidden="true">
+          <circle cx="55" cy="55" r="26" fill="white" stroke="#20145f" stroke-width="2.4"/>
+          <circle cx="55" cy="40" r="4.5" fill="#2a8b8b"/>
+          <circle cx="55" cy="55" r="4.5" fill="#20145f"/>
+          <circle cx="55" cy="70" r="4.5" fill="#e8a020"/>
+          <circle cx="55" cy="55" r="44" fill="none" stroke="#d8dfe6" stroke-width="1.8" stroke-dasharray="5 4"/>
+          <circle cx="55" cy="11" r="4" fill="#3cc2b1" stroke="#20145f" stroke-width="1.6"/>
+          <circle cx="99" cy="55" r="4" fill="#e85d4a" stroke="#20145f" stroke-width="1.6"/>
+          <circle cx="55" cy="99" r="4" fill="#3cc2b1" stroke="#20145f" stroke-width="1.6"/>
+          <circle cx="11" cy="55" r="4" fill="#e85d4a" stroke="#20145f" stroke-width="1.6"/>
+        </svg>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ═══════ RECOGNITION BAND ═══════ -->
   <section class="recognition-band" aria-labelledby="recognition-heading">
@@ -831,6 +854,5 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
 });
 </script>
 
-<script src="award-banner.js"></script>
 </body>
 </html>

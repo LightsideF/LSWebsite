@@ -281,20 +281,20 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 .case-stamp-val{display:block;font-size:0.85rem;font-weight:700;color:var(--site-accent);font-family:'Merriweather',serif;line-height:1.2;margin-bottom:2px;}
 .case-stamp-lbl{font-size:0.67rem;color:rgba(255,255,255,0.5);display:block;line-height:1.3;}
 .case-body{overflow:hidden;max-height:0;transition:max-height 0.38s ease;}
-.case-body.open{max-height:600px;}
+.case-body.open{max-height:800px;}
 .case-body-inner{padding:18px 20px 14px;border-top:0.5px solid var(--site-border);}
 .case-section-lbl{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
 .case-sit{background:var(--site-offwhite);border-left:3px solid var(--site-teal);border-radius:0 4px 4px 0;padding:14px 16px;margin-bottom:14px;}
 .case-sit p{font-family:'Merriweather',serif;font-size:0.88rem;font-style:italic;color:var(--site-text);line-height:1.8;}
 .case-sol p{font-size:0.9rem;color:var(--site-muted);line-height:1.7;margin-bottom:8px;}
 .case-sol p:last-child{margin-bottom:0;}
-.case-outcomes-list{list-style:none;margin-top:12px;border-top:1px solid var(--site-border);padding-top:10px;display:flex;flex-direction:column;gap:5px;}
-.case-outcomes-list li{font-size:0.85rem;color:var(--site-muted);line-height:1.55;display:flex;gap:8px;align-items:flex-start;}
-.case-outcomes-list li::before{content:'✓';color:var(--site-teal);font-weight:700;flex-shrink:0;}
+
 .case-footer{padding:10px 20px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid var(--site-border);}
 .case-toggle-btn{font-size:0.85rem;font-weight:700;color:var(--site-teal);background:none;border:none;cursor:pointer;padding:0;font-family:inherit;min-height:44px;display:inline-flex;align-items:center;gap:6px;}
 .case-read-link{font-size:0.85rem;font-weight:700;color:var(--site-teal);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;}
 .case-read-link:hover{color:var(--site-teal-dk);text-decoration:underline;}
+.case-attribution{font-size:0.78rem;color:var(--site-muted);font-style:italic;border-top:1px solid var(--site-border);padding-top:10px;margin-top:12px;}
+.case-attribution a{color:var(--site-teal);}
 .toggle-chevron{font-size:0.72rem;display:inline-block;transition:transform 0.25s;}
 .case-toggle-btn[aria-expanded="true"] .toggle-chevron{transform:rotate(180deg);}
 .case-card.hidden-case{display:none;}
@@ -338,21 +338,7 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 .referred-strip{margin-top:24px;}
 .referred-strip h4{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--site-muted);margin-bottom:12px;}
 .referred-cases{display:flex;flex-direction:column;gap:10px;}
-.ref-case-card{background:var(--site-navy);border-radius:6px;overflow:hidden;text-decoration:none;display:block;transition:box-shadow 0.2s,transform 0.18s;}
-.ref-case-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.28);transform:translateY(-2px);text-decoration:none;}
-.ref-case-header{padding:14px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
-.ref-case-meta{flex:1;}
-.ref-case-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--site-teal);margin-bottom:4px;}
-.ref-case-title{font-family:'Merriweather',serif;font-size:0.88rem;font-weight:700;color:white;line-height:1.35;margin-bottom:3px;}
-.ref-case-detail{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.4;}
-.ref-case-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.35);border-radius:4px;padding:6px 10px;text-align:center;flex-shrink:0;}
-.ref-stamp-num{display:block;font-family:'Merriweather',serif;font-size:0.92rem;font-weight:700;color:var(--site-accent);line-height:1.1;margin-bottom:2px;}
-.ref-stamp-lbl{font-size:0.62rem;color:rgba(255,255,255,0.6);line-height:1.3;display:block;}
-.ref-case-footer{padding:8px 18px;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;}
-.ref-case-ref-tag{font-size:0.67rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--site-accent);color:var(--site-navy);padding:3px 8px;border-radius:3px;}
-.ref-case-ref-tag--navy{background:var(--site-navy-lt);color:white;}
-.ref-case-ref-tag--slate{background:var(--site-muted);color:white;}
-.ref-case-arrow{font-size:0.88rem;color:var(--site-accent);}
+
 .adviser-assurance{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;}
 .adv-assurance-item{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--site-border);border-radius:6px;padding:16px;}
 .adv-check{width:28px;height:28px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.8rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
@@ -407,6 +393,14 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
 /* ── Responsive ── */
+
+/* ── Hero icon (desktop only) ── */
+.hero-icon{display:none;}
+@media(min-width:761px){
+  .hero-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;}
+  .hero-text{flex:1;min-width:0;max-width:680px;}
+  .hero-icon{display:block;flex-shrink:0;width:200px;height:200px;}
+}
 @media(max-width:960px){
   .outcomes-inner{grid-template-columns:1fr;gap:32px;}
   .threat-grid{grid-template-columns:1fr 1fr;}
@@ -520,6 +514,18 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="flex-shrink:0;"><circle cx="4.5" cy="4" r="2.5" stroke="white" stroke-width="1.3"/><path d="M0.5 12.5c0-2.209 1.791-4 4-4" stroke="white" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="4" r="2.5" stroke="rgba(255,255,255,0.55)" stroke-width="1.3"/><path d="M13.5 12.5c0-2.209-1.791-4-4-4" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-linecap="round"/></svg>
         For professional advisers
       </a>
+    </div><!-- /.hero-text -->
+    <div class="hero-icon" aria-hidden="true">
+      <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" width="200" height="200" aria-hidden="true">
+          <circle cx="74" cy="34" r="22" fill="#f5c800" stroke="#3cc2b1" stroke-width="2.4"/>
+          <line x1="74" y1="8"  x2="74" y2="2"  stroke="#20145f" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="91" y1="14" x2="96" y2="9"  stroke="#20145f" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="100" y1="32" x2="107" y2="31" stroke="#20145f" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="93" y1="50" x2="99" y2="55" stroke="#20145f" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="55" y1="14" x2="50" y2="9"  stroke="#20145f" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="48" y1="30" x2="41" y2="29" stroke="#20145f" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M 6 78 C 6 88, 13 93, 23 93 L 73 93 C 83 93, 88 87, 88 79 C 88 71, 82 66, 74 65 C 74 55, 67 48, 58 48 C 52 48, 47 51, 44 56 C 40 50, 33 46, 25 48 C 16 50, 10 57, 10 65 C 7 67, 6 72, 6 78 Z" fill="#8a9aaa" stroke="#cc1414" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
     </div>
   </div>
 </section>
@@ -787,139 +793,123 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 <section class="cases-section" aria-labelledby="cases-heading">
   <div class="cases-inner">
     <div class="section-label">Real cases</div>
-    <h2 class="section-h2" id="cases-heading" style="margin-bottom:8px;">Five painful debt situations &mdash; resolved.</h2>
-    <p class="section-sub">What these five real client situations share is that the outcome was better than the client expected when they first called.</p>
+    <h2 class="section-h2" id="cases-heading" style="margin-bottom:8px;">Painful debt situations &mdash; resolved.</h2>
+    <p class="section-sub">What every one of these real client situations shares is that the outcome was better than the client expected when they first called.</p>
     <div class="cases-grid" id="cases-grid">
 
-      <!-- Case 1: Mr. & Mrs. V (200VD BKT) -->
+      <!-- Debt Left Us Struggling — We Just Needed a Fresh Start -->
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
             <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
-            <div class="case-card-title">Debt Left Us Struggling &mdash; We Just Needed a Fresh Start</div>
+            <div class="case-card-title">Debt Left Us Struggling — We Just Needed a Fresh Start</div>
             <div class="case-card-ref">Mr. &amp; Mrs. V &mdash; mortgage shortfall, credit cards, unsecured debts</div>
           </div>
           <div class="case-stamp">
             <span class="case-stamp-val">Fresh<br>Start</span>
-            <span class="case-stamp-lbl">12 months</span>
+            <span class="case-stamp-lbl">Debt written off</span>
           </div>
         </div>
-        <div class="case-body" id="case-body-v">
+        <div class="case-body" id="case-body-1">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;The mortgage shortfall. The credit card balances. Everything combined made repayment impossible. Bankruptcy brought every debt together and gave them a genuine fresh start.&rdquo;</p></div>
+            <div class="case-sit"><p>“My nan left me some money when she died. I used it as a deposit on a flat. It felt like the right thing to do with her money. Something lasting. It didn’t last.”</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>The property had already been repossessed and sold for less than the outstanding mortgage, leaving a shortfall that became unsecured debt. Combined with other personal debts, the position was unmanageable. Bankruptcy brought all liabilities &mdash; including the shortfall &mdash; into a single estate and wrote them off at discharge.</p></div>
-            <ul class="case-outcomes-list">
-              <li>Mortgage shortfall and all unsecured debts written off</li>
-              <li>Genuine fresh start after years of unmanageable debt</li>
-              <li>Discharged within 12 months</li>
-            </ul>
+            <div class="case-sol"><p>Mr. and Mrs. V had been managing their debts through a creditor arrangement when a mortgage rate rise made the position unworkable almost overnight. The property was repossessed and sold for less than the outstanding mortgage, leaving a shortfall debt that followed them after the keys were handed back. Combined with existing credit card and loan balances, the total was beyond any realistic repayment plan. We recommended bankruptcy, prepared the application, managed all correspondence with the Insolvency Service, and attended the Official Receiver interview with them. Every debt — including the mortgage shortfall — was written off.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah. Referred by Lorraine Sellwood, IFA, Phase 8 Ltd.</div>
           </div>
         </div>
         <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-v" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-1" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
           <a href="mr-and-mrs-v-bankruptcy.html" class="case-read-link">Full case &rarr;</a>
         </div>
       </div>
 
-      <!-- Case 2: Mr. JB (200BTS) -->
+      <!-- The Tax Bill Was Real - but Future Debt Was Written Off -->
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
             <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
-            <div class="case-card-title">The Tax Bill Was Real &mdash; but Future Debt Was Written Off</div>
+            <div class="case-card-title">The Tax Bill Was Real - but Future Debt Was Written Off</div>
             <div class="case-card-ref">Mr. JB &mdash; self-employed tree surgeon, HMRC debt, tools protected</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">Job<br>Saved</span>
-            <span class="case-stamp-lbl">tools protected</span>
+            <span class="case-stamp-val">100%</span>
+            <span class="case-stamp-lbl">of debts written off</span>
           </div>
         </div>
-        <div class="case-body" id="case-body-jb">
+        <div class="case-body" id="case-body-2">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;A self-employed tree surgeon needed all his debts dealt with, and his job safeguarded.&rdquo;</p></div>
+            <div class="case-sit"><p>“The returns had fallen behind, and when I finally caught up with my accountant and got everything submitted, the liability that came back was more than I could afford to pay.”</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>Bankruptcy was timed carefully &mdash; filed post-5 April so the current tax year liability could be captured and written off alongside the other debts. The wood chipper and vehicle used for work were protected as tools of trade, preserving the ability to earn. Self-employed status was maintained throughout.</p></div>
-            <ul class="case-outcomes-list">
-              <li>Bankruptcy timed post-5 April to capture current tax year liability</li>
-              <li>Wood chipper and vehicle protected as tools of trade</li>
-              <li>Self-employed work unaffected</li>
-            </ul>
+            <div class="case-sol"><p>Mr. JB’s accountant brought the case to us. The HMRC income tax liability was unaffordable and had no viable repayment route — bankruptcy was the right answer, not a managed arrangement that HMRC may not even have agreed to. The key practical decision was timing: Mr. JB came to us in January, and by waiting until after 5 April, the current tax year’s accumulating liability could also be caught by the bankruptcy order and written off. His specialist tools of trade — including his wood chipper vehicle — were protected throughout as assets essential to his livelihood. Mr. JB was discharged in the usual way. The debt is gone; his tools are intact; his accountant has a tax management system in place going forward.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah. Referred by Mr. JB’s accountant.</div>
           </div>
         </div>
         <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-jb" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-2" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
           <a href="mr-jb-hmrc.html" class="case-read-link">Full case &rarr;</a>
         </div>
       </div>
 
-      <!-- Case 3: Mr. CR (500COH) -->
+      <!-- Tax Return Filed, Debt Unaffordable - but BTL Properties Saved -->
       <div class="case-card">
         <div class="case-card-hdr">
           <div class="case-card-meta">
             <div class="case-card-eyebrow">Personal &mdash; HMRC / Bankruptcy</div>
-            <div class="case-card-title">Tax Return Filed, Debt Unaffordable &mdash; but BTL Properties Saved</div>
+            <div class="case-card-title">Tax Return Filed, Debt Unaffordable - but BTL Properties Saved</div>
             <div class="case-card-ref">Mr. CR &mdash; HMRC bankruptcy, beneficial ownership, discharged in three months</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">BTL<br>Saved</span>
-            <span class="case-stamp-lbl">3 months</span>
+            <span class="case-stamp-val">Property<br>Saved</span>
+            <span class="case-stamp-lbl">3 mths - Discharged</span>
           </div>
         </div>
-        <div class="case-body" id="case-body-cr">
+        <div class="case-body" id="case-body-3">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;Two properties in Mr. CR&rsquo;s name that belonged to his step-daughters. Bankruptcy followed &mdash; but the properties were safe, and he was discharged early, in just three months.&rdquo;</p></div>
+            <div class="case-sit"><p>“I hadn’t filed my tax returns for several years. When I finally did, the bill was around £44,000 — and HMRC wanted £5,000 a month to clear it. What made it far worse was that two properties appeared to be in my name. They weren’t mine — they belonged to my teenage step-daughters.”</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>The two buy-to-let properties registered in Mr. CR&rsquo;s name were beneficially owned by his step-daughters. We established that beneficial ownership clearly and comprehensively &mdash; the Trustee accepted the argument. The properties were not available to the bankruptcy estate. HMRC&rsquo;s debt was dealt with through the process and Mr. CR was discharged in three months.</p></div>
-            <ul class="case-outcomes-list">
-              <li>BTL properties protected on beneficial ownership grounds</li>
-              <li>Properties not available to the Trustee in Bankruptcy</li>
-              <li>Discharged early, in just three months</li>
-            </ul>
+            <div class="case-sol"><p>We established that both properties were beneficially owned by Mr. CR’s step-daughters — not by Mr. CR — and built the evidence case: source of deposits, documented intention at the time of purchase, and the written trust arrangement in favour of the step-daughters. We presented that case to the bankruptcy trustee with sufficient clarity that the trustee accepted the position without dispute. Both properties were excluded from the bankruptcy estate entirely. Mr. CR was discharged from bankruptcy within three months — nine months ahead of the standard twelve-month term.</p></div>
+            <div class="case-attribution">Adviser: Barry Mitchell. Referred by Kam Sira, Accountant, TaxAssist — Watford.</div>
           </div>
         </div>
         <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-cr" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-3" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
           <a href="mr-cr-hmrc.html" class="case-read-link">Full case &rarr;</a>
         </div>
       </div>
 
-      <!-- Case 4: Ms. R (200RW) — hidden -->
+      <!-- Divorce, Debt — but My Children’s Inheritance Was Still Safe -->
       <div class="case-card hidden-case">
         <div class="case-card-hdr">
           <div class="case-card-meta">
             <div class="case-card-eyebrow">Personal &mdash; Bankruptcy / Divorce &amp; Debt</div>
-            <div class="case-card-title">Divorce, Debt &mdash; but My Children&rsquo;s Inheritance Was Still Safe</div>
+            <div class="case-card-title">Divorce, Debt — but My Children’s Inheritance Was Still Safe</div>
             <div class="case-card-ref">Ms. R &mdash; BTL property saved via LPA Receiver during bankruptcy</div>
           </div>
           <div class="case-stamp">
             <span class="case-stamp-val">BTL<br>Kept</span>
-            <span class="case-stamp-lbl">discharged</span>
+            <span class="case-stamp-lbl">LPA Receiver used</span>
           </div>
         </div>
-        <div class="case-body" id="case-body-rw">
+        <div class="case-body" id="case-body-4">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;BTL property protected throughout bankruptcy via LPA Receiver. All unsecured debt written off. Children&rsquo;s inheritance intact.&rdquo;</p></div>
+            <div class="case-sit"><p>“I had no money apart from the income from my rental property in Manchester, which didn’t even cover my rent and living costs. A builder threatened to make me bankrupt. I was terrified I would lose my rental property — my source of income and my children’s inheritance.”</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>A buy-to-let property that formed part of Ms. R&rsquo;s children&rsquo;s inheritance was at risk in bankruptcy. We structured a second-charge LPA Receiver appointment by family members, who collected the rental income and used it to service the first-charge mortgage throughout the bankruptcy period. The property was retained at discharge.</p></div>
-            <ul class="case-outcomes-list">
-              <li>BTL property saved via LPA Receiver appointment during bankruptcy</li>
-              <li>Rental income serviced the first-charge mortgage throughout</li>
-              <li>Property retained at discharge; children&rsquo;s inheritance preserved</li>
-            </ul>
+            <div class="case-sol"><p>Ms. R came to us with credit card debt from a failed property development business, a marriage that had broken down, and a builder threatening bankruptcy over a disputed claim. We first stabilised her finances through a creditor arrangement, freezing interest across all accounts. When the builder proceeded with his petition, we advised her to let him bear the cost — because bankruptcy would write off the credit card debt and the builder’s claim simultaneously. Her condition was clear: her children’s inheritance — a BTL property in Manchester — had to be saved. We advised her parents, who held a second charge on the property, to appoint an LPA Receiver before the first charge holder could act. The LPA Receiver collected the rental income and used it to service the mortgage throughout the bankruptcy period, giving the Official Receiver no viable route to the asset. Ms. R was discharged debt-free, with the property still hers and her children’s inheritance intact.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah.</div>
           </div>
         </div>
         <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-rw" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-4" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
           <a href="ms-r-divorce-debt.html" class="case-read-link">Full case &rarr;</a>
         </div>
       </div>
 
-      <!-- Case 5: Mr. G (200GK) — hidden -->
+      <!-- The Bankruptcy Order That Should Never Have Been Made -->
       <div class="case-card hidden-case">
         <div class="case-card-hdr">
           <div class="case-card-meta">
@@ -928,26 +918,50 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
             <div class="case-card-ref">Mr. G &mdash; FCA registration preserved, order annulled, all records cleared</div>
           </div>
           <div class="case-stamp">
-            <span class="case-stamp-val">Order<br>Annulled</span>
-            <span class="case-stamp-lbl">records cleared</span>
+            <span class="case-stamp-val">Bktcy<br>Annulled</span>
+            <span class="case-stamp-lbl">£60k v £194k</span>
           </div>
         </div>
-        <div class="case-body" id="case-body-gk">
+        <div class="case-body" id="case-body-5">
           <div class="case-body-inner">
             <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;FCA registration preserved. Bankruptcy removed from all records. Thirty-year marriage protected.&rdquo;</p></div>
+            <div class="case-sit"><p>“I knew exactly what a bankruptcy petition was. When I walked into that meeting on the Friday afternoon, I already understood what I was looking at. The hearing was four days away. HMRC were claiming £60,000.”</p></div>
             <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>A bankruptcy order had been made against Mr. G &mdash; a regulated sole trader in financial services. The order threatened his FCA authorisation and ability to trade. We challenged the order on the grounds it should never have been made. The court agreed. The order was annulled and removed from all records. His FCA registration was preserved and his ability to trade as a regulated professional was restored.</p></div>
-            <ul class="case-outcomes-list">
-              <li>Bankruptcy order challenged and annulled</li>
-              <li>FCA authorisation and trading ability preserved</li>
-              <li>Order removed from all records</li>
-            </ul>
+            <div class="case-sol"><p>Lightside secured an emergency adjournment of the bankruptcy petition hearing at four days’ notice and paid £10,000 at court on the day. When the bankruptcy order was subsequently made — after Mr. G allowed the eight-week window to pass — Lightside took the case on in full and applied for annulment on the grounds the order should never have been made. That specific legal basis mattered: it would, if the application succeeded, remove the bankruptcy from all records entirely, preserving Mr. G’s FCA authorisation. HMRC contested the application and raised their demand from the original £60,000 to £194,000. Lightside challenged the revised figure successfully: the annulment was granted on the basis of the original £60,000 petition debt. The bankruptcy was annulled, the record was cleared, and his FCA registration was preserved.</p></div>
+            <div class="case-attribution">Adviser: Priti Shah. Referred by Andrew Rhodes, Partner, Sobell Rhodes LLP — www.sobellrhodes.co.uk via BNI.</div>
           </div>
         </div>
         <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-gk" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-5" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
           <a href="mr-g-personal-liability.html" class="case-read-link">Full case &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Bankruptcy Actually Protected Her Home — Litigious Landlord, Zero Loss -->
+      <div class="case-card hidden-case">
+        <div class="case-card-hdr">
+          <div class="case-card-meta">
+            <div class="case-card-eyebrow">Personal &mdash; Bankruptcy / Property</div>
+            <div class="case-card-title">Bankruptcy Actually Protected Her Home — Litigious Landlord, Zero Loss</div>
+            <div class="case-card-ref">Mrs. SS &mdash; home and Porsche retained, discharged in 12 months</div>
+          </div>
+          <div class="case-stamp">
+            <span class="case-stamp-val">Porsche<br>kept</span>
+            <span class="case-stamp-lbl">Assets saved</span>
+          </div>
+        </div>
+        <div class="case-body" id="case-body-6">
+          <div class="case-body-inner">
+            <div class="case-section-lbl">The Situation</div>
+            <div class="case-sit"><p>“I was so scared at the thought of bankruptcy. The thought of losing my home was terrifying. I wasn’t eating. I wasn’t sleeping.”</p></div>
+            <div class="case-section-lbl">What We Did</div>
+            <div class="case-sol"><p>Mrs. SS’s home was never at risk — but she didn’t know that. A thorough review of the equity ownership structure confirmed the Trustee in Bankruptcy had no viable claim on the property. We managed all correspondence throughout, so she never had to deal with the insolvency service or creditors directly. When the Trustee attempted to claim the family Porsche, we challenged it. The claim was dropped. Mrs. SS was discharged within 12 months with her home, her marriage, and her financial footing intact.</p></div>
+            <div class="case-attribution">Adviser: Barry Mitchell. Referred by Peter Green, Green & Co Accountants.</div>
+          </div>
+        </div>
+        <div class="case-footer">
+          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-6" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+          <a href="mrs-ss-property-at-risk.html" class="case-read-link">Full case &rarr;</a>
         </div>
       </div>
 
@@ -1065,84 +1079,174 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
           </div>
         </div>
 
-        <div class="referred-strip">
-          <h4>Cases referred by professionals</h4>
-          <div class="referred-cases">
+          <div class="referred-strip">
+            <h4>Cases referred by professionals</h4>
+            <div class="referred-cases">
 
-            <a href="mrs-ss-property-at-risk.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Bankruptcy / Property</div>
-                  <div class="ref-case-title">Bankruptcy Actually Protected Her Home &mdash; Litigious Landlord, Zero Loss</div>
-                  <div class="ref-case-detail">Mrs. SS &mdash; home and Porsche retained, discharged in 12 months</div>
+                <div class="case-card">
+                  <div class="case-card-hdr">
+                    <div class="case-card-meta">
+                      <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
+                      <div class="case-card-title">Bankruptcy Actually Protected Her Home — Litigious Landlord, Zero Loss</div>
+                      <div class="case-card-ref">Mrs. SS &mdash; home and Porsche retained, discharged in 12 months</div>
+                    </div>
+                    <div class="case-stamp">
+                      <span class="case-stamp-val">Porsche<br>kept</span>
+                      <span class="case-stamp-lbl">Assets saved</span>
+                    </div>
+                  </div>
+                  <div class="case-body" id="case-body-ref-1">
+                    <div class="case-body-inner">
+                      <div class="case-section-lbl">The Situation</div>
+                      <div class="case-sit"><p>“I was so scared at the thought of bankruptcy. The thought of losing my home was terrifying. I wasn’t eating. I wasn’t sleeping.”</p></div>
+                      <div class="case-section-lbl">What We Did</div>
+                      <div class="case-sol"><p>Mrs. SS’s home was never at risk — but she didn’t know that. A thorough review of the equity ownership structure confirmed the Trustee in Bankruptcy had no viable claim on the property. We managed all correspondence throughout, so she never had to deal with the insolvency service or creditors directly. When the Trustee attempted to claim the family Porsche, we challenged it. The claim was dropped. Mrs. SS was discharged within 12 months with her home, her marriage, and her financial footing intact.</p></div>
+                      <div class="case-attribution">Adviser: Barry Mitchell. Referred by Peter Green, Green & Co Accountants.</div>
+                    </div>
+                  </div>
+                  <div class="case-footer">
+                    <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-1" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                    <a href="mrs-ss-property-at-risk.html" class="case-read-link">Full case &rarr;</a>
+                  </div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">All<br>debts</span>
-                  <span class="ref-stamp-lbl">written off</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
 
-            <a href="mr-jb-hmrc.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Bankruptcy / HMRC</div>
-                  <div class="ref-case-title">The Tax Bill Was Real &mdash; but Future Debt Was Written Off</div>
-                  <div class="ref-case-detail">Mr. JB &mdash; self-employed, tools protected, job safeguarded</div>
+                <div class="case-card">
+                  <div class="case-card-hdr">
+                    <div class="case-card-meta">
+                      <div class="case-card-eyebrow">Personal &mdash; Bankruptcy</div>
+                      <div class="case-card-title">The Tax Bill Was Real - but Future Debt Was Written Off</div>
+                      <div class="case-card-ref">Mr. JB &mdash; self-employed tree surgeon, HMRC debt, tools protected</div>
+                    </div>
+                    <div class="case-stamp">
+                      <span class="case-stamp-val">100%</span>
+                      <span class="case-stamp-lbl">of debts written off</span>
+                    </div>
+                  </div>
+                  <div class="case-body" id="case-body-ref-2">
+                    <div class="case-body-inner">
+                      <div class="case-section-lbl">The Situation</div>
+                      <div class="case-sit"><p>“The returns had fallen behind, and when I finally caught up with my accountant and got everything submitted, the liability that came back was more than I could afford to pay.”</p></div>
+                      <div class="case-section-lbl">What We Did</div>
+                      <div class="case-sol"><p>Mr. JB’s accountant brought the case to us. The HMRC income tax liability was unaffordable and had no viable repayment route — bankruptcy was the right answer, not a managed arrangement that HMRC may not even have agreed to. The key practical decision was timing: Mr. JB came to us in January, and by waiting until after 5 April, the current tax year’s accumulating liability could also be caught by the bankruptcy order and written off. His specialist tools of trade — including his wood chipper vehicle — were protected throughout as assets essential to his livelihood. Mr. JB was discharged in the usual way. The debt is gone; his tools are intact; his accountant has a tax management system in place going forward.</p></div>
+                      <div class="case-attribution">Adviser: Priti Shah. Referred by Mr. JB’s accountant.</div>
+                    </div>
+                  </div>
+                  <div class="case-footer">
+                    <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-2" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                    <a href="mr-jb-hmrc.html" class="case-read-link">Full case &rarr;</a>
+                  </div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Job<br>Saved</span>
-                  <span class="ref-stamp-lbl">tools kept</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
 
-            <a href="mr-cr-hmrc.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Bankruptcy / HMRC</div>
-                  <div class="ref-case-title">Tax Return Filed, Debt Unaffordable &mdash; but BTL Properties Saved</div>
-                  <div class="ref-case-detail">Mr. CR &mdash; beneficial ownership argument, discharged in three months</div>
+                <div class="case-card">
+                  <div class="case-card-hdr">
+                    <div class="case-card-meta">
+                      <div class="case-card-eyebrow">Personal &mdash; HMRC / Bankruptcy</div>
+                      <div class="case-card-title">Tax Return Filed, Debt Unaffordable - but BTL Properties Saved</div>
+                      <div class="case-card-ref">Mr. CR &mdash; HMRC bankruptcy, beneficial ownership, discharged in three months</div>
+                    </div>
+                    <div class="case-stamp">
+                      <span class="case-stamp-val">Property<br>Saved</span>
+                      <span class="case-stamp-lbl">3 mths - Discharged</span>
+                    </div>
+                  </div>
+                  <div class="case-body" id="case-body-ref-3">
+                    <div class="case-body-inner">
+                      <div class="case-section-lbl">The Situation</div>
+                      <div class="case-sit"><p>“I hadn’t filed my tax returns for several years. When I finally did, the bill was around £44,000 — and HMRC wanted £5,000 a month to clear it. What made it far worse was that two properties appeared to be in my name. They weren’t mine — they belonged to my teenage step-daughters.”</p></div>
+                      <div class="case-section-lbl">What We Did</div>
+                      <div class="case-sol"><p>We established that both properties were beneficially owned by Mr. CR’s step-daughters — not by Mr. CR — and built the evidence case: source of deposits, documented intention at the time of purchase, and the written trust arrangement in favour of the step-daughters. We presented that case to the bankruptcy trustee with sufficient clarity that the trustee accepted the position without dispute. Both properties were excluded from the bankruptcy estate entirely. Mr. CR was discharged from bankruptcy within three months — nine months ahead of the standard twelve-month term.</p></div>
+                      <div class="case-attribution">Adviser: Barry Mitchell. Referred by Kam Sira, Accountant, TaxAssist — Watford.</div>
+                    </div>
+                  </div>
+                  <div class="case-footer">
+                    <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-3" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                    <a href="mr-cr-hmrc.html" class="case-read-link">Full case &rarr;</a>
+                  </div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">BTL<br>Saved</span>
-                  <span class="ref-stamp-lbl">3 months</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
 
-            <a href="mr-g-personal-liability.html" class="ref-case-card">
-              <div class="ref-case-header">
-                <div class="ref-case-meta">
-                  <div class="ref-case-eyebrow">Personal &mdash; Annulment</div>
-                  <div class="ref-case-title">The Bankruptcy Order That Should Never Have Been Made</div>
-                  <div class="ref-case-detail">Mr. G &mdash; FCA registration preserved, order annulled</div>
+                <div class="case-card">
+                  <div class="case-card-hdr">
+                    <div class="case-card-meta">
+                      <div class="case-card-eyebrow">Personal &mdash; Bankruptcy / Annulment</div>
+                      <div class="case-card-title">The Bankruptcy Order That Should Never Have Been Made</div>
+                      <div class="case-card-ref">Mr. G &mdash; FCA registration preserved, order annulled, all records cleared</div>
+                    </div>
+                    <div class="case-stamp">
+                      <span class="case-stamp-val">Bktcy<br>Annulled</span>
+                      <span class="case-stamp-lbl">£60k v £194k</span>
+                    </div>
+                  </div>
+                  <div class="case-body" id="case-body-ref-4">
+                    <div class="case-body-inner">
+                      <div class="case-section-lbl">The Situation</div>
+                      <div class="case-sit"><p>“I knew exactly what a bankruptcy petition was. When I walked into that meeting on the Friday afternoon, I already understood what I was looking at. The hearing was four days away. HMRC were claiming £60,000.”</p></div>
+                      <div class="case-section-lbl">What We Did</div>
+                      <div class="case-sol"><p>Lightside secured an emergency adjournment of the bankruptcy petition hearing at four days’ notice and paid £10,000 at court on the day. When the bankruptcy order was subsequently made — after Mr. G allowed the eight-week window to pass — Lightside took the case on in full and applied for annulment on the grounds the order should never have been made. That specific legal basis mattered: it would, if the application succeeded, remove the bankruptcy from all records entirely, preserving Mr. G’s FCA authorisation. HMRC contested the application and raised their demand from the original £60,000 to £194,000. Lightside challenged the revised figure successfully: the annulment was granted on the basis of the original £60,000 petition debt. The bankruptcy was annulled, the record was cleared, and his FCA registration was preserved.</p></div>
+                      <div class="case-attribution">Adviser: Priti Shah. Referred by Andrew Rhodes, Partner, Sobell Rhodes LLP — www.sobellrhodes.co.uk via BNI.</div>
+                    </div>
+                  </div>
+                  <div class="case-footer">
+                    <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-4" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                    <a href="mr-g-personal-liability.html" class="case-read-link">Full case &rarr;</a>
+                  </div>
                 </div>
-                <div class="ref-case-stamp">
-                  <span class="ref-stamp-num">Order<br>Annulled</span>
-                  <span class="ref-stamp-lbl">records cleared</span>
-                </div>
-              </div>
-              <div class="ref-case-footer">
-                <span class="ref-case-ref-tag">Accountant</span>
-                <span class="ref-case-arrow">&#8594;</span>
-              </div>
-            </a>
 
+                <div class="case-card">
+                  <div class="case-card-hdr">
+                    <div class="case-card-meta">
+                      <div class="case-card-eyebrow">Personal &mdash; Bankruptcy / Divorce &amp; Debt</div>
+                      <div class="case-card-title">Divorce, Debt — but My Children’s Inheritance Was Still Safe</div>
+                      <div class="case-card-ref">Ms. R &mdash; BTL property saved via LPA Receiver during bankruptcy</div>
+                    </div>
+                    <div class="case-stamp">
+                      <span class="case-stamp-val">BTL<br>Kept</span>
+                      <span class="case-stamp-lbl">LPA Receiver used</span>
+                    </div>
+                  </div>
+                  <div class="case-body" id="case-body-ref-5">
+                    <div class="case-body-inner">
+                      <div class="case-section-lbl">The Situation</div>
+                      <div class="case-sit"><p>“I had no money apart from the income from my rental property in Manchester, which didn’t even cover my rent and living costs. A builder threatened to make me bankrupt. I was terrified I would lose my rental property — my source of income and my children’s inheritance.”</p></div>
+                      <div class="case-section-lbl">What We Did</div>
+                      <div class="case-sol"><p>Ms. R came to us with credit card debt from a failed property development business, a marriage that had broken down, and a builder threatening bankruptcy over a disputed claim. We first stabilised her finances through a creditor arrangement, freezing interest across all accounts. When the builder proceeded with his petition, we advised her to let him bear the cost — because bankruptcy would write off the credit card debt and the builder’s claim simultaneously. Her condition was clear: her children’s inheritance — a BTL property in Manchester — had to be saved. We advised her parents, who held a second charge on the property, to appoint an LPA Receiver before the first charge holder could act. The LPA Receiver collected the rental income and used it to service the mortgage throughout the bankruptcy period, giving the Official Receiver no viable route to the asset. Ms. R was discharged debt-free, with the property still hers and her children’s inheritance intact.</p></div>
+                      <div class="case-attribution">Adviser: Priti Shah.</div>
+                    </div>
+                  </div>
+                  <div class="case-footer">
+                    <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-5" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                    <a href="ms-r-divorce-debt.html" class="case-read-link">Full case &rarr;</a>
+                  </div>
+                </div>
+
+                <div class="case-card">
+                  <div class="case-card-hdr">
+                    <div class="case-card-meta">
+                      <div class="case-card-eyebrow">Personal &mdash; Bankruptcy / Property</div>
+                      <div class="case-card-title">Debt Left Us Struggling — We Just Needed a Fresh Start</div>
+                      <div class="case-card-ref">Mr. &amp; Mrs. V &mdash; mortgage shortfall, credit cards, unsecured debts</div>
+                    </div>
+                    <div class="case-stamp">
+                      <span class="case-stamp-val">Fresh<br>Start</span>
+                      <span class="case-stamp-lbl">Debt written off</span>
+                    </div>
+                  </div>
+                  <div class="case-body" id="case-body-ref-6">
+                    <div class="case-body-inner">
+                      <div class="case-section-lbl">The Situation</div>
+                      <div class="case-sit"><p>“My nan left me some money when she died. I used it as a deposit on a flat. It felt like the right thing to do with her money. Something lasting. It didn’t last.”</p></div>
+                      <div class="case-section-lbl">What We Did</div>
+                      <div class="case-sol"><p>Mr. and Mrs. V had been managing their debts through a creditor arrangement when a mortgage rate rise made the position unworkable almost overnight. The property was repossessed and sold for less than the outstanding mortgage, leaving a shortfall debt that followed them after the keys were handed back. Combined with existing credit card and loan balances, the total was beyond any realistic repayment plan. We recommended bankruptcy, prepared the application, managed all correspondence with the Insolvency Service, and attended the Official Receiver interview with them. Every debt — including the mortgage shortfall — was written off.</p></div>
+                      <div class="case-attribution">Adviser: Priti Shah. Referred by Lorraine Sellwood, IFA, Phase 8 Ltd.</div>
+                    </div>
+                  </div>
+                  <div class="case-footer">
+                    <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-ref-6" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
+                    <a href="mr-and-mrs-v-bankruptcy.html" class="case-read-link">Full case &rarr;</a>
+                  </div>
+                </div>
+
+            </div>
           </div>
-        </div>
       </div>
 
     </div><!-- /adviser-panel-grid -->
@@ -1586,6 +1690,5 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
 })();
 </script>
 
-<script src="award-banner.js"></script>
 </body>
 </html>
