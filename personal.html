@@ -171,7 +171,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
 /* ── Hero ── */
 .page-hero{background:var(--site-navy);padding:44px 24px 52px;}
-.page-hero-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:flex-start;justify-content:flex-start;gap:40px;}
+.page-hero-inner{max-width:var(--max-w);margin:0 auto;}
 .breadcrumb{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:16px;}
 .breadcrumb a{color:rgba(255,255,255,0.7);}
 .breadcrumb a:hover{color:var(--site-accent);text-decoration:none;}
@@ -369,10 +369,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .case-read-link:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .case-toggle-btn[aria-expanded="true"] .toggle-chevron{transform:rotate(180deg);}
 .toggle-chevron{display:inline-block;transition:transform 0.25s;font-size:0.75rem;}
-
-.hero-text{flex:0 0 640px;min-width:0;display:block;}
-.hero-award-img{display:block;height:auto;max-height:160px;width:auto;max-width:260px;object-fit:contain;flex-shrink:0;padding-top:32px;}
-@media(max-width:768px){.hero-award-img{display:none;}.page-hero-inner{display:block;}}
 </style>
 </head>
 <body>
@@ -439,7 +435,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 <!-- HERO -->
 <section class="page-hero" aria-labelledby="page-h1">
   <div class="page-hero-inner">
-    <div class="hero-text">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a><span aria-hidden="true">/</span>Personal Debt
     </nav>
@@ -449,8 +444,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="flex-shrink:0;"><circle cx="4.5" cy="4" r="2.5" stroke="white" stroke-width="1.3"/><path d="M0.5 12.5c0-2.209 1.791-4 4-4" stroke="white" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="4" r="2.5" stroke="rgba(255,255,255,0.55)" stroke-width="1.3"/><path d="M13.5 12.5c0-2.209-1.791-4-4-4" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-linecap="round"/></svg>
       For professional advisers
     </button>
-    </div>
-    <img src="nav-hero.webp" alt="Best Personal &amp; Business Solutions Firm 2026, England &amp; Wales — UK Enterprise Awards" class="hero-award-img" width="794" height="250">
   </div>
 </section>
 
