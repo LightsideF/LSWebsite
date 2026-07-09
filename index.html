@@ -230,8 +230,31 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   display:grid;
   grid-template-columns:1fr 420px;
   gap:48px;
-  align-items:start;  /* top-align both columns */
+  align-items:start;
+  position:relative; /* needed for badge absolute child */
 }
+
+/* Award badge — overlaps the column boundary, desktop only */
+.hero-badge{
+  position:absolute;
+  /* sits on the boundary between left and right columns.
+     Left col is 1fr, right col is 420px, gap is 48px.
+     Centre of gap = right edge of left col = calc(100% - 420px - 48px)
+     Badge is 120px rendered, so offset left by 60px to centre on the gap */
+  top: 36px; /* aligned with top of H1 text, below eyebrow line */
+  right: calc(420px + 24px - 60px); /* centre on gap midpoint */
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.45));
+  pointer-events: none;
+}
+.hero-badge img{
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+@media(max-width:900px){.hero-badge{display:none;}}
 
 /* Award image — page-level, top-right corner, diagonal top-left to bottom-right.
    Sits behind sticky header (z-index:199) so it's visible in the corner triangle
@@ -298,6 +321,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   background:var(--site-accent);color:var(--site-navy);
   font-size:0.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
+@media(max-width:900px){.hero-trust{display:none;}}
 
 /* Hero right — testimonial panel, top-aligned, amber border */
 .hero-panel{
@@ -524,6 +548,11 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   <section class="home-hero" aria-labelledby="home-h1">
 
     <div class="home-hero-inner">
+
+      <!-- Award badge — overlaps column boundary, desktop only -->
+      <div class="hero-badge" aria-hidden="true">
+        <img src="index-hero.webp" alt="">
+      </div>
 
       <!-- LEFT: heading + CTA -->
       <div class="hero-text">
