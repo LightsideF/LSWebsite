@@ -252,28 +252,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 }
 @media(max-width:900px){.hero-badge{display:none;}}
 
-/* Award image — page-level, top-right corner, diagonal top-left to bottom-right.
-   Sits behind sticky header (z-index:199) so it's visible in the corner triangle
-   but the nav stays on top. On scroll the image disappears naturally behind the
-   sticky header. Desktop only. */
-.page-award{
-  position:absolute;
-  top:0; right:0;
-  width:340px;
-  pointer-events:none;
-  z-index:199; /* just below sticky header z-index:200 */
-  /* Triangle clip: corners are top-right, bottom-right, top-left of element.
-     This gives a diagonal running from top-left to bottom-right. */
-  clip-path:polygon(100% 0, 100% 100%, 0 0);
-  overflow:hidden;
-}
-.page-award img{
-  width:100%;
-  height:auto;
-  display:block;
-  opacity:0.88;
-}
-@media(max-width:900px){.page-award{display:none;}}
 
 /* Hero left */
 .hero-text{position:relative;z-index:1;}
@@ -467,11 +445,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 </style>
 </head>
 <body>
-
-<!-- Award badge — page-level, top-right corner, desktop only -->
-<div class="page-award" aria-hidden="true">
-  <img src="nav-hero.webp" alt="">
-</div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      COOKIE BANNER — fixed, do not modify
