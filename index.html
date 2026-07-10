@@ -285,6 +285,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   white-space:nowrap;transition:all 0.18s;text-decoration:none;display:inline-block;min-height:44px;
 }
 .btn-hero-ghost:hover{border-color:var(--site-accent);color:var(--site-accent);text-decoration:none;}
+button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',sans-serif;}
 .hero-trust{display:flex;gap:20px;flex-wrap:wrap;}
 .hero-trust-item{
   font-size:0.82rem;color:rgba(255,255,255,0.62);
@@ -530,7 +531,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <p class="hero-lead">Debt is rarely just a financial problem — it affects your sleep, your relationships, and your sense of who you are. We take the time to understand your full situation, then work with tenacity to find the right path forward.</p>
         <div class="hero-cta-row">
           <a href="tel:01275859143" class="btn-hero-primary">Call 01275 859143</a>
-          <a href="contact.html" class="btn-hero-ghost">Send a message</a>
+          <button type="button" class="btn-hero-ghost" id="hero-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">Send a message</button>
         </div>
         <div class="hero-trust">
           <div class="hero-trust-item"><div class="hero-trust-dot">&#10003;</div>Completely confidential</div>
@@ -893,6 +894,26 @@ initForm('footer-form-toggle','footer-contact-form','footer-form','footer-error'
   });
 })();
 
+/* ── Hero "Send a message" → footer form ── */
+(function(){
+  var heroBtn=document.getElementById('hero-form-toggle');
+  var footerToggle=document.getElementById('footer-form-toggle');
+  if(!heroBtn||!footerToggle)return;
+  heroBtn.addEventListener('click',function(){
+    var wrapper=document.getElementById('footer-contact-form');
+    if(wrapper&&wrapper.hidden){footerToggle.click();}
+    setTimeout(function(){
+      var target=document.getElementById('footer-contact-form');
+      if(target){
+        var headerH=document.querySelector('.site-header');
+        var offset=headerH?headerH.offsetHeight+8:98;
+        var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+        window.scrollTo({top:top,behavior:'smooth'});
+      }
+    },80);
+  });
+})();
+
 /* ── FAQ accordion ── */
 document.querySelectorAll('.faq-question').forEach(function(btn){
   btn.addEventListener('click',function(){
@@ -908,6 +929,6 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
 });
 </script>
 
-
+<script src="award-banner.js"></script>
 </body>
 </html>
