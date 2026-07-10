@@ -222,16 +222,22 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .pa-intro-body{font-size:0.97rem;color:var(--site-text);line-height:1.8;margin-bottom:14px;}
 .pa-intro-body:last-child{margin-bottom:0;}
 
+/* ── Intro testimonial pull quote ── */
+.pa-intro-testimonial{margin-top:28px;padding:20px 24px;border-left:4px solid var(--site-accent);background:var(--site-offwhite);}
+.pa-intro-testimonial blockquote{font-family:'Merriweather',serif;font-style:italic;font-size:0.92rem;font-weight:300;color:var(--site-navy);line-height:1.8;margin-bottom:10px;}
+.pa-intro-testimonial cite{font-size:0.82rem;font-weight:700;color:var(--site-muted);font-style:normal;}
+
 /* ── Who we work with ── */
-.pa-who-work-with{background:var(--site-offwhite);border:1px solid var(--site-border);border-radius:6px;padding:28px 28px 24px;}
-.pa-who-work-with h3{font-family:'Merriweather',serif;font-size:1rem;font-weight:700;color:var(--site-navy);margin-bottom:16px;}
+.pa-who-work-with{background:var(--site-teal);border:1px solid var(--site-teal-dk);border-radius:6px;padding:28px 28px 24px;}
+.pa-who-work-with h3{font-family:'Merriweather',serif;font-size:1rem;font-weight:700;color:var(--site-white);margin-bottom:16px;}
 .pa-who-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.pa-who-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.92rem;color:var(--site-text);line-height:1.5;}
-.pa-who-tick{width:22px;height:22px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.65rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-.pa-who-list li strong{display:block;color:var(--site-navy);}
-.pa-who-list li span{font-size:0.85rem;color:var(--site-muted);}
-.pa-who-list li a{color:var(--site-teal);text-decoration:underline;}
-.pa-who-list li a:hover{color:var(--site-teal-dk);}
+.pa-who-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.92rem;color:var(--site-white);line-height:1.5;}
+.pa-who-tick{width:22px;height:22px;border-radius:50%;background:var(--site-accent);color:var(--site-white);font-size:0.65rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.pa-who-list li strong{display:block;color:var(--site-white);}
+.pa-who-list li span{font-size:0.85rem;color:rgba(255,255,255,0.85);}
+.pa-who-list li a{color:var(--site-white);text-decoration:underline;}
+.who-desc-p{font-size:0.85rem;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.65;}
+.pa-who-list li a:hover{color:var(--site-accent);}
 
 /* ── What makes us different ── */
 .pa-why{background:var(--site-navy);padding:64px 24px;}
@@ -454,33 +460,37 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <p class="pa-intro-opener">Regulated debt advice isn&rsquo;t a bolt-on to your existing service. It requires FCA authorisation, specialist knowledge, and the kind of candour with clients that most advisory relationships make difficult.</p>
       <p class="pa-intro-body">When a client is in financial difficulty, you face a conflict: they need honest advice about options that may be uncomfortable, inconvenient, or unfamiliar. Lightside provides that advice on a fully regulated basis, takes on the creditor negotiation, and reports back to you — so the client gets the right outcome without damaging the relationship you have built.</p>
       <p class="pa-intro-body">We challenge insolvency practitioners and solicitors when the terms aren&rsquo;t right for our client. We have annulled bankruptcies, unpicked liquidation proposals, negotiated HMRC down from six-figure demands, saved homes and investment properties in bankruptcy proceedings, and structured full-and-final settlements that averted bankruptcy entirely. A selection of those cases is below.</p>
+        <div class="pa-intro-testimonial">
+          <blockquote>&ldquo;I refer all my liquidation clients to Lightside &mdash; solvent and insolvent &mdash; and for clients in financial difficulty I bring them in early. Their ability to ask the right questions, think creatively and find entirely client-centric solutions means my clients are in safe hands. I wouldn&rsquo;t refer them otherwise.&rdquo;</blockquote>
+          <cite>&mdash; Price Mann Accountants</cite>
+        </div>
     </div>
     <div class="pa-who-work-with">
       <h3>Who we work with</h3>
       <ul class="pa-who-list">
         <li>
           <span class="pa-who-tick" aria-hidden="true">&#10003;</span>
-          <div><strong>Accountants &amp; Tax Advisers</strong><span>When a client&rsquo;s situation moves beyond restructuring and tax planning into regulated debt advice territory, we step in — across the company and the individual simultaneously.</span></div>
+          <div><strong>Accountants &amp; Tax Advisers</strong><span>When a client&rsquo;s situation moves beyond restructuring and tax planning into regulated debt advice territory, we step in &mdash; across the company and the individual simultaneously.</span></div>
         </li>
         <li>
           <span class="pa-who-tick" aria-hidden="true">&#10003;</span>
-          <div><strong>Solicitors</strong><span>Litigation, family law, probate, conveyancing — debt intersects all of them. We handle the financial complexity while you handle the law. We are also authorised to apply for <a href="insights-what-is-breathing-space.html">Breathing Space</a> — the 60-day statutory moratorium you cannot access directly.</span></div>
+          <div><strong>Solicitors</strong><p class="who-desc-p">Litigation, family law, probate, conveyancing &mdash; debt intersects all of them. We&rsquo;re authorised to deal with the debt.</p><p class="who-desc-p"><a href="insights-what-is-breathing-space.html">Breathing Space</a> is legal protection that stops creditor action for 60 days. However a solicitor cannot access this directly. We can, and we act quickly.</p></div>
         </li>
         <li>
           <span class="pa-who-tick" aria-hidden="true">&#10003;</span>
-          <div><strong>IFAs &amp; Mortgage Advisers</strong><span>When debt cuts across your client&rsquo;s financial plan, we provide the regulated advice that sits outside your authorisation — and a written note for your compliance file.</span></div>
+          <div><strong>IFAs &amp; Mortgage Advisers</strong><span>When debt cuts across your client&rsquo;s financial plan, we provide the regulated advice that sits outside your authorisation &mdash; and a written note for your compliance file.</span></div>
         </li>
         <li>
           <span class="pa-who-tick" aria-hidden="true">&#10003;</span>
-          <div><strong>Insolvency Practitioners</strong><span>When you are acting for the company, the director needs independent advice on personal guarantees, director&rsquo;s loan accounts, and post-liquidation obligations. We are FCA-authorised to provide it.</span></div>
+          <div><strong>Insolvency Practitioners</strong><span>When you are acting for the company, the director needs independent advice on personal guarantees, director&rsquo;s loan accounts, and post-liquidation obligations. We are FCA-authorised to provide advice on all personal debt situations, and provide the basis for clear, professional discussions with all parties.</span></div>
         </li>
         <li>
           <span class="pa-who-tick" aria-hidden="true">&#10003;</span>
-          <div><strong>Business Advisers</strong><span>When trading is tough, we help you support clients — ensuring they remain legally compliant, that staff are treated fairly, and that all realistic outcomes are planned for.</span></div>
+          <div><strong>Business Advisers</strong><span>When trading is tough, we help you support clients through it &mdash; ensuring they remain legally compliant, that staff are treated fairly, and that all realistic outcomes are planned for.</span></div>
         </li>
         <li>
           <span class="pa-who-tick" aria-hidden="true">&#10003;</span>
-          <div><strong>Corporate Finance &amp; Turnaround Advisers</strong><span>Where business rescue has personal guarantees in play, personal and corporate positions cannot be separated. We work across both simultaneously.</span></div>
+          <div><strong>Corporate Finance &amp; Turnaround Advisers</strong><span>Where business rescue has personal guarantees in play, the personal and corporate positions cannot be separated. We work across both simultaneously.</span></div>
         </li>
       </ul>
     </div>
@@ -495,11 +505,11 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="pa-why-grid">
       <div class="pa-why-card">
         <h3>We challenge IP and creditor proposals</h3>
-        <p>We have annulled bankruptcy orders, structured bankruptcies, unpicked liquidation proposals, and negotiated settlements with liquidators and secured lenders. We scrutinise every position put to us. We are not passive administrators.</p>
+        <p>We have annulled bankruptcy orders, structured bankruptcies, unpicked liquidation proposals, and negotiated settlements with liquidators and lenders. We scrutinise every position put to us. We are not passive administrators.</p>
       </div>
       <div class="pa-why-card">
         <h3>Personal and business handled together</h3>
-        <p>Debt rarely sits neatly in one box. When a company is in difficulty and a director has personal guarantees exposed, both need addressing — and addressing together. We hold both dimensions simultaneously, reducing the pressure on the director and producing better outcomes.</p>
+        <p>Debt rarely sits neatly in one box. When a company is in difficulty and a director has personal guarantees exposed, both need addressing — and addressing together. We have the expertise to hold both dimensions simultaneously, which reduces the pressure on the director and produces better outcomes.</p>
       </div>
       <div class="pa-why-card">
         <h3>FCA regulated — you are protected</h3>
@@ -507,7 +517,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       </div>
       <div class="pa-why-card">
         <h3>We give candid, straightforward advice</h3>
-        <p>When you have known a client for years and the relationship has become a professional friendship, delivering difficult news is genuinely hard. We do it — calmly, directly, with a clear focus on options and a realistic future. You stay the trusted adviser. We handle the uncomfortable conversation.</p>
+        <p>When you have known a client for years and the relationship has become a professional friendship, delivering difficult news is genuinely hard. We do it — calmly, directly, and with a clear focus on what the options are and what a realistic future looks like. You stay the trusted adviser. We handle the uncomfortable conversation.</p>
       </div>
       <div class="pa-why-card">
         <h3>No referral fee, no kickback</h3>
@@ -515,7 +525,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       </div>
       <div class="pa-why-card">
         <h3>Tenacity where others accept the first answer</h3>
-        <p>We do not accept the first position put to us — whether that is HMRC&rsquo;s opening offer, an aggressive stance from a trustee in bankruptcy, or a liquidator&rsquo;s claim against assets. Every party has a position. We find the leverage, test the argument, and push.</p>
+        <p>We do not accept the first position put to us — whether that is HMRC&rsquo;s opening offer, an aggressive stance from a trustee in bankruptcy, or a liquidator&rsquo;s claim against assets. Every party has a position. We find the leverage, test the argument, and push. That is what separates strategy from administration.</p>
       </div>
     </div>
   </div>
