@@ -8,10 +8,8 @@
 
   var css = `
 #ls-award-banner {
-  background: #f7f8f9;
-  border-top: 3px solid #e8a020;
-  border-bottom: 3px solid #e8a020;
-  padding: 10px 24px;
+  background: #e8a020;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,12 +31,12 @@
   display: block;
 }
 #ls-award-banner .ls-award-text span {
-  color: #6b7a8d;
+  color: rgba(30,58,95,0.7);
   font-size: 0.78rem;
 }
 @media (max-width: 680px) {
   #ls-award-banner {
-    padding: 7px 16px;
+    padding: 9px 16px;
     gap: 10px;
   }
   #ls-award-banner .ls-award-svg {
