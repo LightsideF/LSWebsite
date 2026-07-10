@@ -209,6 +209,15 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .footer-bottom a{color:rgba(255,255,255,0.45);margin-right:14px;}
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
+/* ── Page-specific: Intro two-col ── */
+.intro-two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:36px;}
+.intro-venn{min-width:0;}
+.intro-copy p{font-size:1rem;line-height:1.8;color:var(--site-text);margin-bottom:18px;}
+.intro-copy p:last-child{margin-bottom:0;}
+.intro-line{margin-bottom:0.6em;}
+.intro-line--final{margin-top:1.4em;margin-bottom:0;font-style:italic;color:var(--site-navy);}
+@media(max-width:760px){.intro-two-col{grid-template-columns:1fr;gap:28px;}}
+
 /* ── Page-specific: Values panel ── */
 .values-panel{background:var(--site-navy);border-radius:6px;padding:32px;margin-bottom:44px;}
 .values-panel h3{font-family:'Merriweather',serif;font-size:1.05rem;color:var(--site-white);margin-bottom:20px;}
@@ -331,7 +340,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <ul>
         <li><a href="personal.html">Personal Debt</a></li>
         <li><a href="business.html">Business &amp; Directors</a></li>
-        <li><a href="advisers.html">Advisers</a></li>
+        <li><a href="our-network.html">Our Network</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -376,9 +385,34 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <!-- Firm story intro -->
     <div class="page-intro">
       <div class="section-label">Who we are</div>
-      <h2 class="section-h2">A different kind of debt advice firm</h2>
-      <p>Lightside is considered a specialist in its field — regularly referred clients by solicitors, accountants, and mortgage advisers who trust us to handle their clients' matters with discretion, expertise, and a genuine commitment to the right outcome.</p>
-      <p>We will consider all available options and give honest, professional advice on what is realistically achievable — for individuals and businesses alike. Our aim is always to put a client in a position where they can make a genuinely informed choice about the right path forward, without pressure and without jargon.</p>
+      <h2 class="section-h2">Three disciplines. One specialist.</h2>
+
+      <div class="intro-two-col">
+        <div class="intro-venn">
+          <svg width="100%" viewBox="0 0 680 560" role="img">
+            <title>Three disciplines Venn diagram — Lightside Financial at the convergence of Finance, Law, and Commercial Reality</title>
+            <desc>Three overlapping circles representing Finance, Law, and Commercial Reality. Lightside Financial sits at the central intersection of all three.</desc>
+            <circle cx="290" cy="200" r="180" fill="#1e3a5f" opacity="0.18"/>
+            <circle cx="460" cy="200" r="180" fill="#2a8b8b" opacity="0.22"/>
+            <circle cx="375" cy="340" r="180" fill="#e8a020" opacity="0.18"/>
+            <circle cx="290" cy="200" r="180" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+            <circle cx="460" cy="200" r="180" fill="none" stroke="#2a8b8b" stroke-width="2"/>
+            <circle cx="375" cy="340" r="180" fill="none" stroke="#c08010" stroke-width="2"/>
+            <text x="168" y="175" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1e3a5f">Finance</text>
+            <text x="590" y="175" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1f6e6e">Law</text>
+            <text x="375" y="430" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#a06800">Commercial Reality</text>
+            <image href="lightsideLogo_withStrap_300dpi.png" x="268" y="195" width="214" height="72" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+        </div>
+        <div class="intro-copy">
+          <p class="intro-line">Most firms handle one piece of this — the financial analysis, the legal exposure, or the commercial negotiation.</p>
+          <p class="intro-line">Lightside works across all three — but only for debt.</p>
+          <p class="intro-line">We read financial statements the way an accountant does, but we apply that reading to what it means for the director or individual personally.</p>
+          <p class="intro-line">We know insolvency law — not as background knowledge, but as the mechanism we use every day.</p>
+          <p class="intro-line">And we bring commercial judgement specific to debt: where fewer assets can mean more leverage, and where a creditor who appears immovable may settle at a fraction of the sum if approached correctly.</p>
+          <p class="intro-line intro-line--final">Professional advisers refer their clients to us. This territory is not theirs — but it is ours.</p>
+        </div>
+      </div>
 
       <div class="testimonials-link-strip">
         <p><strong>Read what our clients say.</strong> Financial difficulty is one of the most private experiences a person can go through — which is why you won't find us on Trustpilot. The testimonials on our site have been shared privately, over many years, by clients who wanted to express their gratitude.</p>
@@ -412,14 +446,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="value-item">
         <div class="value-dot"></div>
         <p><strong>Plans adapt when circumstances change</strong>Life doesn't stand still. If your situation changes and the agreed approach is no longer the most appropriate, we will revisit your options and make sure the course of action continues to fit your needs.</p>
-      </div>
-    </div>
-
-    <!-- FCA strip -->
-    <div class="fca-strip">
-      <div class="fca-badge">FCA<br>Auth.</div>
-      <div class="fca-text">
-        <p><strong>Authorised and Regulated by the Financial Conduct Authority.</strong> Lightside Financial is a trading name of Lightside (BSPC) Ltd, registered in England and Wales (Company No. 5817877). FCA Reference No. 676943. Registered office: Bourton Barns, Ebdon Lane, Wick St Lawrence, Weston-super-Mare, BS22 7YA.</p>
       </div>
     </div>
 
@@ -466,7 +492,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <!-- Priti Shah -->
     <div class="team-panel" id="priti-shah">
       <div class="team-photo-col">
-        <img class="team-photo" src="priti-shah.jpg" alt="Priti Shah — Regional Director, Lightside Financial"
+        <img class="team-photo" src="priti-shah.webp" alt="Priti Shah — Regional Director, Lightside Financial"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
         <div class="team-photo-placeholder" style="display:none;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
