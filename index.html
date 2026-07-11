@@ -443,6 +443,19 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
   .btn-hero-primary,.btn-hero-ghost{width:100%;text-align:center;padding:14px 20px;}
   .assurances-grid{grid-template-columns:1fr;}
 }
+
+/* ── Hero background animation ── */
+.home-hero-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+@media(prefers-reduced-motion:no-preference){
+  @keyframes hero-emanate{
+    0%{r:20;opacity:0.65;stroke-width:1.8;}
+    100%{r:420;opacity:0;stroke-width:0.2;}
+  }
+  .hero-em-ring{fill:none;animation:hero-emanate 9s ease-out infinite;}
+  .hero-em-1{animation-delay:0s;}
+  .hero-em-2{animation-delay:3s;}
+  .hero-em-3{animation-delay:6s;}
+}
 </style>
 </head>
 <body>
@@ -517,6 +530,29 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
   <!-- HERO -->
   <section class="home-hero" aria-labelledby="home-h1">
 
+<svg class="home-hero-bg" viewBox="0 0 1100 420" preserveAspectRatio="xMidYMid slice"
+  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Grid lines -->
+  <line x1="0" y1="0" x2="1100" y2="420" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="0" y1="105" x2="1100" y2="525" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="0" y1="210" x2="1100" y2="630" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="1100" y1="0" x2="0" y2="420" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="1100" y1="105" x2="0" y2="525" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="300" y1="0" x2="1400" y2="420" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="-300" y1="0" x2="800" y2="420" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <!-- Static base rings — always visible -->
+  <circle cx="900" cy="0" r="80" fill="none" stroke="rgba(42,139,139,0.24)" stroke-width="1.5"/>
+  <circle cx="900" cy="0" r="140" fill="none" stroke="rgba(42,139,139,0.15)" stroke-width="1"/>
+  <circle cx="900" cy="0" r="200" fill="none" stroke="rgba(42,139,139,0.09)" stroke-width="0.8"/>
+  <!-- Emanating rings -->
+  <circle class="hero-em-ring hero-em-1" cx="900" cy="0" stroke="rgba(42,139,139,0.55)"/>
+  <circle class="hero-em-ring hero-em-2" cx="900" cy="0" stroke="rgba(42,139,139,0.55)"/>
+  <circle class="hero-em-ring hero-em-3" cx="900" cy="0" stroke="rgba(42,139,139,0.55)"/>
+  <!-- Origin dot -->
+  <circle cx="900" cy="0" r="22" fill="rgba(42,139,139,0.35)"/>
+  <circle cx="900" cy="0" r="10" fill="#2a8b8b"/>
+  <circle cx="900" cy="0" r="4" fill="rgba(255,255,255,0.55)"/>
+</svg>
     <div class="home-hero-inner">
 
       <!-- Award badge — overlaps column boundary, desktop only -->
