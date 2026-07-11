@@ -114,6 +114,11 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
+
+/* ── Hero animation ── */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.page-hero h1,.hero-lead{animation:fadeInUp 0.5s ease both;}
+.hero-lead{animation-delay:0.1s;}
 /* ── Trust bar ── */
 /* ── Section utilities ── */
 .section-label{font-size:0.72rem;color:var(--site-teal);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}

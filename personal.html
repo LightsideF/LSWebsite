@@ -287,6 +287,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
 /* ── Animation ── */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.page-hero h1,.hero-lead{animation:fadeInUp 0.5s ease both;}
+.hero-lead{animation-delay:0.1s;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
 .ch-card:nth-child(1){animation:fadeUp 0.35s ease both 0.04s;}
 .ch-card:nth-child(2){animation:fadeUp 0.35s ease both 0.10s;}

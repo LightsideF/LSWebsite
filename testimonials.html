@@ -330,6 +330,11 @@ a:hover { color: var(--site-teal-dk); text-decoration: underline; }
 .cookie-decline{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.3);}
 .cookie-decline:hover{color:rgba(255,255,255,0.85);}
 
+
+/* ── Hero animation ── */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.page-hero h1,.hero-lead{animation:fadeInUp 0.5s ease both;}
+.hero-lead{animation-delay:0.1s;}
 /* ── Trust bar ── */
 .trust-bar{background:var(--site-navy);border-top:1px solid rgba(255,255,255,0.1);padding:14px 24px;}
 .trust-bar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
