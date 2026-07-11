@@ -456,6 +456,22 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
   .hero-em-2{animation-delay:3s;}
   .hero-em-3{animation-delay:6s;}
 }
+
+/* ── Award badge spin ── */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes badge-spin{
+    0%{transform:rotateY(0deg);}
+    100%{transform:rotateY(360deg);}
+  }
+  .hero-badge{
+    perspective:600px;
+    transform-style:preserve-3d;
+  }
+  .hero-badge img{
+    animation:badge-spin 8s linear infinite;
+    transform-origin:center center;
+  }
+}
 </style>
 </head>
 <body>
