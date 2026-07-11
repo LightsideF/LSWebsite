@@ -112,12 +112,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* ── Trust bar ── */
-.trust-bar{background:var(--site-navy);border-top:1px solid rgba(255,255,255,0.1);padding:14px 24px;}
-.trust-bar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
-.trust-item{display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.75);}
-.trust-circle{width:24px;height:24px;border-radius:50%;background:var(--site-accent);color:white;font-size:0.72rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
-.trust-divider{width:1px;height:20px;background:rgba(255,255,255,0.2);}
-
 /* ── Section utilities ── */
 .section-label{font-size:0.72rem;color:var(--site-teal);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
 .section-h2{font-family:'Merriweather',serif;font-size:1.5rem;font-weight:700;color:var(--site-navy);margin-bottom:8px;line-height:1.3;}
@@ -170,8 +164,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .contact-form--dark .cf-success-msg a{color:#7ddba8;}
 
 /* ── Hero ── */
-.page-hero{background:var(--site-navy);padding:44px 24px 52px;}
-.page-hero-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:flex-start;justify-content:flex-start;gap:40px;}
+
+
 .breadcrumb{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:16px;}
 .breadcrumb a{color:rgba(255,255,255,0.7);}
 .breadcrumb a:hover{color:var(--site-accent);text-decoration:none;}
@@ -312,9 +306,10 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .footer-inner{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:680px){
-  .page-hero h1{font-size:1.7rem;}
   .trust-bar-inner{flex-direction:column;align-items:flex-start;gap:10px;}
   .trust-divider{display:none;}
+
+  .page-hero h1{font-size:1.7rem;}
   .adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:20px;}
   .adviser-banner-btn{width:100%;text-align:center;}
   .footer-inner{grid-template-columns:1fr;}
@@ -369,9 +364,25 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .case-read-link:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .case-toggle-btn[aria-expanded="true"] .toggle-chevron{transform:rotate(180deg);}
 .toggle-chevron{display:inline-block;transition:transform 0.25s;font-size:0.75rem;}
-.hero-text{flex:0 0 640px;min-width:0;display:block;}
-.hero-award-img{display:block;height:auto;max-height:160px;width:auto;max-width:260px;object-fit:contain;flex-shrink:0;padding-top:32px;}
-@media(max-width:768px){.hero-award-img{display:none;}.page-hero-inner{display:block;}}
+
+
+@media(max-width:768px){}
+
+/* ── Trust bar ── */
+.trust-bar{background:var(--site-navy);border-top:1px solid rgba(255,255,255,0.1);padding:14px 24px;}
+.trust-bar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+.trust-item{display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.75);}
+.trust-circle{width:24px;height:24px;border-radius:50%;background:var(--site-accent);color:white;font-size:0.72rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.trust-divider{width:1px;height:20px;background:rgba(255,255,255,0.2);}
+
+/* ── Hero ── */
+.page-hero{background:var(--site-navy);padding:20px 24px 24px;position:relative;overflow:hidden;}
+.page-hero-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:flex-start;justify-content:flex-start;gap:40px;}
+.hero-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:flex-start;justify-content:flex-start;gap:40px;}
+.page-hero-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.hero-text{flex:0 0 640px;min-width:0;display:block;position:relative;z-index:1;}
+.hero-award-img{display:block;height:auto;max-height:160px;width:auto;max-width:260px;object-fit:contain;flex-shrink:0;padding-top:16px;position:relative;z-index:1;}
+@media(max-width:768px){.hero-award-img{display:none;}.page-hero-inner{display:block;}.hero-inner{display:block;}}
 </style>
 </head>
 <body>
@@ -418,8 +429,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     </button>
   </div>
 </header>
-
-<!-- TRUST BAR -->
 <div class="trust-bar" aria-label="Trust indicators">
   <div class="trust-bar-inner">
     <div class="trust-item"><span class="trust-circle" aria-hidden="true">&#10003;</span>Completely Confidential</div>
@@ -432,11 +441,28 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </div>
 
+<!-- TRUST BAR -->
+</div>
+
 <!-- MAIN -->
 <main id="main-content" aria-label="Personal debt solutions hub">
 
 <!-- HERO -->
 <section class="page-hero" aria-labelledby="page-h1">
+<svg class="page-hero-bg" viewBox="0 0 700 175" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <line x1="0" y1="0" x2="700" y2="175" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="0" y1="55" x2="700" y2="230" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="110" x2="700" y2="285" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="700" y1="0" x2="0" y2="175" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="700" y1="55" x2="0" y2="230" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="200" y1="0" x2="900" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="-200" y1="0" x2="500" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <circle cx="560" cy="8" r="100" fill="none" stroke="rgba(42,139,139,0.3)" stroke-width="1.5"/>
+  <circle cx="560" cy="8" r="158" fill="none" stroke="rgba(42,139,139,0.18)" stroke-width="1"/>
+  <circle cx="560" cy="8" r="218" fill="none" stroke="rgba(42,139,139,0.1)" stroke-width="1"/>
+  <circle cx="560" cy="8" r="278" fill="none" stroke="rgba(42,139,139,0.06)" stroke-width="0.5"/>
+  <circle cx="560" cy="8" r="18" fill="rgba(42,139,139,0.45)"/><circle cx="560" cy="8" r="8" fill="#2a8b8b"/>
+</svg>
   <div class="page-hero-inner">
     <div class="hero-text">
     <nav class="breadcrumb" aria-label="Breadcrumb">
