@@ -174,8 +174,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* ── Hero ── */
-.page-hero{background:var(--site-navy);padding:36px 24px 40px;}
-.hero-inner{max-width:var(--max-w);margin:0 auto;}
+.page-hero{background:var(--site-navy);padding:36px 24px 40px;position:relative;overflow:hidden;}
+.hero-inner{max-width:var(--max-w);margin:0 auto;position:relative;z-index:1;}
 .breadcrumb{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:16px;}
 .breadcrumb a{color:rgba(255,255,255,0.7);}
 .breadcrumb a:hover{color:var(--site-accent);text-decoration:none;}
@@ -365,7 +365,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <ul>
         <li><a href="personal.html">Personal Debt</a></li>
         <li><a href="business.html">Business &amp; Directors</a></li>
-        <li><a href="advisers.html">Advisers</a></li>
+        <li><a href="our-network.html">Our Network</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="insights.html" class="active">Insights</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -378,6 +378,30 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 </header>
 
 <section class="page-hero" aria-labelledby="page-h1">
+<svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;" viewBox="0 0 700 175" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <line x1="0" y1="175" x2="700" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="700" y1="175" x2="0" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="88" x2="700" y2="-87" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="700" y1="88" x2="0" y2="-87" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <circle cx="60" cy="110" r="40" fill="none" stroke="rgba(192,57,43,0.28)" stroke-width="1.5"/>
+  <circle cx="60" cy="110" r="65" fill="none" stroke="rgba(192,57,43,0.16)" stroke-width="1.0"/>
+  <circle cx="60" cy="110" r="90" fill="none" stroke="rgba(192,57,43,0.08)" stroke-width="0.8"/>
+  <circle cx="640" cy="28" r="40" fill="none" stroke="rgba(42,139,139,0.28)" stroke-width="1.5"/>
+  <circle cx="640" cy="28" r="65" fill="none" stroke="rgba(42,139,139,0.16)" stroke-width="1.0"/>
+  <circle cx="640" cy="28" r="90" fill="none" stroke="rgba(42,139,139,0.08)" stroke-width="0.8"/>
+  <circle cx="620" cy="158" r="40" fill="none" stroke="rgba(232,160,32,0.28)" stroke-width="1.5"/>
+  <circle cx="620" cy="158" r="65" fill="none" stroke="rgba(232,160,32,0.16)" stroke-width="1.0"/>
+  <circle cx="620" cy="158" r="90" fill="none" stroke="rgba(232,160,32,0.08)" stroke-width="0.8"/>
+  <circle cx="60" cy="110" r="22" fill="rgba(192,57,43,0.35)"/>
+  <circle cx="60" cy="110" r="10" fill="#c0392b"/>
+  <circle cx="60" cy="110" r="4"  fill="rgba(255,255,255,0.55)"/>
+  <circle cx="640" cy="28" r="22" fill="rgba(42,139,139,0.35)"/>
+  <circle cx="640" cy="28" r="10" fill="#2a8b8b"/>
+  <circle cx="640" cy="28" r="4"  fill="rgba(255,255,255,0.55)"/>
+  <circle cx="620" cy="158" r="22" fill="rgba(232,160,32,0.35)"/>
+  <circle cx="620" cy="158" r="10" fill="#e8a020"/>
+  <circle cx="620" cy="158" r="4"  fill="rgba(255,255,255,0.55)"/>
+</svg>
   <div class="hero-inner">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a> &rsaquo;
@@ -702,19 +726,19 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
         <article class="related-case-card">
           <div class="rcc-channel">Personal Guarantees</div>
-          <h3 class="rcc-title"><a href="personal-guarantee-will-i-lose-my-home.html">Home At Risk Because of Business Debt</a></h3>
+          <h3 class="rcc-title"><a href="mr-and-mrs-b-personal-guarantees.html">Home At Risk Because of Business Debt</a></h3>
           <p class="rcc-soundbite">Personal guarantee resolved for 8p in &pound;1 &mdash; home no longer at risk.</p>
         </article>
 
         <article class="related-case-card">
           <div class="rcc-channel">Too Much Debt</div>
-          <h3 class="rcc-title"><a href="i-need-help-pg-personal-guarantee.html">Personal Guarantee Called In &mdash; Debt Growing, Home &amp; Family Impacted</a></h3>
+          <h3 class="rcc-title"><a href="mr-and-mrs-c-personal-too-much-debt.html">Personal Guarantee Called In &mdash; Debt Growing, Home &amp; Family Impacted</a></h3>
           <p class="rcc-soundbite">Five years of payments and the debt had grown, not shrunk. A Creditor Arrangement brought control over personal and business debt.</p>
         </article>
 
         <article class="related-case-card">
           <div class="rcc-channel">Bankruptcy</div>
-          <h3 class="rcc-title"><a href="mortgage-shortfall-after-repossession-what-happens.html">Debt Left Us Struggling &mdash; We Just Needed a Fresh Start</a></h3>
+          <h3 class="rcc-title"><a href="mr-and-mrs-v-bankruptcy.html">Debt Left Us Struggling &mdash; We Just Needed a Fresh Start</a></h3>
           <p class="rcc-soundbite">The mortgage shortfall. The credit card balances. Everything combined made repayment impossible. Bankruptcy brought every debt together and gave them a genuine fresh start.</p>
         </article>
 
