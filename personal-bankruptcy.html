@@ -135,6 +135,21 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .opening-bullets li a{color:var(--site-teal);font-weight:700;}
 .opening-bullets li a:hover{color:var(--site-teal-dk);}
 .opening-note{font-size:0.85rem;color:var(--site-muted);font-style:italic;margin-top:18px;border-top:1px solid var(--site-border);padding-top:14px;}
+.read-more-toggle{background:none;border:none;cursor:pointer;font-family:'Lato',sans-serif;font-size:0.88rem;font-weight:700;color:var(--site-teal);padding:0;margin-top:14px;display:inline-flex;align-items:center;gap:6px;min-height:44px;}
+.read-more-toggle:hover{color:var(--site-teal-dk);}
+.read-more-panel[hidden]{display:none!important;}
+.support-section{background:var(--site-teal);border-radius:8px;padding:36px 36px 32px;margin-bottom:44px;}
+.support-section .section-label{color:var(--site-accent);}
+.support-section h2{font-family:'Merriweather',serif;font-size:1.35rem;font-weight:700;color:white;margin-bottom:20px;line-height:1.3;}
+.support-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+.support-pillar{background:rgba(255,255,255,0.12);border-top:3px solid var(--site-accent);border-radius:6px;padding:20px 18px;}
+.support-pillar strong{display:block;font-size:0.92rem;font-weight:700;color:white;margin-bottom:8px;line-height:1.3;}
+.support-pillar p{font-size:0.87rem;color:rgba(255,255,255,0.88);line-height:1.65;margin:0;}
+.support-lead{font-size:1rem;color:rgba(255,255,255,0.95);line-height:1.8;margin-bottom:24px;border-left:4px solid var(--site-accent);padding-left:18px;}
+.support-stakes{background:rgba(255,255,255,0.12);border-radius:6px;padding:20px 22px;margin-bottom:24px;}
+.support-stakes p{font-size:0.95rem;color:rgba(255,255,255,0.95);line-height:1.75;margin:0;}
+.support-stakes strong{color:white;}
+@media(max-width:760px){.support-pillars{grid-template-columns:1fr;}}
 
 /* ── Flip tiles ── */
 .flip-section{margin-bottom:52px;}
@@ -549,6 +564,8 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
   <div class="opening-statement">
     <div class="opening-inner">
       <p class="opener">Bankruptcy is a formal legal process that writes off almost all unsecured debt. It is not the right answer in every situation &mdash; but it is the right answer in more situations than most people expect.</p>
+      <button type="button" class="read-more-toggle" id="opening-read-more" aria-expanded="false" aria-controls="opening-detail">Read more &#9660;</button>
+      <div id="opening-detail" hidden>
       <ul class="opening-bullets">
         <li>Almost all unsecured debts are written off &mdash; credit cards, personal loans, overdrafts, HMRC liabilities, mortgage shortfalls: all gone. Notable exceptions are student loans and parking fines.</li>
         <li>Secured debts &mdash; your mortgage, secured loans &mdash; are not affected by bankruptcy. You keep your mortgage if you keep paying it.</li>
@@ -556,8 +573,10 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
         <li>Restrictions apply during the un-discharged period: you cannot borrow &pound;500 or more without disclosing your status, you cannot act as a company director, and some professional roles are affected. These end at discharge.</li>
         <li>There is a government bankruptcy fee of &pound;680, payable to the Insolvency Service.</li>
         <li>If your total unsecured debt is &pound;50,000 or less, a Debt Relief Order (DRO) may be a more appropriate route. DROs are free. Lightside does not administer DROs, but if the numbers suggest a DRO is right for you, we will tell you &mdash; and <a href="https://www.citizensadvice.org.uk/debt-and-money/debt-solutions/debt-relief-orders/debt-relief-orders-explained/debt-relief-orders-what-you-need-to-know/" target="_blank" rel="noopener noreferrer">Citizens Advice can help you access one</a>.</li>
+        <li>Not all debts are written off in bankruptcy. Student loans, child maintenance, court fines, and compensation orders survive discharge &mdash; they remain payable. So does any secured debt tied to a property you keep.</li>
       </ul>
       <p class="opening-note">Not sure if bankruptcy is for you? Most people aren&rsquo;t, when they first call. That&rsquo;s what the first conversation is for.</p>
+      </div>
     </div>
   </div>
 
@@ -632,10 +651,32 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
     <p class="flip-note">These are not the only factors. The only way to know your real position is to go through it with an expert adviser.</p>
   </div>
 
-  <!-- What bankruptcy can and can't touch -->
-  <div style="margin-bottom:44px;">
-    <p style="font-size:0.97rem;color:var(--site-text);line-height:1.75;">Not all debts are written off in bankruptcy. Student loans, child maintenance, court fines, and compensation orders survive discharge &mdash; they remain payable. So does any secured debt tied to a property you keep.</p>
-    <p style="font-size:0.97rem;margin-top:10px;"><a href="insights-debts-included-excluded.html" style="color:var(--site-teal);font-weight:700;">See which debts are included and excluded &rarr;</a></p>
+  <!-- Debts link -->
+  <p style="font-size:0.97rem;margin-bottom:44px;"><a href="insights-debts-included-excluded.html" style="color:var(--site-teal);font-weight:700;">See which debts are included and excluded &rarr;</a></p>
+
+  <!-- Lightside Bankruptcy Support Service -->
+  <div class="support-section">
+    <div class="section-label">Our Service</div>
+    <h2>Lightside Bankruptcy Support Service</h2>
+    <p class="support-lead">Preparation is everything. Get it wrong and you pay for it later &mdash; sometimes for years. Get it right and bankruptcy does exactly what it&rsquo;s supposed to.</p>
+    <div class="support-pillars">
+      <div class="support-pillar">
+        <strong>We know what&rsquo;s coming</strong>
+        <p>Because we guide clients through the entire process, we know exactly what the Official Receiver is likely to ask, what the Trustee will focus on, and where the pressure points are. That knowledge shapes your preparation from day one.</p>
+      </div>
+      <div class="support-pillar">
+        <strong>We don&rsquo;t just handhold &mdash; we strategise</strong>
+        <p>We negotiate. We challenge. We push back where pushing back is warranted. This matters most when it comes to demands around your home and your income &mdash; typically your two most significant assets, and the two areas where the stakes are highest.</p>
+      </div>
+      <div class="support-pillar">
+        <strong>We&rsquo;re with you throughout</strong>
+        <p>From pre-bankruptcy structuring through to submission, the Official Receiver interview, and every enquiry that follows &mdash; we stay with you until the Trustee&rsquo;s enquiries are fully exhausted. No hand-off. No disappearing act.</p>
+      </div>
+    </div>
+    <div class="support-stakes">
+      <p><strong>The preparation stage is the most important step in the process</strong> &mdash; and it&rsquo;s the one most people approach without specialist support. We structure that stage carefully, avoiding the potholes that create problems at investigation. If your home, your income, or your assets are in scope, that preparation is not optional. It&rsquo;s the difference between a managed outcome and an avoidable one.</p>
+    </div>
+    <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);margin:0;">Want to understand what our involvement looks like in practice? <a href="insights-what-is-breathing-space.html" style="color:var(--site-accent);font-weight:700;">Read our guide to the Breathing Space scheme &rarr;</a></p>
   </div>
 
   <!-- A creditor is trying to make you bankrupt -->
@@ -646,7 +687,7 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
 
       <div class="threat-card threat-card-1">
         <div class="threat-card-heading">Buy time to consider your options</div>
-        <div class="threat-card-body">The Debt Respite Scheme (Breathing Space) pauses creditor enforcement for 60 days. That pause stops the clock on a bankruptcy petition. You cannot request Breathing Space directly but we can.</div>
+        <div class="threat-card-body">The Debt Respite Scheme (<a href="insights-what-is-breathing-space.html" style="color:var(--site-accent);font-weight:700;">Breathing Space</a>) pauses creditor enforcement for 60 days. That pause stops the clock on a bankruptcy petition. You cannot request Breathing Space directly but we can.</div>
       </div>
 
       <div class="threat-card threat-card-2">
@@ -1621,6 +1662,19 @@ function handleTileToggle(tile){
         .catch(function(err){console.error('Form error:',err);submitBtn.disabled=false;submitBtn.textContent=orig;if(errorEl)errorEl.hidden=false;});
     });
   }
+})();
+
+/* ── Opening read more/less toggle ── */
+(function(){
+  var btn=document.getElementById('opening-read-more');
+  var panel=document.getElementById('opening-detail');
+  if(!btn||!panel)return;
+  btn.addEventListener('click',function(){
+    var open=btn.getAttribute('aria-expanded')==='true';
+    panel.hidden=open;
+    btn.setAttribute('aria-expanded',String(!open));
+    btn.innerHTML=open?'Read more &#9660;':'Read less &#9650;';
+  });
 })();
 
 /* ── Case card expand/collapse ── */
