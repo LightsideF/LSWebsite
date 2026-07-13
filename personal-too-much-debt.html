@@ -206,35 +206,36 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .slide-form-wrap--light .cf-success-msg{color:var(--site-navy);}
 
 /* ── Outcomes section ── */
-.outcomes-section{padding:52px 0;background:var(--site-offwhite);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);}
+.outcomes-section{padding:52px 0;background:var(--site-teal);}
 .outcomes-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-.outcomes-bullets .section-label{color:var(--site-teal);}
-.outcomes-bullets .section-h2{color:var(--site-navy);margin-bottom:16px;}
+.outcomes-bullets .section-label{color:var(--site-accent);}
+.outcomes-bullets .section-h2{color:white;margin-bottom:8px;}
+.outcomes-intro{font-size:0.97rem;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:24px;}
+.outcomes-landscape{background:rgba(255,255,255,0.12);border-radius:6px;padding:20px 22px;margin-top:24px;}
+.outcomes-landscape p{font-size:0.88rem;color:rgba(255,255,255,0.9);line-height:1.75;margin:0;}
 /* Toggle button — hidden on desktop, shown on mobile */
-.outcomes-toggle-btn{display:none;background:none;border:none;cursor:pointer;font-family:'Lato',sans-serif;font-size:0.92rem;font-weight:700;color:var(--site-teal);padding:0 0 20px 0;align-items:center;gap:8px;min-height:44px;}
-.otb-icon{width:22px;height:22px;border-radius:50%;background:var(--site-light);color:var(--site-teal);font-size:1rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:transform 0.25s,background 0.15s;flex-shrink:0;}
-.outcomes-toggle-btn[aria-expanded="true"] .otb-icon{transform:rotate(45deg);background:var(--site-teal);color:white;}
 /* List always visible on desktop */
-.outcomes-list-wrap{display:block;}
 .outcomes-list{list-style:none;}
-.outcomes-list li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--site-border);font-size:0.97rem;color:var(--site-text);line-height:1.65;}
+.outcomes-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.18);line-height:1.65;}
 .outcomes-list li:last-child{border-bottom:none;padding-bottom:0;}
 .outcomes-list li:first-child{padding-top:0;}
+.outcomes-list-title{font-size:0.95rem;font-weight:700;color:white;display:block;margin-bottom:4px;}
+.outcomes-list-body{font-size:0.88rem;color:rgba(255,255,255,0.82);line-height:1.7;display:block;}
 .outcome-tick{width:22px;height:22px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.7rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
 .outcomes-list li:last-child .outcome-tick{background:var(--site-accent);}
 
 /* ── Featured case card ── */
 .outcomes-case{display:flex;flex-direction:column;gap:0;}
-.featured-case-card{background:var(--site-navy);border-top:3px solid var(--site-teal);border-radius:6px;padding:28px 24px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:box-shadow 0.2s,transform 0.2s;}
-.featured-case-card:hover{box-shadow:0 6px 28px rgba(0,0,0,0.28);transform:translateY(-2px);text-decoration:none;}
-.featured-case-label{font-size:0.67rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--site-teal);}
+.featured-case-card{background:var(--site-navy);border-top:3px solid var(--site-accent);border-radius:6px;padding:28px 24px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:box-shadow 0.2s,transform 0.2s;}
+.featured-case-card:hover{box-shadow:0 6px 28px rgba(0,0,0,0.4);transform:translateY(-2px);text-decoration:none;}
+.featured-case-label{font-size:0.67rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--site-accent);}
 .featured-case-title{font-family:'Merriweather',serif;font-size:1.05rem;font-weight:700;color:white;line-height:1.45;}
 .featured-case-soundbite{font-size:0.88rem;font-style:italic;color:rgba(255,255,255,0.65);line-height:1.65;}
 .featured-case-outcomes{list-style:none;margin-top:12px;border-top:1px solid rgba(255,255,255,0.12);padding-top:12px;display:flex;flex-direction:column;gap:7px;}
 .featured-case-outcomes li{display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;color:rgba(255,255,255,0.88);line-height:1.5;}
 .fco-tick{width:18px;height:18px;border-radius:50%;background:var(--site-accent);color:var(--site-navy);font-size:0.65rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .featured-case-read{font-size:0.88rem;font-weight:700;color:var(--site-accent);margin-top:6px;padding-top:6px;display:flex;align-items:center;gap:5px;min-height:44px;}
-.featured-case-pa{margin-top:14px;font-size:0.82rem;color:var(--site-muted);font-style:italic;padding-top:14px;border-top:1px solid var(--site-border);}
+.featured-case-pa{margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.5);font-style:italic;padding-top:14px;border-top:1px solid rgba(255,255,255,0.12);}
 .outcomes-card-cta{margin-top:16px;}
 
 /* ── How it works — 4 step cards ── */
@@ -389,6 +390,20 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 /* ── Animations ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
 
+/* ── Lightside Service section ── */
+.support-section{background:var(--site-teal);border-radius:8px;padding:36px 36px 32px;margin-bottom:44px;}
+.support-section .section-label{color:var(--site-accent);}
+.support-section h2{font-family:'Merriweather',serif;font-size:1.35rem;font-weight:700;color:white;margin-bottom:20px;line-height:1.3;}
+.support-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+.support-pillar{background:rgba(255,255,255,0.12);border-top:3px solid var(--site-accent);border-radius:6px;padding:20px 18px;}
+.support-pillar strong{display:block;font-size:0.92rem;font-weight:700;color:white;margin-bottom:8px;line-height:1.3;}
+.support-pillar p{font-size:0.87rem;color:rgba(255,255,255,0.88);line-height:1.65;margin:0;}
+.support-lead{font-size:1rem;color:rgba(255,255,255,0.95);line-height:1.8;margin-bottom:24px;border-left:4px solid var(--site-accent);padding-left:18px;}
+.support-stakes{background:rgba(255,255,255,0.12);border-radius:6px;padding:20px 22px;margin-bottom:0;}
+.support-stakes p{font-size:0.95rem;color:rgba(255,255,255,0.95);line-height:1.75;margin:0;}
+.support-stakes strong{color:white;}
+@media(max-width:760px){.support-pillars{grid-template-columns:1fr;}}
+
 /* ── Responsive ── */
 
 /* ── Hero icon (desktop only) ── */
@@ -422,9 +437,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .nav-cta{margin:6px 16px 10px!important;border-radius:4px!important;text-align:center;}
   .hamburger{display:flex;}
   /* Outcomes — toggle on mobile */
-  .outcomes-toggle-btn{display:flex;}
-  .outcomes-list-wrap{display:none;}
-  .outcomes-list-wrap.open{display:block;}
+
   /* Inline CTA — centre on mobile */
   .inline-cta{flex-direction:column;gap:20px;}
   .inline-cta-btns{width:100%;}
@@ -719,19 +732,54 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
     <div class="outcomes-bullets">
       <div class="section-label">The difference we make</div>
-      <h2 class="section-h2" id="outcomes-heading">Here is what often becomes possible</h2>
-      <button type="button" class="outcomes-toggle-btn" id="outcomes-toggle" aria-expanded="false" aria-controls="outcomes-list-wrap">
-        Show what we can achieve <span class="otb-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="outcomes-list-wrap" id="outcomes-list-wrap">
-        <ul class="outcomes-list">
-          <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Interest and charges can often be frozen &mdash; stopping the debt from growing.</li>
-          <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Repayments can be restructured to something you can actually sustain.</li>
-          <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Creditor calls, letters and legal threats can often be stopped &mdash; redirected to us instead.</li>
-          <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>In some cases debt can be settled for less than the full amount &mdash; or written off entirely.</li>
-          <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>The family home is rarely at risk &mdash; and establishing that is the first thing we do.</li>
-          <li><span class="outcome-tick" aria-hidden="true">&#9654;</span>The road isn&rsquo;t always smooth. But we know where the potholes are &mdash; and we&rsquo;ll be alongside you for every stretch of it.</li>
-        </ul>
+      <h2 class="section-h2" id="outcomes-heading">What we actually do &mdash; and what that makes possible</h2>
+      <p class="outcomes-intro">Most people contact us not knowing what can be achieved. Here is what we do, and what it typically produces.</p>
+      <ul class="outcomes-list">
+        <li>
+          <span class="outcome-tick" aria-hidden="true">&#10003;</span>
+          <span>
+            <span class="outcomes-list-title">We negotiate directly with every creditor</span>
+            <span class="outcomes-list-body">We contact each creditor, their agents, solicitors, or whoever has purchased the debt. We deal with them so you don&rsquo;t have to. Calls and letters stop coming to you and come to us instead.</span>
+          </span>
+        </li>
+        <li>
+          <span class="outcome-tick" aria-hidden="true">&#10003;</span>
+          <span>
+            <span class="outcomes-list-title">We push for interest and charges to be frozen &mdash; and we get it confirmed in writing</span>
+            <span class="outcomes-list-body">Frozen interest means your payments actually reduce what you owe. We push for this on every account, chase it tenaciously, and don&rsquo;t accept a verbal agreement &mdash; we get written confirmation. Note: this is not possible on loans, where interest is front-loaded, but we factor that in when structuring the plan.</span>
+          </span>
+        </li>
+        <li>
+          <span class="outcome-tick" aria-hidden="true">&#10003;</span>
+          <span>
+            <span class="outcomes-list-title">We stay on top of debt as it moves</span>
+            <span class="outcomes-list-body">Debt is frequently sold between agencies and collectors. An agreement reached with one organisation doesn&rsquo;t always follow it. We track movement, re-establish arrangements when needed, and ensure nothing slips through the gaps.</span>
+          </span>
+        </li>
+        <li>
+          <span class="outcome-tick" aria-hidden="true">&#10003;</span>
+          <span>
+            <span class="outcomes-list-title">We know which correspondence is urgent and which is noise</span>
+            <span class="outcomes-list-body">The letters with red ink and capital letters are often the least urgent. The ones that need immediate action are frequently the plain ones in blue &mdash; because those are court forms. We read everything and tell you what matters.</span>
+          </span>
+        </li>
+        <li>
+          <span class="outcome-tick" aria-hidden="true">&#10003;</span>
+          <span>
+            <span class="outcomes-list-title">We use Breathing Space strategically to buy time</span>
+            <span class="outcomes-list-body">The Debt Respite Scheme pauses all creditor enforcement for 60 days. We use this as a tactical tool &mdash; creating the space to prepare a proper plan, prevent CCJs, and bring creditors to the table on better terms. You cannot apply for Breathing Space yourself; we can.</span>
+          </span>
+        </li>
+        <li>
+          <span class="outcome-tick" aria-hidden="true">&#10003;</span>
+          <span>
+            <span class="outcomes-list-title">Where the numbers support it, we negotiate partial settlements</span>
+            <span class="outcomes-list-body">When a creditor will move, we pursue settlement below the face value of the debt. We produce the financial statement, make the proposal, follow it up verbally, and handle counter-proposals. Debt written off this way is gone &mdash; you are no longer pursued for it.</span>
+          </span>
+        </li>
+      </ul>
+      <div class="outcomes-landscape">
+        <p>The road isn&rsquo;t always smooth &mdash; creditors push back, debt moves, and some accounts take longer than others. We know where the pressure points are, we keep pushing, and we stay alongside you for every stretch of it. If circumstances change and a different solution becomes appropriate &mdash; including bankruptcy &mdash; we will tell you clearly and help you make that decision.</p>
       </div>
     </div>
 
@@ -751,6 +799,30 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <div class="outcomes-card-cta">
         <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
       </div>
+      <a href="can-i-settle-my-debts-for-less.html" class="featured-case-card" aria-label="Read Mr. N's story" style="margin-top:16px;">
+        <div class="featured-case-label">Personal &mdash; Too Much Debt</div>
+        <h3 class="featured-case-title">Over &pound;50,000 of Debt Settled for Less Than 50%</h3>
+        <p class="featured-case-soundbite">&ldquo;70% of my minimum payment was just going on interest. Four years later I was in exactly the same position &mdash; just more tired of it.&rdquo;</p>
+        <ul class="featured-case-outcomes" aria-label="Key outcomes">
+          <li><span class="fco-tick" aria-hidden="true">&#10003;</span>Full and final settlement agreed with every creditor</li>
+          <li><span class="fco-tick" aria-hidden="true">&#10003;</span>Over &pound;35,000 written off &mdash; paid just over &pound;15,000</li>
+          <li><span class="fco-tick" aria-hidden="true">&#10003;</span>Timed around a simultaneous property purchase</li>
+        </ul>
+        <span class="featured-case-read" aria-hidden="true">Read Mr. N&rsquo;s story &rarr;</span>
+      </a>
+      <p class="featured-case-pa">Referred by Andrew Rhodes, Partner, Sobell Rhodes Accountants.</p>
+      <a href="separation-divorce-too-much-debt.html" class="featured-case-card" aria-label="Read Ms. JJ's story" style="margin-top:16px;">
+        <div class="featured-case-label">Personal &mdash; Too Much Debt</div>
+        <h3 class="featured-case-title">Feeling Overwhelmed Dealing with the Debt &mdash; Lightside Helped To Find Space</h3>
+        <p class="featured-case-soundbite">&ldquo;The calls were relentless. I couldn&rsquo;t sleep because of anxiety I felt in the pit of my stomach.&rdquo;</p>
+        <ul class="featured-case-outcomes" aria-label="Key outcomes">
+          <li><span class="fco-tick" aria-hidden="true">&#10003;</span>All creditor calls and letters stopped</li>
+          <li><span class="fco-tick" aria-hidden="true">&#10003;</span>Law and commercial reality explained clearly</li>
+          <li><span class="fco-tick" aria-hidden="true">&#10003;</span>Peace of mind restored &mdash; three crises, one solution</li>
+        </ul>
+        <span class="featured-case-read" aria-hidden="true">Read Ms. JJ&rsquo;s story &rarr;</span>
+      </a>
+      <p class="featured-case-pa">Referred by her divorce solicitor.</p>
     </div>
 
   </div>
@@ -793,150 +865,6 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="testimonial-block">
       <blockquote>&ldquo;At a very difficult and dark time, Lightside literally saved my life.&rdquo;</blockquote>
       <div class="testimonial-attr">Ms. J &mdash; client, referred by her solicitor. <a href="testimonials.html">Read more testimonials &rarr;</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ CASE STUDIES ═══════ -->
-<section class="cases-section" aria-labelledby="cases-heading">
-  <div class="cases-inner">
-    <div class="section-label">Real cases</div>
-    <h2 class="section-h2" id="cases-heading">How we have helped people through too much debt</h2>
-    <p class="section-sub">Every situation is different. These are real cases &mdash; anonymised &mdash; showing the range of what we deal with and what becomes possible.</p>
-    <div class="cases-grid" id="cases-grid">
-      <div class="case-card">
-        <div class="case-card-hdr">
-          <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
-            <div class="case-card-title">Feeling Overwhelmed Dealing with the Debt &mdash; Lightside Helped To Find Space</div>
-            <div class="case-card-ref">Ms. JJ &mdash; three crises in three months, creditor calls stopped</div>
-          </div>
-          <div class="case-stamp">
-            <span class="case-stamp-val">Control</span>
-            <span class="case-stamp-lbl">Peace of Mind</span>
-          </div>
-        </div>
-        <div class="case-body" id="case-body-1">
-          <div class="case-body-inner">
-            <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;The calls were relentless. I couldn&rsquo;t sleep because of anxiety I felt in the pit of my stomach.&rdquo;</p></div>
-            <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>Ms. JJ was anxious and worried about the advice she had already received. She had tried to engage with creditors but the letters and calls didn&rsquo;t stop. We advised, differentiating between the law and commercial reality. We took over dealing with her lenders; the calls stopped, the letters reduced. Ms. JJ knew we could be relied upon, and she got back her peace of mind.</p></div>
-            <div class="case-attribution">Adviser: Priti Shah. Referred by her divorce solicitor.</div>
-          </div>
-        </div>
-        <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-1" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-          <a href="separation-divorce-too-much-debt.html" class="case-read-link">Full case &rarr;</a>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-card-hdr">
-          <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
-            <div class="case-card-title">Over &pound;50,000 of Debt Settled for Less Than 50%</div>
-            <div class="case-card-ref">Mr. N &mdash; negotiated settlement, property purchase supported</div>
-          </div>
-          <div class="case-stamp">
-            <span class="case-stamp-val">70% Saved</span>
-            <span class="case-stamp-lbl">Debt Free</span>
-          </div>
-        </div>
-        <div class="case-body" id="case-body-2">
-          <div class="case-body-inner">
-            <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;The debt built up across credit cards and personal loans, and for a long time I told myself I was managing. But in reality, I wasn&rsquo;t; 70% of my minimum payment was just going on interest!&rdquo;</p></div>
-            <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>Mr. N had been in a debt management plan for some time but there was no strategy behind it &mdash; the balances on his credit cards and personal loans barely moved month to month. We identified that the right route was a negotiated full and final settlement rather than continued servicing, and assessed each creditor individually for their likely appetite for discount. Each settlement was confirmed in writing before any payment was made, and we carefully sequenced the creditor negotiations around a simultaneous property purchase so the debt resolution supported rather than disrupted the conveyancing. Mr. N paid just over &pound;15,000 in settlement of liabilities exceeding &pound;50,000 &mdash; his home was not at risk at any point &mdash; and now carries only his mortgage and one credit card he clears in full each month.</p></div>
-            <div class="case-attribution">Adviser: Priti Shah. Referred by Andrew Rhodes, Partner, Sobell Rhodes Accountants.</div>
-          </div>
-        </div>
-        <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-2" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-          <a href="can-i-settle-my-debts-for-less.html" class="case-read-link">Full case &rarr;</a>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-card-hdr">
-          <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
-            <div class="case-card-title">Temporary Financial Blips are Fine &mdash; But Not When They Become Ongoing</div>
-            <div class="case-card-ref">Mr. &amp; Mrs. V &mdash; bailiff stopped, creditor arrangement restored control</div>
-          </div>
-          <div class="case-stamp">
-            <span class="case-stamp-val">Bailiff stopped</span>
-            <span class="case-stamp-lbl">Arrangement</span>
-          </div>
-        </div>
-        <div class="case-body" id="case-body-3">
-          <div class="case-body-inner">
-            <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;We were using credit cards to fill the gaps. Not for luxuries &mdash; just to get through the month. The balances kept growing, and I felt completely overwhelmed.&rdquo;</p></div>
-            <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>Mr. and Mrs. V were behind on their commitments, had not identified which debts were priority debts, and were relying on credit to maintain day-to-day affordability. A bailiff had come to the door. We reviewed their income and expenditure, separated priority from non-priority debt, and put a Creditor Arrangement in place &mdash; stopping interest and charges across all creditors, redirecting all creditor contact through Lightside, and agreeing affordable repayments structured around their actual income. The bailiff action stopped. Council Tax was brought up to date. For the first time in a long time, Mr. and Mrs. V felt financial stability rather than month-to-month crisis.</p></div>
-            <div class="case-attribution">Adviser: Priti Shah. Referred by Lorraine Sellwood, IFA, Phase 8 Ltd.</div>
-          </div>
-        </div>
-        <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-3" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-          <a href="debt-growing-despite-making-payments.html" class="case-read-link">Full case &rarr;</a>
-        </div>
-      </div>
-      <div class="case-card hidden-case">
-        <div class="case-card-hdr">
-          <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
-            <div class="case-card-title">Using One Card to Pay Another &mdash; Trapped in a Debt Cycle</div>
-            <div class="case-card-ref">Ms. J &mdash; credit card spiral, interest frozen, cycle broken</div>
-          </div>
-          <div class="case-stamp">
-            <span class="case-stamp-val">Cycle broken</span>
-            <span class="case-stamp-lbl">Interest frozen</span>
-          </div>
-        </div>
-        <div class="case-body" id="case-body-4">
-          <div class="case-body-inner">
-            <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;I was doing everything I was supposed to do &mdash; making all the payments &mdash; but the debt wasn&rsquo;t going down. If anything, it was creeping up. Four years later, I was in exactly the same position, just more tired of it.&rdquo;</p></div>
-            <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>Ms. J had a decent salary and had never missed a payment &mdash; the problem was that her repayments were not reducing the debt. We reviewed her full financial position and each creditor individually, then approached them directly with a creditor arrangement based on payments she could sustainably afford rather than minimums driven by interest. A freeze on interest and charges across all accounts was negotiated, so that from that point every payment reduced the actual balance rather than servicing it. We took over all creditor communication. The debt cycle was broken, a clear end date established, and Ms. J&rsquo;s mortgage position was protected throughout.</p></div>
-            <div class="case-attribution">Adviser: Priti Shah. Referred by Tony Balzan, CeMap Mortgage Adviser, One Stop Finance Ltd.</div>
-          </div>
-        </div>
-        <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-4" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-          <a href="stuck-in-debt-cycle-using-credit-to-pay-credit.html" class="case-read-link">Full case &rarr;</a>
-        </div>
-      </div>
-      <div class="case-card hidden-case">
-        <div class="case-card-hdr">
-          <div class="case-card-meta">
-            <div class="case-card-eyebrow">Personal &mdash; Too Much Debt</div>
-            <div class="case-card-title">Personal Guarantee Called In &mdash; Debt Growing, Home &amp; Family Impacted</div>
-            <div class="case-card-ref">Mr. &amp; Mrs. C &mdash; bankruptcy halted, over &pound;50,000 resolved</div>
-          </div>
-          <div class="case-stamp">
-            <span class="case-stamp-val">Bktcy halted</span>
-            <span class="case-stamp-lbl">Charge agreed</span>
-          </div>
-        </div>
-        <div class="case-body" id="case-body-5">
-          <div class="case-body-inner">
-            <div class="case-section-lbl">The Situation</div>
-            <div class="case-sit"><p>&ldquo;I&rsquo;d been paying my debts but in 5 years they had not shrunk. Then the business closed. I couldn&rsquo;t pay the credit cards. A personal guarantee creditor came straight for us, and bankruptcy was the word I couldn&rsquo;t stop turning over.&rdquo;</p></div>
-            <div class="case-section-lbl">What We Did</div>
-            <div class="case-sol"><p>We treated the personal and business debt as one picture rather than two. The personal guarantee was the immediate pressure point &mdash; the creditor was preparing bankruptcy proceedings. We negotiated a voluntary charge on the family home, which gave the creditor the security they needed to stand down from formal action. The bankruptcy threat was removed and the home was protected. We then brought over &pound;50,000 of personal credit card and loan debt into a single coordinated Creditor Arrangement, took over all creditor communication, and structured the co-director&rsquo;s share of the guaranteed debt separately. Mr C has since relaunched his business.</p></div>
-            <div class="case-attribution">Adviser: Priti Shah. Referred by an insolvency practitioner.</div>
-          </div>
-        </div>
-        <div class="case-footer">
-          <button type="button" class="case-toggle-btn" aria-expanded="false" aria-controls="case-body-5" data-case-toggle>Read more <span class="toggle-chevron" aria-hidden="true">&#9660;</span></button>
-          <a href="i-need-help-pg-personal-guarantee.html" class="case-read-link">Full case &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div class="cases-toggle-wrap">
-      <button type="button" id="cases-toggle-btn" aria-expanded="false">Show more cases</button>
     </div>
   </div>
 </section>
@@ -1385,27 +1313,6 @@ initForm('footer-form-toggle','footer-contact-form','footer-form','footer-error'
         var top=wrapper.getBoundingClientRect().top+window.pageYOffset-offset;
         window.scrollTo({top:top,behavior:'smooth'});
       },80);
-    }
-  });
-})();
-
-/* ── Outcomes collapsible (mobile only) ── */
-(function(){
-  var btn=document.getElementById('outcomes-toggle');
-  var panel=document.getElementById('outcomes-list-wrap');
-  if(!btn||!panel)return;
-  btn.addEventListener('click',function(){
-    var open=panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded',String(open));
-    btn.querySelector('.otb-icon').textContent=open?'\u00d7':'+';
-    btn.childNodes[0].textContent=open?'Hide outcomes\u00a0':'Show what we can achieve\u00a0';
-  });
-  window.addEventListener('resize',function(){
-    if(window.innerWidth>680){
-      panel.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-      btn.querySelector('.otb-icon').textContent='+';
-      btn.childNodes[0].textContent='Show what we can achieve\u00a0';
     }
   });
 })();
