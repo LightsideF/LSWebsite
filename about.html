@@ -215,7 +215,11 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .intro-copy p:last-child{margin-bottom:0;}
 .intro-line{margin-bottom:0.6em;}
 .intro-line--final{margin-top:1.4em;margin-bottom:0;font-style:italic;color:var(--site-navy);}
-@media(max-width:760px){.intro-two-col{grid-template-columns:1fr;gap:28px;}}
+@media(max-width:760px){
+  .intro-two-col{grid-template-columns:1fr;gap:28px;}
+  .intro-venn{display:flex;justify-content:center;}
+  .intro-venn svg{max-width:360px;width:100%;}
+}
 
 /* ── Page-specific: Values panel ── */
 .values-panel{background:var(--site-navy);border-radius:6px;padding:32px;margin-bottom:44px;}
@@ -421,7 +425,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
       <div class="intro-two-col">
         <div class="intro-venn">
-          <svg width="100%" viewBox="0 0 680 560" role="img">
+          <svg width="100%" viewBox="95 10 570 530" role="img">
             <title>Three disciplines Venn diagram — Lightside Financial at the convergence of Finance, Law, and Commercial Reality</title>
             <desc>Three overlapping circles representing Finance, Law, and Commercial Reality. Lightside Financial sits at the central intersection of all three.</desc>
             <circle cx="290" cy="200" r="180" fill="#1e3a5f" opacity="0.28"/>
