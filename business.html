@@ -391,6 +391,24 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hero-text{flex:0 0 640px;min-width:0;display:block;position:relative;z-index:1;}
 .hero-award-img{display:block;height:auto;max-height:160px;width:auto;max-width:260px;object-fit:contain;flex-shrink:0;padding-top:16px;position:relative;z-index:1;}
 @media(max-width:768px){.hero-award-img{display:none;}.page-hero-inner{display:block;}.hero-inner{display:block;}}
+
+/* ── Hero emanating rings ── */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes page-emanate{
+    0%{r:20;opacity:0.65;stroke-width:1.8;}
+    100%{r:420;opacity:0;stroke-width:0.2;}
+  }
+  .page-em-ring{fill:none;animation:page-emanate 9s ease-out infinite;}
+  .page-em-1{animation-delay:0s;}
+  .page-em-2{animation-delay:3s;}
+  .page-em-3{animation-delay:6s;}
+  .page-em-b{animation-delay:1.5s;}
+  .page-em-c{animation-delay:4.5s;}
+  .page-em-d{animation-delay:7.5s;}
+  .page-em-e{animation-delay:0.8s;}
+  .page-em-f{animation-delay:3.8s;}
+  .page-em-g{animation-delay:6.8s;}
+}
 </style>
 </head>
 <body>
@@ -469,6 +487,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   <circle cx="60" cy="88" r="145" fill="none" stroke="rgba(192,57,43,0.20)" stroke-width="1"/>
   <circle cx="60" cy="88" r="200" fill="none" stroke="rgba(192,57,43,0.11)" stroke-width="1"/>
   <circle cx="60" cy="88" r="255" fill="none" stroke="rgba(192,57,43,0.06)" stroke-width="0.5"/>
+  <circle class="page-em-ring page-em-1" cx="60" cy="88" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-2" cx="60" cy="88" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-3" cx="60" cy="88" stroke="rgba(192,57,43,0.55)"/>
   <circle cx="60" cy="88" r="22" fill="rgba(192,57,43,0.40)"/><circle cx="60" cy="88" r="8" fill="#c0392b"/>
   <circle cx="60" cy="88" r="3" fill="rgba(255,255,255,0.55)"/>
 </svg>

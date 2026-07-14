@@ -55,6 +55,24 @@ body{font-family:'Lato',sans-serif;color:var(--site-text);background:var(--site-
 @media(max-width:760px){.page-hero h1{font-size:1.75rem;}.hero-lead{font-size:1rem;}.tile-grid{grid-template-columns:1fr 1fr;}.cases-grid{grid-template-columns:1fr;}.steps-row{grid-template-columns:1fr;}.adviser-banner-inner{flex-direction:column;align-items:flex-start;gap:16px;}.adviser-banner-btn{width:100%;text-align:center;}}
 @media(max-width:680px){.site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--site-white);border-bottom:3px solid var(--site-coral);box-shadow:0 4px 16px rgba(0,0,0,0.12);z-index:190;}.site-nav.open{display:block;}.site-nav ul{flex-direction:column;gap:0;padding:10px 0;}.site-nav ul li a{padding:14px 24px;border-radius:0;}.nav-cta{margin:6px 16px 10px!important;border-radius:4px!important;text-align:center;}.hamburger{display:flex;}.inline-cta{flex-direction:column;gap:20px;}.inline-cta-btns{width:100%;}.inline-cta .cta-buttons{justify-content:center;}.trust-bar-inner{flex-direction:column;align-items:flex-start;gap:0;padding:4px 0;}.trust-item{width:100%;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);}.trust-item:last-child{border-bottom:none;}.trust-divider{display:none;}.testimonial-block{padding:24px 22px 24px 32px;}}
 @media(max-width:480px){.page-body{padding:32px 16px 0;}.tile-grid{grid-template-columns:1fr 1fr;gap:10px;}.tile-heading{min-height:90px;padding:14px 12px;}.faq-section{padding:36px 16px 44px;}.faq-question{padding:14px;font-size:0.92rem;}.cf-row--2{grid-template-columns:1fr;}}
+
+/* ── Hero emanating rings ── */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes page-emanate{
+    0%{r:20;opacity:0.65;stroke-width:1.8;}
+    100%{r:420;opacity:0;stroke-width:0.2;}
+  }
+  .page-em-ring{fill:none;animation:page-emanate 9s ease-out infinite;}
+  .page-em-1{animation-delay:0s;}
+  .page-em-2{animation-delay:3s;}
+  .page-em-3{animation-delay:6s;}
+  .page-em-b{animation-delay:1.5s;}
+  .page-em-c{animation-delay:4.5s;}
+  .page-em-d{animation-delay:7.5s;}
+  .page-em-e{animation-delay:0.8s;}
+  .page-em-f{animation-delay:3.8s;}
+  .page-em-g{animation-delay:6.8s;}
+}
 </style>
 </head>
 <body>
@@ -76,6 +94,9 @@ body{font-family:'Lato',sans-serif;color:var(--site-text);background:var(--site-
   <circle cx="580" cy="88" r="192" fill="none" stroke="rgba(192,57,43,0.11)" stroke-width="1.0"/>
   <circle cx="580" cy="88" r="248" fill="none" stroke="rgba(42,139,139,0.06)" stroke-width="0.5"/>
   <circle cx="580" cy="88" r="304" fill="none" stroke="rgba(192,57,43,0.04)" stroke-width="0.5"/>
+  <circle class="page-em-ring page-em-1" cx="580" cy="88" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-2" cx="580" cy="88" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-3" cx="580" cy="88" stroke="rgba(192,57,43,0.55)"/>
   <circle cx="580" cy="88" r="16" fill="rgba(192,57,43,0.38)"/>
   <circle cx="580" cy="88" r="7" fill="#c0392b"/>
 </svg><div class="hero-inner"><div class="hero-text"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="business.html">Business &amp; Directors</a> &rsaquo; <span>Personal Guarantees</span></nav><h1 id="page-h1">Personal Guarantees</h1><p class="hero-lead">A personal guarantee turns a business debt into your debt. That changes everything &mdash; your home, your savings, your ability to move on. But the position is almost never as fixed as the creditor wants you to believe. What matters now is what you do next.</p><a href="#adviser-anchor" class="adviser-pill" id="adviser-pill-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="flex-shrink:0;"><circle cx="4.5" cy="4" r="2.5" stroke="white" stroke-width="1.3"/><path d="M0.5 12.5c0-2.209 1.791-4 4-4" stroke="white" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="4" r="2.5" stroke="rgba(255,255,255,0.55)" stroke-width="1.3"/><path d="M13.5 12.5c0-2.209-1.791-4-4-4" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-linecap="round"/></svg> For professional advisers</a></div></div></section>

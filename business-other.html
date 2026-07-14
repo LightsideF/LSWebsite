@@ -458,6 +458,24 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
   .faq-question{padding:14px;font-size:0.92rem;}
   .cf-row--2{grid-template-columns:1fr;}
 }
+
+/* ── Hero emanating rings ── */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes page-emanate{
+    0%{r:20;opacity:0.65;stroke-width:1.8;}
+    100%{r:420;opacity:0;stroke-width:0.2;}
+  }
+  .page-em-ring{fill:none;animation:page-emanate 9s ease-out infinite;}
+  .page-em-1{animation-delay:0s;}
+  .page-em-2{animation-delay:3s;}
+  .page-em-3{animation-delay:6s;}
+  .page-em-b{animation-delay:1.5s;}
+  .page-em-c{animation-delay:4.5s;}
+  .page-em-d{animation-delay:7.5s;}
+  .page-em-e{animation-delay:0.8s;}
+  .page-em-f{animation-delay:3.8s;}
+  .page-em-g{animation-delay:6.8s;}
+}
 </style>
 </head>
 <body>
@@ -517,6 +535,9 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
   <circle cx="30" cy="170" r="264" fill="none" stroke="rgba(192,57,43,0.06)" stroke-width="0.5"/>
   <circle cx="570" cy="5" r="75" fill="none" stroke="rgba(192,57,43,0.12)" stroke-width="0.8"/>
   <circle cx="570" cy="5" r="130" fill="none" stroke="rgba(192,57,43,0.06)" stroke-width="0.5"/>
+  <circle class="page-em-ring page-em-1" cx="30" cy="170" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-2" cx="30" cy="170" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-3" cx="30" cy="170" stroke="rgba(192,57,43,0.55)"/>
   <circle cx="30" cy="170" r="16" fill="rgba(192,57,43,0.40)"/>
   <circle cx="30" cy="170" r="7" fill="#c0392b"/>
 </svg>

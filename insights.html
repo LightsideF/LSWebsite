@@ -315,6 +315,24 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .cta-buttons{flex-direction:column;width:100%;}
   .btn-primary,.btn-secondary{width:100%;text-align:center;}
 }
+
+/* ── Hero emanating rings ── */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes page-emanate{
+    0%{r:20;opacity:0.65;stroke-width:1.8;}
+    100%{r:420;opacity:0;stroke-width:0.2;}
+  }
+  .page-em-ring{fill:none;animation:page-emanate 9s ease-out infinite;}
+  .page-em-1{animation-delay:0s;}
+  .page-em-2{animation-delay:3s;}
+  .page-em-3{animation-delay:6s;}
+  .page-em-b{animation-delay:1.5s;}
+  .page-em-c{animation-delay:4.5s;}
+  .page-em-d{animation-delay:7.5s;}
+  .page-em-e{animation-delay:0.8s;}
+  .page-em-f{animation-delay:3.8s;}
+  .page-em-g{animation-delay:6.8s;}
+}
 </style>
 </head>
 <body>
@@ -388,12 +406,21 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   <circle cx="560" cy="120" r="20" fill="none" stroke="rgba(232,160,32,0.28)" stroke-width="1.5"/>
   <circle cx="560" cy="120" r="35" fill="none" stroke="rgba(232,160,32,0.16)" stroke-width="1.0"/>
   <circle cx="560" cy="120" r="50" fill="none" stroke="rgba(232,160,32,0.08)" stroke-width="0.8"/>
+  <circle class="page-em-ring page-em-1" cx="60" cy="110" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-2" cx="60" cy="110" stroke="rgba(192,57,43,0.55)"/>
+  <circle class="page-em-ring page-em-3" cx="60" cy="110" stroke="rgba(192,57,43,0.55)"/>
   <circle cx="60" cy="110" r="22" fill="rgba(192,57,43,0.35)"/>
   <circle cx="60" cy="110" r="10" fill="#c0392b"/>
   <circle cx="60" cy="110" r="4"  fill="rgba(255,255,255,0.55)"/>
+  <circle class="page-em-ring page-em-b" cx="640" cy="60" stroke="rgba(42,139,139,0.55)"/>
+  <circle class="page-em-ring page-em-c" cx="640" cy="60" stroke="rgba(42,139,139,0.55)"/>
+  <circle class="page-em-ring page-em-d" cx="640" cy="60" stroke="rgba(42,139,139,0.55)"/>
   <circle cx="640" cy="60" r="22" fill="rgba(42,139,139,0.35)"/>
   <circle cx="640" cy="60" r="10" fill="#2a8b8b"/>
   <circle cx="640" cy="60" r="4"  fill="rgba(255,255,255,0.55)"/>
+  <circle class="page-em-ring page-em-e" cx="560" cy="120" stroke="rgba(232,160,32,0.55)"/>
+  <circle class="page-em-ring page-em-f" cx="560" cy="120" stroke="rgba(232,160,32,0.55)"/>
+  <circle class="page-em-ring page-em-g" cx="560" cy="120" stroke="rgba(232,160,32,0.55)"/>
   <circle cx="560" cy="120" r="22" fill="rgba(232,160,32,0.35)"/>
   <circle cx="560" cy="120" r="10" fill="#e8a020"/>
   <circle cx="560" cy="120" r="4"  fill="rgba(255,255,255,0.55)"/>
