@@ -221,26 +221,21 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .slide-form-wrap--light .cf-success-msg{color:var(--site-navy);}
 
 /* ── Outcomes section ── */
-.outcomes-section{padding:52px 0;background:var(--site-offwhite);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);}
+.outcomes-section{padding:52px 0;background:var(--site-teal);}
 .outcomes-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-.outcomes-toggle-btn{display:none;background:none;border:none;cursor:pointer;font-family:'Lato',sans-serif;font-size:0.92rem;font-weight:700;color:var(--site-teal);padding:0 0 20px 0;align-items:center;gap:8px;min-height:44px;}
-.otb-icon{width:22px;height:22px;border-radius:50%;background:var(--site-light);color:var(--site-teal);font-size:1rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:transform 0.25s,background 0.15s;flex-shrink:0;}
-.outcomes-toggle-btn[aria-expanded="true"] .otb-icon{transform:rotate(45deg);background:var(--site-teal);color:white;}
-.outcomes-list-wrap{display:block;}
 .outcomes-list{list-style:none;}
-.outcomes-list li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--site-border);font-size:0.97rem;color:var(--site-text);line-height:1.65;}
+.outcomes-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.18);font-size:0.97rem;color:rgba(255,255,255,0.92);line-height:1.65;}
 .outcomes-list li:last-child{border-bottom:none;padding-bottom:0;}
 .outcomes-list li:first-child{padding-top:0;}
-.outcome-tick{width:22px;height:22px;border-radius:50%;background:var(--site-teal);color:white;font-size:0.7rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
-.outcomes-list li:last-child .outcome-tick{background:var(--site-accent);}
+.outcome-tick{width:22px;height:22px;border-radius:50%;background:var(--site-accent);color:var(--site-navy);font-size:0.7rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px;}
 
 /* ── Featured case card ── */
 .outcomes-case{display:flex;flex-direction:column;gap:16px;}
-.featured-case-card{background:var(--site-navy);border-top:3px solid var(--site-coral);border-radius:6px;padding:24px;text-decoration:none;display:block;transition:box-shadow 0.2s,transform 0.2s;}
+.featured-case-card{background:var(--site-navy);border-top:3px solid var(--site-accent);border-radius:6px;padding:24px;text-decoration:none;display:block;transition:box-shadow 0.2s,transform 0.2s;}
 .featured-case-card:hover{box-shadow:0 6px 28px rgba(0,0,0,0.28);transform:translateY(-2px);text-decoration:none;}
 .feat-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px;}
 .feat-card-meta{flex:1;}
-.featured-case-label{font-size:0.67rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
+.featured-case-label{font-size:0.67rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--site-accent);margin-bottom:6px;}
 .featured-case-title{font-family:'Merriweather',serif;font-size:1rem;font-weight:700;color:white;line-height:1.4;}
 .feat-stamp{background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.3);border-radius:4px;padding:8px 12px;text-align:center;flex-shrink:0;min-width:80px;}
 .feat-stamp-val{display:block;font-size:0.88rem;font-weight:700;color:var(--site-accent);font-family:'Merriweather',serif;line-height:1.2;margin-bottom:2px;}
@@ -250,8 +245,18 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .featured-case-outcomes li{display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;color:rgba(255,255,255,0.88);line-height:1.5;}
 .fco-tick{width:18px;height:18px;border-radius:50%;background:var(--site-accent);color:var(--site-navy);font-size:0.65rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .featured-case-read{font-size:0.88rem;font-weight:700;color:var(--site-accent);margin-top:10px;display:flex;align-items:center;gap:5px;min-height:44px;}
-.featured-case-pa{font-size:0.82rem;color:var(--site-muted);font-style:italic;border-top:1px solid var(--site-border);padding-top:14px;margin-top:0;}
+.featured-case-pa{font-size:0.82rem;color:rgba(255,255,255,0.55);font-style:italic;border-top:1px solid rgba(255,255,255,0.15);padding-top:14px;margin-top:0;}
 .outcomes-card-cta{margin-top:0;}
+
+
+.outcomes-bullets .section-label{color:rgba(255,255,255,0.7);}
+.outcomes-bullets .section-h2{color:white;}
+.outcomes-section .btn-secondary{color:white;border-color:rgba(255,255,255,0.5);background:transparent;}
+.outcomes-section .btn-secondary:hover{background:rgba(255,255,255,0.12);}
+.outcomes-testimonial{background:rgba(255,255,255,0.10);border-left:4px solid var(--site-accent);border-radius:0 6px 6px 0;padding:22px 24px;margin-top:0;}
+.outcomes-testimonial blockquote{font-family:'Merriweather',serif;font-size:0.92rem;font-weight:300;font-style:italic;color:rgba(255,255,255,0.92);line-height:1.8;margin:0 0 10px;}
+.outcomes-testimonial .testimonial-attr{font-size:0.82rem;font-weight:700;color:var(--site-accent);}
+.outcomes-testimonial .testimonial-attr a{color:var(--site-accent);}
 
 /* ── How it works ── */
 .how-section{background:var(--site-white);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);padding:52px 24px;}
@@ -448,9 +453,6 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
   .inline-cta{flex-direction:column;gap:20px;}
   .inline-cta-btns{width:100%;}
   .inline-cta .cta-buttons{justify-content:center;}
-  .outcomes-toggle-btn{display:flex;}
-  .outcomes-list-wrap{display:none;}
-  .outcomes-list-wrap.open{display:block;}
   .trust-bar-inner{flex-direction:column;align-items:flex-start;gap:0;padding:4px 0;}
   .trust-item{width:100%;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
   .trust-item:last-child{border-bottom:none;}
@@ -698,20 +700,15 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
     <div class="outcomes-bullets">
       <div class="section-label">What we can achieve</div>
       <h2 class="section-h2" id="outcomes-heading">The outcomes that become possible when a director gets independent advice first</h2>
-      <button type="button" class="outcomes-toggle-btn" id="outcomes-toggle" aria-expanded="false" aria-controls="outcomes-list-wrap">
-        <span class="otb-label">Show what we can achieve&nbsp;</span>
-        <span class="otb-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="outcomes-list-wrap" id="outcomes-list-wrap">
-        <ul class="outcomes-list">
+      <p class="outcomes-intro">These are the outcomes that become possible when a director gets independent advice before any formal process begins.</p>
+      <ul class="outcomes-list">
           <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>A viable business rescued rather than closed &mdash; where the underlying trading position justifies it</li>
           <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Company dissolved rather than liquidated &mdash; avoiding investigation, DLA recovery, and IP fees where conditions warrant and allow this</li>
           <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Brand, staff, and customer relationships preserved through a pre-pack sale to a new entity</li>
           <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Personal exposure addressed as part of the company process &mdash; personal guarantees, DLAs, and HMRC handled together</li>
           <li><span class="outcome-tick" aria-hidden="true">&#10003;</span>Pre-appointment consultation with the liquidator &mdash; shaping the outcome before the formal process begins</li>
           <li><span class="outcome-tick" aria-hidden="true">&#8594;</span>A director who understands exactly where they stand &mdash; and has someone acting solely on their side throughout</li>
-        </ul>
-      </div>
+      </ul>
     </div>
     <div class="outcomes-case">
       <a href="prepack-administration-save-business-close-company.html" class="featured-case-card" aria-label="Read Sam&rsquo;s story">
@@ -734,8 +731,34 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
         <span class="featured-case-read">Read Sam&rsquo;s story &rarr;</span>
       </a>
       <p class="featured-case-pa">Most of our Director Support work reaches us via referral from professional advisers.</p>
-      <div class="outcomes-card-cta">
+      <div class="outcomes-card-cta" style="display:flex;gap:10px;flex-wrap:wrap;">
         <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
+        <button type="button" class="btn-secondary" id="outcomes-form-toggle" aria-expanded="false" aria-controls="outcomes-contact-form">Send a message</button>
+      </div>
+      <div class="slide-form-wrap slide-form-wrap--dark" id="outcomes-contact-form" hidden style="margin-top:12px;">
+        <form class="contact-form" id="outcomes-form" novalidate>
+          <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
+          <input type="hidden" name="subject" value="Website enquiry &mdash; Director Support">
+          <input type="hidden" name="from_name" value="Lightside Website">
+          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="cf-row cf-row--2">
+            <div class="cf-field"><label for="outcomes-name">Your name <span class="cf-required" aria-hidden="true">*</span></label><input type="text" id="outcomes-name" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></div>
+            <div class="cf-field"><label for="outcomes-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="outcomes-email" name="email" required autocomplete="email" placeholder="e.g. sarah@example.com"></div>
+          </div>
+          <div class="cf-field"><label for="outcomes-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="outcomes-phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000"></div>
+          <div class="cf-field"><label for="outcomes-message">Your message <span class="cf-required" aria-hidden="true">*</span></label><textarea id="outcomes-message" name="message" required rows="4" placeholder="Tell us a little about your situation &mdash; as much or as little as you like."></textarea></div>
+          <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
+          <div class="cf-actions">
+            <button type="submit" class="cf-submit">Send message</button>
+            <button type="button" class="btn-form-cancel" id="outcomes-form-cancel">Cancel</button>
+          </div>
+          <div class="cf-error" id="outcomes-error" hidden><p>We weren&rsquo;t able to send your message &mdash; please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+        </form>
+        <div class="cf-success" id="outcomes-success" hidden><p class="cf-success-msg">&#10003; Message sent &mdash; thank you. We&rsquo;ll be in touch shortly.</p></div>
+      </div>
+      <div class="outcomes-testimonial">
+        <blockquote>&ldquo;Nobody had mentioned that Nick would personally have to repay &pound;30,000 if we signed. We were hours away from signing when Lightside told us what the liquidation route actually meant.&rdquo;</blockquote>
+        <div class="testimonial-attr">Tanya &mdash; Company Director &mdash; <a href="testimonials.html">Read more testimonials &rarr;</a></div>
       </div>
     </div>
   </div>
@@ -768,16 +791,6 @@ blockquote{font-family:'Merriweather',serif;font-size:1rem;font-weight:300;font-
         <h4>We stay alongside you</h4>
         <p>We remain with you, helping to manage any personal debt dimension and liaising with the IP on your behalf. You are never left to navigate it alone.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonial -->
-<section class="testimonial-section" aria-label="Client testimonial">
-  <div class="testimonial-inner">
-    <div class="testimonial-block">
-      <blockquote>&ldquo;Nobody had mentioned that Nick would personally have to repay &pound;30,000 if we signed. We were hours away from signing when Lightside told us what the liquidation route actually meant.&rdquo;</blockquote>
-      <div class="testimonial-attr">Tanya &mdash; Company Director &mdash; <a href="testimonials.html">Read more testimonials &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -1410,26 +1423,36 @@ function handleTileToggle(tile){
   }
 }
 
-/* ── Outcomes toggle (mobile only) ── */
+
+
+
+/* ── Outcomes form toggle ── */
 (function(){
-  var btn=document.getElementById('outcomes-toggle');
-  var panel=document.getElementById('outcomes-list-wrap');
-  var label=btn?btn.querySelector('.otb-label'):null;
-  if(!btn||!panel)return;
-  btn.addEventListener('click',function(){
-    var open=panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded',String(open));
-    btn.querySelector('.otb-icon').textContent=open?'×':'+';
-    if(label)label.textContent=open?'Hide outcomes ':'Show what we can achieve ';
+  var toggle=document.getElementById('outcomes-form-toggle');
+  var wrapper=document.getElementById('outcomes-contact-form');
+  var form=document.getElementById('outcomes-form');
+  var errorEl=document.getElementById('outcomes-error');
+  var successEl=document.getElementById('outcomes-success');
+  var cancelBtn=document.getElementById('outcomes-form-cancel');
+  if(!toggle||!wrapper)return;
+  toggle.addEventListener('click',function(){
+    var isHidden=wrapper.hidden;
+    wrapper.hidden=!isHidden;
+    toggle.setAttribute('aria-expanded',isHidden?'true':'false');
   });
-  window.addEventListener('resize',function(){
-    if(window.innerWidth>680){
-      panel.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-      btn.querySelector('.otb-icon').textContent='+';
-      if(label)label.textContent='Show what we can achieve ';
-    }
-  });
+  if(cancelBtn){cancelBtn.addEventListener('click',function(){wrapper.hidden=true;toggle.setAttribute('aria-expanded','false');if(form)form.reset();if(errorEl)errorEl.hidden=true;});}
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(errorEl)errorEl.hidden=true;
+      var submitBtn=form.querySelector('.cf-submit');
+      submitBtn.disabled=true;submitBtn.textContent='Sending…';
+      fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)})
+        .then(function(r){return r.json();})
+        .then(function(j){if(j.success){form.hidden=true;if(successEl)successEl.hidden=false;}else{throw new Error('failed');}})
+        .catch(function(){submitBtn.disabled=false;submitBtn.textContent='Send message';if(errorEl)errorEl.hidden=false;});
+    });
+  }
 })();
 
 /* ── Inline CTA form ── */
