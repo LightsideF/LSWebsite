@@ -208,15 +208,14 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .trust-divider{display:none;}
 
   .mobile-channel-list{display:block;margin-top:32px;}
-  .mcl-item{border:1px solid var(--site-border);border-top:3px solid var(--site-coral);border-radius:6px;margin-bottom:16px;overflow:hidden;}
-  .mcl-heading{display:block;font-family:'Merriweather',serif;font-size:1.0rem;font-weight:700;color:var(--site-navy);padding:16px 18px 8px;text-decoration:none;}
-  .mcl-heading:hover{color:var(--site-coral);text-decoration:none;}
+  .mcl-item{display:block;border:1px solid var(--site-border);border-top:3px solid var(--site-coral);border-radius:6px;margin-bottom:16px;overflow:hidden;text-decoration:none;color:inherit;}
+  .mcl-item:hover{box-shadow:0 4px 16px rgba(192,57,43,0.12);text-decoration:none;}
+  .mcl-heading{display:block;font-family:'Merriweather',serif;font-size:1.0rem;font-weight:700;color:var(--site-navy);padding:16px 18px 8px;}
+  .mcl-item:hover .mcl-heading{color:var(--site-coral);}
   .mcl-list{list-style:none;padding:0 18px 16px;margin:0;}
   .mcl-list li{font-size:0.88rem;color:var(--site-text);padding:5px 0;border-bottom:1px solid var(--site-border);line-height:1.4;}
   .mcl-list li:last-child{border-bottom:none;}
   .mcl-list li::before{content:'→ ';color:var(--site-coral);font-size:0.78rem;}
-  .mcl-list a{color:var(--site-text);text-decoration:none;display:block;}
-  .mcl-list a:hover{color:var(--site-coral);}
 }
 
 /* ── How it works ── */
@@ -645,8 +644,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   <!-- MOBILE CHANNEL LIST (visible on mobile only) -->
   <div class="mobile-channel-list" aria-label="Channel details">
 
-    <div class="mcl-item">
-      <a class="mcl-heading" href="business-closing-a-company.html">Companies &ndash; Director Support</a>
+    <a class="mcl-item" href="business-closing-a-company.html">
+      <span class="mcl-heading">Companies &ndash; Director Support</span>
       <ul class="mcl-list">
         <li>Turnaround</li>
         <li>Pre-Pack</li>
@@ -656,10 +655,10 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <li>Administration</li>
         <li>Solvent closure</li>
       </ul>
-    </div>
+    </a>
 
-    <div class="mcl-item">
-      <a class="mcl-heading" href="business-personal-guarantees.html">Personal Guarantees</a>
+    <a class="mcl-item" href="business-personal-guarantees.html">
+      <span class="mcl-heading">Personal Guarantees</span>
       <ul class="mcl-list">
         <li>Funding Circle</li>
         <li>Iwoca</li>
@@ -667,10 +666,10 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <li>Federal Capital</li>
         <li>and more</li>
       </ul>
-    </div>
+    </a>
 
-    <div class="mcl-item">
-      <a class="mcl-heading" href="business-personal-liability.html">Personal Liability</a>
+    <a class="mcl-item" href="business-personal-liability.html">
+      <span class="mcl-heading">Personal Liability</span>
       <ul class="mcl-list">
         <li>Overdrawn Directors&rsquo; Loan Account</li>
         <li>Expenses Recovery Demand</li>
@@ -679,16 +678,16 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <li>Fraud</li>
         <li>Sole Traders</li>
       </ul>
-    </div>
+    </a>
 
-    <div class="mcl-item">
-      <a class="mcl-heading" href="business-other.html">Other Situations</a>
+    <a class="mcl-item" href="business-other.html">
+      <span class="mcl-heading">Other Situations</span>
       <ul class="mcl-list">
         <li>Bounce Back Loans</li>
         <li>Structuring</li>
         <li>Business &amp; Personal &mdash; joined up approach</li>
       </ul>
-    </div>
+    </a>
 
   </div><!-- /.mobile-channel-list -->
 
