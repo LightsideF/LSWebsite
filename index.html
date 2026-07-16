@@ -298,38 +298,70 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
 }
 @media(max-width:900px){.hero-trust{display:none;}}
 
-/* Hero right — testimonial panel, top-aligned, amber border */
+/* Hero right — photo panel */
 .hero-panel{
   position:relative;z-index:1;
-  background:var(--site-teal);
-  border:2px solid var(--site-accent);
   border-radius:6px;
-  padding:32px 28px;
-  /* no margin-top — align-items:start handles top alignment */
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
 }
-.hero-panel-label{
-  font-size:0.70rem;font-weight:700;letter-spacing:0.1em;
-  text-transform:uppercase;color:rgba(255,255,255,0.72);margin-bottom:16px;
+.hero-panel-img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  object-position:center 40%;
+  border-radius:6px 6px 0 0;
+  display:block;
 }
-.hero-panel-quote{
-  font-family:'Merriweather',serif;font-style:italic;
-  font-size:0.95rem;font-weight:300;
-  color:var(--site-white);line-height:1.82;margin-bottom:18px;
-}
-.hero-panel-attr{font-size:0.80rem;color:rgba(255,255,255,0.82);font-weight:700;}
-.hero-panel-divider{border:none;border-top:1px solid rgba(255,255,255,0.22);margin:22px 0;}
-.hero-panel-stamps{display:flex;gap:8px;margin-top:4px;}
-.hero-stamp{
-  flex:1;padding:12px 8px;text-align:center;
-  background:var(--site-navy);
+.hero-panel-stamps{
+  display:flex;gap:0;
+  border-radius:0 0 6px 6px;
+  overflow:hidden;
   border:1px solid var(--site-accent);
-  border-radius:4px;
+  border-top:none;
 }
+.hero-stamp{
+  flex:1;padding:14px 8px;text-align:center;
+  background:var(--site-navy);
+  border-right:1px solid var(--site-accent);
+}
+.hero-stamp:last-child{border-right:none;}
 .stamp-value{
   font-family:'Merriweather',serif;font-size:1.05rem;font-weight:700;
   color:var(--site-white);line-height:1;margin-bottom:5px;
 }
 .stamp-label{font-size:0.70rem;color:rgba(255,255,255,0.68);line-height:1.3;}
+
+/* ── WHERE WE HAVE HELPED — case cards ── */
+.helped-section{background:var(--site-white);padding:68px 24px 72px;border-bottom:1px solid var(--site-border);}
+.helped-inner{max-width:var(--max-w);margin:0 auto;}
+.helped-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px;}
+/* case-card component — identical to advisers.html */
+.case-card{background:var(--site-white);border:1px solid var(--site-border);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;}
+.case-card-head{background:var(--site-navy);padding:20px 22px 18px;}
+.case-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--site-teal);margin-bottom:6px;}
+.case-card-title{font-family:'Merriweather',serif;font-size:0.92rem;font-weight:700;color:var(--site-white);line-height:1.4;margin-bottom:12px;}
+.case-stamp{display:inline-flex;gap:0;border:1px solid rgba(255,255,255,0.2);border-radius:3px;overflow:hidden;font-size:0.72rem;font-weight:700;}
+.stamp-value{background:var(--site-accent);color:var(--site-navy);padding:3px 9px;}
+.stamp-label{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.8);padding:3px 9px;}
+.case-card-body{padding:20px 22px;flex:1;display:flex;flex-direction:column;}
+.case-sit-quote{font-family:'Merriweather',serif;font-style:italic;font-size:0.88rem;font-weight:300;color:var(--site-navy);line-height:1.7;margin-bottom:14px;}
+.case-we-did-toggle{background:none;border:none;cursor:pointer;font-size:0.82rem;font-weight:700;color:var(--site-teal);padding:0;font-family:inherit;display:flex;align-items:center;gap:5px;}
+.case-we-did-toggle:hover{color:var(--site-teal-dk);}
+.case-we-did-toggle .toggle-icon{font-size:0.9rem;transition:transform 0.2s;display:inline-block;}
+.case-we-did-toggle[aria-expanded="true"] .toggle-icon{transform:rotate(45deg);}
+.case-we-did-body{display:none;margin-top:12px;font-size:0.85rem;color:var(--site-text);line-height:1.7;border-top:1px solid var(--site-border);padding-top:12px;}
+.case-we-did-body.open{display:block;}
+.case-we-did-body p{margin-bottom:10px;}
+.case-we-did-body p:last-child{margin-bottom:0;}
+.case-attribution{font-size:0.78rem;color:var(--site-muted);margin-top:14px;padding-top:10px;border-top:1px solid var(--site-border);}
+.case-card-foot{padding:14px 22px;border-top:1px solid var(--site-border);background:var(--site-white);}
+.case-full-link{font-size:0.85rem;font-weight:700;color:var(--site-accent);display:flex;align-items:center;gap:6px;transition:gap 0.2s;}
+.case-full-link:hover{gap:10px;color:var(--site-accent);text-decoration:none;}
+.case-full-link::after{content:'→';}
+@media(max-width:860px){.helped-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.helped-grid{grid-template-columns:1fr;}}
 
 /* ── PATHWAYS ── */
 .pathways-section{background:var(--site-offwhite);padding:68px 24px 72px;border-bottom:1px solid var(--site-border);}
@@ -380,32 +412,7 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
 .step-content h4{font-size:0.90rem;font-weight:700;color:white;margin-bottom:4px;}
 .step-content p{font-size:0.83rem;color:rgba(255,255,255,0.58);line-height:1.6;}
 
-/* ── ASSURANCES ── */
-.assurances-section{background:var(--site-offwhite);padding:56px 24px;border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);}
-.assurances-inner{max-width:var(--max-w);margin:0 auto;}
-/* The four distinct bordered cells */
-.assurances-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-  margin-top:32px;
-}
-.assurance-cell{
-  background:var(--site-white);
-  border:1px solid var(--site-border);
-  border-top:3px solid var(--site-teal);
-  border-radius:4px;
-  padding:24px 20px;
-  display:flex;flex-direction:column;gap:10px;
-}
-.assurance-check{
-  width:30px;height:30px;border-radius:50%;
-  background:var(--site-navy);color:white;
-  font-size:0.75rem;font-weight:900;
-  display:flex;align-items:center;justify-content:center;
-}
-.assurance-cell strong{font-size:0.90rem;color:var(--site-navy);font-weight:700;line-height:1.3;}
-.assurance-cell p{font-size:0.83rem;color:var(--site-muted);line-height:1.55;}
+
 
 /* ── Responsive ── */
 @media(max-width:900px){
@@ -424,7 +431,7 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
   .site-nav.open{display:block;position:absolute;top:90px;left:0;right:0;background:white;border-bottom:2px solid var(--site-teal);padding:12px 0;box-shadow:0 4px 12px rgba(0,0,0,0.12);z-index:300;}
   .site-nav.open ul{flex-direction:column;gap:0;}
   .site-nav.open ul li a{padding:12px 24px;}
-  .assurances-grid{grid-template-columns:repeat(2,1fr);}
+
 }
 @media(max-width:600px){
   .cf-row--2{grid-template-columns:1fr;}
@@ -441,7 +448,7 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
   #home-h1{font-size:1.65rem;}
   .hero-cta-row{flex-direction:column;}
   .btn-hero-primary,.btn-hero-ghost{width:100%;text-align:center;padding:14px 20px;}
-  .assurances-grid{grid-template-columns:1fr;}
+
 }
 
 /* ── Hero background animation ── */
@@ -605,15 +612,9 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
         </div>
       </div>
 
-      <!-- RIGHT: testimonial panel — teal bg, amber border, top-aligned -->
+      <!-- RIGHT: coastal photo + trust stamps -->
       <div class="hero-panel">
-        <div class="hero-panel-label">What our clients say</div>
-        <blockquote class="hero-panel-quote">
-          &ldquo;At a very difficult and dark time, Lightside literally saved my life. From the first meeting, a huge weight was lifted from my shoulders &mdash; not just the day-to-day nightmare of dealing with lenders alone, but the guilt and shame of being in debt at all.&rdquo;
-        </blockquote>
-        <div class="hero-panel-attr">Ms. J &mdash; referred by her solicitor during divorce proceedings</div>
-        <hr class="hero-panel-divider">
-        <!-- Three distinct bordered stamps -->
+        <img src="index-main-hero.webp" alt="Open tidal flat on the North Somerset coast — calm water, wide sky, light breaking through" class="hero-panel-img">
         <div class="hero-panel-stamps">
           <div class="hero-stamp">
             <div class="stamp-value">FCA</div>
@@ -751,32 +752,74 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
     </div>
   </section>
 
-  <!-- ASSURANCES -->
-  <section class="assurances-section" aria-labelledby="assurances-h2">
-    <div class="assurances-inner">
-      <div class="section-label">Our commitment to you</div>
-      <h2 class="section-h2" id="assurances-h2">What you can always expect from Lightside</h2>
-      <div class="assurances-grid">
-        <div class="assurance-cell">
-          <div class="assurance-check">&#10003;</div>
-          <strong>FCA Authorised &amp; Regulated</strong>
-          <p>You are dealing with a regulated firm at all times. FCA No. 676943.</p>
+  <!-- WHERE WE HAVE HELPED -->
+  <section class="helped-section" aria-labelledby="helped-h2">
+    <div class="helped-inner">
+      <div class="section-label">Real cases, real outcomes</div>
+      <h2 class="section-h2" id="helped-h2">Where we have helped</h2>
+      <p class="section-sub">Every case is different. These are three examples of what working with Lightside looks like in practice.</p>
+      <div class="helped-grid">
+
+        <!-- CARD 1: 200NCM / Too Much Debt -->
+        <div class="case-card">
+          <div class="case-card-head">
+            <div class="case-eyebrow">Personal &middot; Too Much Debt</div>
+            <div class="case-card-title">Personal Guarantee Called In &mdash; Debt Growing, Home &amp; Family Impacted</div>
+            <div class="case-stamp"><span class="stamp-value">Bktcy halted</span><span class="stamp-label">Charge agreed</span></div>
+          </div>
+          <div class="case-card-body">
+            <p class="case-sit-quote">&ldquo;I&rsquo;d been paying my debts but in 5 years they had not shrunk. Then the business closed. I couldn&rsquo;t pay the credit cards. A personal guarantee creditor came straight for us, and bankruptcy was the word I couldn&rsquo;t stop turning over.&rdquo;</p>
+            <button type="button" class="case-we-did-toggle" aria-expanded="false" aria-controls="we-did-200ncm">What we did <span class="toggle-icon">+</span></button>
+            <div class="case-we-did-body" id="we-did-200ncm">
+              <p>We treated the personal and business debt as one picture rather than two. The personal guarantee was the immediate pressure point &mdash; the creditor was preparing bankruptcy proceedings. We negotiated a voluntary charge on the family home, which gave the creditor the security they needed to stand down from formal action. The bankruptcy threat was removed and the home was protected. We then brought over &pound;50,000 of personal credit card and loan debt into a single coordinated Creditor Arrangement, took over all creditor communication, and structured the co-director&rsquo;s share of the guaranteed debt separately. Mr C has since relaunched his business.</p>
+              <div class="case-attribution">Adviser: Priti Shah &nbsp;&middot;&nbsp; Referred by an insolvency practitioner</div>
+            </div>
+          </div>
+          <div class="case-card-foot">
+            <a href="i-need-help-pg-personal-guarantee.html" class="case-full-link">Read full case</a>
+          </div>
         </div>
-        <div class="assurance-cell">
-          <div class="assurance-check">&#10003;</div>
-          <strong>Completely confidential</strong>
-          <p>Everything you tell us stays between us &mdash; always.</p>
+
+        <!-- CARD 2: 300PASTA / Closing a Company -->
+        <div class="case-card">
+          <div class="case-card-head">
+            <div class="case-eyebrow">Business &amp; Directors &middot; Pre-Pack Administration</div>
+            <div class="case-card-title">Company Closed. Jobs Saved. The Restaurant Carried On.</div>
+            <div class="case-stamp"><span class="stamp-value">Business Saved</span><span class="stamp-label">Company Closed</span></div>
+          </div>
+          <div class="case-card-body">
+            <p class="case-sit-quote">&ldquo;The business hadn&rsquo;t failed. That was the hardest part to sit with. We&rsquo;d built something real &mdash; then the council changed what we were allowed to use.&rdquo;</p>
+            <button type="button" class="case-we-did-toggle" aria-expanded="false" aria-controls="we-did-300pasta">What we did <span class="toggle-icon">+</span></button>
+            <div class="case-we-did-body" id="we-did-300pasta">
+              <p>We structured a pre-pack sale of the restaurant&rsquo;s assets to a newly formed company at independently assessed fair value. All staff were offered TUPE transfer. The original company entered CVL, closing out its historic liabilities while preserving the brand, the team, and the customer base. The new company is trading profitably from new premises.</p>
+              <div class="case-attribution">Adviser: Khurm Arshad</div>
+            </div>
+          </div>
+          <div class="case-card-foot">
+            <a href="prepack-administration-save-business-close-company.html" class="case-full-link">Read full case</a>
+          </div>
         </div>
-        <div class="assurance-cell">
-          <div class="assurance-check">&#10003;</div>
-          <strong>No obligation</strong>
-          <p>Talk to us before you decide anything. The initial conversation is free.</p>
+
+        <!-- CARD 3: 500SAN / Bankruptcy -->
+        <div class="case-card">
+          <div class="case-card-head">
+            <div class="case-eyebrow">Personal &middot; Bankruptcy</div>
+            <div class="case-card-title">Bankruptcy Actually Protected Her Home &mdash; Litigious Landlord, Zero Loss</div>
+            <div class="case-stamp"><span class="stamp-value">Porsche kept</span><span class="stamp-label">Assets saved</span></div>
+          </div>
+          <div class="case-card-body">
+            <p class="case-sit-quote">&ldquo;I was so scared at the thought of bankruptcy. The thought of losing my home was terrifying. I wasn&rsquo;t eating. I wasn&rsquo;t sleeping.&rdquo;</p>
+            <button type="button" class="case-we-did-toggle" aria-expanded="false" aria-controls="we-did-500san">What we did <span class="toggle-icon">+</span></button>
+            <div class="case-we-did-body" id="we-did-500san">
+              <p>Mrs. SS&rsquo;s home was never at risk &mdash; but she didn&rsquo;t know that. A thorough review of the equity ownership structure confirmed the Trustee in Bankruptcy had no viable claim on the property. We managed all correspondence throughout, so she never had to deal with the insolvency service or creditors directly. When the Trustee attempted to claim the family Porsche, we challenged it. The claim was dropped. Mrs. SS was discharged within 12 months with her home, her marriage, and her financial footing intact.</p>
+              <div class="case-attribution">Adviser: Barry Mitchell &nbsp;&middot;&nbsp; Referred by Peter Green, Green &amp; Co Accountants</div>
+            </div>
+          </div>
+          <div class="case-card-foot">
+            <a href="will-i-lose-my-house-if-i-go-bankrupt.html" class="case-full-link">Read full case</a>
+          </div>
         </div>
-        <div class="assurance-cell">
-          <div class="assurance-check">&#10003;</div>
-          <strong>Honest, independent advice</strong>
-          <p>We recommend what is right for your situation &mdash; not what is easiest to sell.</p>
-        </div>
+
       </div>
     </div>
   </section>
@@ -979,6 +1022,18 @@ initForm('footer-form-toggle','footer-contact-form','footer-form','footer-error'
     },80);
   });
 })();
+
+/* ── Case card "What we did" toggles ── */
+document.querySelectorAll('.case-we-did-toggle').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var bodyId=btn.getAttribute('aria-controls');
+    var body=document.getElementById(bodyId);
+    var isOpen=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',isOpen?'false':'true');
+    if(body){body.classList.toggle('open',!isOpen);}
+    btn.querySelector('.toggle-icon').textContent=isOpen?'+':'×';
+  });
+});
 
 /* ── FAQ accordion ── */
 document.querySelectorAll('.faq-question').forEach(function(btn){
