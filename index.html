@@ -394,23 +394,24 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
 .pathway-card:hover .pathway-link{gap:10px;}
 .pathway-link::after{content:'→';}
 
-/* ── HOW WE WORK ── */
-.how-section{background:var(--site-white);padding:68px 24px 24px;}
+/* ── WHY LIGHTSIDE ── */
+.how-section{background:var(--site-white);padding:68px 24px 56px;}
 .how-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
-.how-body p{font-size:0.97rem;color:var(--site-text);line-height:1.8;margin-bottom:14px;}
-.differentiators{margin-top:28px;display:flex;flex-direction:column;gap:14px;}
+.how-body p{font-size:0.97rem;color:var(--site-text);line-height:1.8;margin-bottom:20px;}
+.how-body::after{content:'';display:block;clear:both;}
+.differentiators{margin-top:28px;display:flex;flex-direction:column;gap:18px;}
 .diff-item{display:flex;gap:14px;align-items:flex-start;}
 .diff-circle{width:26px;height:26px;border-radius:50%;background:var(--site-navy);color:white;font-size:0.68rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;}
-.diff-text strong{display:block;font-size:0.90rem;color:var(--site-navy);margin-bottom:2px;}
-.diff-text span{font-size:0.84rem;color:var(--site-muted);line-height:1.55;}
-.steps-panel{background:var(--site-navy);border-radius:6px;padding:32px 28px;}
-.steps-panel-label{font-size:0.70rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--site-teal);margin-bottom:20px;}
-.step-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
-.step-row:last-child{border-bottom:none;padding-bottom:0;}
-.step-row:first-child{padding-top:0;}
-.step-num{width:34px;height:34px;border-radius:50%;background:var(--site-teal);color:white;font-family:'Merriweather',serif;font-size:0.9rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.step-content h4{font-size:0.90rem;font-weight:700;color:white;margin-bottom:4px;}
-.step-content p{font-size:0.83rem;color:rgba(255,255,255,0.58);line-height:1.6;}
+.diff-text strong{display:block;font-size:0.90rem;color:var(--site-navy);margin-bottom:3px;}
+.diff-text span{font-size:0.84rem;color:var(--site-muted);line-height:1.6;}
+/* 20+ years SVG badge — floated within differentiators */
+.exp-badge{float:right;margin:0 0 12px 20px;width:100px;height:133px;display:block;flex-shrink:0;}
+@media(max-width:900px){.exp-badge{float:none;display:block;margin:16px 0;width:90px;height:120px;}}
+/* Venn panel */
+.venn-panel{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:8px;}
+.venn-caption{font-size:0.88rem;color:var(--site-muted);line-height:1.65;margin-bottom:16px;text-align:center;max-width:380px;}
+.venn-caption strong{color:var(--site-navy);}
+.venn-panel svg{width:100%;max-width:420px;height:auto;}
 
 
 
@@ -420,6 +421,8 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
   .home-hero{padding:44px 24px 52px;}
   #home-h1{font-size:1.9rem;}
   .how-inner{grid-template-columns:1fr;gap:40px;}
+  .venn-panel{padding-top:0;}
+  .venn-panel svg{max-width:340px;}
   .pathways-grid{grid-template-columns:1fr;gap:14px;}
 }
 @media(max-width:680px){
@@ -679,76 +682,69 @@ button.btn-hero-ghost{background:transparent;cursor:pointer;font-family:'Lato',s
     </div>
   </section>
 
-  <!-- HOW WE WORK -->
+  <!-- WHY LIGHTSIDE -->
   <section class="how-section" aria-labelledby="how-h2">
     <div class="how-inner">
+
+      <!-- LEFT: punchy differentiators + 20+ credential -->
       <div class="how-body">
         <div class="section-label">Why Lightside</div>
-        <h2 class="section-h2" id="how-h2">We meet the person before we address the problem</h2>
-        <p>Most people come to us not quite knowing where to start. They know the situation is serious, but they don&rsquo;t know what the options are, what the consequences might be, or who they can trust to tell them the truth.</p>
-        <p>We are FCA-authorised debt advisers. Not a debt management company chasing a monthly fee, and not a firm that pushes one solution regardless of the situation. We look at everything &mdash; income, outgoings, every creditor, every asset &mdash; and give you an honest assessment of every option available to you.</p>
+        <h2 class="section-h2" id="how-h2">On your side &mdash; from the first conversation</h2>
+        <p>Most people arrive not quite knowing where to start. The situation feels serious, but the options aren&rsquo;t clear, the consequences aren&rsquo;t explained, and finding someone to trust feels impossible.</p>
+        <!-- 20+ years badge — floated right before bullets so all four wrap beside it -->
+        <img src="20-years-experience.svg" alt="20+ years experience" class="exp-badge">
         <div class="differentiators">
           <div class="diff-item">
             <div class="diff-circle">&#10003;</div>
             <div class="diff-text">
               <strong>We work for you, not your creditors</strong>
-              <span>Every recommendation we make is in your interest &mdash; not the creditors&rsquo;.</span>
+              <span>Every recommendation we make is in your interest. Not theirs.</span>
             </div>
           </div>
           <div class="diff-item">
             <div class="diff-circle">&#10003;</div>
             <div class="diff-text">
-              <strong>We handle all creditor contact directly</strong>
-              <span>Once you instruct us, the calls and letters stop coming to you.</span>
+              <strong>We take over the creditor contact</strong>
+              <span>Once you instruct us, we handle all creditor communication directly. You don&rsquo;t respond to calls or letters &mdash; we deal with them.</span>
             </div>
           </div>
           <div class="diff-item">
             <div class="diff-circle">&#10003;</div>
             <div class="diff-text">
-              <strong>Plain English, every step of the way</strong>
-              <span>No jargon, no pressure, no judgement. You understand exactly where you stand.</span>
+              <strong>We tell you what we actually think</strong>
+              <span>No jargon. No pressure. No comfortable half-truths. You&rsquo;ll know exactly where you stand and what every option means for you.</span>
             </div>
           </div>
           <div class="diff-item">
             <div class="diff-circle">&#10003;</div>
             <div class="diff-text">
               <strong>We challenge when it matters</strong>
-              <span>We have annulled bankruptcy orders, challenged HMRC assessments, and unpicked liquidation proposals. We are not passive administrators.</span>
+              <span>We have blocked Trustee claims on assets creditors had no right to. We have negotiated settlements, challenging creditor assumptions. We have annulled bankruptcy orders on the grounds the order should never have been made.</span>
             </div>
           </div>
         </div>
+
       </div>
-      <div class="steps-panel">
-        <div class="steps-panel-label">What happens when you contact us</div>
-        <div class="step-row">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h4>A confidential conversation</h4>
-            <p>We listen. No judgement, no pressure. You tell us what&rsquo;s happening and we ask what we need to understand the full picture.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h4>We review everything</h4>
-            <p>Income, outgoings, all creditors, assets. We look at your situation as a whole &mdash; not just the debt figure.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h4>We explain your options</h4>
-            <p>Clearly, in plain English. Every option available to you, with our honest view on which produces the best outcome.</p>
-          </div>
-        </div>
-        <div class="step-row">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h4>We handle it</h4>
-            <p>Once you instruct us, we deal with your creditors directly. You no longer have to face them alone.</p>
-          </div>
-        </div>
+
+      <!-- RIGHT: Three disciplines Venn diagram -->
+      <div class="venn-panel">
+        <p class="venn-caption"><strong>Three disciplines. One specialist.</strong> Most firms handle one piece of this &mdash; the financial analysis, the legal exposure, or the commercial negotiation. Lightside works across all three.</p>
+        <svg viewBox="95 10 570 530" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>Three disciplines Venn diagram &mdash; Lightside Financial at the convergence of Finance, Law, and Commercial Reality</title>
+          <desc>Three overlapping circles representing Finance, Law, and Commercial Reality. Lightside Financial sits at the central intersection of all three.</desc>
+          <circle cx="290" cy="200" r="180" fill="#1e3a5f" opacity="0.28"/>
+          <circle cx="460" cy="200" r="180" fill="#2a8b8b" opacity="0.32"/>
+          <circle cx="375" cy="340" r="180" fill="#e8a020" opacity="0.28"/>
+          <circle cx="290" cy="200" r="180" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+          <circle cx="460" cy="200" r="180" fill="none" stroke="#2a8b8b" stroke-width="2"/>
+          <circle cx="375" cy="340" r="180" fill="none" stroke="#c08010" stroke-width="2"/>
+          <text x="168" y="175" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1e3a5f">Finance</text>
+          <text x="590" y="175" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1f6e6e">Law</text>
+          <text x="375" y="430" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#a06800">Commercial Reality</text>
+          <image href="lightsideLogo_withStrap_300dpi.png" x="222" y="178" width="306" height="102" preserveAspectRatio="xMidYMid meet"/>
+        </svg>
       </div>
+
     </div>
   </section>
 
