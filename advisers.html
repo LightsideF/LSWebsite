@@ -462,6 +462,10 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .tc-card-client .tc-attribution{color:var(--site-teal);border-color:var(--site-border);}
 .tc-card-adviser .tc-attribution{color:var(--site-accent);border-color:rgba(255,255,255,0.15);}
 
+/* 20+ years SVG badge */
+.exp-badge{float:right;margin:0 0 16px 24px;width:100px;height:133px;display:block;}
+.pa-intro-text::after{content:'';display:block;clear:both;}
+@media(max-width:900px){.exp-badge{float:none;display:block;margin:0 0 20px 0;width:90px;height:120px;}}
 </style>
 </head>
 <body>
@@ -559,6 +563,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 <section class="pa-intro">
   <div class="pa-intro-inner">
     <div class="pa-intro-text">
+      <!-- 20+ years badge — floated right, all column text wraps beside it -->
+      <img src="20-years-experience.svg" alt="20+ years experience" class="exp-badge">
       <div class="section-label">Why advisers refer to Lightside</div>
       <h2 class="section-h2">We fill the gap your professional indemnity won&rsquo;t let you cross</h2>
       <p class="pa-intro-opener">Regulated debt advice isn&rsquo;t a bolt-on to your existing service. It requires FCA authorisation, specialist knowledge, and the kind of candour with clients that most advisory relationships make difficult.</p>
