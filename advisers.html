@@ -415,6 +415,53 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   .page-em-f{animation-delay:3.8s;}
   .page-em-g{animation-delay:6.8s;}
 }
+
+/* ══════════════════════════════════════════════════════════════
+   TESTIMONIAL CAROUSELS
+   Client carousel: index.html, contact.html
+   Adviser carousel: index.html, advisers.html
+   To update content: edit all pages that carry that carousel.
+   ══════════════════════════════════════════════════════════════ */
+.tcarousel-section{padding:52px 0;overflow:hidden;}
+.tcarousel-inner{max-width:1100px;margin:0 auto;padding:0 24px 32px;}
+.tcarousel-section .section-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.tcarousel-section .section-h2{font-family:'Merriweather',serif;font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:0;}
+/* Client section */
+.tcarousel-client{background:var(--site-offwhite);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);}
+.tcarousel-client .section-label{color:var(--site-teal);}
+.tcarousel-client .section-h2{color:var(--site-navy);}
+/* Adviser section */
+.tcarousel-adviser{background:var(--site-teal);}
+.tcarousel-adviser .section-label{color:rgba(255,255,255,0.6);}
+.tcarousel-adviser .section-h2{color:#ffffff;}
+/* Track */
+.tc-track-wrap{overflow:hidden;width:100%;position:relative;}
+.tc-track-wrap::before,.tc-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none;}
+.tcarousel-client .tc-track-wrap::before{background:linear-gradient(to right,var(--site-offwhite),transparent);}
+.tcarousel-client .tc-track-wrap::after{background:linear-gradient(to left,var(--site-offwhite),transparent);}
+.tcarousel-adviser .tc-track-wrap::before{background:linear-gradient(to right,var(--site-teal),transparent);}
+.tcarousel-adviser .tc-track-wrap::after{background:linear-gradient(to left,var(--site-teal),transparent);}
+.tc-track{display:flex;gap:18px;width:max-content;}
+.tc-track:hover{animation-play-state:paused!important;}
+@keyframes tc-scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes tc-scroll-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+.tc-left{animation:tc-scroll-left 70s linear infinite;}
+.tc-right{animation:tc-scroll-right 70s linear infinite;}
+@media(prefers-reduced-motion:reduce){.tc-left,.tc-right{animation:none;}}
+/* Cards */
+.tc-card{width:320px;flex-shrink:0;border-radius:6px;padding:22px;display:flex;flex-direction:column;gap:12px;}
+.tc-card-client{background:var(--site-white);border:1px solid var(--site-border);border-top:4px solid var(--site-navy);}
+.tc-card-adviser{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.16);border-top:4px solid var(--site-accent);}
+.tc-quote-mark{font-size:2rem;line-height:0.8;font-weight:700;display:block;margin-bottom:4px;}
+.tc-card-client .tc-quote-mark{color:rgba(42,139,139,0.22);}
+.tc-card-adviser .tc-quote-mark{color:rgba(232,160,32,0.32);}
+.tc-quote{font-size:0.95rem;line-height:1.7;flex:1;}
+.tc-card-client .tc-quote{color:var(--site-text);}
+.tc-card-adviser .tc-quote{color:rgba(255,255,255,0.88);}
+.tc-attribution{font-size:0.82rem;font-weight:700;padding-top:10px;border-top:1px solid;}
+.tc-card-client .tc-attribution{color:var(--site-teal);border-color:var(--site-border);}
+.tc-card-adviser .tc-attribution{color:var(--site-accent);border-color:rgba(255,255,255,0.15);}
+
 </style>
 </head>
 <body>
@@ -806,6 +853,33 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ADVISER TESTIMONIALS CAROUSEL
+     Also appears on: advisers.html
+     To update content: change BOTH files.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="tcarousel-section tcarousel-adviser" aria-labelledby="tc-adviser-h2">
+  <div class="tcarousel-inner">
+    <div class="section-label">What professional advisers say</div>
+    <h2 class="section-h2" id="tc-adviser-h2">Trusted by the professionals who refer to us.</h2>
+  </div>
+  <div class="tc-track-wrap">
+    <div class="tc-track tc-right" id="tc-adviser-track" aria-label="Professional adviser testimonials carousel">
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">My client had been receiving conflicting advice from several commercial lawyers over months. The very same afternoon you obtained a 60-day breathing space period for him. I have absolute faith in continuing to refer clients to Lightside.</p><div class="tc-attribution">Milen Johar C.A., F.C.A. &mdash; Director, VKJ Finance Ltd</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">When we have a client with unmanageable HMRC VAT and Corporation Tax debt, with bailiff threats, we know we can count on Lightside to assist. Having worked on a number of cases together, we are always impressed with the strategic thinking we can count on.</p><div class="tc-attribution">Tanuka Saha &mdash; N. Saha &amp; Co Accountants</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">I refer all my liquidation clients to Lightside &mdash; solvent and insolvent. Their ability to ask the right questions, think creatively, and find entirely client-centric solutions means my clients are in safe hands. I wouldn&rsquo;t refer them otherwise.</p><div class="tc-attribution">Price Mann Accountants</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">Having worked on several matters with the team at Lightside, it has always been evident that clients trust the quality of advice. We have been pleased to be engaged, and are always impressed with the clarity of the information we are provided with.</p><div class="tc-attribution">Neil Kelly &mdash; MD Law</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">The team at Lightside can be counted on to be sympathetic and clear with clients who need to hear the hard truth. The outside-of-the-box thinking means Lightside is who I turn to when a client needs liquidation input &mdash; whether at the start of the process, or post-liquidation when personal demands are being made.</p><div class="tc-attribution">Praful Shah &mdash; Shah PJ &amp; Co Accountants</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">It is refreshing that we can direct our clients to Lightside for FCA-regulated debt advice, so that the other side&rsquo;s assertions can be properly challenged and a better outcome achieved for all parties.</p><div class="tc-attribution">Natalie Wespieser &mdash; Wilson Family Law</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">I have been delighted with the outcomes achieved for referrals passed to Lightside. I have always been kept in the loop &mdash; and it has been pleasing to know from clients that they are pleased with the referral I have made.</p><div class="tc-attribution">Andrew Rhodes &mdash; Sobell Rhodes Accountants</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">I have recommended Lightside to clients and prospective clients with debt problems on a number of occasions. They provide a first class service. Nothing but positive feedback from those I have referred.</p><div class="tc-attribution">Jeremy Garson &mdash; Senior Partner, Rise Legal</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">Where I have seen financial plans going down a blackhole because of debt, I have been amazed at what Lightside has done to stop this and chart a clear path forward for clients I have referred.</p><div class="tc-attribution">Maria Isaeva CFA &mdash; Financial Planner</div></div>
+      <div class="tc-card tc-card-adviser"><span class="tc-quote-mark" aria-hidden="true">&ldquo;</span><p class="tc-quote">We are pleased that we can call Lightside and discuss client matters informally to ascertain how best to deal with situations of financial difficulty. Lightside understand that a company debt problem has a real impact on the personal situation &mdash; and that joined-up thinking is what sets them apart.</p><div class="tc-attribution">Ben Korklin &mdash; Lawrence Grant</div></div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- FOOTER CTA -->
@@ -990,6 +1064,16 @@ document.querySelectorAll('.case-we-did-toggle').forEach(function(btn){
 
 </script>
 
+<script>
+/* ── Testimonial carousel — duplicate tracks for infinite loop ── */
+(function(){
+  ['tc-client-track','tc-adviser-track'].forEach(function(id){
+    var t=document.getElementById(id);
+    if(!t)return;
+    Array.from(t.children).forEach(function(k){t.appendChild(k.cloneNode(true));});
+  });
+})();
+</script>
 <script src="award-banner.js"></script>
 </body>
 </html>
