@@ -47,12 +47,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
 
 <style>
-/* ── Reset ── */
+/* ââ Reset ââ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 img{display:block;max-width:100%;}
 html{scroll-behavior:smooth;}
 
-/* ── Tokens ── */
+/* ââ Tokens ââ */
 :root{
   --site-teal:#2a8b8b;
   --site-teal-dk:#1f6e6e;
@@ -72,7 +72,7 @@ body{font-family:'Lato',sans-serif;color:var(--site-text);background:var(--site-
 a{color:var(--site-teal);text-decoration:none;}
 a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
-/* ── Cookie banner ── */
+/* ââ Cookie banner ââ */
 #cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--site-navy);padding:18px 24px;box-shadow:0 -4px 20px rgba(0,0,0,0.25);align-items:center;gap:20px;flex-wrap:wrap;}
 #cookie-banner p{font-size:0.9rem;line-height:1.6;margin:0;color:rgba(255,255,255,0.85);flex:1 1 300px;}
 #cookie-banner a{color:var(--site-accent);}
@@ -83,7 +83,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .cookie-decline{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.3);}
 .cookie-decline:hover{color:rgba(255,255,255,0.85);}
 
-/* ── Utility bar ── */
+/* ââ Utility bar ââ */
 .util-bar{background:var(--site-navy);padding:7px 0;}
 .util-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;justify-content:flex-end;gap:28px;align-items:center;}
 .util-bar a{font-size:0.85rem;color:rgba(255,255,255,0.85);}
@@ -92,7 +92,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .util-contact-btn{background:none;border:none;font-size:0.85rem;color:rgba(255,255,255,0.85);cursor:pointer;padding:0;font-family:inherit;}
 .util-contact-btn:hover{color:var(--site-accent);}
 
-/* ── Header ── */
+/* ââ Header ââ */
 .site-header{background:var(--site-white);border-bottom:3px solid var(--site-teal);position:sticky;top:0;z-index:200;box-shadow:0 2px 10px rgba(0,0,0,0.08);}
 .header-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:90px;position:relative;}
 .logo-fallback{color:var(--site-navy);text-decoration:none;font-family:'Merriweather',serif;}
@@ -111,7 +111,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
-/* ── Hero ── */
+/* ââ Hero ââ */
 .page-hero{background:var(--site-navy);padding:36px 24px 40px;}
 .hero-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:flex-start;justify-content:flex-start;gap:40px;}
 .hero-text{}
@@ -123,7 +123,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .hero-award-img{display:block;height:auto;max-height:160px;width:auto;max-width:260px;object-fit:contain;flex-shrink:0;padding-top:32px;}
 @media(max-width:768px){.hero-award-img{display:none;}.hero-inner{display:block;}}
 
-/* ── Trust bar ── */
+/* ââ Trust bar ââ */
 .trust-bar{background:var(--site-navy);border-top:1px solid rgba(255,255,255,0.1);padding:14px 24px;}
 .trust-bar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
 .trust-item{display:flex;gap:8px;align-items:center;font-size:0.85rem;color:rgba(255,255,255,0.75);}
@@ -131,26 +131,26 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .trust-divider{width:1px;height:20px;background:rgba(255,255,255,0.2);}
 .trust-item--strapline{font-family:'Merriweather',serif;font-style:italic;font-size:0.88rem;color:rgba(255,255,255,0.9);font-weight:300;}
 
-/* ── Section utilities ── */
+/* ââ Section utilities ââ */
 .section-label{font-size:0.72rem;color:var(--site-teal);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
 .section-h2{font-family:'Merriweather',serif;font-size:1.5rem;font-weight:700;color:var(--site-navy);margin-bottom:8px;line-height:1.3;}
 .section-sub{font-size:1rem;color:var(--site-muted);margin-bottom:32px;line-height:1.7;}
 
-/* ── Page body ── */
+/* ââ Page body ââ */
 .page-body{max-width:var(--max-w);margin:0 auto;padding:52px 24px 0;}
 
-/* ── Page intro ── */
+/* ââ Page intro ââ */
 .page-intro{margin-bottom:44px;}
 .page-intro p{font-size:1rem;line-height:1.8;color:var(--site-text);margin-bottom:18px;}
 .page-intro p:last-child{margin-bottom:0;}
 .page-intro .opener{font-family:'Merriweather',serif;font-size:1.05rem;font-weight:300;font-style:italic;color:var(--site-navy);line-height:1.85;}
 
-/* ── No referral fee note ── */
+/* ââ No referral fee note ââ */
 .no-fee-note{background:var(--site-offwhite);border:1px solid var(--site-border);border-left:4px solid var(--site-teal);border-radius:0 6px 6px 0;padding:20px 28px;margin:28px 0 0;}
 .no-fee-note p{font-size:0.95rem;color:var(--site-text);line-height:1.75;margin:0;}
 .no-fee-note strong{color:var(--site-navy);}
 
-/* ── Pillars section ── */
+/* ââ Pillars section ââ */
 .pillars-section{margin-bottom:56px;}
 .pillars-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
 .pillars-diagram-wrap{width:100%;}
@@ -160,7 +160,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .pillars-explanation p:last-child{margin-bottom:0;}
 @media(max-width:800px){.pillars-grid{grid-template-columns:1fr;gap:32px;}}
 
-/* ── Referrers section ── */
+/* ââ Referrers section ââ */
 .referrers-section{background:var(--site-offwhite);border-top:1px solid var(--site-border);padding:64px 24px;}
 .referrers-inner{max-width:var(--max-w);margin:0 auto;}
 .referrers-inner .section-h2{margin-bottom:10px;}
@@ -172,7 +172,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 @media(max-width:860px){.referrers-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:540px){.referrers-grid{grid-template-columns:1fr;}.referrers-section{padding:44px 16px;}}
 
-/* ── Referred cases section ── */
+/* ââ Referred cases section ââ */
 .referred-section{background:var(--site-white);padding:64px 24px;}
 .referred-section-inner{max-width:var(--max-w);margin:0 auto;}
 .referred-section .section-h2{margin-bottom:10px;}
@@ -194,7 +194,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 @media(max-width:900px){.referred-cases-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.referred-cases-grid{grid-template-columns:1fr;}.referred-section{padding:44px 16px;}}
 
-/* ── Outbound / wider network section ── */
+/* ââ Outbound / wider network section ââ */
 .outbound-section{background:var(--site-navy);padding:56px 24px;}
 .outbound-inner{max-width:var(--max-w);margin:0 auto;}
 .outbound-section .section-label{color:var(--site-teal);}
@@ -205,7 +205,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .outbound-item-icon{color:var(--site-accent);font-size:0.8rem;}
 .outbound-item-label{font-size:0.9rem;font-weight:700;color:rgba(255,255,255,0.85);}
 
-/* ── Refer CTA band ── */
+/* ââ Refer CTA band ââ */
 .refer-band{background:var(--site-light);border-top:1px solid var(--site-border);border-bottom:1px solid var(--site-border);padding:40px 24px;}
 .refer-band-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
 .refer-band-kicker{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--site-teal);margin-bottom:6px;}
@@ -218,7 +218,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-band-secondary:hover{background:var(--site-navy);color:white;}
 @media(max-width:760px){.refer-band-inner{grid-template-columns:1fr;gap:24px;}.refer-band{padding:32px 16px;}}
 
-/* ── Footer CTA ── */
+/* ââ Footer CTA ââ */
 .footer-cta-wrap{background:var(--site-navy);}
 .footer-cta{max-width:var(--max-w);margin:0 auto;padding:52px 24px;text-align:center;}
 .footer-cta-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.5);margin-bottom:10px;}
@@ -230,7 +230,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .btn-secondary{background:transparent;color:white;font-weight:700;font-size:0.95rem;padding:13px 26px;border-radius:4px;border:2px solid rgba(255,255,255,0.5);cursor:pointer;font-family:inherit;min-height:44px;line-height:1.4;display:inline-block;}
 .btn-secondary:hover{border-color:white;color:white;}
 
-/* ── Slide-down contact form ── */
+/* ââ Slide-down contact form ââ */
 .slide-form-wrap{margin-top:22px;text-align:left;}
 .contact-form{display:flex;flex-direction:column;gap:16px;}
 .cf-row{display:grid;gap:14px;}
@@ -253,7 +253,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .cf-success{padding:16px;background:rgba(42,139,139,0.15);border-radius:4px;border:1px solid rgba(42,139,139,0.3);}
 .cf-success-msg{font-size:0.92rem;color:white;line-height:1.6;}
 
-/* ── Footer ── */
+/* ââ Footer ââ */
 .site-footer{background:var(--site-navy);padding:48px 24px 24px;}
 .footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:40px;margin-bottom:32px;}
 .footer-logo-text{font-family:'Merriweather',serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:2px;}
@@ -275,7 +275,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .footer-bottom a{color:rgba(255,255,255,0.45);margin-right:14px;}
 .footer-bottom a:hover{color:var(--site-accent);text-decoration:none;}
 
-/* ── Responsive ── */
+/* ââ Responsive ââ */
 @media(max-width:900px){
   .footer-inner{grid-template-columns:1fr;}
 }
@@ -332,7 +332,8 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
       <ul>        <li><a href="index.html">Home</a></li>
         <li><a href="personal.html">Personal Debt</a></li>
         <li><a href="business.html">Business &amp; Directors</a></li>
-        <li><a href="our-network.html" class="active">Our Network</a></li>
+        <li><a href="advisers.html">Advisers</a></li>
+        <li><a href="cases.html" class="nav-wwh">Where We&rsquo;ve Helped</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -353,9 +354,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <span>Our Network</span>
       </nav>
       <h1 id="page-h1">Where your client's debt problem gets resolved.</h1>
-      <p class="hero-lead">Accountants, solicitors, IFAs, insolvency practitioners and other professionals refer clients to Lightside when debt is at the heart of the matter. We work alongside the referring adviser — and we refer back.</p>
+      <p class="hero-lead">Accountants, solicitors, IFAs, insolvency practitioners and other professionals refer clients to Lightside when debt is at the heart of the matter. We work alongside the referring adviser â and we refer back.</p>
     </div>
-    <img src="nav-hero.webp" alt="Best Personal &amp; Business Solutions Firm 2026, England &amp; Wales — UK Enterprise Awards" class="hero-award-img" width="794" height="250">
+    <img src="nav-hero.webp" alt="Best Personal &amp; Business Solutions Firm 2026, England &amp; Wales â UK Enterprise Awards" class="hero-award-img" width="794" height="250">
   </div>
 </section>
 
@@ -380,12 +381,12 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="page-intro">
       <div class="section-label">Why advisers refer to us</div>
       <h2 class="section-h2">We sit where finance, law and commercial reality meet</h2>
-      <p class="opener">Most professional advisers are expert in one domain and competent in a second. The third is where the gaps appear — and in debt situations, those gaps matter.</p>
-      <p>Your accountant understands the numbers. Your solicitor understands the legal exposure. Your financial adviser understands the product landscape. But when a client is in debt difficulty, what drives the outcome is rarely just one of those things. It is the point where they intersect — and what someone with specific experience of debt negotiation, insolvency law and creditor behaviour actually does with that intersection.</p>
-      <p>That is where Lightside operates. We are not generalists who have stumbled into debt advice. We are specialists who have spent years working at that specific convergence of financial analysis, legal understanding and commercial judgement — and applying it to the particular dynamics of debt situations, where the rules work differently.</p>
+      <p class="opener">Most professional advisers are expert in one domain and competent in a second. The third is where the gaps appear â and in debt situations, those gaps matter.</p>
+      <p>Your accountant understands the numbers. Your solicitor understands the legal exposure. Your financial adviser understands the product landscape. But when a client is in debt difficulty, what drives the outcome is rarely just one of those things. It is the point where they intersect â and what someone with specific experience of debt negotiation, insolvency law and creditor behaviour actually does with that intersection.</p>
+      <p>That is where Lightside operates. We are not generalists who have stumbled into debt advice. We are specialists who have spent years working at that specific convergence of financial analysis, legal understanding and commercial judgement â and applying it to the particular dynamics of debt situations, where the rules work differently.</p>
 
       <div class="no-fee-note">
-        <p><strong>No referral fees — in either direction.</strong> We do not pay referral fees and we do not receive them. Advisers refer to us because it is the right thing for their client. That is the only basis on which the relationship works — and it is why it keeps working.</p>
+        <p><strong>No referral fees â in either direction.</strong> We do not pay referral fees and we do not receive them. Advisers refer to us because it is the right thing for their client. That is the only basis on which the relationship works â and it is why it keeps working.</p>
       </div>
     </div>
 
@@ -406,7 +407,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <!-- Capstone pill -->
             <rect x="110" y="20" width="460" height="64" rx="32" fill="#1e3a5f"/>
             <text class="pc" x="340" y="44" text-anchor="middle" dominant-baseline="central">Lightside Financial</text>
-            <text class="pcs" x="340" y="65" text-anchor="middle" dominant-baseline="central">Specialist debt advice — personal and business</text>
+            <text class="pcs" x="340" y="65" text-anchor="middle" dominant-baseline="central">Specialist debt advice â personal and business</text>
             <!-- Connector lines -->
             <line x1="142" y1="84" x2="142" y2="110" stroke="#085041" stroke-width="1" opacity="0.4"/>
             <line x1="340" y1="84" x2="340" y2="110" stroke="#185FA5" stroke-width="1" opacity="0.4"/>
@@ -443,9 +444,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
         <div class="pillars-explanation">
           <div class="section-label">Where we operate</div>
           <h2 class="section-h2" id="pillars-heading">Three domains. One specialist.</h2>
-          <p>Most professional advisers command one of these areas deeply and have working knowledge of a second. The third is where gaps appear — and in debt situations, those gaps determine outcomes.</p>
-          <p>We read financial statements and cashflows the way an accountant does, but we apply that reading to what a creditor will accept and why. We know insolvency law not as background knowledge but as the mechanism we work with daily. And we bring commercial judgement that is specific to debt — where the normal rules do not always apply.</p>
-          <p>In a debt situation, having fewer assets can give a client more leverage, not less. A creditor who appears immovable on paper may settle at a fraction of the sum when approached correctly. Knowing when that is true — and acting on it — is what specialist experience looks like.</p>
+          <p>Most professional advisers command one of these areas deeply and have working knowledge of a second. The third is where gaps appear â and in debt situations, those gaps determine outcomes.</p>
+          <p>We read financial statements and cashflows the way an accountant does, but we apply that reading to what a creditor will accept and why. We know insolvency law not as background knowledge but as the mechanism we work with daily. And we bring commercial judgement that is specific to debt â where the normal rules do not always apply.</p>
+          <p>In a debt situation, having fewer assets can give a client more leverage, not less. A creditor who appears immovable on paper may settle at a fraction of the sum when approached correctly. Knowing when that is true â and acting on it â is what specialist experience looks like.</p>
           <p>Professional advisers refer to us because this specific territory is not theirs, and their client's outcome depends on someone for whom it is.</p>
         </div>
 
@@ -459,7 +460,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="referrers-inner">
       <div class="section-label">Who works with us</div>
       <h2 class="section-h2" id="referrers-heading">Professional advisers across several disciplines refer clients to Lightside</h2>
-      <p class="section-sub" style="max-width:680px;">The referral typically happens when a client's core problem — debt — falls outside the referring adviser's specialism. We work with the referring adviser, keep them informed, and return the client to their care once the debt matter is resolved.</p>
+      <p class="section-sub" style="max-width:680px;">The referral typically happens when a client's core problem â debt â falls outside the referring adviser's specialism. We work with the referring adviser, keep them informed, and return the client to their care once the debt matter is resolved.</p>
 
       <div class="referrers-grid">
 
@@ -476,7 +477,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7v2h14V7L10 2z" stroke="#2a8b8b" stroke-width="1.5" stroke-linejoin="round"/><rect x="5" y="9" width="3" height="7" stroke="#2a8b8b" stroke-width="1.3"/><rect x="12" y="9" width="3" height="7" stroke="#2a8b8b" stroke-width="1.3"/><path d="M2 16h16" stroke="#2a8b8b" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <h3>Solicitors</h3>
-          <p>Solicitors refer when a legal matter — divorce, litigation, estate work — surfaces a personal or business debt problem that requires specialist resolution. We handle the debt; they handle the law.</p>
+          <p>Solicitors refer when a legal matter â divorce, litigation, estate work â surfaces a personal or business debt problem that requires specialist resolution. We handle the debt; they handle the law.</p>
         </div>
 
         <div class="referrer-card">
@@ -508,7 +509,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h14M10 3l7 7-7 7" stroke="#2a8b8b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Other professionals</h3>
-          <p>Valuers, financial planners, business advisers and others who encounter client debt situations in the course of their work also refer to us. If you are unsure whether a referral is appropriate, call us — it costs nothing to ask.</p>
+          <p>Valuers, financial planners, business advisers and others who encounter client debt situations in the course of their work also refer to us. If you are unsure whether a referral is appropriate, call us â it costs nothing to ask.</p>
         </div>
 
       </div>
@@ -520,23 +521,23 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="referred-section-inner">
       <div class="section-label">In practice</div>
       <h2 class="section-h2" id="referred-cases-heading">Cases referred by professional advisers</h2>
-      <p class="section-sub" style="max-width:680px;">A selection of cases that came to us through professional referral — showing the range of situations and the outcomes we achieved.</p>
+      <p class="section-sub" style="max-width:680px;">A selection of cases that came to us through professional referral â showing the range of situations and the outcomes we achieved.</p>
 
       <div class="referred-cases-grid">
 
-        <!-- Case 1: 200MIC — accountant referral -->
+        <!-- Case 1: 200MIC â accountant referral -->
         <div class="net-case-card">
           <div class="net-case-header">
             <div class="net-case-eyebrow">Business &amp; Directors &mdash; HMRC / Personal Liability</div>
-            <div class="net-case-title">A £360,000 fraud judgment that could have followed two directors personally</div>
+            <div class="net-case-title">A Â£360,000 fraud judgment that could have followed two directors personally</div>
             <div class="net-case-stamp">
-              <span class="net-case-stamp-val">£250,000</span>
+              <span class="net-case-stamp-val">Â£250,000</span>
               <span class="net-case-stamp-lbl">Settled, no criminal charges</span>
             </div>
           </div>
           <div class="net-case-body">
-            <p>Mr D and Mr J had run their business for over thirty years without a single problem. Then a VAT fraud allegation from HMRC — following the pattern typically seen in carousel fraud cases — resulted in a First Tier Tribunal judgment of £360,000. Because the debt had been established as fraud, HMRC could pursue the directors personally.</p>
-            <p>Referred by their chartered accountants, we engaged with the liquidator before the CVL formally proceeded and negotiated a global settlement: £250,000 net repayment, with HMRC's assurance that no personal criminal proceedings would follow. The company closed cleanly within twelve months.</p>
+            <p>Mr D and Mr J had run their business for over thirty years without a single problem. Then a VAT fraud allegation from HMRC â following the pattern typically seen in carousel fraud cases â resulted in a First Tier Tribunal judgment of Â£360,000. Because the debt had been established as fraud, HMRC could pursue the directors personally.</p>
+            <p>Referred by their chartered accountants, we engaged with the liquidator before the CVL formally proceeded and negotiated a global settlement: Â£250,000 net repayment, with HMRC's assurance that no personal criminal proceedings would follow. The company closed cleanly within twelve months.</p>
           </div>
           <div class="net-case-footer">
             <span class="net-case-tag">Referred by accountant</span>
@@ -544,7 +545,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           </div>
         </div>
 
-        <!-- Case 2: 200VD — IFA referral -->
+        <!-- Case 2: 200VD â IFA referral -->
         <div class="net-case-card">
           <div class="net-case-header">
             <div class="net-case-eyebrow">Personal Debt &mdash; Too Much Debt</div>
@@ -556,7 +557,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           </div>
           <div class="net-case-body">
             <p>Mr and Mrs V were behind on commitments, had not identified which debts were priority, and had a bailiff at the door. Their IFA, recognising that no meaningful financial planning was possible while the debt situation remained unresolved, referred them to us.</p>
-            <p>We reviewed their income and expenditure, separated priority from non-priority debt, and put a Creditor Arrangement in place — stopping interest and charges across all creditors, redirecting all contact through Lightside, and agreeing affordable repayments around their actual income. The bailiff action stopped and Council Tax was brought up to date.</p>
+            <p>We reviewed their income and expenditure, separated priority from non-priority debt, and put a Creditor Arrangement in place â stopping interest and charges across all creditors, redirecting all contact through Lightside, and agreeing affordable repayments around their actual income. The bailiff action stopped and Council Tax was brought up to date.</p>
           </div>
           <div class="net-case-footer">
             <span class="net-case-tag">Referred by IFA</span>
@@ -564,18 +565,18 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           </div>
         </div>
 
-        <!-- Case 3: 200JJ — solicitor referral -->
+        <!-- Case 3: 200JJ â solicitor referral -->
         <div class="net-case-card">
           <div class="net-case-header">
             <div class="net-case-eyebrow">Personal Debt &mdash; Too Much Debt</div>
-            <div class="net-case-title">Three crises in three months — told her home was at risk</div>
+            <div class="net-case-title">Three crises in three months â told her home was at risk</div>
             <div class="net-case-stamp">
               <span class="net-case-stamp-val">No charge order</span>
               <span class="net-case-stamp-lbl">Home safe. Creditors managed.</span>
             </div>
           </div>
           <div class="net-case-body">
-            <p>Ms JJ came to us after her divorce solicitor identified that the debt accumulating through her separation was becoming a crisis in its own right. She had been told that credit card companies could secure the debt on her home — frightening but, commercially, unrealistic. She couldn't sleep.</p>
+            <p>Ms JJ came to us after her divorce solicitor identified that the debt accumulating through her separation was becoming a crisis in its own right. She had been told that credit card companies could secure the debt on her home â frightening but, commercially, unrealistic. She couldn't sleep.</p>
             <p>We explained the reality of how credit card lenders actually behave, took over all creditor contact, and negotiated a managed repayment arrangement with each lender. No court action was taken. No charging order was ever placed. Ms JJ got back her peace of mind.</p>
           </div>
           <div class="net-case-footer">
@@ -593,7 +594,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="outbound-inner">
       <div class="section-label">Our wider network</div>
       <h2 class="section-h2" id="outbound-heading">The referral relationship works both ways</h2>
-      <p class="outbound-body">When a client comes to us whose situation requires expertise beyond debt resolution — or alongside it — we can signpost them to trusted professionals within our network. Those relationships have been built over many years and are tested in practice. We are happy to make introductions where it serves the client.</p>
+      <p class="outbound-body">When a client comes to us whose situation requires expertise beyond debt resolution â or alongside it â we can signpost them to trusted professionals within our network. Those relationships have been built over many years and are tested in practice. We are happy to make introductions where it serves the client.</p>
       <div class="outbound-grid">
         <div class="outbound-item"><div class="outbound-item-icon">&#9670;</div><div class="outbound-item-label">Mortgage Advisers</div></div>
         <div class="outbound-item"><div class="outbound-item-icon">&#9670;</div><div class="outbound-item-label">Solicitors</div></div>
@@ -612,7 +613,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="refer-band-text">
       <div class="refer-band-kicker">Make a referral</div>
       <div class="refer-band-heading">Have a client whose debt situation needs specialist attention?</div>
-      <div class="refer-band-sub">Call us to discuss the case — or send a message and we will call you. All enquiries are treated in complete confidence. No charge for the initial conversation.</div>
+      <div class="refer-band-sub">Call us to discuss the case â or send a message and we will call you. All enquiries are treated in complete confidence. No charge for the initial conversation.</div>
     </div>
     <div class="refer-band-actions">
       <a href="tel:01275859143" class="btn-band-primary">Call 01275 859143</a>
@@ -626,7 +627,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   <div class="footer-cta">
     <p class="footer-cta-label">Get in touch</p>
     <h3>Not sure if a referral is appropriate?</h3>
-    <p>Call us and describe the situation — we will tell you honestly whether we can help and how.</p>
+    <p>Call us and describe the situation â we will tell you honestly whether we can help and how.</p>
     <div class="cta-buttons">
       <a href="tel:01275859143" class="btn-primary">Call 01275 859143</a>
       <button type="button" class="btn-secondary" id="footer-form-toggle" aria-expanded="false" aria-controls="footer-contact-form">Send a message</button>
@@ -634,7 +635,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     <div class="slide-form-wrap" id="footer-contact-form" hidden>
       <form class="contact-form" id="footer-form" novalidate>
         <input type="hidden" name="access_key" value="e4e9ba56-50dd-4c0e-8ef9-370731ca8359">
-        <input type="hidden" name="subject" value="Professional referral enquiry — Our Network">
+        <input type="hidden" name="subject" value="Professional referral enquiry â Our Network">
         <input type="hidden" name="from_name" value="Lightside Website">
         <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="cf-row cf-row--2">
@@ -642,15 +643,15 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
           <div class="cf-field"><label for="footer-email">Email address <span class="cf-required" aria-hidden="true">*</span></label><input type="email" id="footer-email" name="email" required autocomplete="email" placeholder="e.g. andrew@example.com"></div>
         </div>
         <div class="cf-field"><label for="footer-phone">Phone number <span class="cf-optional">(optional)</span></label><input type="tel" id="footer-phone" name="phone" autocomplete="tel" placeholder="e.g. 01275 000000"></div>
-        <div class="cf-field"><label for="footer-message">Tell us about the client situation <span class="cf-required" aria-hidden="true">*</span></label><textarea id="footer-message" name="message" required rows="4" placeholder="As much or as little as you can share at this stage — we will treat it in complete confidence."></textarea></div>
+        <div class="cf-field"><label for="footer-message">Tell us about the client situation <span class="cf-required" aria-hidden="true">*</span></label><textarea id="footer-message" name="message" required rows="4" placeholder="As much or as little as you can share at this stage â we will treat it in complete confidence."></textarea></div>
         <div class="cf-privacy">We handle your details in line with our <a href="privacy-policy.html">Privacy Policy</a>. We will never share them with third parties.</div>
         <div class="cf-actions">
           <button type="submit" class="cf-submit">Send message</button>
           <button type="button" class="btn-form-cancel" id="footer-form-cancel">Cancel</button>
         </div>
-        <div class="cf-error" id="footer-error" hidden><p>We weren&rsquo;t able to send your message — sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+        <div class="cf-error" id="footer-error" hidden><p>We weren&rsquo;t able to send your message â sorry about that. Please call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
       </form>
-      <div class="cf-success" id="footer-success" hidden><p class="cf-success-msg">&#10003; Message sent — thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
+      <div class="cf-success" id="footer-success" hidden><p class="cf-success-msg">&#10003; Message sent â thank you. We&rsquo;ll be in touch shortly. If you need to speak to someone sooner, call us on <a href="tel:01275859143">01275 859143</a>.</p></div>
     </div>
   </div>
 </div>
@@ -670,7 +671,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
     </div>
   </div>
   <div class="footer-moneyhelper">
-    <p>If you are struggling with debt, free and impartial advice is available from <a href="https://www.moneyhelper.org.uk" target="_blank" rel="noopener noreferrer">MoneyHelper</a> — the government-backed money guidance service.</p>
+    <p>If you are struggling with debt, free and impartial advice is available from <a href="https://www.moneyhelper.org.uk" target="_blank" rel="noopener noreferrer">MoneyHelper</a> â the government-backed money guidance service.</p>
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Lightside (BSPC) Ltd. Registered in England &amp; Wales. 05817877</p>
@@ -685,7 +686,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 </footer>
 
 <script>
-/* ── Cookie banner ── */
+/* ââ Cookie banner ââ */
 (function(){
   var banner=document.getElementById('cookie-banner');
   function hideBanner(){if(banner)banner.style.display='none';}
@@ -696,7 +697,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   if(dec){dec.addEventListener('click',function(){localStorage.setItem('ls_cookie_consent','essential');hideBanner();});}
 })();
 
-/* ── Hamburger ── */
+/* ââ Hamburger ââ */
 (function(){
   var hamburger=document.getElementById('hamburger');
   var nav=document.getElementById('site-nav');
@@ -715,7 +716,7 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
   });
 })();
 
-/* ── Contact form: all toggles wired to one form ── */
+/* ââ Contact form: all toggles wired to one form ââ */
 (function(){
   var wrapper=document.getElementById('footer-contact-form');
   var form=document.getElementById('footer-form');
