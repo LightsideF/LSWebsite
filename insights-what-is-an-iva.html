@@ -178,6 +178,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .article-meta{background:var(--site-offwhite);border-bottom:1px solid var(--site-border);padding:14px 24px;display:flex;gap:10px;align-items:center;font-size:0.85rem;color:var(--site-muted);font-family:'Lato',sans-serif;flex-wrap:wrap;}
 .article-meta-sep{color:var(--site-border);}
 .article-author{color:var(--site-text);font-weight:700;}
+.article-cat{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:2px 9px;border-radius:20px;}
+.article-cat.personal{background:rgba(42,139,139,0.10);color:var(--site-teal);}
+.article-cat.business{background:rgba(192,57,43,0.09);color:#c0392b;}
 
 /* ── Article body ── */
 .article-body{background:var(--site-white);padding:48px 24px 56px;}
@@ -458,11 +461,13 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
      DATE · AUTHOR · READ TIME (optional)
      ═══════════════════════════════════ -->
 <div class="article-meta">
+  <span class="article-cat personal">Personal</span>
+  <span class="article-meta-sep" aria-hidden="true">&middot;</span>
   <span class="article-date">4 April 2026</span>
   <span class="article-meta-sep" aria-hidden="true">&middot;</span>
   <!-- Named author:  <span class="article-author">Written by Priti Shah</span> -->
-  <!-- Firm author:   <span class="article-author">Lightside Financial</span>   -->
-  <span class="article-author">Lightside Financial</span>
+  <!-- Firm author:   <span class="article-author">Written by Priti Shah</span>   -->
+  <span class="article-author">Written by Priti Shah</span>
   <span class="article-meta-sep" aria-hidden="true">&middot;</span>
   <span class="article-read-time">6 min read</span>
 </div>

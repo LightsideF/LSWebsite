@@ -195,6 +195,9 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 .article-meta{background:var(--site-offwhite);border-bottom:1px solid var(--site-border);padding:14px 24px;display:flex;gap:10px;align-items:center;font-size:0.85rem;color:var(--site-muted);font-family:'Lato',sans-serif;flex-wrap:wrap;}
 .article-meta-sep{color:var(--site-border);}
 .article-author{color:var(--site-text);font-weight:700;}
+.article-cat{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:2px 9px;border-radius:20px;}
+.article-cat.personal{background:rgba(42,139,139,0.10);color:var(--site-teal);}
+.article-cat.business{background:rgba(192,57,43,0.09);color:#c0392b;}
 
 /* ── Article body ── */
 .article-body{background:var(--site-white);padding:48px 24px 56px;}
@@ -480,16 +483,20 @@ a:hover{color:var(--site-teal-dk);text-decoration:underline;}
 
 <!-- ═══════════════════════════════════
      ARTICLE METADATA BAR
-     DATE · AUTHOR · READ TIME (optional)
+     CATEGORY · DATE · AUTHOR · READ TIME
      ═══════════════════════════════════ -->
 <div class="article-meta">
+  <!-- Category pill — use one, delete the other -->
+  <span class="article-cat personal">Personal</span>
+  <!-- <span class="article-cat business">Business &amp; Directors</span> -->
+  <span class="article-meta-sep" aria-hidden="true">&middot;</span>
   <span class="article-date"><!-- e.g. 23 March 2026 --></span>
   <span class="article-meta-sep" aria-hidden="true">&middot;</span>
   <!-- Named author:  <span class="article-author">Written by Priti Shah</span> -->
   <!-- Firm author:   <span class="article-author">Lightside Financial</span>   -->
   <span class="article-author"><!-- AUTHOR --></span>
   <span class="article-meta-sep" aria-hidden="true">&middot;</span>
-  <span class="article-read-time"><!-- e.g. 4 min read — optional, remove span if not used --></span>
+  <span class="article-read-time"><!-- e.g. 4 min read --></span>
 </div>
 
 
@@ -912,9 +919,11 @@ PLACEHOLDERS TO FILL
   In <body>:
     ARTICLE HEADLINE    — breadcrumb (3rd item), h1, BlogPosting schema headline
     STANDFIRST          — hero-lead paragraph (1-2 sentences)
+    CATEGORY PILL       — article-meta bar: use .personal or .business class; delete the unused option
     DATE                — article-meta bar (e.g. "23 March 2026")
     AUTHOR              — "Lightside Financial" OR "Written by [Full Name]"
                           Schema author and visible author MUST match.
+    READ TIME           — article-meta bar (e.g. "4 min read") — count ~200 words per minute
     BODY PARAGRAPHS     — article content, 400-600 words total
     L2 SERVICE PAGE LINK — closing paragraph must link to at least one L2 page
     ADVANTAGES/DISADV   — fill from PPTX source material; remove block if not a solution article
@@ -943,9 +952,11 @@ PRE-UPLOAD CHECKLIST (from Anatomy Section 8.2)
   ☐ GA4 ID G-ZHB4VJ09BT present (twice in head)
   ☐ Meta title under 60 characters
   ☐ Meta description 150-160 characters
+  ☐ Category pill set (.personal or .business) — unused option deleted
   ☐ Published date correct in metadata bar and schema
   ☐ Author field: never a placeholder — named individual or Lightside Financial
   ☐ Schema author matches visible author line
+  ☐ Read time populated (e.g. "4 min read")
   ☐ FAQPage schema present if FAQ section included; absent if not
   ☐ At least one link to a relevant L2 service page
   ☐ Related articles strip populated (2-3 cards)
